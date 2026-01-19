@@ -12,54 +12,60 @@ const OurSolutions = () => {
   const cardsRef = useRef([]);
 
   useEffect(() => {
-    const ctx = gsap.context(() => {
-      const cards = cardsRef.current;
+    let mm = gsap.matchMedia();
 
-      // Card 1 Animation:
-      // When Card 2 comes up, Card 1 scales to 0.7
-      gsap.to(cards[0], {
-        scale: 0.7,
-        ease: "none",
-        immediateRender: false, // Prevent conflict on load
-        scrollTrigger: {
-          trigger: cards[1],
-          start: "top bottom", // Starts when Card 2 enters viewport
-          end: "top top+=150px", // Ends when Card 2 hits the sticky top (approx)
-          scrub: 1, // Smooth dragging to prevent jitter
-        },
-      });
+    mm.add(
+      "(min-width: 769px)",
+      () => {
+        const cards = cardsRef.current;
 
-      // When Card 3 comes up, Card 1 scales further from 0.7 down to 0.6
-      gsap.to(cards[0], {
-        scale: 0.6,
-        ease: "none",
-        immediateRender: false,
-        scrollTrigger: {
-          trigger: cards[2],
-          start: "top bottom",
-          end: "top top+=150px",
-          scrub: 1,
-        },
-      });
+        // Card 1 Animation:
+        // When Card 2 comes up, Card 1 scales to 0.7
+        gsap.to(cards[0], {
+          scale: 0.7,
+          ease: "none",
+          immediateRender: false, // Prevent conflict on load
+          scrollTrigger: {
+            trigger: cards[1],
+            start: "top bottom", // Starts when Card 2 enters viewport
+            end: "top top+=150px", // Ends when Card 2 hits the sticky top (approx)
+            scrub: 1, // Smooth dragging to prevent jitter
+          },
+        });
 
-      // Card 2 Animation:
-      // When Card 3 comes up, Card 2 scales to 0.6
-      gsap.to(cards[1], {
-        scale: 0.6,
-        ease: "none",
-        immediateRender: false,
-        scrollTrigger: {
-          trigger: cards[2],
-          start: "top bottom",
-          end: "top top+=150px",
-          scrub: 1,
-        },
-      });
+        // When Card 3 comes up, Card 1 scales further from 0.7 down to 0.6
+        gsap.to(cards[0], {
+          scale: 0.6,
+          ease: "none",
+          immediateRender: false,
+          scrollTrigger: {
+            trigger: cards[2],
+            start: "top bottom",
+            end: "top top+=150px",
+            scrub: 1,
+          },
+        });
 
-      // Card 3 stays at scale 1 (default)
-    }, containerRef);
+        // Card 2 Animation:
+        // When Card 3 comes up, Card 2 scales to 0.6
+        gsap.to(cards[1], {
+          scale: 0.6,
+          ease: "none",
+          immediateRender: false,
+          scrollTrigger: {
+            trigger: cards[2],
+            start: "top bottom",
+            end: "top top+=150px",
+            scrub: 1,
+          },
+        });
 
-    return () => ctx.revert();
+        // Card 3 stays at scale 1 (default)
+      },
+      containerRef
+    );
+
+    return () => mm.revert();
   }, []);
 
   const solutions = [

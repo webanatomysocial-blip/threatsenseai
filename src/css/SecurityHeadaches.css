@@ -114,3 +114,10 @@
   height: auto;
   display: block;
 }
+
+@media (max-width: 768px) {
+  .security-headaches-container {
+    padding: 60px 20px;
+    margin-top: 0px;
+  }
+}

@@ -166,15 +166,67 @@
 
 /* Mobile responsive */
 @media (max-width: 768px) {
+  .custom-options-container {
+    padding: 60px 20px;
+    height: auto; /* Allow container to grow */
+  }
+
   .custom-options-wrapper {
     flex-direction: column;
     height: auto;
+    gap: 30px;
   }
+
+  /* Force all cards to look "active" / expanded */
   .option-card {
-    height: 200px;
+    height: auto !important; /* Allow card to grow with content */
+    flex-basis: auto !important; /* Prevent flex-basis: 0 from collapsing height */
+    flex-grow: 0;
     width: 100%;
+    margin-bottom: 0;
+    padding: 30px;
   }
+
   .option-card.active {
-    height: 400px;
+    height: auto !important;
+    margin-bottom: 0;
+  }
+
+  /* Make sure title flows normally */
+  .option-title,
+  .option-card.active .option-title {
+    white-space: normal;
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+
+  /* Always show description */
+  .option-desc {
+    display: block !important;
+    opacity: 1 !important;
+    transform: none !important;
+    white-space: normal;
+    margin-bottom: 20px;
+  }
+
+  /* Always show image container */
+  .option-image-container {
+    display: flex;
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+  }
+
+  /* Size the image appropriately for the card */
+  .option-image,
+  .option-card.active .option-image {
+    width: 100%;
+    height: 180px;
+    object-fit: contain;
+  }
+
+  /* Hide pagination on mobile since we scroll */
+  .options-pagination {
+    display: none;
   }
 }

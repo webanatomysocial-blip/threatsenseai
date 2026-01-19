@@ -19,3 +19,10 @@
   justify-content: center;
   gap: 30px;
 }
+
+@media (max-width: 768px) {
+  .cta-section {
+    padding: 60px 20px 60px 20px;
+    /* margin-top: 40px; */
+  }
+}

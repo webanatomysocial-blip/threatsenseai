@@ -104,3 +104,37 @@
   display: inline-block;
   margin-right: 0.25em;
 }
+@media (max-width: 768px) {
+  .banner-content {
+    padding: 40px 0;
+    width: 100%;
+  }
+  .home-banner-container {
+    padding: 0px 20px;
+  }
+  .video-placeholder {
+    width: 100%;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+  }
+  .banner-stats {
+    flex-direction: column;
+    margin-left: 0px;
+  }
+
+  .stat-item {
+    border-right: none;
+    width: 100%;
+    flex-direction: column-reverse;
+    margin-bottom: 0px;
+    gap: 10px;
+  }
+  .stat-item2 {
+    width: 100%;
+    flex-direction: column-reverse;
+    gap: 10px;
+    margin-top: 0px;
+  }
+}

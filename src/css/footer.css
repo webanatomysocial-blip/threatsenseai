@@ -185,6 +185,10 @@
   }
 
   .footer-logo-img {
-    height: 80px;
+    height: auto; /* Adjust based on actual logo size */
+    width: 350px;
+  }
+  .footer-logo-img-overlay {
+    display: none;
   }
 }
