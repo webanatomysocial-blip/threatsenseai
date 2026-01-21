@@ -1,13 +1,16 @@
 <IfModule mod_rewrite.c>
   RewriteEngine On
   RewriteBase /
-  RewriteRule ^index\.html$ - [L]
-  RewriteCond %{REQUEST_FILENAME} !-f
-  RewriteCond %{REQUEST_FILENAME} !-d
-  RewriteRule . /index.php [L]
-</IfModule>
+  
+  # Don't rewrite files or directories
+  RewriteCond %{REQUEST_FILENAME} -f [OR]
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^ - [L]
 
-<Files "*.sqlite">
-    Order Deny,Allow
-    Deny from all
-</Files>
+  # Try to route to index.php if available (for SEO/OG tags)
+  RewriteCond %{DOCUMENT_ROOT}/index.php -f
+  RewriteRule ^ index.php [QSA,L]
+
+  # Fallback to index.html for standard SPA routing
+  RewriteRule ^ index.html [QSA,L]
+</IfModule>

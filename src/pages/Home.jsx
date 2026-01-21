@@ -16,7 +16,7 @@ export default function Home() {
 
       <HomeTabSection />
       <SecurityHeadaches />
-      <OurSolutions />
+      <OurSolutions id="solutions" />
       <CustomOptions />
       <KeyFeatures />
       <CustomerFeedback />

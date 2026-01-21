@@ -25,7 +25,7 @@ export default function AboutBanner() {
         stagger: 0.05,
         ease: "power2.out",
         delay: 0.2,
-      }
+      },
     );
   }, []);
 

@@ -21,7 +21,7 @@ const HomeBanner = () => {
           duration: 1,
           stagger: 0.1,
           ease: "power2.out",
-        }
+        },
       );
 
       // 2) Below head elements: y -50px -> 0, Opacity 0->1
@@ -34,7 +34,7 @@ const HomeBanner = () => {
           duration: 1,
           delay: 0.5, // Start after heading starts appearing
           ease: "power2.out",
-        }
+        },
       );
     }, containerRef);
 
@@ -54,7 +54,8 @@ const HomeBanner = () => {
               className="word-span"
               style={{
                 fontStyle: isAnalyzer ? "italic" : "normal",
-                fontFamily: isAnalyzer ? "serif" : "inherit", // Matches the image style better if it's a different font, otherwise remove
+                fontWeight: isAnalyzer ? "300" : "bold",
+                fontFamily: isAnalyzer ? "Instrument Serif" : "inherit",
               }}
             >
               {word}

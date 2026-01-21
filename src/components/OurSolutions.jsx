@@ -63,7 +63,7 @@ const OurSolutions = () => {
 
         // Card 3 stays at scale 1 (default)
       },
-      containerRef
+      containerRef,
     );
 
     return () => mm.revert();
@@ -80,6 +80,7 @@ const OurSolutions = () => {
       ],
       image: cardImage, // Using placeholder
       reverse: false,
+      link: "/tads",
     },
     {
       title: "Data Guard",
@@ -92,6 +93,7 @@ const OurSolutions = () => {
       ],
       image: cardImage,
       reverse: true,
+      link: "/tads",
     },
     {
       title: "ThreatSense SIEM & SOAR",
@@ -103,22 +105,23 @@ const OurSolutions = () => {
       ],
       image: cardImage,
       reverse: false,
+      link: "/tads",
     },
   ];
 
   return (
-    <div className="our-solutions-container" ref={containerRef}>
+    <div className="our-solutions-container" ref={containerRef} id="solutions">
       <div className="solutions-header">
         <div
           className="sub-para-text"
           style={{
-            marginBottom: "10px",
+            marginBottom: "0px",
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
           }}
         >
-          <AiFillInfoCircle color="black" size={18} /> Our Solutions
+          <AiFillInfoCircle color="black" size={18} /> Our Solutions
         </div>
         <h2 className="head-text">
           Explore our future ready <br /> Cybersecurity solutions
@@ -146,7 +149,7 @@ const OurSolutions = () => {
                   ))}
                 </ul>
                 <Link
-                  to="/contact"
+                  to={solution.link}
                   className="white-button"
                   style={{ marginTop: "20px" }}
                 >

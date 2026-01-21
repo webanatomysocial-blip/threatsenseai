@@ -183,7 +183,7 @@ h6 {
   font-weight: 500;
   line-height: 1.6em;
   color: #666;
-  padding-bottom: 20px;
+  /* padding-bottom: 20px; */
   white-space: pre-line;
 }
 
@@ -251,8 +251,39 @@ h6 {
   width: fit-content;
 }
 
-.transparent-bg-btn:hover .arrow-icon {
-  transform: translateX(6px);
+.red-button {
+  background-color: var(--red-color);
+  color: #fff;
+  padding: 12px 22px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  transition: all 0.5s;
+  white-space: nowrap;
+  width: fit-content;
+  border: none;
+  cursor: pointer;
+}
+
+.red-button:hover {
+  background-color: #cc4300; /* Darker shade of orange-red */
+}
+
+.read-more-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #1a1a1a;
+  text-decoration: none;
+  transition: gap 0.3s ease;
+}
+
+.read-more-link:hover {
+  gap: 12px;
+  color: var(--red-color);
 }
 
 /* buttons End */
@@ -276,12 +307,12 @@ body {
   /* Mobile Typography Overrides */
   .big-text-head,
   .big-text-head-white {
-    font-size: 36px !important;
+    font-size: 34px !important;
   }
 
   .head-text,
   .head-text-white {
-    font-size: 26px !important;
+    font-size: 24px !important;
   }
 
   .sub-head-text,

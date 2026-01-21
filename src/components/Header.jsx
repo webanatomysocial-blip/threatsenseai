@@ -42,7 +42,7 @@ const Header = ({ onSearch }) => {
 
         {/* Desktop Nav */}
         <nav className="header-nav only-windows">
-          <Link to="/solutions" className="nav-link">
+          <Link to="/#solutions" className="nav-link">
             Solutions
           </Link>
           <Link to="/about" className="nav-link">
@@ -88,7 +88,7 @@ const Header = ({ onSearch }) => {
               Homepage
             </Link>
             <Link
-              to="/solutions"
+              to="/#solutions"
               className="mobile-nav-link"
               onClick={toggleMenu}
             >

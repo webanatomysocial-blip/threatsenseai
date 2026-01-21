@@ -55,9 +55,7 @@ const HowItWorks = () => {
       <div className="how-it-works-header">
         {/* Label - Using sub-para-text as per instructions for subheading/label consistency if desired or specific class from user instructions */}
         <div className="sub-para-text security-label">
-    
-
-          <span style={{ fontSize: "16px", marginRight: "8px" }}>🛡️</span>{" "}
+          <FaShieldAlt size={16} style={{ marginRight: "8px" }} />
           Security Headaches
         </div>
         <h2 className="head-text">How ThreatSenseAi works</h2>

@@ -67,10 +67,6 @@ if (typeof Image !== 'undefined') {
   blogMetadata.forEach(blog => {
     const img = new Image();
     img.src = blog.image;
-    img.onload = () => console.log(`Successfully preloaded image: ${blog.image}`);
-    img.onerror = () => {
-        console.error(`Failed to preload image: ${blog.image}`);
-        blog.image = "/images/placeholder.jpg"; // Optional fallback
-    };
+    
   });
 }
