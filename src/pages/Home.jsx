@@ -29,7 +29,7 @@ AI-Powered Security"
         backgroundImage={bg}
         buttonText="Get Started"
       />
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }

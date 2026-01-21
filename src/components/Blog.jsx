@@ -1,139 +1,104 @@
+import React, { useState, useEffect, Suspense } from "react";
+import { Link } from "react-router-dom";
+import { blogMetadata } from "../blogs/metadata.js";
+import "../css/Blog.css";
+import { AiFillMessage } from "react-icons/ai";
 
+const Blogs = ({ limit = "all" }) => {
+  const [blogs, setBlogs] = useState([]);
 
-import React, { useState, useEffect, Suspense } from 'react';
-import { Link } from 'react-router-dom';
-import { blogMetadata } from '../blogs/metadata.js';
-import '../css/Blog.css';
-
-// Dynamically import all JSX files from blogs folder
-const blogModules = import.meta.glob('../blogs/*.jsx', { eager: false });
-const blogKeys = Object.keys(blogModules);
-
-// Sort blogKeys by date in descending order (most recent first)
-const sortedBlogKeys = blogKeys.sort((a, b) => {
-  const blogNameA = a.split('/').pop().replace('.jsx', '');
-  const blogNameB = b.split('/').pop().replace('.jsx', '');
-  const metadataA = blogMetadata.find(blog => blog.id === blogNameA) || { date: '1970-01-01' };
-  const metadataB = blogMetadata.find(blog => blog.id === blogNameB) || { date: '1970-01-01' };
-  return new Date(metadataB.date) - new Date(metadataA.date);
-});
-
-const Blogs = ({ backgroundColor, limit = 3 }) => {
-  // Log props for debugging
-  console.log('Blogs component props:', { backgroundColor, limit });
-
-  const totalBlogs = sortedBlogKeys.length;
-  // Determine initial number of blogs to show: all for 'all', otherwise use limit
-  const initialVisible = limit === 'all' ? totalBlogs : Math.min(limit, totalBlogs);
-  const [visibleCount, setVisibleCount] = useState(initialVisible);
-
-  // Log sortedBlogKeys for debugging
-  console.log('Sorted blog keys:', sortedBlogKeys);
-
-  // Preload blog components and images
   useEffect(() => {
-    sortedBlogKeys.slice(0, visibleCount).forEach(key => {
-      // Preload blog module
-      blogModules[key]().catch(error => {
-        console.error(`Error preloading blog ${key}:`, error);
-      });
-      // Preload image
-      const blogName = key.split('/').pop().replace('.jsx', '');
-      const metadata = blogMetadata.find(blog => blog.id === blogName);
-      if (metadata?.image) {
-        const img = new Image();
-        img.src = metadata.image;
-        img.onerror = () => {
-          console.error(`Failed to preload image: ${metadata.image}`);
-        };
-      }
-    });
-  }, [visibleCount]);
+    // For now, we take from metadata directly as requested
+    // In a real app, we might still want the dynamic loading for the full post content
+    const sorted = [...blogMetadata].sort(
+      (a, b) => new Date(b.date) - new Date(a.date)
+    );
+    setBlogs(limit === "all" ? sorted : sorted.slice(0, limit));
+  }, [limit]);
 
-  const loadMore = () => {
-    const newCount = totalBlogs;
-    setVisibleCount(newCount);
-    setTimeout(() => {
-      window.lenis?.scrollTo(window.scrollY, { immediate: true });
-    }, 0);
-  };
+  if (blogs.length === 0) return null;
 
-  // Only show "Load More" if limit='all' and there are more blogs to load
-  const showLoadMore = limit === 'all' && visibleCount < totalBlogs;
+  const featuredBlog = blogs[0];
+  const remainingBlogs = blogs.slice(1);
 
   return (
-    <div className="whole-blog-section" style={{ backgroundColor }}>
-      <div className="blogs-container">
-        <div className="blogs-grid">
-          {sortedBlogKeys.length === 0 && <p>No blogs found.</p>}
-          {sortedBlogKeys.slice(0, visibleCount).map((key, index) => {
-            const blogName = key.split('/').pop().replace('.jsx', '');
-            const metadata = blogMetadata.find(blog => blog.id === blogName) || {
-              title: blogName,
-              slug: blogName.toLowerCase(),
-              excerpt: 'No excerpt available.',
-              image: '/images/placeholder.jpg',
-              date: 'No date',
-            };
-            // Log each blog's metadata for debugging
-            console.log(`Blog: ${blogName}, URL: /blogs/${blogName}, Metadata:`, metadata);
-            return (
-              <div key={index} className="inner-news-blogs-container">
-                <Suspense fallback={<BlogCardSkeleton />}>
-                  <div className="blog-text">
-                    <p className="text-black">BLOG</p>
-                    <Link to={`/blogs/${blogName}`} style={{ textDecoration: 'none' }}>
-                      <p className="sub-big-heading-text-black">{metadata.title}</p>
-                    </Link>
-                  </div>
-                  <div className="image-hover-text-come" style={{ backgroundImage: `url(${metadata.image})` }}>
-                    <div className="inner-text-come">
-                      <div>
-                        <Link to={`/blogs/${blogName}`} style={{ textDecoration: 'none' }}>
-                          <p className="small-text-black">{metadata.excerpt}</p>
-                        </Link>
-                      </div>
-                      <Link
-                        to={`/blogs/${blogName}`}
-                        className="read-more-btn-blue"
-                        aria-label={`Read more about ${metadata.title}`}
-                      >
-                        Read More <i className="bi bi-arrow-right arrow-icon"></i>
-                      </Link>
-                    </div>
-                  </div>
-                </Suspense>
-              </div>
-            );
-          })}
+    <div className="whole-blog-section">
+      <div className="blogs-header">
+        <div className="sub-para-text security-label">
+          <AiFillMessage />
+          Blogs
         </div>
-        {showLoadMore && (
-          <button className="load-more" onClick={loadMore}>
-            Load More
-          </button>
+        <h1 className="head-text">
+          Read our <br /> latest blogs
+        </h1>
+      </div>
+
+      <div className="blogs-main-wrapper">
+        {/* Featured Blog */}
+        {featuredBlog && (
+          <div className="featured-blog-row">
+            <Link
+              to={`/blogs/${featuredBlog.id}`}
+              className="featured-image-container"
+            >
+              <img src={featuredBlog.image} alt={featuredBlog.title} />
+              <div className="image-overlay-text">{featuredBlog.category}</div>
+            </Link>
+            <div className="featured-content">
+              <div className="category-tag">{featuredBlog.category}</div>
+              <Link
+                to={`/blogs/${featuredBlog.id}`}
+                style={{ textDecoration: "none" }}
+              >
+                <h2 className="sub-head-text">{featuredBlog.title}</h2>
+              </Link>
+              <p className="sub-para-text">{featuredBlog.excerpt}</p>
+
+              <div className="featured-footer">
+                <div className="author-info">
+                  <div className="author-avatar"></div>
+                  <span className="sub-para-text">
+                    {featuredBlog.author || "Author Name"}
+                  </span>
+                </div>
+                <span className="sub-para-text date-text">
+                  {featuredBlog.date}
+                </span>
+              </div>
+            </div>
+          </div>
         )}
+
+        {/* Blogs Grid */}
+        <div className="blogs-grid-wrapper">
+          {remainingBlogs.map((blog, index) => (
+            <div key={index} className="grid-blog-item">
+              <Link to={`/blogs/${blog.id}`} className="grid-image-container">
+                <img src={blog.image} alt={blog.title} />
+                <div className="image-overlay-text">{blog.category}</div>
+              </Link>
+              <div className="grid-content">
+                <div className="category-tag">{blog.category}</div>
+                <Link
+                  to={`/blogs/${blog.id}`}
+                  style={{ textDecoration: "none" }}
+                >
+                  <p className="sub-head-text">{blog.title}</p>
+                </Link>
+                <div className="grid-footer">
+                  <p className="sub-para-text date-text">{blog.date}</p>
+                </div>
+              </div>
+            </div>
+          ))}
+          {/* Empty slot to match the grid if needed */}
+          {remainingBlogs.length % 3 !== 0 && (
+            <div className="grid-blog-item empty"></div>
+          )}
+        </div>
       </div>
     </div>
   );
 };
-
-// Skeleton loader for blog cards
-const BlogCardSkeleton = () => (
-  <div className="inner-news-blogs-container">
-    <div className="blog-text">
-      <div className="skeleton-title"></div>
-      <div className="skeleton-title"></div>
-    </div>
-    <div className="image-hover-text-come">
-      <div className="inner-text-come">
-        <div>
-          <div className="skeleton-title"></div>
-          <div className="skeleton-excerpt"></div>
-        </div>
-        <div className="skeleton-link"></div>
-      </div>
-    </div>
-  </div>
-);
 
 export default Blogs;

@@ -3,7 +3,8 @@
 :root {
   --white-color: #ffffff;
   --black-color: #0a0a0a;
-  --yellow-color: #ffdd00;
+  --yellow-color: #f2ff00;
+  --red-color: #ff5400;
   --blue-color: #5900ea;
   --grey-color: #6b6b6b;
   --overlay-bg: rgba(0, 0, 0, 0.5);
@@ -100,7 +101,6 @@ h6 {
   line-height: 1.2em;
   letter-spacing: 0px;
   font-family: "Inter", sans-serif;
-  font-weight: 700; /* Bold headings by default per design */
 }
 
 .big-text-head {
@@ -122,7 +122,7 @@ h6 {
 
 /* Headings: 46px */
 .head-text {
-  font-size: 46px !important;
+  font-size: 40px !important;
   font-family: "Inter", sans-serif;
   font-weight: 600;
   color: var(--black-color);
@@ -131,7 +131,7 @@ h6 {
 }
 
 .head-text-white {
-  font-size: 46px !important;
+  font-size: 40px !important;
   font-family: "Inter", sans-serif;
   font-weight: 700;
   color: var(--white-color);
@@ -233,11 +233,9 @@ h6 {
 }
 
 .white-button:hover {
-  background-color: var(--black-color);
+  background-color: var(--progress-bg);
   /* dark on hover */
-  color: var(--white-color);
-  /* white text */
-  border-color: var(--black-color);
+  color: var(--black-color);
 }
 
 .blue-button {

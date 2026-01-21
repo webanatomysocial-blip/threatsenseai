@@ -45,7 +45,7 @@ const Header = ({ onSearch }) => {
           <Link to="/solutions" className="nav-link">
             Solutions
           </Link>
-          <Link to="/about-us" className="nav-link">
+          <Link to="/about" className="nav-link">
             About Us
           </Link>
           <Link to="/blogs" className="nav-link">
@@ -94,11 +94,7 @@ const Header = ({ onSearch }) => {
             >
               Solutions
             </Link>
-            <Link
-              to="/about-us"
-              className="mobile-nav-link"
-              onClick={toggleMenu}
-            >
+            <Link to="/about" className="mobile-nav-link" onClick={toggleMenu}>
               About Us
             </Link>
             <Link to="/blogs" className="mobile-nav-link" onClick={toggleMenu}>

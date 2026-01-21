@@ -45,44 +45,68 @@ $url = $defaultUrl;
 // Data from src/blogs/metadata.js
 $blogMetadata = [
     [
-        "id" => "AmbitionPost",
-        "title" => "Ambition Is Changing — And That's a Good Thing",
-        "slug" => "ambition-is-changing",
-        "metaDescription" => "Ambition is no longer just about climbing the corporate ladder. It's about finding purpose and redefining success on your own terms.",
-        "image" => "/assets/blogs/blogs-images/1.png",
-        "url" => $baseUrl . "/blogs/ambition-is-changing"
+        "id" => "FutureTrendsSaaS",
+        "title" => "Future Trends in SaaS: What's Next?",
+        "slug" => "future-trends-saas",
+        "metaDescription" => "Explore tomorrow's innovations, today.",
+        "image" => "/src/blogs/blogs-images/1.png",
+        "url" => $baseUrl . "/blogs/future-trends-saas"
     ],
     [
-        "id" => "FearFounderPost",
-        "title" => "The Fear Every Founder Has (But Nobody Talks About)",
-        "slug" => "fear-every-founder-has",
-        "metaDescription" => "Imposter syndrome and the fear of failure are common among founders. Learn why these feelings are normal and how to overcome them.",
-        "image" => "/assets/blogs/blogs-images/2.png",
-        "url" => $baseUrl . "/blogs/fear-every-founder-has"
+        "id" => "SecurityEssentialsSaaS",
+        "title" => "Security Essentials for Modern SaaS Products",
+        "slug" => "security-essentials-saas",
+        "metaDescription" => "Essential security practices for modern cloud products.",
+        "image" => "/src/blogs/blogs-images/1.png",
+        "url" => $baseUrl . "/blogs/security-essentials-saas"
     ],
     [
-        "id" => "FiguredOutPost",
-        "title" => "You Don't Need to Have It All Figured Out",
-        "slug" => "dont-need-figured-out",
-        "metaDescription" => "The pressure to have a perfect 5-year plan can be paralyzing. Discover the power of iteration and starting before you're ready.",
-        "image" => "/assets/blogs/blogs-images/3.jpeg",
-        "url" => $baseUrl . "/blogs/dont-need-figured-out"
+        "id" => "SaaSOnboarding",
+        "title" => "SaaS Onboarding That Delights Users",
+        "slug" => "saas-onboarding-delights",
+        "metaDescription" => "Creating a seamless first experience for your customers.",
+        "image" => "/src/blogs/blogs-images/1.png",
+        "url" => $baseUrl . "/blogs/saas-onboarding-delights"
     ],
     [
-        "id" => "TellStoryPost",
-        "title" => "How to Tell Your Story Without Feeling Like PR",
-        "slug" => "how-to-tell-story",
-        "metaDescription" => "Authenticity wins in modern marketing. Learn how to share your journey and connect with your audience without sounding corporate.",
-        "image" => "/assets/blogs/blogs-images/4.jpeg",
-        "url" => $baseUrl . "/blogs/how-to-tell-story"
+        "id" => "MustHaveIntegrations",
+        "title" => "Must-Have Integrations for Your SaaS stack",
+        "slug" => "must-have-integrations",
+        "metaDescription" => "The tools you need to connect for maximum efficiency.",
+        "image" => "/src/blogs/blogs-images/1.png",
+        "url" => $baseUrl . "/blogs/must-have-integrations"
+    ],
+    [
+        "id" => "ComparingPricingModels",
+        "title" => "Comparing SaaS Pricing Models: What Fits You?",
+        "slug" => "comparing-pricing-models",
+        "metaDescription" => "Finding the right value proposition for your product.",
+        "image" => "/src/blogs/blogs-images/1.png",
+        "url" => $baseUrl . "/blogs/comparing-pricing-models"
+    ],
+    [
+        "id" => "FiveReasonsProductivity",
+        "title" => "5 Reasons SaaS Improves Productivity",
+        "slug" => "five-reasons-productivity",
+        "metaDescription" => "How cloud tools are changing the way we work.",
+        "image" => "/src/blogs/blogs-images/1.png",
+        "url" => $baseUrl . "/blogs/five-reasons-productivity"
     ],
 ];
 
 // 2. Static Pages
 $staticPages = [
     '/blogs' => [
-        'title' => 'Blogs | Success Wikis',
+        'title' => 'Blogs | ThreatSenseAI',
         'description' => 'Read our latest blogs on purpose, resilience, and innovation.'
+    ],
+    '/about' => [
+        'title' => 'About Us | ThreatSenseAI',
+        'description' => 'Learn more about ThreatSenseAI and our mission.'
+    ],
+    '/contact' => [
+        'title' => 'Contact Us | ThreatSenseAI',
+        'description' => 'Get in touch with the ThreatSenseAI team.'
     ],
 ];
 
@@ -111,8 +135,10 @@ if (stripos($cleanPath, 'blogs/') === 0) {
     }
 }
 
-// Read index.html
-if (file_exists('index.html')) {
+// Read index.html (Check dist folder first for production, then root for dev)
+if (file_exists('dist/index.html')) {
+    $html = file_get_contents('dist/index.html');
+} elseif (file_exists('index.html')) {
     $html = file_get_contents('index.html');
 } else {
     die("index.html not found.");

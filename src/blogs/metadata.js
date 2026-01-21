@@ -6,40 +6,59 @@ import four from '../blogs/blogs-images/4.jpeg';
 
 export const blogMetadata = [
   {
-    id: "AmbitionPost",
-    title: "Ambition Is Changing — And That's a Good Thing",
-    slug: "ambition-is-changing",
-    metaDescription: "Ambition is no longer just about climbing the corporate ladder. It's about finding purpose and redefining success on your own terms.",
-    excerpt: "Ambition used to look like a straight line up a corporate ladder. Today, it’s a web of meaningful pursuits. We are redefining what it means to be ambitious.",
+    id: "FutureTrendsSaaS",
+    title: "Future Trends in SaaS: What's Next?",
+    category: "Trends",
+    slug: "future-trends-saas",
+    excerpt: "Explore tomorrow's innovations, today.",
+    image: one, // User requested 1.png for all for now
+    date: "Jan 19, 2026",
+    author: "Author Name",
+  },
+  {
+    id: "SecurityEssentialsSaaS",
+    title: "Security Essentials for Modern SaaS Products",
+    category: "Security",
+    slug: "security-essentials-saas",
+    excerpt: "Essential security practices for modern cloud products.",
     image: one,
-    date: "2025-08-30",
+    date: "Jan 12, 2026",
   },
   {
-    id: "FearFounderPost",
-    title: "The Fear Every Founder Has (But Nobody Talks About)",
-    slug: "fear-every-founder-has",
-    metaDescription: "Imposter syndrome and the fear of failure are common among founders. Learn why these feelings are normal and how to overcome them.",
-    excerpt: "There is a silent anxiety that runs through the veins of every founder. The fear of being found out. Imposter syndrome is real, and it is rampant.",
-    image: two,
-    date: "2025-09-02",
+    id: "SaaSOnboarding",
+    title: "SaaS Onboarding That Delights Users",
+    category: "Onboarding",
+    slug: "saas-onboarding-delights",
+    excerpt: "Creating a seamless first experience for your customers.",
+    image: one,
+    date: "Jan 13, 2026",
   },
   {
-    id: "FiguredOutPost",
-    title: "You Don't Need to Have It All Figured Out",
-    slug: "dont-need-figured-out",
-    metaDescription: "The pressure to have a perfect 5-year plan can be paralyzing. Discover the power of iteration and starting before you're ready.",
-    excerpt: "We live in a world that demands certainty. But the best things in life often come from the unknown. Pressure to have a 5-year plan can be paralyzing.",
-    image: three,
-    date: "2025-09-05",
+    id: "MustHaveIntegrations",
+    title: "Must-Have Integrations for Your SaaS stack",
+    category: "Integrations",
+    slug: "must-have-integrations",
+    excerpt: "The tools you need to connect for maximum efficiency.",
+    image: one,
+    date: "Jan 14, 2026",
   },
   {
-    id: "TellStoryPost",
-    title: "How to Tell Your Story Without Feeling Like PR",
-    slug: "how-to-tell-story",
-    metaDescription: "Authenticity wins in modern marketing. Learn how to share your journey and connect with your audience without sounding corporate.",
-    excerpt: "Marketing often feels transactional. But storytelling is human. When you share your authentic journey, you connect on a deeper level.",
-    image: four,
-    date: "2025-09-08",
+    id: "ComparingPricingModels",
+    title: "Comparing SaaS Pricing Models: What Fits You?",
+    category: "Pricing",
+    slug: "comparing-pricing-models",
+    excerpt: "Finding the right value proposition for your product.",
+    image: one,
+    date: "Jan 15, 2026",
+  },
+  {
+    id: "FiveReasonsProductivity",
+    title: "5 Reasons SaaS Improves Productivity",
+    category: "Productivity",
+    slug: "five-reasons-productivity",
+    excerpt: "How cloud tools are changing the way we work.",
+    image: one,
+    date: "Jan 16, 2026",
   }
 ];
 
@@ -50,8 +69,8 @@ if (typeof Image !== 'undefined') {
     img.src = blog.image;
     img.onload = () => console.log(`Successfully preloaded image: ${blog.image}`);
     img.onerror = () => {
-      // console.error(`Failed to preload image: ${blog.image}`);
-      // blog.image = "/images/placeholder.jpg"; // Optional fallback
+        console.error(`Failed to preload image: ${blog.image}`);
+        blog.image = "/images/placeholder.jpg"; // Optional fallback
     };
   });
 }

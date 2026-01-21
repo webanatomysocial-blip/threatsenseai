@@ -4,6 +4,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "../css/OurSolutions.css";
 import cardImage from "../assets/home/Our-Solutions/bg1.png";
 import { AiFillInfoCircle } from "react-icons/ai";
+import { Link } from "react-router-dom";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -144,6 +145,13 @@ const OurSolutions = () => {
                     </li>
                   ))}
                 </ul>
+                <Link
+                  to="/contact"
+                  className="white-button"
+                  style={{ marginTop: "20px" }}
+                >
+                  Explore More
+                </Link>
               </div>
               <div className="card-image-section">
                 <img

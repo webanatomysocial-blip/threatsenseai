@@ -8,6 +8,7 @@
   padding: 0 130px;
   /* border-bottom: 1px solid #ccc; */
   font-family: var(--font-primary);
+  background-color: white;
 }
 
 .header-left {
