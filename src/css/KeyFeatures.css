@@ -1,0 +1,88 @@
+/* src/css/KeyFeatures.css */
+
+.key-features-container {
+  padding: 80px 130px;
+  background-color: var(
+    --progress-bg
+  ); /* Assuming light bg based on image/context */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.key-features-header {
+  text-align: center;
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.key-features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 60px 40px; /* Vertical gap 60px, Horizontal 40px */
+  width: 100%;
+  max-width: 1200px;
+  background-color: #fff;
+  padding: 60px;
+  border-radius: 20px;
+  /* justify-items: center; */
+}
+
+.feature-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 15px;
+  opacity: 0; /* Initial state for GSAP */
+}
+
+.feature-icon-wrapper {
+  margin-bottom: 10px;
+  font-size: 24px;
+  color: #333; /* Dark icon color */
+}
+
+.feature-content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.feature-title {
+  margin: 0;
+  color: #000;
+}
+
+.feature-desc {
+  margin: 0;
+  color: #555;
+  max-width: 300px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 1024px) {
+  .key-features-container {
+    padding: 60px 40px;
+  }
+  .key-features-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .key-features-container {
+    padding: 60px 20px;
+  }
+  .key-features-grid {
+    grid-template-columns: 1fr;
+    padding: 30px;
+    gap: 40px;
+  }
+  .feature-card {
+    align-items: center;
+    text-align: center;
+  }
+}

@@ -1,0 +1,139 @@
+/* src/css/FAQ.css */
+.faq-container {
+  padding: 20px 0px 0px 0px;
+  background-color: var(--progress-bg);
+  width: 100%;
+}
+
+.faq-border-wrapper {
+  display: flex;
+  border-top: 1px solid #eaeaea;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.faq-left {
+  flex: 1;
+  padding: 60px 40px;
+  border-right: 1px solid #eaeaea;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.faq-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.faq-right {
+  flex: 1.5;
+  background-color: white;
+}
+
+.faq-item {
+  border-bottom: 1px solid #eaeaea;
+}
+
+.faq-item:last-child {
+  border-bottom: none;
+}
+
+.faq-header {
+  width: 100%;
+  padding: 25px 40px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  text-align: left;
+  overflow: hidden;
+}
+
+.faq-header-content {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  transition: transform 0.3s ease;
+  width: 100%;
+}
+
+.faq-item:hover .faq-header-content {
+  transform: translateX(10px);
+}
+
+.faq-plus-icon {
+  color: #ff5400;
+  font-size: 20px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+.faq-item.active .faq-plus-icon {
+  transform: rotate(45deg);
+}
+
+.faq-question {
+  font-size: 18px;
+  font-weight: 500;
+  color: #1a1a1a;
+}
+
+.faq-answer-wrapper {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.3s ease-out;
+  padding: 0 40px;
+}
+
+.faq-item.active .faq-answer-wrapper {
+  grid-template-rows: 1fr;
+  padding-bottom: 30px;
+}
+
+.faq-answer {
+  overflow: hidden;
+  font-size: 16px;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .faq-container {
+    padding: 60px 0px;
+  }
+
+  .faq-border-wrapper {
+    flex-direction: column;
+    border: none;
+  }
+
+  .faq-left {
+    padding: 0 0 40px 0;
+    border-right: none;
+    border-bottom: 1px solid #eaeaea;
+  }
+
+  .faq-right {
+    padding: 20px 0;
+  }
+
+  .faq-header {
+    padding: 25px 0;
+  }
+
+  .faq-answer-wrapper {
+    padding: 0;
+  }
+  .faq-item {
+    padding: 0px 10px;
+  }
+}

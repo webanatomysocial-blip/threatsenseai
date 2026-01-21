@@ -1,0 +1,232 @@
+/* src/css/CustomOptions.css */
+
+.custom-options-container {
+  padding: 30px 130px 80px 130px;
+  background-color: var(--progress-bg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 80vh;
+  /* margin-bottom: 200px; */
+}
+
+.custom-options-header {
+  margin-bottom: 60px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.custom-options-wrapper {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+  max-width: 1200px;
+  height: 350px;
+  margin-bottom: 40px; /* Space for pagination */
+}
+
+.option-card {
+  background-image: url(../assets/home/Custom-Options/bg.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 20px;
+  padding: 30px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: flex-grow 0.5s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  flex-grow: 1;
+  flex-basis: 0;
+}
+
+.option-card.active {
+  flex-grow: 2.5;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* Active BG Image */
+.active-bg-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  opacity: 0.5; /* Slight transparency so text is readable */
+}
+
+.option-content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  position: relative;
+  z-index: 1; /* Above bg image */
+}
+
+.option-title {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #333;
+  white-space: nowrap; /* Prevent wrap in collapsed state */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: white-space 0.3s;
+}
+
+.option-card.active .option-title {
+  white-space: nowrap; /* Wrap text when active */
+  font-size: 24px;
+}
+
+.option-desc {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 20px;
+  opacity: 0;
+  transition: opacity 0.3s ease 0.2s, transform 0.3s ease 0.2s;
+  display: none;
+  white-space: nowrap;
+}
+
+.option-card.active .option-desc {
+  opacity: 1;
+  transform: translateY(0);
+  display: block;
+}
+
+.option-image-container {
+  flex: 1;
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: transparent;
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+
+.option-image {
+  width: 200px;
+  height: 100px;
+  object-fit: contain;
+  object-position: left;
+  transition: transform 0.5s ease;
+}
+.option-card.active .option-image {
+  width: 300px;
+  height: 150px;
+}
+/* Pagination at Bottom */
+.options-pagination {
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+}
+
+.pagination-dot {
+  width: 40px;
+  height: 4px;
+  background-color: #e0e0e0;
+  border-radius: 2px;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+}
+
+.pagination-dot.active {
+  background-color: #d0d0d0; /* Base color when active but not filled */
+}
+
+.pagination-progress {
+  height: 100%;
+  width: 0%;
+  background-color: #000; /* Or var(--blue-color) */
+  animation: progressFill 4s linear forwards;
+}
+
+@keyframes progressFill {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .custom-options-container {
+    padding: 60px 20px;
+    height: auto; /* Allow container to grow */
+  }
+
+  .custom-options-wrapper {
+    flex-direction: column;
+    height: auto;
+    gap: 30px;
+  }
+
+  /* Force all cards to look "active" / expanded */
+  .option-card {
+    height: auto !important; /* Allow card to grow with content */
+    flex-basis: auto !important; /* Prevent flex-basis: 0 from collapsing height */
+    flex-grow: 0;
+    width: 100%;
+    margin-bottom: 0;
+    padding: 30px;
+  }
+
+  .option-card.active {
+    height: auto !important;
+    margin-bottom: 0;
+  }
+
+  /* Make sure title flows normally */
+  .option-title,
+  .option-card.active .option-title {
+    white-space: normal;
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+
+  /* Always show description */
+  .option-desc {
+    display: block !important;
+    opacity: 1 !important;
+    transform: none !important;
+    white-space: normal;
+    margin-bottom: 20px;
+  }
+
+  /* Always show image container */
+  .option-image-container {
+    display: flex;
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+  }
+
+  /* Size the image appropriately for the card */
+  .option-image,
+  .option-card.active .option-image {
+    width: 100%;
+    height: 180px;
+    object-fit: contain;
+  }
+
+  /* Hide pagination on mobile since we scroll */
+  .options-pagination {
+    display: none;
+  }
+}
