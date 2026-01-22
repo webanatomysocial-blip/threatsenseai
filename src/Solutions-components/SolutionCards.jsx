@@ -1,10 +1,17 @@
 import React from "react";
 import { BsArrowRight } from "react-icons/bs";
-import { FiCheckCircle } from "react-icons/fi";
 import "../css/Solutions-pages.css";
 import bgImage from "../assets/home/Our-Solutions/bg1.png";
+import { FaGlobe } from "react-icons/fa";
 
-export default function SolutionCards() {
+export default function SolutionCards({ items, label, title, marginTop }) {
+  const defaultLabel = "Why MCAAT?";
+  const defaultTitle = (
+    <>
+      It goes beyond basic <br /> logging
+    </>
+  );
+
   const cardData = [
     {
       title: "DDL & DML Events",
@@ -41,9 +48,21 @@ export default function SolutionCards() {
     },
   ];
 
+  const displayItems = items || cardData;
+
   return (
-    <section className="solution-cards-container">
-      {cardData.map((card, index) => (
+    <section
+      className="solution-cards-container"
+      style={{ marginTop: marginTop }}
+    >
+      <div className="capabilities-header">
+        <div className="sub-para-text security-label">
+          <FaGlobe size={16} style={{ marginRight: "4px" }} />{" "}
+          {label || defaultLabel}
+        </div>
+        <h2 className="head-text">{title || defaultTitle}</h2>
+      </div>
+      {displayItems.map((card, index) => (
         <div className="solution-card-row" key={index}>
           <div className="solution-card-text">
             <h3>{card.title}</h3>

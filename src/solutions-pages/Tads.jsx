@@ -7,9 +7,6 @@ import {
   FaTh,
   FaLock,
   FaBullseye,
-  FaList,
-  FaRobot,
-  FaMagic,
   FaTimes,
   FaCheck,
   FaGlobe,
@@ -19,8 +16,39 @@ import UseCases from "../Solutions-components/UseCases";
 import Cta from "../components/Cta";
 import bg from "../assets/home/tab-section/bg-image.png";
 import ComparisonTable from "../Solutions-components/ComparisonTable";
+import SolutionCarousel from "../Solutions-components/SolutionCarousel";
+import img from "../assets/home/Custom-Options/2.png";
+import img1 from "../assets/home/tab-section/1.jpg";
+import img2 from "../assets/home/tab-section/2.jpg";
+import img3 from "../assets/home/tab-section/3.jpg";
 
 export default function Tads() {
+  const content = [
+    {
+      title: "Minimize DB Footprint",
+      description:
+        "Delivers deep visibility without heavy logging—reducing storage usage while preserving SAP performance.",
+      img: img,
+    },
+    {
+      title: "Real-time Alerts & Incident Creation",
+      description:
+        "Instantly triggers alerts and service tickets for non-compliant actions like audit log tampering or unauthorized changes.",
+      img: img1,
+    },
+    {
+      title: "Rule 11(g) Compliance",
+      description:
+        "Automatically captures all DDL audit requirements across SAP systems to ensure full regulatory adherence.",
+      img: img2,
+    },
+    {
+      title: "Seamless Integration",
+      description:
+        "Integrates effortlessly with your existing SAP landscape without requiring major architectural changes.",
+      img: img3,
+    },
+  ];
   const core = [
     {
       icon: <FaTh />,
@@ -96,6 +124,13 @@ export default function Tads() {
     },
   ];
 
+  const useCasesList = [
+    "Protect critical SAP data from insider threats and data leaks",
+    "Real-time visibility into sensitive data access and exports",
+    "Automated blocking of non-compliant actions and audit log tampering",
+    "Ensure compliance with Rule 11(g) and other regulatory requirements",
+  ];
+
   const headerRef = useRef(null);
 
   useEffect(() => {
@@ -147,7 +182,26 @@ export default function Tads() {
         gridTemplateColumns="repeat(3, 1fr)"
       />
       <RisingThreats />
-      <SolutionCards />
+      <SolutionCarousel
+        label="Why TADS?"
+        title={
+          <>
+            Built for Data <br /> Protection
+          </>
+        }
+        data={content}
+        paddingTop="120px"
+      />
+      <SolutionCards
+        items={content}
+        label="Why TADS?"
+        title={
+          <>
+            Built for Data <br /> Protection
+          </>
+        }
+        marginTop="0px"
+      />
 
       <CapabilitiesSection items={core} gridTemplateColumns="repeat(2, 1fr)" />
 
@@ -212,7 +266,16 @@ export default function Tads() {
         items={Benefits}
         gridTemplateColumns="repeat(2, 1fr)"
       />
-      <UseCases />
+      <UseCases
+        label="Use Cases"
+        title={
+          <>
+            Where ThreatSense <br /> TADS Delivers <br /> Immediate Value
+          </>
+        }
+        list={useCasesList}
+        image={img1}
+      />
       <Cta
         title="Stay Ahead of Threats with
 AI-Powered Security"

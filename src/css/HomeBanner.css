@@ -45,6 +45,7 @@
 .banner-heading {
   margin-bottom: 20px;
   white-space: wrap;
+  font-weight: 600;
 }
 
 .banner-subtext {
@@ -103,6 +104,7 @@
 .word-span {
   display: inline-block;
   margin-right: 0.25em;
+  font-weight: 600 !important;
 }
 @media (max-width: 768px) {
   .banner-content {
@@ -110,7 +112,7 @@
     width: 100%;
   }
   .home-banner-container {
-    padding: 0px 20px;
+    padding: 60px 20px;
   }
   .video-placeholder {
     width: 100%;

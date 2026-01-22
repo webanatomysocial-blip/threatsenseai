@@ -5,7 +5,7 @@ const CapabilitiesSection = ({
   items,
   title = "What it brings?",
   label = "Capabilities",
-  icon = <FaGlobe size={16} style={{ marginRight: "8px" }} />,
+  icon = <FaGlobe size={16} style={{ marginRight: "4px" }} />,
   gridTemplateColumns,
   border,
   borderRadius,
@@ -21,7 +21,9 @@ const CapabilitiesSection = ({
 
       <div
         className="capabilities-grid"
-        style={gridTemplateColumns ? { gridTemplateColumns } : {}}
+        style={
+          gridTemplateColumns ? { "--grid-cols": gridTemplateColumns } : {}
+        }
       >
         {items.map((item, index) => (
           <div

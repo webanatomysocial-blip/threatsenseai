@@ -57,7 +57,7 @@
 
 .benefit-item .sub-para-text {
   color: var(--black-color);
-  font-size: 18px;
+  font-size: 16px;
 }
 
 /* Right Image */
@@ -117,7 +117,7 @@
 
 .capabilities-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: var(--grid-cols, repeat(3, 1fr));
   gap: 20px;
   width: 100%;
 }
@@ -145,14 +145,14 @@
 }
 
 .capability-card .sub-head-text {
-  font-size: 20px !important;
-  line-height: 1.4em;
+  font-size: 24px !important;
+  line-height: 1.4;
 }
 
 .capability-card .sub-para-text {
-  font-size: 15px;
+  font-size: 16px;
   color: #666;
-  line-height: 1.6em;
+  line-height: 1.6;
   padding-bottom: 0;
 }
 
@@ -162,7 +162,7 @@
     padding: 60px 20px;
   }
   .capabilities-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
   }
 }
 

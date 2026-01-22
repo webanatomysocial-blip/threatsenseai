@@ -80,7 +80,7 @@ const OurSolutions = () => {
       ],
       image: cardImage, // Using placeholder
       reverse: false,
-      link: "/tads",
+      link: "/mcaat",
     },
     {
       title: "Data Guard",
@@ -105,7 +105,7 @@ const OurSolutions = () => {
       ],
       image: cardImage,
       reverse: false,
-      link: "/tads",
+      link: "/siem-soar",
     },
   ];
 

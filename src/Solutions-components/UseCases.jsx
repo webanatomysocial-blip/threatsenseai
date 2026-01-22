@@ -2,12 +2,13 @@ import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { BsCheckLg } from "react-icons/bs";
-import img from "../assets/home/tab-section/1.jpg";
+import defaultImg from "../assets/home/tab-section/1.jpg";
 import "../css/Solutions-pages.css";
+import { FaGlobe } from "react-icons/fa";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const UseCases = () => {
+const UseCases = ({ label, title, list, image }) => {
   const containerRef = useRef(null);
   const imgRef = useRef(null);
 
@@ -32,31 +33,35 @@ const UseCases = () => {
     );
   }, []);
 
-  const useCasesList = [
+  const defaultUseCasesList = [
     "Detect insider threats such as privilege abuse, suspicious logins, or policy violations in SAP",
     "Respond automatically to critical incidents like audit log tampering or unauthorized changes",
     "Correlate SAP and non-SAP events for full attack-chain visibility",
     "Support SOC and audit teams with real-time alerts, evidence, and incident timelines",
   ];
 
+  const displayList = list || defaultUseCasesList;
+  const displayLabel = label || "Use Cases";
+  const displayTitle = title || (
+    <>
+      Where ThreatSense <br />
+      SIEM & SOAR Delivers <br />
+      Immediate Value
+    </>
+  );
+  const displayImage = image || defaultImg;
+
   return (
     <div className="use-cases-container" ref={containerRef}>
       <div className="uc-text-side">
-        <div className="uc-label">
-          <span role="img" aria-label="icon">
-            🛡️
-          </span>{" "}
-          Use Cases
+        <div className="sub-para-text security-label">
+          <FaGlobe size={16} style={{ marginRight: "4px" }} /> {displayLabel}
         </div>
 
-        <h2 className="uc-title">
-          Where ThreatSense <br />
-          SIEM & SOAR Delivers <br />
-          Immediate Value
-        </h2>
+        <h2 className="head-text">{displayTitle}</h2>
 
         <ul className="uc-list">
-          {useCasesList.map((item, index) => (
+          {displayList.map((item, index) => (
             <li key={index} className="uc-list-item">
               <div className="uc-check-icon">
                 <BsCheckLg />
@@ -73,7 +78,7 @@ const UseCases = () => {
         <div className="uc-img-wrapper">
           <img
             ref={imgRef}
-            src={img}
+            src={displayImage}
             alt="Use Cases Meeting"
             className="uc-image"
           />

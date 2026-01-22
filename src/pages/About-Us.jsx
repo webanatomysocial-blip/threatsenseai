@@ -61,7 +61,7 @@ export default function AboutUs() {
   return (
     <div>
       <AboutBanner />
-      <LogoCarousel />
+      {/* <LogoCarousel /> */}
       <AboutStats />
       <HowItWorks />
       <Benefits />
