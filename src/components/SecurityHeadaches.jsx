@@ -1,21 +1,39 @@
 import React from "react";
 import "../css/SecurityHeadaches.css";
 import securityVideo from "../assets/home/Security-Headaches/Security-video.mp4";
-// If you have a specific icon for the label, import it here, otherwise use valid JSX
+import { MdSecurity, MdCheckCircle } from "react-icons/md";
 
 const SecurityHeadaches = () => {
   const headaches = [
-    "Slow Incident Response",
-    "Hidden Privileged Users",
-    "Configuration Drift",
-    "Unmonitored APIs",
-    "No Anomaly Detection",
-    "False Positive Fatigue",
-    "No Behavior Analytics",
-    "Vendor Access Blind Spots",
-    "Lack of Real-Time Threat Alerts",
-    "Unclear Value Proposition",
-    "Poor Access Controls",
+    "No real-time threat detection",
+    "Delayed incident response",
+    "Hidden privileged user access",
+    "Excessive admin permissions",
+    "Inactive but enabled user accounts",
+    "Vendor and third-party access risks",
+    "Orphaned and shared accounts",
+    "Configuration drift across systems",
+    "No centralized security visibility",
+    "Incomplete audit trails",
+    "Lack of contextual risk scoring",
+    "Reactive security posture",
+    "Insider-driven data leaks",
+    "No visibility into data movement",
+    "Sensitive data copied via browsers",
+    "GenAI tools exposing enterprise data",
+    "Excessive internal data access",
+    "Uncontrolled data downloads",
+    "Data shared outside approved channels",
+    "Lack of data-level access controls",
+    "Manual data privacy reporting",
+    "Sensitive data in non-production systems",
+    "Attacks without malware signatures",
+    "Data loss without security alerts",
+    "Compliance failures discovered too late",
+    "Trusted users, untrusted actions",
+    "Data leaks without attacks",
+    "Access without accountability",
+    "Alerts without context",
   ];
 
   // Duplicate the list for infinite scroll effect
@@ -25,13 +43,13 @@ const SecurityHeadaches = () => {
     <div className="security-headaches-container">
       {/* Label */}
       <div className="security-label">
-        {/* Simple icon placeholder or use text */}
-        <span style={{ fontSize: "18px" }}>🛡️</span> Security Headaches
+        <MdSecurity size={18} style={{ marginRight: "4px" }} /> Cybersecurity &
+        Data Security Reality
       </div>
 
       {/* Header */}
       <h2 className="head-text security-header">
-        The Security Problems <br /> Keeping you down!!
+        Security Risks That Threaten <br /> Your Systems — and Your Data!
       </h2>
 
       {/* Marquee Section */}
@@ -40,7 +58,11 @@ const SecurityHeadaches = () => {
         <div className="marquee-track">
           {marqueeItems.map((item, index) => (
             <div key={`row1-${index}`} className="marquee-item">
-              <span className="check-icon">✓</span> {item}
+              <MdCheckCircle
+                style={{ marginRight: "4px", color: "#000" }}
+                size={16}
+              />{" "}
+              {item}
             </div>
           ))}
         </div>
@@ -49,7 +71,11 @@ const SecurityHeadaches = () => {
         <div className="marquee-track reverse">
           {marqueeItems.map((item, index) => (
             <div key={`row2-${index}`} className="marquee-item">
-              <span className="check-icon">✓</span> {item}
+              <MdCheckCircle
+                style={{ marginRight: "4px", color: "#000" }}
+                size={16}
+              />{" "}
+              {item}
             </div>
           ))}
         </div>
@@ -58,7 +84,11 @@ const SecurityHeadaches = () => {
         <div className="marquee-track">
           {marqueeItems.map((item, index) => (
             <div key={`row3-${index}`} className="marquee-item">
-              <span className="check-icon">✓</span> {item}
+              <MdCheckCircle
+                style={{ marginRight: "4px", color: "#000" }}
+                size={16}
+              />{" "}
+              {item}
             </div>
           ))}
         </div>

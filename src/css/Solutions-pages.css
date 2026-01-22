@@ -113,6 +113,7 @@
   background-color: transparent;
   padding: 0;
   border-radius: 0;
+  overflow: visible;
   transition: none;
 }
 
@@ -130,7 +131,7 @@
   background: none;
   border: none;
   text-align: left;
-  overflow: hidden;
+  overflow: visible;
   justify-content: flex-start; /* Left align */
 }
 
@@ -208,7 +209,7 @@
   }
 
   .accordion-container {
-    flex-direction: column;
+    flex-direction: column-reverse;
     gap: 30px;
   }
 
@@ -344,7 +345,9 @@
 /* Comparison Table Section */
 .comparison-section {
   padding: 100px 130px;
-  background-color: #f9f9f9; /* Match background or use --progress-bg if preferred */
+  background-color: var(
+    --progress-bg
+  ); /* Match background or use --progress-bg if preferred */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -487,7 +490,7 @@
 
 @media (max-width: 768px) {
   .solution-carousel-wrapper-mcaat {
-    padding: 60px 20px;
+    padding: 60px 20px 60px 20px !important;
   }
 
   .solution-carousel-wrapper-mcaat .mySwiper {
@@ -747,8 +750,16 @@
   display: flex;
   background-color: var(--progress-bg);
 }
+.mcaat-banner-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+}
 .mcaat-banner-content .sub-para-text {
   width: 40%;
+  text-align: center;
 }
 
 @media (max-width: 768px) {
@@ -794,7 +805,7 @@
 
   .solution-card-row,
   .solution-card-row:nth-child(even) {
-    flex-direction: column;
+    flex-direction: column-reverse !important;
     gap: 40px;
   }
 
@@ -885,21 +896,26 @@
     padding: 60px 20px;
     gap: 50px;
   }
+  .solution-cards-container .capabilities-header {
+    margin-bottom: -50px;
+  }
 
   .solution-card-row {
-    flex-direction: column !important;
+    flex-direction: column-reverse !important;
     gap: 30px;
   }
 
   .solution-card-text {
-    text-align: center;
-    align-items: center;
+    text-align: left;
+    align-items: start;
     display: flex;
     flex-direction: column;
   }
 
   .solution-card-visual img {
     height: 300px;
+    width: 100%;
+    object-fit: contain;
   }
 
   .Solution-cap-grid {

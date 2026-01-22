@@ -72,40 +72,46 @@ const OurSolutions = () => {
   const solutions = [
     {
       title: "MCAAT",
-      desc: "Ensure continuous compliance with MCA Rule 11(g) by tracking and securing critical database activities within your SAP systems.",
+      desc: "Compliance is not documentation. It’s control. MCAAT ensures audit trails in SAP cannot be disabled, altered, or bypassed.",
+      subheading: "Built for Rule 11(g) Enforcement",
       features: [
-        "Rule 11(g) Compliance Made Simple",
-        "Secure and Enforce Audit Policies",
-        "Complete Change Visibility",
+        "Rule 11(g) compliance made enforceable",
+        "Secure audit logging at source",
+        "Audit-ready reporting on demand",
       ],
-      image: cardImage, // Using placeholder
+      image: cardImage, // Using placeholder (unchanged)
       reverse: false,
-      link: "/mcaat",
+      link: "/mcaat", // unchanged
+      btn: "Explore MCAAT",
     },
     {
-      title: "Data Guard",
-      desc: "Prevent unauthorized data access and leakage with intelligent monitoring and real-time policy enforcement.",
+      title: "ThreatSense AI Data Security (TADS)",
+      desc: "Prevent Data Leaks Before They Happen. Most data leaks are caused by trusted users. TADS enforces real-time controls to stop data misuse, unauthorized access, and silent exfiltration across endpoints and applications.",
+      subheading: "Prevent Data Leaks Before They Happen",
       features: [
-        "USB Control",
-        "Screenshot Protection",
-        "Watermarking & Control",
-        "Anti-Debugging & Tamper Protection",
+        "Real-time data access enforcement",
+        "Insider threat prevention controls",
+        "Policy-driven data protection",
+        "Tamper-resistant security layer",
       ],
-      image: cardImage,
+      image: cardImage, // unchanged
       reverse: true,
-      link: "/tads",
+      link: "/tads", // unchanged
+      btn: "Explore TADS",
     },
     {
-      title: "ThreatSense SIEM & SOAR",
-      desc: "Automate threat detection and response across SAP and non-SAP systems with an AI-driven security platform.",
+      title: "SIEM & SOAR",
+      desc: "AI-Driven Threat Detection & Response. ThreatSense AI SIEM & SOAR delivers real-time threat visibility and automated incident response across SAP and non-SAP environments.",
+      subheading: "AI-Driven Threat Detection & Response",
       features: [
-        "Continuously tracks and analyzes SAP® security",
-        "Instant alerts on potential threats and vulnerabilities",
-        "Automates incident handling with AI-driven remediation",
+        "Continuous monitoring of SAP® and enterprise security events",
+        "Real-time alerts with contextual risk insights",
+        "Automated incident response and remediation workflows",
       ],
-      image: cardImage,
+      image: cardImage, // unchanged
       reverse: false,
-      link: "/siem-soar",
+      link: "/siem-soar", // unchanged
+      btn: "Explore SIEM & SOAR",
     },
   ];
 
@@ -121,10 +127,16 @@ const OurSolutions = () => {
             justifyContent: "center",
           }}
         >
-          <AiFillInfoCircle color="black" size={18} /> Our Solutions
+          <AiFillInfoCircle
+            color="black"
+            size={18}
+            style={{ marginRight: "4px" }}
+          />{" "}
+          Our Solutions
         </div>
         <h2 className="head-text">
-          Explore our future ready <br /> Cybersecurity solutions
+          Explore cybersecurity solutions <br /> built to protect enterprise
+          data
         </h2>
       </div>
 
@@ -140,6 +152,12 @@ const OurSolutions = () => {
             >
               <div className="card-content">
                 <h3 className="head-text">{solution.title}</h3>
+                <h4
+                  className="sub-para-text"
+                  style={{ fontSize: "18px", fontWeight: "bold" }}
+                >
+                  {solution.subheading}
+                </h4>
                 <p className="solution-desc para-text">{solution.desc}</p>
                 <ul className="features-list">
                   {solution.features.map((feature, i) => (
@@ -153,7 +171,7 @@ const OurSolutions = () => {
                   className="white-button"
                   style={{ marginTop: "20px" }}
                 >
-                  Explore More
+                  {solution.btn}
                 </Link>
               </div>
               <div className="card-image-section">

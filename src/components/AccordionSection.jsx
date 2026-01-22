@@ -42,10 +42,9 @@ const AccordionSection = () => {
             style={{
               display: "flex",
               alignItems: "center",
-              gap: "4px",
             }}
           >
-            <FaGlobe size={16} />
+            <FaGlobe size={16} style={{ marginRight: "4px" }} />
             Capabilities
           </div>
           <div>

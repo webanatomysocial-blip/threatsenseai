@@ -34,7 +34,8 @@ const AboutStats = () => {
     <div className="about-stats-section">
       <div className="about-stats-header">
         <div className="sub-para-text security-label">
-          <AiFillQuestionCircle size={18} /> Why Now?
+          <AiFillQuestionCircle size={18} style={{ marginRight: "4px" }} /> Why
+          Now?
         </div>
         <h2 className="head-text">
           Why do you need SAP® <br /> Cybersecurity?

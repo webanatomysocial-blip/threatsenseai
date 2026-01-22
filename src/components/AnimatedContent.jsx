@@ -31,11 +31,16 @@ const AnimatedContent = ({
     const el = ref.current;
     if (!el) return;
 
-    let scrollerTarget =
-      container || document.getElementById("snap-main-container") || null;
+    let scrollerTarget = container || window;
+
+    // Attempt to find snap container if no container provided, but fallback to window
+    if (!container) {
+      const snapContainer = document.getElementById("snap-main-container");
+      if (snapContainer) scrollerTarget = snapContainer;
+    }
 
     if (typeof scrollerTarget === "string") {
-      scrollerTarget = document.querySelector(scrollerTarget);
+      scrollerTarget = document.querySelector(scrollerTarget) || window;
     }
 
     const axis = direction === "horizontal" ? "x" : "y";
@@ -46,7 +51,7 @@ const AnimatedContent = ({
       [axis]: offset,
       scale,
       opacity: animateOpacity ? initialOpacity : 1,
-      visibility: "visible",
+      visibility: "visible", // Ensure visible once GSAP takes over
     });
 
     const tl = gsap.timeline({
@@ -78,7 +83,8 @@ const AnimatedContent = ({
 
     const st = ScrollTrigger.create({
       trigger: el,
-      scroller: scrollerTarget,
+      // If scrollerTarget is window, don't pass 'scroller' property to let ScrollTrigger use default
+      scroller: scrollerTarget === window ? null : scrollerTarget,
       start: `top ${startPct}%`,
       once: true,
       onEnter: () => tl.play(),
@@ -111,7 +117,13 @@ const AnimatedContent = ({
     <div
       ref={ref}
       className={className}
-      style={{ visibility: "hidden" }}
+      // Removed inline visibility: hidden to allow CSS or expected behavior if JS fails,
+      // though GSAP set above handles it. Best practice: use class or style that GSAP overrides?
+      // Actually, keep it but ensure GSAP 'set' runs quickly.
+      // If we remove it, we might see a flash of unstyled content.
+      // But if GSAP fails, we see nothing.
+      // Compromise: opacity 0 via style is safer than visibility hidden.
+      style={{ opacity: animateOpacity ? initialOpacity : 1 }}
       {...props}
     >
       {children}

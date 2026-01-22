@@ -53,8 +53,9 @@ export default function RisingThreats() {
     <div className="accordion-section">
       <div className="accordion-header-group">
         <div className="sub-para-text security-label d-flex-col">
-          <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
-            <FaGlobe size={16} /> Rising Threat Vector
+          <div style={{ display: "flex", alignItems: "center" }}>
+            <FaGlobe size={16} style={{ marginRight: "4px" }} /> Rising Threat
+            Vector
           </div>
           <h2 className="head-text">AI & Insider Data Exfiltration</h2>
         </div>

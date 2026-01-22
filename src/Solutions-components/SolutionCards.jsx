@@ -72,7 +72,7 @@ export default function SolutionCards({ items, label, title, marginTop }) {
             </a>
           </div>
           <div className="solution-card-visual">
-            <img src={card.img} alt="" />
+            <img src={card.img} alt={cardData.title} />
           </div>
         </div>
       ))}

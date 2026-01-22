@@ -46,18 +46,33 @@
 }
 
 .nav-link {
+  position: relative; /* ← very important for absolute child */
   text-decoration: none;
   color: #000;
   font-weight: 600;
   font-size: 16px;
-  transition: color 0.3s;
+  transition: color 0.3s ease;
+  display: inline-block; /* or block/flex depending on layout */
+}
+
+.nav-link::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 1px;
+  bottom: -2px; /* more reliable than top:100% */
+  left: 0;
+  background-color: #555;
+  transition: width 0.3s ease; /* smooth animation */
 }
 
 .nav-link:hover {
-  color: #555;
-  text-decoration: none;
+  color: #555; /* text color change */
 }
 
+.nav-link:hover::before {
+  width: 100%; /* this actually creates the underline */
+}
 .header-right {
   display: flex;
   align-items: center;

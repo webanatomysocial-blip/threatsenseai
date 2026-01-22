@@ -47,7 +47,7 @@ export default function FAQ() {
       <div className="faq-border-wrapper">
         <div className="faq-left">
           <div className="sub-para-text faq-label">
-            <AiFillFileText color="#000" /> FAQ
+            <AiFillFileText color="#000" style={{ marginRight: "4px" }} /> FAQ
           </div>
           <h1 className="head-text">Frequently asked questions</h1>
         </div>

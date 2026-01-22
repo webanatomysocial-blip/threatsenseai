@@ -38,14 +38,14 @@ export default function ComparisonTable() {
     <section className="comparison-section">
       <div className="capabilities-header">
         <div className="sub-para-text security-label">
-          <FaGlobe size={16} style={{ marginRight: "8px" }} /> Comparison
+          <FaGlobe size={16} style={{ marginRight: "4px" }} /> Comparison
         </div>
         <h2 className="head-text">TADS vs Traditional DLP</h2>
       </div>
 
       <div className="comparison-table-container">
         {/* Sticky Header */}
-        <div className="comp-header-row sticky-header">
+        <div className="comp-header-row ">
           <div className="comp-cell col-capability header-cell-main">
             <h3 className="head-text" style={{ color: "var(--red-color)" }}>
               Capability

@@ -11,7 +11,7 @@ const Blogs = ({ limit = "all" }) => {
     // For now, we take from metadata directly as requested
     // In a real app, we might still want the dynamic loading for the full post content
     const sorted = [...blogMetadata].sort(
-      (a, b) => new Date(b.date) - new Date(a.date)
+      (a, b) => new Date(b.date) - new Date(a.date),
     );
     setBlogs(limit === "all" ? sorted : sorted.slice(0, limit));
   }, [limit]);
@@ -25,7 +25,7 @@ const Blogs = ({ limit = "all" }) => {
     <div className="whole-blog-section">
       <div className="blogs-header">
         <div className="sub-para-text security-label">
-          <AiFillMessage />
+          <AiFillMessage style={{ marginRight: "4px" }} />
           Blogs
         </div>
         <h1 className="head-text">
