@@ -14,7 +14,7 @@ const OurSolutions = () => {
 
   useEffect(() => {
     let mm = gsap.matchMedia();
-
+3
     mm.add(
       "(min-width: 769px)",
       () => {
