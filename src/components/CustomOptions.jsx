@@ -12,20 +12,20 @@ const CustomOptions = () => {
   const options = [
     {
       id: 0,
-      title: "Tag and Track AI Assets with Clarity",
-      desc: "Define routes, fallbacks, and checks that match your flow.",
+      title: "Tag and Track Threat Assets with Precision",
+      desc: "Identify, classify, and monitor critical assets, users, and data contextually.",
       image: img1,
     },
     {
       id: 1,
-      title: "Compose Orchestration Runbooks Fast",
-      desc: "Drag & Drop Reusable Components to build complex workflows instantly.",
+      title: "Design Automated Response Runbooks Faster",
+      desc: "Create customizable SOAR playbooks automating investigation, containment, and remediation systems.",
       image: img2,
     },
     {
       id: 2,
-      title: "Share Reviews Safely with Guardrails",
-      desc: "Ensure every AI interaction is monitored and validated before release.",
+      title: "Simplify SAP® Security Operations",
+      desc: "Continuously monitor SAP environments, correlate risks, and act early proactively.",
       image: img1,
     },
   ];
@@ -64,7 +64,7 @@ const CustomOptions = () => {
           <AiFillAppstore /> Custom Options
         </div>
         <h2 className="head-text">
-          Customize Threat <br /> Intelligence Your Way
+         Build Threat Intelligence <br></br> Around Your Business, Not the Tool
         </h2>
       </div>
 

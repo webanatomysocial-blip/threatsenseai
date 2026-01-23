@@ -97,13 +97,13 @@ const HomeBanner = () => {
       <div className="banner-content">
         {/* Badge */}
         <div className="banner-badge">
-          Protect Enterprise Data Before It Becomes a Breach.
+          Protect Enterprise Data Before It Becomes a Breach
         </div>
 
         {/* Heading */}
         <h1 className="big-text-head banner-heading" ref={headingRef}>
           {renderSplitText(
-            "Meet your new AI driven \n  Cybersecurity solutions.",
+            "Meet your new AI driven \n  Cybersecurity solutions",
           )}
         </h1>
 
@@ -112,7 +112,7 @@ const HomeBanner = () => {
           <p className="para-text banner-subtext">
             AI-powered cybersecurity platform designed to prevent data leaks,
             insider threats, and compliance failures across enterprise systems,
-            browsers, and AI tools.
+            browsers, and AI tools
           </p>
 
           {/* Buttons */}

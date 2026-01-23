@@ -10,30 +10,30 @@ const ResultsComp = () => {
   const results = [
     {
       id: 1,
-      title: "96% Reduction in DB Log Growth",
+      title: "100% Continuous MCA Rule 11(g) Coverage",
       description:
-        "Captures only high-value change events, drastically cutting database log volume versus full DDL/DML logging.",
+        "Ensures audit logs, policies, and controls are always enabled and enforced—eliminating blind spots caused by manual configuration gaps or accidental disabling",
       img: img1,
     },
     {
       id: 2,
-      title: "Zero Performance Degradation",
+      title: "Faster Audits with Ready-to-Use Evidence",
       description:
-        "Operates at database level without impacting SAP transaction speed or system performance.",
+        "Provides centralized, auditor-ready dashboards with timelines and tamper-proof evidence—cutting audit response time and minimizing back-and-forth with compliance teams",
       img: img2,
     },
     {
       id: 3,
       title: "Real-Time Audit Policy Enforcement",
       description:
-        "Automatically enforces audit policies and restores them instantly if disabled or altered.",
+        "Continuously monitors audit policies and log configurations, automatically reinstating them the moment they are altered, disabled, or deleted—without manual intervention",
       img: img3,
     },
     {
       id: 4,
-      title: "Always-On Compliance",
+      title: "Tamper-Proof Audit Evidence",
       description:
-        "Maintains continuous regulatory compliance with minimal manual intervention from IT teams.",
+        "Protects audit logs and compliance evidence from unauthorized modification, ensuring data integrity and defensibility during statutory, internal, and forensic audits",
       img: img4,
     },
   ];

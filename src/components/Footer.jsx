@@ -29,9 +29,7 @@ const Footer = () => {
               className="para-text-white"
               style={{ maxWidth: "400px", color: "#ccc" }}
             >
-              ThreatSenseAI is revolutionizing cybersecurity by seamlessly
-              integrating advanced SIEM and SOAR capabilities into one powerful
-              solution.
+             ThreatSense AI helps enterprises protect sensitive data from insider threats, misuse, and breaches by combining cybersecurity, data security, and automated response into a single platform
             </p>
 
             <div className="footer-socials">

@@ -80,13 +80,12 @@ export default function AboutUs() {
       <AccordionSection />
       <OurTeam />
       <Cta
-        title="Stay Ahead of Threats with
-AI-Powered Security"
-        description="Protect your SAP® environments with real-time monitoring, 
-        automated response, and deep threat analytics. Experience 
-        the power of ThreatSense AI today!"
+        title="Secure Your SAP Data. 
+        Everywhere It Moves."
+        description="Prevent data leaks across SAP, browsers, GenAI tools, and third-party access 
+        with real-time enforcement, masking, and continuous compliance visibility."
         backgroundImage={bg}
-        buttonText="Get Started"
+        buttonText="Book a Demo"
       />
     </div>
   );
