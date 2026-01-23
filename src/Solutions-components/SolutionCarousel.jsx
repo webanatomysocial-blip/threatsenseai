@@ -14,7 +14,7 @@ export default function SolutionCarousel({ label, title, data, paddingTop }) {
   const defaultLabel = "Why MCAAT?";
   const defaultTitle = (
     <>
-      It goes beyond basic <br /> logging
+      We don’t just log - We secure - beyond basic logging
     </>
   );
 

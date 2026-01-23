@@ -2,10 +2,13 @@ import "../css/About-Us.css";
 import { FaGlobe } from "react-icons/fa";
 
 const CapabilitiesSection = ({
+  header = {
+    icon: <FaGlobe size={16} style={{ marginRight: "4px" }} />,
+    label: "Capabilities",
+    title: "What it brings?",
+    subtitle: "",
+  },
   items,
-  title = "What it brings?",
-  label = "Capabilities",
-  icon = <FaGlobe size={16} style={{ marginRight: "4px" }} />,
   gridTemplateColumns,
   border,
   borderRadius,
@@ -14,9 +17,14 @@ const CapabilitiesSection = ({
     <section className="capabilities-section">
       <div className="capabilities-header">
         <div className="sub-para-text security-label">
-          {icon} {label}
+          {header.icon} {header.label}
         </div>
-        <h2 className="head-text">{title}</h2>
+
+        <h2 className="head-text">{header.title}</h2>
+
+        {header.subtitle && (
+          <p className="sub-para-text">{header.subtitle}</p>
+        )}
       </div>
 
       <div

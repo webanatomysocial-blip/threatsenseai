@@ -67,9 +67,15 @@ export default function AboutUs() {
       <Benefits />
 
       <CapabilitiesSection
-        items={capabilities}
-        gridTemplateColumns="repeat(3, 1fr)"
+        items={core}
+        gridTemplateColumns="repeat(2, 1fr)"
+        header={{
+          icon: <FaGlobe size={16} />,
+          label: "Capabilities",
+          title: "What it brings?",
+        }}
       />
+
 
       <AccordionSection />
       <OurTeam />

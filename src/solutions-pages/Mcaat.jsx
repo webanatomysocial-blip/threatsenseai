@@ -12,7 +12,7 @@ import CapabilitiesSection from "../components/CapabilitiesSection";
 import UseCases from "../Solutions-components/UseCases";
 import ResultsComp from "../Solutions-components/ResultsComp";
 
-import { FaTh, FaLock, FaBullseye } from "react-icons/fa";
+import { FaTh, FaLock, FaBullseye,FaGlobe  } from "react-icons/fa";
 import Cta from "../components/Cta";
 import bg from "../assets/home/tab-section/bg-image.png";
 
@@ -125,18 +125,28 @@ export default function Mcaat() {
       <section className="mcaat-banner">
         <div className="mcaat-banner-content">
           <h1 ref={headerRef} className="big-text-head">
-            MCAAT — {splitLetters("AI-Powered Threat Detection")}
+            MCAAT — {splitLetters("MCA Audit Trail Enforcement for SAP")}
           </h1>
           <p className="sub-para-text">
-            AI-Powered Threat Detection. Built for Business Protection. Protect
-            your most critical business data from insider threats, AI-driven
-            data leaks, and compliance risks—before damage occurs.
+            Continuous compliance with MCA Rule 11(g) through automated, tamper-proof audit controls.
+          </p>
+          <p className="sub-para-text">
+            MCAAT is a purpose-built solution that monitors, secures, and enforces audit trail integrity across SAP databases, ensuring critical activities cannot go untracked, disabled, or altered.
           </p>
         </div>
       </section>
       <SolutionCarousel data={content} />
       <SolutionCards items={content} marginTop="0px" />
-      <CapabilitiesSection items={core} gridTemplateColumns="repeat(3, 1fr)" />
+      <CapabilitiesSection
+        items={core}
+        gridTemplateColumns="repeat(2, 1fr)"
+        header={{
+          icon: <FaGlobe size={16} />,
+          label: "Capabilities",
+          title: "What it brings?",
+        }}
+      />
+
       <UseCases
         label="Use Cases"
         title={
@@ -148,9 +158,9 @@ export default function Mcaat() {
         image={img2}
       />
       <ResultsComp />
+      
       <Cta
-        title="Stay Ahead of Threats with
-AI-Powered Security"
+        title="Stay Ahead of Threats with AI-Powered Security"
         description="Protect your SAP® environments with real-time monitoring, 
         automated response, and deep threat analytics. Experience 
         the power of ThreatSense AI today!"

@@ -135,7 +135,16 @@ export default function SiemSoar() {
 
       <SolutionCarousel data={content} />
       <SolutionCards items={content} marginTop="0px" />
-      <CapabilitiesSection items={core} gridTemplateColumns="repeat(3, 1fr)" />
+      <CapabilitiesSection
+        items={core}
+        gridTemplateColumns="repeat(2, 1fr)"
+        header={{
+          icon: <FaGlobe size={16} />,
+          label: "Capabilities",
+          title: "What it brings?",
+        }}
+      />
+
       <UseCases
         label="Use Cases"
         title={
