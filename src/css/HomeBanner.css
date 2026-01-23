@@ -95,13 +95,13 @@
 
 .stat-value {
   font-size: 32px;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .word-span {
   display: inline-block;
   margin-right: 0.25em;
-  font-weight: 600 !important;
+  font-weight: 500 !important;
 }
 
 @media (max-width: 768px) {

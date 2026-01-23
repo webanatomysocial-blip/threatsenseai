@@ -52,7 +52,7 @@ const HomeBanner = () => {
         {line.split(" ").map((word, wordIndex) => {
           // Check if word contains "Analyzer" (ignoring punctuation if needed, or exact match)
           const isAnalyzer =
-            word.toLowerCase().includes("cybersecurity") ||
+            // word.toLowerCase().includes("cybersecurity") ||
             word.toLowerCase().includes("solutions");
           return (
             <span
@@ -60,7 +60,7 @@ const HomeBanner = () => {
               className="word-span"
               style={{
                 fontStyle: isAnalyzer ? "italic" : "normal",
-                fontWeight: isAnalyzer ? "300" : "bold",
+                fontWeight: isAnalyzer ? "400" : "bold",
                 fontFamily: isAnalyzer ? "Instrument Serif" : "inherit",
               }}
             >

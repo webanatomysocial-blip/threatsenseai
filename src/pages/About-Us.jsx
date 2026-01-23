@@ -16,6 +16,7 @@ import {
   FaList,
   FaRobot,
   FaMagic,
+  FaGlobe,
 } from "react-icons/fa";
 
 export default function AboutUs() {
@@ -67,15 +68,14 @@ export default function AboutUs() {
       <Benefits />
 
       <CapabilitiesSection
-        items={core}
-        gridTemplateColumns="repeat(2, 1fr)"
+        items={capabilities}
+        gridTemplateColumns="repeat(3, 1fr)"
         header={{
           icon: <FaGlobe size={16} />,
           label: "Capabilities",
           title: "What it brings?",
         }}
       />
-
 
       <AccordionSection />
       <OurTeam />
