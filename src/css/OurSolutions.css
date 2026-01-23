@@ -32,7 +32,7 @@
 
 .solution-card {
   background-color: #fff;
-  border-radius: 30px;
+  border-radius: 20px;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
   height: 100%;
   width: 100%;
@@ -64,10 +64,10 @@
 }
 
 .solution-title {
-  font-size: 32px;
+  font-size: 24px;
   font-weight: 600;
   margin-bottom: 20px;
-  font-family: "Inter", sans-serif;
+  font-family: var(--font-primary);
 }
 
 .solution-desc {
@@ -130,6 +130,6 @@
   }
 
   .solution-title {
-    font-size: 24px;
+    font-size: 20px;
   }
 }

@@ -1,0 +1,168 @@
+/* Accordion Section */
+.accordion-section {
+  padding: 100px 130px;
+  background-color: var(--progress-bg); /* Assuming white from image or light */
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.accordion-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  gap: 60px;
+  transition: all 0.3s ease-in-out;
+}
+.d-flex {
+  display: flex;
+  flex-direction: column;
+  align-items: self-start;
+  justify-content: center;
+  width: 50%;
+  transition: all 0.3s ease-in-out;
+}
+.accordion-content-side {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.accordion-header-group {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 40px;
+  justify-content: space-between;
+  transition: all 0.3s ease-in-out;
+}
+
+.accordion-header-group .head-text {
+  margin-top: 10px;
+}
+
+/* Accordion List - FAQ Style */
+.accordion-list {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border-top: 1px solid #eaeaea; /* Matching FAQ top border if needed, or just items */
+}
+
+.accordion-item {
+  border-bottom: 1px solid #eaeaea;
+  background-color: transparent; /* FAQ has transparent/white? FAQ-right is white. */
+  padding: 0; /* Reset padding to match FAQ structure */
+  border-radius: 0; /* Reset radius */
+  transition: none; /* Reset transition */
+}
+
+.accordion-item:last-child {
+  border-bottom: none;
+}
+
+.accordion-header {
+  width: 100%;
+  padding: 25px 0; /* FAQ has 25px 40px but here we are in a column, maybe 25px 0 is better or keep padding? */
+  /* User wants SAME design. FAQ has padding: 25px 40px. But let's check context. */
+  padding: 25px 0px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  text-align: left;
+  overflow: hidden;
+  justify-content: flex-start; /* Left align */
+}
+
+.accordion-header-content {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  transition: transform 0.3s ease;
+  width: 100%;
+}
+
+.accordion-item:hover .accordion-header-content {
+  transform: translateX(10px);
+}
+
+.accordion-plus-icon {
+  color: #ff5400;
+  font-size: 20px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+.accordion-item.active .accordion-plus-icon {
+  transform: rotate(45deg);
+}
+
+.accordion-title {
+  font-size: 18px !important;
+  font-weight: 500;
+  color: #1a1a1a;
+  margin: 0;
+}
+
+.accordion-body-wrapper {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.3s ease-out;
+  padding: 0; /* FAQ has 0 40px */
+  /* padding-left: 35px; Indent to align with text? */
+}
+
+.accordion-item.active .accordion-body-wrapper {
+  grid-template-rows: 1fr;
+  padding-bottom: 30px;
+}
+
+.accordion-body {
+  overflow: hidden;
+  font-size: 16px;
+  color: #666;
+  line-height: 1.6;
+  padding: 0; /* Reset padding */
+}
+
+.accordion-image-side {
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start; /* Align top */
+  width: 50%;
+}
+
+.accordion-image {
+  width: 100%;
+  height: 450px;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+/* Responsive Accordion */
+@media (max-width: 1024px) {
+  .accordion-container {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .accordion-section {
+    padding: 60px 20px;
+  }
+
+  .accordion-image-side {
+    width: 100%;
+    justify-content: center;
+  }
+  .d-flex {
+    width: 100%;
+  }
+}

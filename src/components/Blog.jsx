@@ -25,7 +25,7 @@ const Blogs = ({ limit = "all" }) => {
     <div className="whole-blog-section">
       <div className="blogs-header">
         <div className="sub-para-text security-label">
-          <AiFillMessage />
+          <AiFillMessage style={{ marginRight: "4px" }} />
           Blogs
         </div>
         <h1 className="head-text">

@@ -44,11 +44,10 @@ export default function AboutBanner() {
           Why {splitLetters("ThreatSenseAi?")}
         </h1>
         <p className="sub-para-text" style={{ textAlign: "center" }}>
-          ThreatSenseAi ensures least privilege access, real-time threat
-          blocking, and automated incident response, all without disrupting
-          business operations. Its lightweight, non-intrusive design makes it
-          the ultimate security solution for safeguarding critical SAP
-          environments.
+          ThreatSenseAI was founded to secure the most business-critical systems
+          enterprises rely on - starting with SAP. We help organizations prevent
+          data leaks, insider misuse, and cyber risks through purpose-built
+          security solutions designed for real-world enterprise complexity.
         </p>
       </div>
 

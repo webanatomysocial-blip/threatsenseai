@@ -1,4 +1,8 @@
 import React, { useEffect, useRef } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/autoplay";
 import gsap from "gsap";
 import "../css/index.css";
 import "../css/HomeBanner.css";
@@ -47,14 +51,17 @@ const HomeBanner = () => {
       <React.Fragment key={lineIndex}>
         {line.split(" ").map((word, wordIndex) => {
           // Check if word contains "Analyzer" (ignoring punctuation if needed, or exact match)
-          const isAnalyzer = word.toLowerCase().includes("analyzer");
+          const isAnalyzer =
+            word.toLowerCase().includes("solutions") ||
+            word.toLowerCase().includes("analyzer");
           return (
             <span
               key={`${lineIndex}-${wordIndex}`}
               className="word-span"
               style={{
                 fontStyle: isAnalyzer ? "italic" : "normal",
-                fontFamily: isAnalyzer ? "serif" : "inherit", // Matches the image style better if it's a different font, otherwise remove
+                fontWeight: isAnalyzer ? "400" : "bold",
+                fontFamily: isAnalyzer ? "Instrument Serif" : "inherit",
               }}
             >
               {word}
@@ -66,6 +73,20 @@ const HomeBanner = () => {
     ));
   };
 
+  const statsData = [
+    { title: "Insider-driven Data Leaks", value: "5x" },
+    { title: "Breaches caused by trusted users", value: "~90%" },
+    { title: "Sensitive data exposed via AI tools", value: "~40%" },
+    {
+      title: "Time to detect insider data threats than external attacks",
+      value: "3x",
+    },
+    { title: "Growth in browser-based data leaks", value: "3x" },
+    { title: "Enterprises with overexposed sensitive data", value: "~60%" },
+    { title: "Average cost of a data breach", value: "$4.45M" },
+    { title: "Enterprises lack proof of data privacy controls", value: "~70%" },
+  ];
+
   return (
     <div ref={containerRef} className="home-banner-container">
       {/* 4) Background video placeholder */}
@@ -75,42 +96,65 @@ const HomeBanner = () => {
 
       <div className="banner-content">
         {/* Badge */}
-        <div className="banner-badge">Best Security for SAP Ecosystems</div>
+        <div className="banner-badge">
+          Protect Enterprise Data Before It Becomes a Breach
+        </div>
 
         {/* Heading */}
         <h1 className="big-text-head banner-heading" ref={headingRef}>
-          {renderSplitText("Meet your new AI \n driven threat Analyzer.")}
+          {renderSplitText(
+            "Meet your new AI driven \n  Cybersecurity solutions"
+          )}
         </h1>
 
         <div ref={subContentRef}>
           {/* Sub-text */}
           <p className="para-text banner-subtext">
-            Leverage our AI-powered Threat Intelligence assistant with SIEM,
-            SOAR, and MDR capabilities for SAP®
+            AI-powered cybersecurity platform designed to prevent data leaks,
+            insider threats, and compliance failures across enterprise systems,
+            browsers, and AI tools
           </p>
 
           {/* Buttons */}
           <div className="banner-buttons">
-            <a href="#" className="blue-button">
+            <a href="#" className="red-button">
               Get Started
             </a>
             <a href="#" className="white-button">
-              Book A Free Demo
+              Book a Demo
             </a>
           </div>
 
           {/* Footer Stats / Dashed Border Section */}
           <div className="banner-stats">
-            <div className="stat-item">
-              <div className="sub-para-text stat-title">
-                Faster than other solutions
-              </div>
-              <div className="stat-value">5X</div>
-            </div>
-            <div className="stat-item2">
-              <div className="sub-para-text stat-title">Support Assistant</div>
-              <div className="stat-value">24/7</div>
-            </div>
+            <Swiper
+              modules={[Autoplay]}
+              spaceBetween={20}
+              slidesPerView={1}
+              loop={true}
+              autoplay={{
+                delay: 2500,
+                disableOnInteraction: false,
+              }}
+              breakpoints={{
+                640: {
+                  slidesPerView: 2,
+                },
+                1024: {
+                  slidesPerView: 4,
+                },
+              }}
+              className="stats-swiper"
+            >
+              {statsData.map((stat, index) => (
+                <SwiperSlide key={index}>
+                  <div className="stat-item-slide">
+                    <div className="sub-para-text stat-title">{stat.title}</div>
+                    <div className="stat-value">{stat.value}</div>
+                  </div>
+                </SwiperSlide>
+              ))}
+            </Swiper>
           </div>
         </div>
       </div>

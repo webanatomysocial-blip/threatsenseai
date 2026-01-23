@@ -5,7 +5,7 @@ import SecurityHeadaches from "../components/SecurityHeadaches";
 import OurSolutions from "../components/OurSolutions";
 import CustomOptions from "../components/CustomOptions";
 import KeyFeatures from "../components/KeyFeatures";
-import Footer from "../components/Footer";
+
 import Cta from "../components/Cta";
 import bg from "../assets/home/tab-section/bg-image.png";
 
@@ -16,20 +16,18 @@ export default function Home() {
 
       <HomeTabSection />
       <SecurityHeadaches />
-      <OurSolutions />
+      <OurSolutions id="solutions" />
       <CustomOptions />
       <KeyFeatures />
       <CustomerFeedback />
       <Cta
-        title="Stay Ahead of Threats with
-AI-Powered Security"
-        description="Protect your SAP® environments with real-time monitoring, 
-        automated response, and deep threat analytics. Experience 
-        the power of ThreatSense AI today!"
+        title="Built to stop insider threats, 
+        data leaks, and security failures."
+        description="AI-powered cybersecurity and data security for SAP and enterprise environments.
+Detect threats, deter misuse, and defend sensitive data in real time."
         backgroundImage={bg}
-        buttonText="Get Started"
+        buttonText="Book a Demo"
       />
-      {/* <Footer /> */}
     </>
   );
 }

@@ -18,30 +18,30 @@ const CustomerFeedback = () => {
   const testimonialsTop = [
     {
       id: 1,
-      text: `"We no longer waste time on manual threat analysis — AI-powered insights help us detect and mitigate risks before they escalate."`,
+      text: "Manual reviews limited our visibility. ThreatSense AI gave us continuous monitoring and audit-ready evidence, significantly strengthening our compliance posture.",
       name: "Compliance Officer",
       role: "Retail Enterprise",
       icon: <FiLayers />,
     },
     {
       id: 2,
-      text: `"The built-in ITSM solution is a game changer. Incident management is now faster and more efficient than ever."`,
-      name: "Head IT",
-      role: "Pharma Industry",
+      text: "The built-in automation transformed our operations—what took hours now takes minutes, with full visibility across SAP and enterprise systems.",
+      name: "Head of IT Security",
+      role: "Pharmaceutical Organization",
       icon: <FiGlobe />,
     },
     {
       id: 3,
-      text: `"Seamless integration with our existing SAP landscape made the deployment painless and quick."`,
+      text: "Insider risks and data leakage were our biggest concerns. ThreatSense AI helped us enforce controls in real-time, not after incidents occurred",
       name: "CISO",
-      role: "Manufacturing",
+      role: "Manufacturing Enterprise",
       icon: <FiTrendingUp />,
     },
     {
       id: 4,
-      text: `"The privacy controls give us peace of mind knowing our data is handled securely across all regions."`,
-      name: "Security Lead",
-      role: "FinTech",
+      text: "MCA Rule 11(g) compliance was a constant risk; MCAAT delivered SAP audit visibility and confidence, making audits stress-free and reliable.",
+      name: "Head of Internal Audit",
+      role: "Large Manufacturing Enterprise",
       icon: <FiUserCheck />,
     },
   ];
@@ -49,31 +49,24 @@ const CustomerFeedback = () => {
   const testimonialsBottom = [
     {
       id: 5,
-      text: `"Made for our launch. It felt like having an extra expert on the team guiding us through compliance."`,
-      name: "CTO",
-      role: "Tech Startup",
+      text: "Insider data leakage worried us, especially in SAP. TADS enforced real-time endpoint and application controls, stopping unauthorized access before breaches.",
+      name: "Chief Information Security Officer",
+      role: "Global Services Organization",
       icon: <FiSmile />,
     },
     {
       id: 6,
-      text: `"Flexible customizations allowed us to tailor the alerts exactly to our workflow needs."`,
-      name: "Ops Manager",
-      role: "Logistics",
+      text: "ThreatSense AI’s SIEM and SOAR transformed incident response, cutting alert noise, automating actions, and freeing teams to focus on threats..",
+      name: "SOC Manager",
+      role: "Financial Services Enterprise",
       icon: <FiLayers />,
     },
     {
       id: 7,
-      text: `"24/7 monitoring has caught issues we would have definitely missed otherwise. Highly recommended."`,
-      name: "Director of Engineering",
-      role: "SaaS Platform",
+      text: "What impressed us most was the unified approach—audit, data security, and threat response together, delivering end-to-end visibility across SAP and enterprise systems.",
+      name: "IT Risk & Security Lead",
+      role: "Power Generation Enterprise",
       icon: <FiGlobe />,
-    },
-    {
-      id: 8,
-      text: `"The automated response features have cut our mean time to resolution by over 60%."`,
-      name: "VP of Security",
-      role: "E-commerce",
-      icon: <FiTrendingUp />,
     },
   ];
 
@@ -96,7 +89,8 @@ const CustomerFeedback = () => {
           <AiFillAppstore /> Customer Feedback
         </div>
         <h2 className="head-text">
-          Trusted by hundreds of <br /> forward-thinking startups
+          Trusted by security <br />
+          and compliance leaders
         </h2>
       </div>
 

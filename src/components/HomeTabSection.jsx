@@ -36,7 +36,7 @@ const HomeTabSection = () => {
   }, []);
 
   const tabs = [
-    { id: "detect", label: "1. Detect", image: img1 },
+    { id: "detect", label: "Detect", image: img1 },
     { id: "deter", label: "Deter", image: img2 },
     { id: "defend", label: "Defend", image: img3 },
   ];

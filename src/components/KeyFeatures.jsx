@@ -25,55 +25,55 @@ const KeyFeatures = () => {
       id: 1,
       icon: <FiSend />,
       title: "24/7 Monitoring & Response",
-      desc: "Continuous threat detection and instant response, anytime.",
+      desc: "Continuous monitoring of security events and data activity with immediate response to high-risk threats.",
     },
     {
       id: 2,
       icon: <FiCpu />,
-      title: "AI Enabled",
-      desc: "Smart threat analysis powered by artificial intelligence.",
+      title: "AI-Powered Threat Intelligence",
+      desc: "Advanced analytics and behavioural models to detect anomalies, insider threats, and emerging attack patterns.",
     },
     {
       id: 3,
       icon: <FiGitMerge />,
-      title: "Integrations",
-      desc: "Seamlessly connects with various SAP®, ITSM, and messenger tools.",
+      title: "Enterprise Integrations",
+      desc: "Seamlessly integrates with SAP®, ITSM tools, SIEMs, and enterprise messaging platforms.",
     },
     {
       id: 4,
       icon: <FiToggleLeft />,
-      title: "Auto Response",
-      desc: "Automated incident handling for faster threat mitigation.",
+      title: "Automated Incident Response",
+      desc: "Trigger automated remediation actions to reduce response time and limit impact.",
     },
     {
       id: 5,
       icon: <FiBox />,
-      title: "Privacy & Security",
-      desc: "Sync campaign data with Customer.io via integrations or APIs.",
+      title: "Privacy & Data Protection",
+      desc: "Built-in controls to protect sensitive data, enforce policies, and support regulatory compliance.",
     },
     {
       id: 6,
       icon: <FiSliders />,
-      title: "Flexible Customizations",
-      desc: "Adapt the solution to fit your enterprise unique security needs.",
+      title: "Flexible Security Customization",
+      desc: "Configure rules, policies, and workflows to align with your enterprise risk and compliance needs.",
     },
     {
       id: 7,
       icon: <FiBell />,
-      title: "150+ Pre-delivered Rules",
-      desc: "Ready-to-use rules for comprehensive threat detection with an option to add more.",
+      title: "150+ Pre-Configured Security Rules",
+      desc: "Out-of-the-box detection rules covering SAP security, insider risk, and common attack scenarios - extensible as needed.",
     },
     {
       id: 8,
       icon: <FiDatabase />,
-      title: "Built-in ITSM solution",
-      desc: "Streamlined incident management within the platform.",
+      title: "Built-In ITSM & Case Management*",
+      desc: "Manage security incidents, investigations, and remediation workflows directly within the platform.",
     },
     {
       id: 9,
       icon: <FiAlertCircle />,
-      title: "Transaction Alerts",
-      desc: "Send receipts, resets, updates, and reminders—all with your branding.",
+      title: "Real-Time Security Alerts",
+      desc: "Context-aware alerts delivered instantly to security teams with actionable insights - not noise.",
     },
   ];
 
@@ -108,10 +108,12 @@ const KeyFeatures = () => {
           className="sub-para-text"
           style={{ display: "flex", alignItems: "center", gap: "5px" }}
         >
-          <AiFillAppstore /> Key Features
+          <AiFillAppstore />
+          Platform Capabilities
         </div>
         <h2 className="head-text">
-          Comprehensive SAP® <br /> Security & Compliance <br /> Solution
+          Designed to detect threats, <br /> prevent data leaks, and automate
+          response.
         </h2>
       </div>
 

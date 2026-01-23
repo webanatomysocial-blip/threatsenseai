@@ -33,7 +33,7 @@ export default function Contact() {
     <div className="contact-page">
       <div className="contact-header">
         <div className="sub-para-text security-label ">
-          <AiFillMessage /> Contact us
+          <AiFillMessage style={{ marginRight: "4px" }} /> Contact us
         </div>
         <h1 className="head-text">Let's get in touch</h1>
         <p className="sub-para-text contact-desc">
@@ -91,7 +91,7 @@ export default function Contact() {
       <section className="connect-section">
         <div className="contact-header">
           <div className="sub-para-text contact-label">
-            <AiFillFileText /> FAQ
+            <AiFillFileText style={{ marginRight: "4px" }} /> FAQ
           </div>
           <h1 className="head-text">More ways to connect</h1>
         </div>
