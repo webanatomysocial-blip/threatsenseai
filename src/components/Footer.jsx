@@ -119,7 +119,10 @@ const Footer = () => {
                     <a href="#" aria-label="X (Twitter)">
                       <FaXTwitter size={24} color="white" />
                     </a>
-                    <a href="#" aria-label="LinkedIn">
+                    <a
+                      href="https://www.linkedin.com/company/threatsenseai/"
+                      aria-label="LinkedIn"
+                    >
                       <FaLinkedin size={24} color="white" />
                     </a>
                     <a href="#" aria-label="Instagram">

@@ -14,37 +14,37 @@ export default function RisingThreats() {
   const threatData = [
     {
       id: "01",
-      title: '"SAP is secure by default"',
+      title: "Lorem ipsum dolor sit amet",
       description:
-        "REALITY: SAP provides robust transaction security, but data export channels (reports, downloads, API calls) remain largely uncontrolled. Users with legitimate access can extract sensitive data unmonitored.",
+        "Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
       image: bannerImg,
     },
     {
       id: "02",
-      title: '"Our DLP covers SAP data"',
+      title: "Duis aute irure dolor",
       description:
-        "REALITY: Generic DLP tools struggle with SAP's proprietary protocols and data structures, often missing critical context or generating high false positives.",
+        "In reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
       image: bannerImg,
     },
     {
       id: "03",
-      title: '"Role-based access is enough"',
+      title: "Sed ut perspiciatis unde",
       description:
-        "REALITY: Roles define what users can do, not what they actually do. Excessive authorizations and segregation of duty (SoD) conflicts are common, leaving gaps for exploitation.",
+        "Omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
       image: bannerImg,
     },
     {
       id: "04",
-      title: '"We monitor SAP with SIEM"',
+      title: "Nemo enim ipsam voluptatem",
       description:
-        "REALITY: SIEMs often lack deep visibility into SAP-specific logs and business logic, leading to blind spots in threat detection within the SAP landscape.",
+        "Quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet.",
       image: bannerImg,
     },
     {
       id: "05",
-      title: '"Encryption protects our data"',
+      title: "Ut enim ad minima veniam",
       description:
-        "REALITY: Encryption protects data at rest and in transit, but once authorized users access it, they can often extract it in clear text. Additional controls are needed for data in use.",
+        "Quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae.",
       image: bannerImg,
     },
   ];

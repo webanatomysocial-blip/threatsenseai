@@ -8,28 +8,40 @@ export default function ComparisonTable() {
     {
       category: "SAP Integration",
       items: [
-        { name: "SAP-native architecture", tads: true, legacy: false },
-        { name: "Understands SAP transaction", tads: true, legacy: false },
-        { name: "Role-aware policies", tads: true, legacy: false },
-        { name: "Real-time SAP data inspection", tads: true, legacy: false },
+        { name: "Lorem ipsum dolor sit amet", tads: true, legacy: false },
+        { name: "Consectetur adipiscing elit", tads: true, legacy: false },
+        { name: "Sed do eiusmod tempor", tads: true, legacy: false },
+        { name: "Incididunt ut labore et dolore", tads: true, legacy: false },
       ],
     },
     {
       category: "Protection Capabilities",
       items: [
-        { name: "Preventive blocking", tads: true, legacy: false },
-        { name: "Content-aware classification", tads: true, legacy: false },
-        { name: "AI/GenAI paste protection", tads: true, legacy: false },
-        { name: "Cross-channel correlation", tads: true, legacy: false },
+        { name: "Magna aliqua ut enim ad minim", tads: true, legacy: false },
+        { name: "Veniam quis nostrud exercitation", tads: true, legacy: false },
+        { name: "Ullamco laboris nisi ut aliquip", tads: true, legacy: false },
+        { name: "Ex ea commodo consequat", tads: true, legacy: false },
       ],
     },
     {
       category: "Deployment & Operations",
       items: [
-        { name: "Agentless option available", tads: true, legacy: false },
-        { name: "No endpoint software required", tads: true, legacy: false },
-        { name: "Sub-1ms latency impact", tads: true, legacy: false },
-        { name: "Cloud-native architecture", tads: true, legacy: false },
+        {
+          name: "Duis aute irure dolor in reprehenderit",
+          tads: true,
+          legacy: false,
+        },
+        { name: "In voluptate velit esse cillum", tads: true, legacy: false },
+        {
+          name: "D dolore eu fugiat nulla pariatur",
+          tads: true,
+          legacy: false,
+        },
+        {
+          name: "Excepteur sint occaecat cupidatat",
+          tads: true,
+          legacy: false,
+        },
       ],
     },
   ];

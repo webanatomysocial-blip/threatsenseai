@@ -13,19 +13,19 @@ const CustomOptions = () => {
     {
       id: 0,
       title: "Tag and Track Threat Assets with Precision",
-      desc: "Identify, classify, and monitor critical assets, users, and data contextually.",
+      desc: "Identify, classify, and monitor critical assets, users,\n and data contextually.",
       image: img1,
     },
     {
       id: 1,
       title: "Design Automated Response Runbooks Faster",
-      desc: "Create customizable SOAR playbooks automating investigation, containment, and remediation systems.",
+      desc: "Build customizable SOAR playbooks automating investigation,\n containment, and remediation.",
       image: img2,
     },
     {
       id: 2,
       title: "Simplify SAP® Security Operations",
-      desc: "Continuously monitor SAP environments, correlate risks, and act early proactively.",
+      desc: "Continuously monitor SAP environments, correlate risks,\n and act early proactively.",
       image: img1,
     },
   ];

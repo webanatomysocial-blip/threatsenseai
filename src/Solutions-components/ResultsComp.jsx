@@ -44,7 +44,7 @@ const ResultsComp = () => {
         <div className="sub-para-text security-label">
           <FaGlobe size={16} style={{ marginRight: "4px" }} /> Results
         </div>
-        <h2 className="head-text">Lorem, ipsum dolor sit</h2>
+        <h2 className="head-text">Results We Deliver</h2>
       </div>
       {results.map((res) => (
         <div key={res.id} className={`res-container res-container-${res.id}`}>

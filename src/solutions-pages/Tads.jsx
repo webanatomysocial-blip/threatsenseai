@@ -155,10 +155,10 @@ export default function Tads() {
   ];
 
   const useCasesList = [
-    "Protect critical SAP data from insider threats and data leaks",
-    "Real-time visibility into sensitive data access and exports",
-    "Automated blocking of non-compliant actions and audit log tampering",
-    "Ensure compliance with Rule 11(g) and other regulatory requirements",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+    "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+    "Ut enim ad minim veniam, quis nostrud exercitation ullamco",
+    "Duis aute irure dolor in reprehenderit in voluptate velit esse",
   ];
 
   const headerRef = useRef(null);
@@ -217,7 +217,7 @@ export default function Tads() {
         items={capabilities}
         gridTemplateColumns="repeat(2, 1fr)"
       />
-      <RisingThreats />
+
       {/* <SolutionCarousel
         label="Why TADS?"
         title={
@@ -228,7 +228,7 @@ export default function Tads() {
         data={content}
         paddingTop="120px"
       /> */}
-      <SolutionCards
+      {/* <SolutionCards
         items={content}
         label="Why TADS?"
         title={
@@ -237,8 +237,8 @@ export default function Tads() {
           </>
         }
         marginTop="0px"
-      />
-
+      /> */}
+      {/* 
       <CapabilitiesSection
         items={core}
         gridTemplateColumns="repeat(2, 1fr)"
@@ -247,60 +247,7 @@ export default function Tads() {
           label: "Key Capabilities",
           title: "Core Capabilities",
         }}
-      />
-
-      {/* Protection Layer Section */}
-      {/* <section className="protection-layer-section">
-        <div className="capabilities-header">
-          <div className="sub-para-text security-label">
-            <FaGlobe size={16} style={{ marginRight: "4px" }} /> Protection
-            layer.
-          </div>
-          <h2 className="head-text">Complete Data Leak Protection</h2>
-        </div>
-
-        <div className="protection-grid">
-          <div className="leak-column">
-            <h3>How Data Leaks</h3>
-            <div className="pl-list">
-              {[
-                "File Downloads",
-                "Email Exports",
-                "Copy/Paste",
-                "API Calls",
-                "Cloud Upload",
-              ].map((item, i) => (
-                <div key={i} className="pl-item">
-                  <div className="pl-icon-x">
-                    <FaTimes />
-                  </div>
-                  <span className="pl-text">{item}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          <div className="block-column">
-            <h3>How TADS Blocks It</h3>
-            <div className="pl-list">
-              {[
-                "Content-aware blocking",
-                "Real-time classification",
-                "User justification workflow",
-                "Encrypted channel protection",
-                "Print/screenshot prevention",
-              ].map((item, i) => (
-                <div key={i} className="pl-item">
-                  <div className="pl-icon-check">
-                    <FaCheck />
-                  </div>
-                  <span className="pl-text">{item}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section> */}
+      /> */}
 
       <ComparisonTable />
 
@@ -325,6 +272,59 @@ export default function Tads() {
         items={Benefits}
         gridTemplateColumns="repeat(2, 1fr)"
       />
+      {/* Protection Layer Section */}
+      <section className="protection-layer-section">
+        <div className="capabilities-header">
+          <div className="sub-para-text security-label">
+            <FaGlobe size={16} style={{ marginRight: "4px" }} /> Protection
+            layer.
+          </div>
+          <h2 className="head-text">Complete Data Leak Protection</h2>
+        </div>
+
+        <div className="protection-grid">
+          <div className="leak-column">
+            <h3>How Data Leaks</h3>
+            <div className="pl-list">
+              {[
+                "Lorem ipsum dolor sit amet",
+                "Consectetur adipiscing elit",
+                "Sed do eiusmod tempor",
+                "Incididunt ut labore et dolore",
+                "Magna aliqua",
+              ].map((item, i) => (
+                <div key={i} className="pl-item">
+                  <div className="pl-icon-x">
+                    <FaTimes />
+                  </div>
+                  <span className="pl-text">{item}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="block-column">
+            <h3>How TADS Blocks It</h3>
+            <div className="pl-list">
+              {[
+                "Lorem ipsum dolor sit amet",
+                "Consectetur adipiscing elit",
+                "Sed do eiusmod tempor",
+                "Incididunt ut labore et dolore",
+                "Magna aliqua",
+              ].map((item, i) => (
+                <div key={i} className="pl-item">
+                  <div className="pl-icon-check">
+                    <FaCheck />
+                  </div>
+                  <span className="pl-text">{item}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+      <RisingThreats />
       <Cta
         title="Control How SAP Data Leaves Your Enterprise"
         description="Real-time visibility and enforcement to prevent insider leaks, excessive access,

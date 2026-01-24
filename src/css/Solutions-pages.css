@@ -234,7 +234,7 @@
 
 .use-cases-container {
   padding: 100px 130px;
-  background-color: #f9f9f9;
+  background-color: var(--progress-bg);
   /* Light background as seen */
   display: flex;
   align-items: center;
