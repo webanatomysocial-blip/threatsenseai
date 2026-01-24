@@ -100,7 +100,11 @@
   .about-banner-layout {
     flex-direction: column;
   }
-
+  .about-banner-layout img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+  }
   .about-banner-image-box {
     height: 300px;
   }

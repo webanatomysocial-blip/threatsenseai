@@ -1,0 +1,10 @@
+.light-rays-container {
+  width: 100%;
+  height: 100%;
+  position: absolute; /* Changed to absolute to overlay */
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 2; /* Ensure it's above or below as needed, mixing modes might be good */
+  overflow: hidden;
+}

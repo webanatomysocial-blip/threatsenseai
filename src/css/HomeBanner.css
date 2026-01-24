@@ -20,11 +20,12 @@
   right: 130px;
   bottom: 0;
   z-index: -1;
-  background-color: #f0f0f0;
+  /* background-color: #f0f0f0; */
   border-radius: 20px;
-  background-image: radial-gradient(circle, #e0e0e0 1px, transparent 1px);
+  /* background-image: radial-gradient(circle, #e0e0e0 1px, transparent 1px); */
   background-size: 20px 20px;
   opacity: 0.5;
+  overflow: hidden;
 }
 
 .banner-content {
@@ -48,6 +49,7 @@
   margin-bottom: 20px;
   white-space: wrap;
   font-weight: 600;
+  /* line-height: 0.5; */
 }
 
 .banner-subtext {
@@ -106,6 +108,7 @@
   display: inline-block;
   margin-right: 0.25em;
   font-weight: 500 !important;
+  line-height: 0.5;
 }
 
 @media (max-width: 768px) {

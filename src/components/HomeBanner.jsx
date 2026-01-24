@@ -6,6 +6,8 @@ import "swiper/css/autoplay";
 import gsap from "gsap";
 import "../css/index.css";
 import "../css/HomeBanner.css";
+import LetterGlitch from "./LetterGlitch";
+// import LightRays from "./LightRays";
 
 const HomeBanner = () => {
   const containerRef = useRef(null);
@@ -94,7 +96,27 @@ const HomeBanner = () => {
     <div ref={containerRef} className="home-banner-container">
       {/* 4) Background video placeholder */}
       <div className="video-placeholder">
-        {/* Actual video element would go here */}
+        {/* <LightRays
+          raysOrigin="center-center"
+          raysColor="#ffffff"
+          raysSpeed={1}
+          lightSpread={0.5}
+          rayLength={3}
+          followMouse={false} // Auto-rotation enabled
+          mouseInfluence={0}
+          noiseAmount={0}
+          distortion={0}
+          className="custom-rays"
+          pulsating={false}
+          fadeDistance={1}
+          saturation={1}
+        /> */}
+        <LetterGlitch
+          glitchSpeed={50}
+          centerVignette={true}
+          outerVignette={true}
+          smooth={true}
+        />
       </div>
 
       <div className="banner-content">
@@ -133,7 +155,7 @@ const HomeBanner = () => {
             <Swiper
               modules={[Autoplay]}
               spaceBetween={20}
-              slidesPerView={2}
+              slidesPerView={1}
               loop={true}
               autoplay={{
                 delay: 2500,
@@ -141,7 +163,7 @@ const HomeBanner = () => {
               }}
               breakpoints={{
                 640: {
-                  slidesPerView: 2,
+                  slidesPerView: 1,
                 },
                 1024: {
                   slidesPerView: 2,
