@@ -60,7 +60,7 @@ const KeyFeatures = () => {
     {
       id: 7,
       icon: <FiBell />,
-      title: "150+ Pre-Configured Security Rules",
+      title: "150+ Pre-Configured Security\n Rules",
       desc: "Out-of-the-box detection rules covering SAP security, insider risk, and common attack scenarios - extensible as needed.",
     },
     {
@@ -72,7 +72,7 @@ const KeyFeatures = () => {
     {
       id: 9,
       icon: <FiAlertCircle />,
-      title: "Real-Time Security Alerts",
+      title: "Real-Time Security\n Alerts",
       desc: "Context-aware alerts delivered instantly to security teams with actionable insights - not noise.",
     },
   ];

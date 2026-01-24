@@ -11,7 +11,17 @@ import CapabilitiesSection from "../components/CapabilitiesSection";
 import UseCases from "../Solutions-components/UseCases";
 import Cta from "../components/Cta";
 import bg from "../assets/home/tab-section/bg-image.png";
-import { FaTh, FaLock, FaBullseye } from "react-icons/fa";
+import {
+  FaTh,
+  FaLock,
+  FaBullseye,
+  FaGlobe,
+  FaLayerGroup,
+  FaUserShield,
+  FaSearchPlus,
+  FaMicroscope,
+  FaMagic,
+} from "react-icons/fa";
 
 export default function SiemSoar() {
   const content = [
@@ -43,13 +53,13 @@ export default function SiemSoar() {
 
   const core = [
     {
-      icon: <FaTh />,
+      icon: <FaLayerGroup />,
       title: "Comprehensive Coverage",
       description:
         "Utilizes AI-driven analytics to differentiate between legitimate activities and actual threats, reducing false alarms.",
     },
     {
-      icon: <FaLock />,
+      icon: <FaUserShield />,
       title: "Identity & Access Protection",
       description:
         "Continuously monitors user activities, detects anomalies, and automatically blocks suspicious actions.",
@@ -61,22 +71,22 @@ export default function SiemSoar() {
         "Utilizes AI-driven analytics to differentiate between legitimate activities and actual threats, reducing false alarms.",
     },
     {
-      icon: <FaBullseye />,
-      title: "Accurate Risk Detection",
+      icon: <FaSearchPlus />,
+      title: "Anomaly Behavioral Analytics",
       description:
-        "Utilizes AI-driven analytics to differentiate between legitimate activities and actual threats, reducing false alarms.",
+        "Deep learning models that identify subtle deviations from normal user and system behavior.",
     },
     {
-      icon: <FaBullseye />,
-      title: "Accurate Risk Detection",
+      icon: <FaMicroscope />,
+      title: "Automated Threat Hunting",
       description:
-        "Utilizes AI-driven analytics to differentiate between legitimate activities and actual threats, reducing false alarms.",
+        "Proactively searches for hidden threats and attack indicators across your entire architecture.",
     },
     {
-      icon: <FaBullseye />,
-      title: "Accurate Risk Detection",
+      icon: <FaMagic />,
+      title: "Context-Aware Risk Scoring",
       description:
-        "Utilizes AI-driven analytics to differentiate between legitimate activities and actual threats, reducing false alarms.",
+        "Dynamic risk assessments that prioritize alerts based on asset value and threat severity.",
     },
   ];
 
@@ -137,7 +147,7 @@ export default function SiemSoar() {
       <SolutionCards items={content} marginTop="0px" />
       <CapabilitiesSection
         items={core}
-        gridTemplateColumns="repeat(2, 1fr)"
+        gridTemplateColumns="repeat(3, 1fr)"
         header={{
           icon: <FaGlobe size={16} />,
           label: "Capabilities",

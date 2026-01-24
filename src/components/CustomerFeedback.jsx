@@ -75,7 +75,7 @@ const CustomerFeedback = () => {
     slidesPerView: "auto",
     spaceBetween: 20,
     loop: true,
-    speed: 5000, // Smooth continuous scroll speed
+    speed: 20000, // Smooth continuous scroll speed
     allowTouchMove: true, // Enable swipe
   };
 

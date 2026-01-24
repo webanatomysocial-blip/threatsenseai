@@ -33,12 +33,14 @@
 }
 
 .banner-badge {
-  border: 3px dashed rgba(0, 0, 0, 0.2);
-  padding: 6px 8px;
+  border: 2px dashed rgba(0, 0, 0, 0.2);
+  padding: 6px 14px;
   border-radius: 20px;
   display: inline-block;
   margin-bottom: 20px;
-  font-size: 12px;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: -0.035em;
   color: #555;
 }
 
@@ -67,13 +69,13 @@
 }
 
 .stat-item-slide {
-  border-right: 3px dashed #ccc;
+  border-right: 2px dashed #ccc;
   display: flex;
   flex-direction: column;
   justify-content: start;
   align-items: start;
   text-align: left;
-  padding: 40px 20px; /* Adjust padding as needed */
+  padding: 40px 30px; /* Adjust padding as needed */
   height: 100%;
   box-sizing: border-box;
   /* width: 320px; */
@@ -82,9 +84,9 @@
 .banner-stats {
   display: flex;
   justify-content: center;
-  border-top: 3px dashed #ccc;
-  border-bottom: 3px dashed #ccc;
-  border-left: 3px dashed #ccc;
+  border-top: 2px dashed #ccc;
+  border-bottom: 2px dashed #ccc;
+  /* border-left: 2px dashed #ccc; */
   text-align: left;
   width: 100%;
   margin: 0 auto;
@@ -92,6 +94,7 @@
 
 .stat-title {
   margin-bottom: 5px;
+  /* width: 80%; */
 }
 
 .stat-value {

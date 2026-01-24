@@ -33,26 +33,6 @@ const Footer = () => {
               insider threats, misuse, and breaches by combining cybersecurity,
               data security, and automated response into a single platform
             </p>
-
-            <div className="footer-socials">
-              <span
-                className="sub-para-text-white"
-                style={{ display: "block", marginBottom: "10px" }}
-              >
-                Social
-              </span>
-              <div className="social-icons">
-                <a href="#" aria-label="X (Twitter)">
-                  <FaXTwitter size={24} color="white" />
-                </a>
-                <a href="#" aria-label="LinkedIn">
-                  <FaLinkedin size={24} color="white" />
-                </a>
-                <a href="#" aria-label="Instagram">
-                  <FaInstagram size={24} color="white" />
-                </a>
-              </div>
-            </div>
           </div>
 
           <div className="footer-right">
@@ -128,6 +108,25 @@ const Footer = () => {
                     </a>
                   </li>
                 </ul>
+                <div className="footer-socials">
+                  <span
+                    className="sub-para-text-white"
+                    style={{ display: "block", marginBottom: "10px" }}
+                  >
+                    Social
+                  </span>
+                  <div className="social-icons">
+                    <a href="#" aria-label="X (Twitter)">
+                      <FaXTwitter size={24} color="white" />
+                    </a>
+                    <a href="#" aria-label="LinkedIn">
+                      <FaLinkedin size={24} color="white" />
+                    </a>
+                    <a href="#" aria-label="Instagram">
+                      <FaInstagram size={24} color="white" />
+                    </a>
+                  </div>
+                </div>
               </div>
               <div className="footer-column">
                 <h4 className="sub-para-text-white" style={{ fontWeight: 600 }}>

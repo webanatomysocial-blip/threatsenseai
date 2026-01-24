@@ -64,13 +64,13 @@
 
 .newsletter-input {
   background-color: transparent;
-  border: 1px solid #333;
+  border: 1px solid #ffffff;
   border-radius: 50px;
   padding: 12px 24px;
   color: #fff;
-  flex-grow: 1;
+  flex-grow: 0.5;
   outline: none;
-  font-size: 14px;
+  font-size: 16px;
 }
 
 .newsletter-input:focus {
@@ -79,8 +79,8 @@
 
 .footer-links-container {
   display: flex;
-  justify-content: space-between;
-  gap: 40px;
+  justify-content: flex-start;
+  gap: 100px;
 }
 
 .footer-column {
@@ -96,11 +96,13 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
+  font-size: 16px;
 }
 
 .footer-links li a {
   text-decoration: none;
   transition: color 0.3s;
+  font-size: 16px !important;
 }
 
 .footer-links li a:hover {

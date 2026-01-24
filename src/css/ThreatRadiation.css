@@ -1,0 +1,145 @@
+.threat-radiation-section {
+  position: relative;
+  padding: 100px 0px;
+  background-color: var(--progress-bg);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.radiation-header {
+  text-align: center;
+  margin-bottom: 20px;
+  z-index: 15;
+}
+
+.radiation-container {
+  position: relative;
+  width: 100%;
+  max-width: 1400px;
+  height: 500px; /* Locked at 500px per user preference */
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.bg-half-moon {
+  position: absolute;
+  bottom: 0%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 1100px;
+  z-index: 1;
+  opacity: 1;
+  /* Masking to create the half-moon shape if the PNG has excess whitespace */
+  border-top-left-radius: 550px;
+  border-top-right-radius: 550px;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+}
+
+.bg-half-moon img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.radiation-svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.threat-pill {
+  position: absolute;
+  background: #ffffff;
+  padding: 8px 16px;
+  border-radius: 100px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e0e0e0;
+  z-index: 10;
+  white-space: nowrap;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+  transform: translate(-50%, -50%);
+  cursor: default;
+}
+
+.threat-pill:hover {
+  transform: translate(-50%, -60%) scale(1.05) !important;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  border-color: #000;
+  z-index: 11;
+}
+
+.threat-pill span {
+  font-size: 13px;
+  font-weight: 500;
+  color: #000;
+}
+
+.pill-check {
+  color: #000;
+  font-size: 15px;
+  flex-shrink: 0;
+}
+
+.radiation-line {
+  stroke: #000;
+  opacity: 0.35; /* Increased visibility */
+}
+
+/* Responsive adjustments */
+@media (max-width: 1100px) {
+  .threat-pill span {
+    font-size: 12px;
+  }
+  .radiation-container {
+    height: 450px;
+  }
+  .bg-half-moon {
+    max-width: 900px;
+  }
+}
+
+@media (max-width: 768px) {
+  .threat-radiation-section {
+    padding: 60px 20px;
+  }
+  .radiation-container {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 15px;
+    max-width: 100%;
+  }
+  .bg-half-moon,
+  .radiation-svg {
+    display: none;
+  }
+  .threat-pill {
+    position: relative !important;
+    left: 0 !important;
+    top: 0 !important;
+    transform: none !important;
+    width: 100%;
+    max-width: 380px;
+    justify-content: flex-start;
+    padding: 12px 20px;
+  }
+}

@@ -6,25 +6,25 @@ const AboutStats = () => {
   const stats = [
     {
       percentage: "67%",
-      title: "Insider Privilege Abuse",
+      title: "Insider Privilege\n Abuse",
       description:
         "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
     },
     {
       percentage: "80%",
-      title: "Security Incidents Are the Norm",
+      title: "Security Incidents\n Are the Norm",
       description:
         "Lorem Ipsum has been the industry's standard dummy text ever since.",
     },
     {
       percentage: "78%",
-      title: "Misconfiguration Is the Biggest Threat",
+      title: "Misconfiguration\n Is the Biggest Threat",
       description:
         "It is a long established fact that a reader will be distracted.",
     },
     {
       percentage: "$5million+",
-      title: "The Real Cost of a Breach",
+      title: "The Real Cost of a\n Breach",
       description:
         "There are many variations of passages of Lorem Ipsum available.",
     },

@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import "../css/AboutBanner.css";
 import bannerImg from "../assets/about-images/banner.jpg";
-import ideaSvg from "../assets/about-images/idea.svg";
+// import ideaSvg from "../assets/about-images/idea.svg";
 
 export default function AboutBanner() {
   const headerRef = useRef(null);
@@ -25,7 +25,7 @@ export default function AboutBanner() {
         stagger: 0.05,
         ease: "power2.out",
         delay: 0.2,
-      }
+      },
     );
   }, []);
 
@@ -52,7 +52,7 @@ export default function AboutBanner() {
       </div>
 
       <div className="about-banner-layout">
-        <div className="about-banner-image-box">
+        {/* <div className="about-banner-image-box">
           <img src={bannerImg} alt="Our environment" />
         </div>
 
@@ -71,7 +71,10 @@ export default function AboutBanner() {
               enterprises to proactively safeguard their digital assets.
             </p>
           </div>
-        </div>
+        </div> */}
+        <img src={bannerImg} alt="" />
+        <img src={bannerImg} alt="" />
+        <img src={bannerImg} alt="" />
       </div>
     </section>
   );

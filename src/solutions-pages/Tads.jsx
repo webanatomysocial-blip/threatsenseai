@@ -10,6 +10,15 @@ import {
   FaTimes,
   FaCheck,
   FaGlobe,
+  FaSearch,
+  FaFileAlt,
+  FaBell,
+  FaUserShield,
+  FaShieldAlt,
+  FaClipboardCheck,
+  FaCogs,
+  FaUserLock,
+  FaServer,
 } from "react-icons/fa";
 
 import CapabilitiesSection from "../components/CapabilitiesSection";
@@ -22,6 +31,8 @@ import img from "../assets/home/Custom-Options/2.png";
 import img1 from "../assets/home/tab-section/1.jpg";
 import img2 from "../assets/home/tab-section/2.jpg";
 import img3 from "../assets/home/tab-section/3.jpg";
+import ThreatRadiation from "../Solutions-components/ThreatRadiation";
+import CoreTechs from "../Solutions-components/CoreTechs";
 
 export default function Tads() {
   const content = [
@@ -52,7 +63,7 @@ export default function Tads() {
   ];
   const core = [
     {
-      icon: <FaTh />,
+      icon: <FaSearch />,
       title: "Deep Data Discovery",
       description:
         "Continuously discovers, inventories, and classifies sensitive data across SAP ECC, S/4HANA, HANA DB, and connected systems. Identifies PII, financial data, credentials, and regulated fields to establish a defensible data baseline for security and compliance.",
@@ -64,13 +75,13 @@ export default function Tads() {
         "Enforces fine-grained data security policies based on user role, transaction context, data sensitivity, and destination. Prevents unauthorized exports, excessive access, and risky data movements through real-time blocking, justification workflows, or adaptive warnings.",
     },
     {
-      icon: <FaBullseye />,
+      icon: <FaFileAlt />,
       title: "Compliance Reporting",
       description:
         "Delivers audit-ready reports mapped to GDPR, DPDP, SOX, PCI-DSS, and internal data governance controls. Provides traceable evidence of data access, usage, and enforcement actions to support audits, regulatory inquiries, and continuous compliance monitoring.",
     },
     {
-      icon: <FaBullseye />,
+      icon: <FaBell />,
       title: "Smart Alerting",
       description:
         "Generates high-fidelity, context-aware alerts for real data risk scenarios, not noise. Prioritizes insider misuse, mass data access, and policy violations, with seamless integration into SIEM, SOAR, and ITSM platforms for faster investigation and response.",
@@ -79,7 +90,7 @@ export default function Tads() {
 
   const capabilities = [
     {
-      icon: <FaTh />,
+      icon: <FaSearch />,
       title: "Deep Data Discovery",
       description:
         "Continuously discovers, inventories, and classifies sensitive data across SAP ECC, S/4HANA, HANA DB, and connected systems. Identifies PII, financial data, credentials, and regulated fields to establish a defensible data baseline for security and compliance.",
@@ -91,13 +102,13 @@ export default function Tads() {
         "Enforces fine-grained data security policies based on user role, transaction context, data sensitivity, and destination. Prevents unauthorized exports, excessive access, and risky data movements through real-time blocking, justification workflows, or adaptive warnings.",
     },
     {
-      icon: <FaBullseye />,
+      icon: <FaFileAlt />,
       title: "Compliance Reporting",
       description:
         "Delivers audit-ready reports mapped to GDPR, DPDP, SOX, PCI-DSS, and internal data governance controls. Provides traceable evidence of data access, usage, and enforcement actions to support audits, regulatory inquiries, and continuous compliance monitoring.",
     },
     {
-      icon: <FaBullseye />,
+      icon: <FaBell />,
       title: "Smart Alerting",
       description:
         "Generates high-fidelity, context-aware alerts for real data risk scenarios, not noise. Prioritizes insider misuse, mass data access, and policy violations, with seamless integration into SIEM, SOAR, and ITSM platforms for faster investigation and response.",
@@ -106,37 +117,37 @@ export default function Tads() {
 
   const Benefits = [
     {
-      icon: <FaTh />,
+      icon: <FaUserShield />,
       title: "CISO & Security Leaders",
       description:
         "Reduce enterprise risk exposure and demonstrate proactive data protection to leadership and regulators. Gain unified visibility into SAP data flows, insider risk, and data leakage paths across the organization.",
     },
     {
-      icon: <FaLock />,
+      icon: <FaShieldAlt />,
       title: "SAP Security & GRC Teams",
       description:
         "Extend SAP security beyond access controls. Enforce data-centric policies aligned with SAP roles and authorizations while detecting unauthorized data exports, excessive access, and policy violations in real time.",
     },
     {
-      icon: <FaBullseye />,
+      icon: <FaClipboardCheck />,
       title: "Audit & Compliance Teams",
       description:
         "Meet regulatory and statutory requirements with automated evidence collection. Maintain continuous compliance across GDPR, DPDP, SOX, and industry mandates with audit-ready reports and traceable data access logs.",
     },
     {
-      icon: <FaBullseye />,
+      icon: <FaCogs />,
       title: "Enterprise Architects",
       description:
         "Deploy seamlessly across complex SAP landscapes without redesign. Support hybrid, cloud, and RISE environments using a scalable, non-intrusive architecture aligned with enterprise security standards.",
     },
     {
-      icon: <FaBullseye />,
+      icon: <FaUserLock />,
       title: "Data Protection Officer (DPO) & Privacy Office",
       description:
         "Enforce privacy-by-design and data minimization principles. Prevent overexposure of PII and sensitive data while demonstrating accountability, lawful processing, and continuous compliance with global privacy regulations.",
     },
     {
-      icon: <FaBullseye />,
+      icon: <FaServer />,
       title: "IT Operations & Basis Teams",
       description:
         "Maintain SAP performance and stability while supporting security controls. Gain real-time visibility into risky data activities without disrupting transports, system operations, or day-to-day SAP administration.",
@@ -189,23 +200,25 @@ export default function Tads() {
             TADS — {splitLetters("ThreatSense AI Data Security")}
           </h1>
           <p className="sub-para-text">
-            Protect sensitive SAP data from insider misuse, AI-driven data leaks, and unauthorized access—across applications, browsers, endpoints, and databases.
+            Protect sensitive SAP data from insider misuse, AI-driven data
+            leaks, and unauthorized access—across applications, browsers,
+            endpoints, and databases.
           </p>
 
           <p className="sub-para-text">
-
             Built for modern data risks. Crafted for SAP landscapes.
-
           </p>
         </div>
       </section>
+      <CoreTechs />
+      <ThreatRadiation />
 
       <CapabilitiesSection
         items={capabilities}
-        gridTemplateColumns="repeat(3, 1fr)"
+        gridTemplateColumns="repeat(2, 1fr)"
       />
       <RisingThreats />
-      <SolutionCarousel
+      {/* <SolutionCarousel
         label="Why TADS?"
         title={
           <>
@@ -214,7 +227,7 @@ export default function Tads() {
         }
         data={content}
         paddingTop="120px"
-      />
+      /> */}
       <SolutionCards
         items={content}
         label="Why TADS?"
@@ -288,7 +301,19 @@ export default function Tads() {
           </div>
         </div>
       </section> */}
+
       <ComparisonTable />
+
+      <UseCases
+        label="Use Cases"
+        title={
+          <>
+            Where ThreatSense <br /> TADS Delivers <br /> Immediate Value
+          </>
+        }
+        list={useCasesList}
+        image={img1}
+      />
       <CapabilitiesSection
         header={{
           icon: <FaGlobe size={16} />,
@@ -299,16 +324,6 @@ export default function Tads() {
         borderRadius="20px"
         items={Benefits}
         gridTemplateColumns="repeat(2, 1fr)"
-      />
-      <UseCases
-        label="Use Cases"
-        title={
-          <>
-            Where ThreatSense <br /> TADS Delivers <br /> Immediate Value
-          </>
-        }
-        list={useCasesList}
-        image={img1}
       />
       <Cta
         title="Control How SAP Data Leaves Your Enterprise"

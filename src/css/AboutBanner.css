@@ -29,6 +29,11 @@
   gap: 30px;
   align-items: stretch;
 }
+.about-banner-layout img {
+  width: 33%;
+  height: auto;
+  border-radius: 20px;
+}
 
 .about-banner-image-box {
   flex: 1;

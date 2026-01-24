@@ -1,0 +1,152 @@
+.core-techs-section {
+  padding: 100px 130px;
+  background-color: var(--progress-bg);
+  position: relative;
+}
+
+.techs-timeline {
+  position: relative;
+  /* max-width: 1200px; */
+  margin: 60px auto 0;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+/* Central Timeline Line */
+.timeline-line {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    #ff7a55,
+    #ff7a55,
+    transparent
+  );
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+.tech-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  position: relative;
+  z-index: 2;
+}
+
+.tech-row.reverse {
+  flex-direction: row-reverse;
+}
+
+.tech-image-container,
+.tech-text-container {
+  width: 45%;
+}
+
+/* Timeline Numbering Node */
+.timeline-node {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 40px;
+  height: 40px;
+  background-color: #ff7a55;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: bold;
+  font-size: 14px;
+  box-shadow: 0 0 20px rgba(255, 122, 85, 0.4);
+  z-index: 3;
+}
+
+/* Image Styling with Blob/Glow effect from image */
+.image-blob-bg {
+  position: relative;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tech-image {
+  width: 100%;
+  height: auto;
+  /* max-width: 400px; */
+  /* border-radius: 20px; */
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  /* background: #fff; */
+  /* padding: 15px; */
+}
+
+.tech-text-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.tech-subtitle {
+  font-weight: 500;
+  font-size: 18px !important;
+  color: var(--black-color);
+}
+
+.tech-desc {
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .core-techs-section {
+    padding: 80px 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .core-techs-section {
+    padding: 60px 20px;
+  }
+
+  .timeline-line {
+    left: 20px;
+  }
+
+  .timeline-node {
+    left: 20px;
+    transform: translate(-50%, -50%);
+    top: 0;
+  }
+
+  .tech-row,
+  .tech-row.reverse {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 50px;
+    gap: 30px;
+    text-align: left;
+  }
+
+  .tech-image-container,
+  .tech-text-container {
+    width: 100%;
+  }
+
+  .tech-image {
+    max-width: 100%;
+  }
+
+  .techs-timeline {
+    gap: 80px;
+  }
+}

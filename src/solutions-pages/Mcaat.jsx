@@ -13,45 +13,56 @@ import UseCases from "../Solutions-components/UseCases";
 import ResultsComp from "../Solutions-components/ResultsComp";
 import bgImage from "../assets/home/Our-Solutions/bg1.png";
 
-import { FaTh, FaLock, FaBullseye, FaGlobe } from "react-icons/fa";
+import {
+  FaTh,
+  FaLock,
+  FaBullseye,
+  FaGlobe,
+  FaSync,
+  FaHistory,
+  FaUserShield,
+  FaChartBar,
+  FaDatabase,
+  FaCloud,
+} from "react-icons/fa";
 import Cta from "../components/Cta";
 import bg from "../assets/home/tab-section/bg-image.png";
 
 export default function Mcaat() {
   const core = [
     {
-      icon: <FaTh />,
-      title: "Always-On Audit Readiness",
+      icon: <FaSync />,
+      title: "Always-On\n Audit Readiness",
       description:
         "Eliminates reliance on manual checks by ensuring audit trails are always active. Even if logs are disabled during maintenance or misuse, MCAAT restores continuity automatically, removing one of the most common causes of audit non-compliance.",
     },
     {
-      icon: <FaLock />,
-      title: "Before & After Value Capture",
+      icon: <FaHistory />,
+      title: "Before & After\nValue Capture",
       description:
         "Provides full context for every critical change by recording before-and-after values. This enables precise root-cause analysis, faster audit validation, and clear accountability, without requiring forensic reconstruction during audits or investigations.",
     },
     {
-      icon: <FaBullseye />,
-      title: "Protection from Audit Trail Tampering",
+      icon: <FaUserShield />,
+      title: "Protection from Audit \nTrail Tampering",
       description:
         "Shifts audit integrity from trust-based to control-based. By preventing and detecting tampering attempts in real time, MCAAT ensures audit data remains legally defensible and reliable for regulators, auditors, and internal investigations.",
     },
     {
-      icon: <FaBullseye />,
-      title: "Auditor-Ready Dashboards",
+      icon: <FaChartBar />,
+      title: "Auditor-Ready\n Dashboards",
       description:
         "Reduces audit effort by presenting evidence in a format auditors understand immediately. Timelines, change histories, and exportable reports eliminate last-minute data compilation and significantly shorten audit cycles.",
     },
     {
-      icon: <FaBullseye />,
-      title: "Optimized Logging to Reduce DB Bloat",
+      icon: <FaDatabase />,
+      title: "Optimized Logging\n to Reduce DB Bloat",
       description:
         "Balances compliance with performance by capturing only audit-relevant, high-value events. This prevents excessive database growth while maintaining complete traceability, avoiding the trade-off between system performance and audit coverage. ",
     },
     {
-      icon: <FaBullseye />,
-      title: "Solution for MS SQL, SAP HANA & RISE",
+      icon: <FaCloud />,
+      title: "Solution for MS SQL,\n SAP HANA & RISE",
       description:
         "Delivers consistent audit controls across on-premise, hybrid, and cloud SAP landscapes. MCAAT adapts to modern SAP architectures without requiring system redesign, ensuring compliance continuity during migrations and transformations. ",
     },
@@ -148,13 +159,15 @@ export default function Mcaat() {
     },
     {
       title: "Automated Protection of Audit Evidence",
-      description: "MCAAT safeguards audit logs, change records, and supporting evidence from unauthorized access or modification. This ensures audit data remains complete, accurate, and defensible during internal reviews, statutory audits, and forensic investigations.",
+      description:
+        "MCAAT safeguards audit logs, change records, and supporting evidence from unauthorized access or modification. This ensures audit data remains complete, accurate, and defensible during internal reviews, statutory audits, and forensic investigations.",
       link: "#",
       img: bgImage,
     },
     {
       title: "Automated Monitoring of High-Risk System Activities",
-      description: "Sensitive actions such as DEBUG mode usage, audit policy deletion, or critical configuration changes are continuously monitored. MCAAT detects these high-risk activities instantly, preventing silent compliance breaches and reducing reliance on post-facto audit reviews.d",
+      description:
+        "Sensitive actions such as DEBUG mode usage, audit policy deletion, or critical configuration changes are continuously monitored. MCAAT detects these high-risk activities instantly, preventing silent compliance breaches and reducing reliance on post-facto audit reviews.d",
       link: "#",
       img: bgImage,
     },
@@ -230,7 +243,7 @@ export default function Mcaat() {
             <a href="#" className="red-button">
               Request MCAAT Demo
             </a>
-          </div >
+          </div>
         </div>
       </section>
       <SolutionCarousel data={content} />
@@ -244,7 +257,7 @@ export default function Mcaat() {
 
       <CapabilitiesSection
         items={core}
-        gridTemplateColumns="repeat(2, 1fr)"
+        gridTemplateColumns="repeat(3 , 1fr)"
         header={{
           icon: <FaGlobe size={16} />,
           label: "Key Capabilities",
@@ -255,11 +268,7 @@ export default function Mcaat() {
       <ResultsComp />
       <UseCases
         label="Use Cases"
-        title={
-          <>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-          </>
-        }
+        title={<>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</>}
         list={useCasesList}
         image={img2}
       />

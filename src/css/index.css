@@ -122,17 +122,17 @@ h6 {
 /* Headings: 40px */
 .head-text {
   font-size: 40px !important;
-  font-weight: 500;
+  font-weight: 600;
   color: var(--black-color);
-  line-height: 1.2;
+  line-height: 1.4em;
   white-space: pre-line;
 }
 
 .head-text-white {
   font-size: 40px !important;
-  font-weight: 500;
+  font-weight: 600;
   color: var(--white-color);
-  line-height: 1.2;
+  line-height: 1.4em;
   white-space: pre-line;
 }
 
@@ -156,7 +156,7 @@ h6 {
 /* Paragraphs: 16px */
 .para-text {
   font-size: 17px;
-  font-family: "Inter", sans-serif; /* Adjusted to Inter to match screenshots */
+  font-family: "Inter", sans-serif;
   font-weight: 400;
   line-height: 1.6em;
   color: var(--grey-color);
@@ -177,7 +177,7 @@ h6 {
   font-family: "Inter", sans-serif;
   font-weight: 400;
   line-height: 1.6em;
-  color: #666;
+  color: var(--black-color);
   /* padding-bottom: 20px; */
   white-space: pre-line;
 }
@@ -198,7 +198,7 @@ h6 {
 .black-button {
   background-color: #000;
   color: #fff;
-  padding: 12px 22px;
+  padding: 12px 24px;
   border-radius: 12px;
   text-decoration: none;
   font-weight: 600;
@@ -206,6 +206,7 @@ h6 {
   transition: all 0.5s;
   white-space: nowrap;
   width: fit-content;
+  cursor: pointer;
 }
 
 .black-button:hover {
@@ -215,7 +216,7 @@ h6 {
 .white-button {
   background-color: #ffffff;
   color: #000000;
-  padding: 12px 22px;
+  padding: 12px 24px;
   border-radius: 12px;
   text-decoration: none;
   font-weight: 600;
@@ -224,18 +225,20 @@ h6 {
   white-space: nowrap;
   width: fit-content;
   border: 1px solid rgba(59, 59, 59, 0.12);
+  cursor: pointer;
 }
 
 .white-button:hover {
   background-color: var(--progress-bg);
   /* dark on hover */
+  border: 1px solid rgba(59, 59, 59, 0.9);
   color: var(--black-color);
 }
 
 .blue-button {
   background-color: #5900ea;
   color: #fff;
-  padding: 12px 22px;
+  padding: 12px 24px;
   border-radius: 12px;
   text-decoration: none;
   font-weight: 600;
@@ -243,12 +246,13 @@ h6 {
   transition: all 0.5s;
   white-space: nowrap;
   width: fit-content;
+  cursor: pointer;
 }
 
 .red-button {
   background-color: var(--red-color);
   color: #fff;
-  padding: 12px 22px;
+  padding: 12px 24px;
   border-radius: 12px;
   text-decoration: none;
   font-weight: 600;

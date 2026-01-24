@@ -4,6 +4,7 @@ import "../css/header.css";
 import logo from "../assets/logo.png";
 import { BsSearch } from "react-icons/bs";
 import { FiMenu } from "react-icons/fi";
+import { FiX } from "react-icons/fi";
 
 const Header = ({ onSearch }) => {
   const [searchValue, setSearchValue] = useState("");

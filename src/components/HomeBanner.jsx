@@ -25,7 +25,7 @@ const HomeBanner = () => {
           duration: 1,
           stagger: 0.1,
           ease: "power2.out",
-        }
+        },
       );
 
       // 2) Below head elements: y -50px -> 0, Opacity 0->1
@@ -38,7 +38,7 @@ const HomeBanner = () => {
           duration: 1,
           delay: 0.5, // Start after heading starts appearing
           ease: "power2.out",
-        }
+        },
       );
     }, containerRef);
 
@@ -84,7 +84,10 @@ const HomeBanner = () => {
     { title: "Growth in browser-based data leaks", value: "3x" },
     { title: "Enterprises with overexposed sensitive data", value: "~60%" },
     { title: "Average cost of a data breach", value: "$4.45M" },
-    { title: "Enterprises lack proof of data privacy controls", value: "~70%" },
+    {
+      title: "Enterprises lack proof of data privacy controls",
+      value: "~70%",
+    },
   ];
 
   return (
@@ -103,7 +106,7 @@ const HomeBanner = () => {
         {/* Heading */}
         <h1 className="big-text-head banner-heading" ref={headingRef}>
           {renderSplitText(
-            "Meet your new AI driven \n  Cybersecurity solutions"
+            "Meet your new AI driven \n  Cybersecurity solutions",
           )}
         </h1>
 
@@ -130,7 +133,7 @@ const HomeBanner = () => {
             <Swiper
               modules={[Autoplay]}
               spaceBetween={20}
-              slidesPerView={1}
+              slidesPerView={2}
               loop={true}
               autoplay={{
                 delay: 2500,
@@ -141,7 +144,7 @@ const HomeBanner = () => {
                   slidesPerView: 2,
                 },
                 1024: {
-                  slidesPerView: 4,
+                  slidesPerView: 2,
                 },
               }}
               className="stats-swiper"

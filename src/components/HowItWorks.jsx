@@ -14,37 +14,37 @@ const HowItWorks = () => {
   const steps = [
     {
       icon: <FaPlug />,
-      title: "Deploy the ThreatSenseAi Agent",
+      title: "Deploy the\n ThreatSenseAi Agent",
       description:
         "Install the lightweight ThreatSense AI agent on your SAP system—quick, seamless, and zero impact on performance.",
     },
     {
       icon: <FaHeartbeat />, // or FaWaveSquare
-      title: "Real-Time Log Collection",
+      title: "Real-Time\n Log Collection",
       description:
         "The agent continuously collects logs and security events from your SAP system & securely transmitted to the ThreatSense AI system.",
     },
     {
       icon: <FaBrain />,
-      title: "AI-Powered Threat Detection & Analysis",
+      title: "AI-Powered\n Threat Detection & Analysis",
       description:
         "Our advanced SIEM & SOAR engine analyzes patterns, identifies anomalies, and flags potential threats instantly.",
     },
     {
       icon: <FaRegBell />,
-      title: "Instant Alerts & Notifications",
+      title: "Instant Alerts\n & Notifications",
       description:
         "Alerts are securely sent to your SOC team via Slack, Teams, Email, or any preferred messaging platform with No delays and other security threats.",
     },
     {
       icon: <FaCompressArrowsAlt />, // Seamless ITSM Integration
-      title: "Seamless ITSM Integration",
+      title: "Seamless\n ITSM Integration",
       description:
         "Every security event is automatically recorded in our ITSM tool or integrated into your existing ITSM system.",
     },
     {
       icon: <FaShieldAlt />,
-      title: "Automated Response & Threat Mitigation",
+      title: "Automated Response\n   & Threat Mitigation",
       description:
         "Our AI engine determines the right action based on threat severity and Automates defense mechanisms instantly.",
     },

@@ -32,6 +32,11 @@ const AccordionSection = () => {
       description:
         "Enforces strict security policies, ensuring alignment with industry regulations and best practices.",
     },
+    {
+      title: "lorem ipsum",
+      description:
+        "lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.",
+    },
   ];
 
   return (
@@ -92,11 +97,11 @@ const AccordionSection = () => {
             ))}
           </div>
           {/* Red Button if requested, but image doesn't show it. Prompt said 'use red-button'. */}
-          <div style={{ marginTop: "30px" }}>
+          {/* <div style={{ marginTop: "30px" }}>
             <a href="#" className="red-button">
               Book A Free Demo
             </a>
-          </div>
+          </div> */}
         </div>
         <div className="accordion-image-side">
           <img src={bgImage} alt="Capabilities" className="accordion-image" />

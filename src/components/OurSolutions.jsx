@@ -19,18 +19,20 @@ const OurSolutions = () => {
       "(min-width: 769px)",
       () => {
         const cards = cardsRef.current;
+        if (!cards[0] || !cards[1] || !cards[2]) return;
 
         // Card 1 Animation:
         // When Card 2 comes up, Card 1 scales to 0.7
         gsap.to(cards[0], {
           scale: 0.7,
           ease: "none",
-          immediateRender: false, // Prevent conflict on load
+          immediateRender: false,
           scrollTrigger: {
             trigger: cards[1],
-            start: "top bottom", // Starts when Card 2 enters viewport
-            end: "top top+=150px", // Ends when Card 2 hits the sticky top (approx)
-            scrub: 1, // Smooth dragging to prevent jitter
+            start: "top bottom",
+            end: "top top+=150px",
+            scrub: 1,
+            invalidateOnRefresh: true,
           },
         });
 
@@ -44,6 +46,7 @@ const OurSolutions = () => {
             start: "top bottom",
             end: "top top+=150px",
             scrub: 1,
+            invalidateOnRefresh: true,
           },
         });
 
@@ -58,15 +61,24 @@ const OurSolutions = () => {
             start: "top bottom",
             end: "top top+=150px",
             scrub: 1,
+            invalidateOnRefresh: true,
           },
         });
-
-        // Card 3 stays at scale 1 (default)
       },
-      containerRef
+      containerRef,
     );
 
-    return () => mm.revert();
+    // Critical for SPA navigation: Refresh ScrollTrigger after a short delay
+    // to ensure the DOM is fully painted and any other scroll adjustments
+    // (like ScrollToTop) are finished.
+    const refreshTimer = setTimeout(() => {
+      ScrollTrigger.refresh();
+    }, 100);
+
+    return () => {
+      mm.revert();
+      clearTimeout(refreshTimer);
+    };
   }, []);
 
   const solutions = [
