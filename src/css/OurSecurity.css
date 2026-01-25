@@ -1,0 +1,79 @@
+.our-security-section {
+  background: linear-gradient(180deg, #0b1222, #0f1729);
+  padding: 80px 0;
+}
+
+.our-security-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.security-label {
+  display: inline-block;
+  color: #ff7a18;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  margin-bottom: 16px;
+}
+
+/* Intro spacing only */
+.security-intro {
+  max-width: 720px;
+  margin-bottom: 30px;
+}
+
+/* List */
+.security-list {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+/* Card */
+.philosophy-item {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  padding: 28px;
+  border-radius: 20px;
+  transition: background-color 0.4s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+
+/* Badge */
+.step-badge {
+  min-width: 56px;
+  height: 56px;
+  background-color: #ff7a18;
+  color: #ffffff;
+  font-weight: 700;
+  border-radius: 16px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: transform 0.3s ease;
+}
+
+
+
+/* Mobile */
+@media (max-width: 768px) {
+  .our-security-section {
+    padding: 60px 0;
+  }
+
+  .philosophy-item {
+    padding: 15px 0;
+    flex-direction: column;
+  }
+
+  .security-list {
+    gap: 15px;
+  }
+}

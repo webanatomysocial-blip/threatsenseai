@@ -1,31 +1,42 @@
 import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "../css/AboutBanner.css";
 import bannerImg from "../assets/about-images/banner.jpg";
-// import ideaSvg from "../assets/about-images/idea.svg";
+
+gsap.registerPlugin(ScrollTrigger);
 
 export default function AboutBanner() {
   const headerRef = useRef(null);
+  const layoutRef = useRef(null);
 
   useEffect(() => {
+    // Animate the header letters
     const chars = headerRef.current.querySelectorAll(".split-text-char");
-
     gsap.fromTo(
       chars,
-      {
-        opacity: 0,
-        y: 30,
-        filter: "blur(10px)",
-      },
+      { opacity: 0, y: 30, filter: "blur(10px)" },
+      { opacity: 1, y: 0, filter: "blur(0px)", duration: 0.8, stagger: 0.05, ease: "power2.out", delay: 0.2 }
+    );
+
+    // Animate the banner images in layout
+    const images = layoutRef.current.querySelectorAll("img");
+    gsap.fromTo(
+      images,
+      { opacity: 0, y: 50, scale: 0.95 },
       {
         opacity: 1,
         y: 0,
-        filter: "blur(0px)",
+        scale: 1,
         duration: 0.8,
-        stagger: 0.05,
-        ease: "power2.out",
-        delay: 0.2,
-      },
+        stagger: 0.2,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: layoutRef.current,
+          start: "top 80%",
+          toggleActions: "play none none none",
+        },
+      }
     );
   }, []);
 
@@ -51,27 +62,8 @@ export default function AboutBanner() {
         </p>
       </div>
 
-      <div className="about-banner-layout">
-        {/* <div className="about-banner-image-box">
-          <img src={bannerImg} alt="Our environment" />
-        </div>
-
-        <div className="about-banner-orange-box">
-          <img src={ideaSvg} alt="Idea" className="idea-icon" />
-          <div className="orange-box-content">
-            <h2 className="head-text">
-              Our Story <br />
-              Started in 2010
-            </h2>
-            <p className="para-text-white">
-              ThreatSenseAi is revolutionizing cybersecurity by seamlessly
-              integrating advanced SIEM and SOAR capabilities into one powerful
-              solution. Our platform is engineered to provide deep, real-time
-              threat detection and automated incident response, empowering
-              enterprises to proactively safeguard their digital assets.
-            </p>
-          </div>
-        </div> */}
+      {/* Animate banner layout images */}
+      <div className="about-banner-layout" ref={layoutRef}>
         <img src={bannerImg} alt="" />
         <img src={bannerImg} alt="" />
         <img src={bannerImg} alt="" />
