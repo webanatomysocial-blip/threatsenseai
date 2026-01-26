@@ -33,6 +33,7 @@
   width: 33%;
   height: auto;
   border-radius: 20px;
+  object-fit: cover;
 }
 
 .about-banner-image-box {

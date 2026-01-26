@@ -3,6 +3,8 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "../css/AboutBanner.css";
 import bannerImg from "../assets/about-images/banner.jpg";
+import bannerImg2 from "../assets/about-images/banner1.jpg";
+import bannerImg3 from "../assets/about-images/banner3.webp";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -65,8 +67,8 @@ export default function AboutBanner() {
       {/* Animate banner layout images */}
       <div className="about-banner-layout" ref={layoutRef}>
         <img src={bannerImg} alt="" />
-        <img src={bannerImg} alt="" />
-        <img src={bannerImg} alt="" />
+        <img src={bannerImg2} alt="" />
+        <img src={bannerImg3} alt="" />
       </div>
     </section>
   );

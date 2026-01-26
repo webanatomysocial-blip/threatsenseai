@@ -3,12 +3,12 @@ import React, { useRef, useEffect, useState, startTransition } from "react";
 const LetterGlitch = ({
   customCharacters = "",
   glitchColors = ["#c1c1c1ff", "#fff9f9ff", "#fff9f9ff"],
-  glitchSpeed = 50,
+  glitchSpeed = 15,
   centerVignette = false,
   outerVignette = true,
   smooth = true,
   oneOff = false,
-  density = 0.05,
+  density = 0.2,
   randomizeColor = false,
   style = {},
 }) => {
@@ -23,9 +23,9 @@ const LetterGlitch = ({
   // Standard React doesn't have useIsStaticRenderer, so we assume false (interactive)
   const isStatic = false;
 
-  const fontSize = 10;
-  const charWidth = 6; // Reduced to eliminate horizontal gaps
-  const charHeight = 10; // Reduced to eliminate vertical gaps
+  const fontSize = 14;
+  const charWidth = 10; // Reduced to eliminate horizontal gaps
+  const charHeight = 14; // Reduced to eliminate vertical gaps
 
   const defaultLettersAndSymbols = [
     "A",
