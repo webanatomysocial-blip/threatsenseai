@@ -3,7 +3,6 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "../css/HomeTabSection.css";
 
-// Import images
 import bgImage from "../assets/home/tab-section/bg-image.png";
 import img1 from "../assets/home/tab-section/1.jpg";
 import img2 from "../assets/home/tab-section/2.jpg";
@@ -15,6 +14,14 @@ const HomeTabSection = () => {
   const [activeTab, setActiveTab] = useState("detect");
   const containerRef = useRef(null);
   const bgRef = useRef(null);
+  const navRef = useRef(null);
+  const indicatorRef = useRef(null);
+
+  const tabs = [
+    { id: "detect", label: "Detect", image: img1 },
+    { id: "deter", label: "Deter", image: img2 },
+    { id: "defend", label: "Defend", image: img3 },
+  ];
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -24,10 +31,9 @@ const HomeTabSection = () => {
         ease: "power4.out",
         scrollTrigger: {
           trigger: containerRef.current,
-          start: "top 90%", // Animation starts when section hits 80% viewport height
-          toggleActions: "play none none none", // Play once
+          start: "top 90%",
+          toggleActions: "play none none none",
           once: true,
-          // markers: true,
         },
       });
     }, containerRef);
@@ -35,15 +41,35 @@ const HomeTabSection = () => {
     return () => ctx.revert();
   }, []);
 
-  const tabs = [
-    { id: "detect", label: "Detect", image: img1 },
-    { id: "deter", label: "Deter", image: img2 },
-    { id: "defend", label: "Defend", image: img3 },
-  ];
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveTab(prev => {
+        const index = tabs.findIndex(tab => tab.id === prev);
+        return tabs[(index + 1) % tabs.length].id;
+      });
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  useEffect(() => {
+    if (!navRef.current || !indicatorRef.current) return;
+
+    const activeButton = navRef.current.querySelector(
+      `[data-tab="${activeTab}"]`
+    );
+    if (!activeButton) return;
+
+    gsap.to(indicatorRef.current, {
+      x: activeButton.offsetLeft,
+      width: activeButton.offsetWidth,
+      duration: 0.5,
+      ease: "power3.out",
+    });
+  }, [activeTab]);
 
   return (
     <div className="home-tab-section" ref={containerRef}>
-      {/* Background Image Absolute */}
       <img
         ref={bgRef}
         src={bgImage}
@@ -51,10 +77,13 @@ const HomeTabSection = () => {
         className="tab-bg-image"
       />
 
-      <div className="tab-navigation">
-        {tabs.map((tab) => (
+      <div className="tab-navigation" ref={navRef}>
+        <span ref={indicatorRef} className="tab-indicator" />
+
+        {tabs.map(tab => (
           <button
             key={tab.id}
+            data-tab={tab.id}
             className={`tab-button ${activeTab === tab.id ? "active" : ""}`}
             onClick={() => setActiveTab(tab.id)}
           >
@@ -63,12 +92,9 @@ const HomeTabSection = () => {
         ))}
       </div>
 
-      {/* Navigation Tabs */}
-
-      {/* Content Area */}
       <div className="tab-content-container">
         {tabs.map(
-          (tab) =>
+          tab =>
             activeTab === tab.id && (
               <div key={tab.id} className="tab-panel">
                 <img

@@ -1,15 +1,17 @@
 import "../css/WhatMakesUs.css";
 import { BsArchive, BsShield, BsFileText } from "react-icons/bs";
-import { FaBolt, FaBuilding, FaExclamationTriangle } from "react-icons/fa";
-import AnimatedContent from "./AnimatedContent"; 
+import { FaBolt, FaBuilding, FaExclamationTriangle, FaFingerprint } from "react-icons/fa";
+import AnimatedContent from "./AnimatedContent";
+
 
 const WhatMakesUs = () => {
   return (
     <section className="different-section">
       <div className="different-container">
 
-        <span className="different-eyebrow">
-          WHAT MAKES US DIFFERENT
+        <span className="different-eyebrow" style={{ display: "flex", justifyContent:"center",alignItems: "center", gap: "6px" }}>
+          <FaFingerprint size={18} color="black" />
+          What Makes us Different
         </span>
 
         <h2 className="head-text different-heading">
@@ -31,7 +33,7 @@ const WhatMakesUs = () => {
           className="different-grid"
         >
           <div className="different-card">
-            <div className="different-icon"><BsArchive size={20}  color="#F97015" /></div>
+            <div className="different-icon"><BsArchive size={20} color="#F97015" /></div>
             <p className="sub-head-text">"SAP First" – by Design</p>
             <p className="sub-para-text">
               We build natively for SAP application, database, and data layers—rather than retrofitting generic security tools onto complex SAP environments.
@@ -39,7 +41,7 @@ const WhatMakesUs = () => {
           </div>
 
           <div className="different-card">
-            <div className="different-icon"><FaBolt size={20}  color="#F97015" /></div>
+            <div className="different-icon"><FaBolt size={20} color="#F97015" /></div>
             <p className="sub-head-text">Real-Time Control, Not Postmortem</p>
             <p className="sub-para-text">
               We don't just log violations. We automatically respond—reinstating controls, blocking actions, and preserving evidence as incidents occur.
@@ -47,7 +49,7 @@ const WhatMakesUs = () => {
           </div>
 
           <div className="different-card">
-            <div className="different-icon"><BsShield size={20}  color="#F97015" /></div>
+            <div className="different-icon"><BsShield size={20} color="#F97015" /></div>
             <p className="sub-head-text">Data-Centric Protection</p>
             <p className="sub-para-text">
               Our focus is on how data is accessed, exposed, copied, exported, or shared—across SAP, browsers, AI tools, and third-party channels.
@@ -55,7 +57,7 @@ const WhatMakesUs = () => {
           </div>
 
           <div className="different-card">
-            <div className="different-icon"><BsFileText size={20}  color="#F97015"/></div>
+            <div className="different-icon"><BsFileText size={20} color="#F97015" /></div>
             <p className="sub-head-text">Compliance That Stays On</p>
             <p className="sub-para-text">
               Continuous enforcement of regulatory requirements such as MCA Rule 11(g), GDPR, DPDP, SOX, and industry mandates—without relying on manual checks.
@@ -63,7 +65,7 @@ const WhatMakesUs = () => {
           </div>
 
           <div className="different-card">
-            <div className="different-icon"><FaBuilding size={20}  color="#F97015"/></div>
+            <div className="different-icon"><FaBuilding size={20} color="#F97015" /></div>
             <p className="sub-head-text">Enterprise-Safe Architecture</p>
             <p className="sub-para-text">
               Lightweight, non-intrusive deployment that integrates seamlessly with existing SAP landscapes, SIEM/SOAR platforms, and ITSM tools.
@@ -71,7 +73,7 @@ const WhatMakesUs = () => {
           </div>
 
           <div className="different-card">
-            <div className="different-icon"><FaExclamationTriangle size={20}  color="#F97015" /></div>
+            <div className="different-icon"><FaExclamationTriangle size={20} color="#F97015" /></div>
             <p className="sub-head-text">Built to Stop Insider & AI-Driven Leaks</p>
             <p className="sub-para-text">
               Addresses modern leak vectors including privileged misuse, excessive access, browser-based exfiltration, and data exposure through GenAI tools.

@@ -67,7 +67,9 @@
 }
 
 .nav-link:hover {
-  color: #555; /* text color change */
+    color: var(--red-color);
+
+  
 }
 
 .nav-link:hover::before {

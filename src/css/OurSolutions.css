@@ -1,12 +1,17 @@
 /* src/css/OurSolutions.css */
 
 .our-solutions-container {
-  padding: 80px 130px;
+  padding: 80px 20px;
+  /* Reduced side padding */
+  padding-bottom: 500px;
   background-color: var(--progress-bg);
   display: flex;
   flex-direction: column;
   align-items: center;
   position: relative;
+  width: 100%;
+  overflow: hidden;
+  /* Prevent horizontal scroll jitter */
 }
 
 .solutions-header {
@@ -16,18 +21,53 @@
 
 .cards-wrapper {
   width: 100%;
-  max-width: 1200px;
+  max-width: 1400px;
+  /* Increased width */
   position: relative;
-  /* padding-bottom: 100px; */
+  height: auto;
+  /* Let content define height */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .solution-card-container {
-  position: sticky;
-  top: 100px;
-  margin-bottom: 50px;
-  height: 500px;
+  margin-bottom: 100vh;
+  /* Reduced from 120vh for faster scroll */
+  height: 80vh;
+  min-height: 550px;
   width: 100%;
+  max-width: 1300px;
+  /* Increased card width */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform-origin: top center;
+  position: relative;
+  will-change: transform;
+  transform: translateZ(0);
+  /* Force GPU acceleration */
+  backface-visibility: hidden;
+  z-index: 1;
 }
+
+/* Base Z-indices */
+.solution-card-container:nth-child(1) {
+  z-index: 1;
+}
+
+.solution-card-container:nth-child(2) {
+  z-index: 2;
+}
+
+.solution-card-container:nth-child(3) {
+  z-index: 3;
+}
+
+.solution-card-container:last-child {
+  margin-bottom: 0;
+}
+
 /* Removed specific nth-child(2) rule to ensure consistent stacking behavior */
 
 .solution-card {
@@ -40,6 +80,8 @@
   /* flex-direction: column; */
   overflow: hidden;
   position: relative;
+  transform-style: preserve-3d;
+  /* Stability for stacking */
 }
 
 .card-content {

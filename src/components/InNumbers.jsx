@@ -1,6 +1,7 @@
 import React from "react";
 import "../css/InNumbers.css";
-import AnimatedContent from "./AnimatedContent"; 
+import AnimatedContent from "./AnimatedContent";
+import { FaChartBar } from "react-icons/fa";
 
 const topStats = [
   { value: "5", label: "Innovative security tools" },
@@ -19,7 +20,10 @@ const InNumbers = () => {
     <section className="in-numbers-section">
       <div className="in-numbers-container">
         {/* Label */}
-        <span className="numbers-label">THREATSENSEAI IN NUMBERS</span>
+        <span className="numbers-label" style={{ display: "flex", alignItems: "center", gap: "6px" ,justifyContent:"center"}}>
+          <FaChartBar size={18} color="black" />
+          ThreatSenseAi In Numbers
+        </span>
 
         {/* Heading */}
         <h2 className="head-text">Proven Protection at Scale</h2>

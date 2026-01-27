@@ -13,7 +13,7 @@ const OurSolutions = () => {
   const cardsRef = useRef([]);
 
   useEffect(() => {
-    let mm = gsap.matchMedia();
+    const mm = gsap.matchMedia();
 
     mm.add(
       "(min-width: 769px)",
@@ -21,56 +21,69 @@ const OurSolutions = () => {
         const cards = cardsRef.current;
         if (!cards[0] || !cards[1] || !cards[2]) return;
 
-        // Card 1 Animation:
-        // When Card 2 comes up, Card 1 scales to 0.7
-        gsap.to(cards[0], {
-          scale: 0.7,
-          ease: "none",
-          immediateRender: false,
-          scrollTrigger: {
-            trigger: cards[1],
-            start: "top bottom",
-            end: "top top+=150px",
-            scrub: 1,
-            invalidateOnRefresh: true,
-          },
-        });
+        cards.forEach((card, index) => {
+          const isLast = index === cards.length - 1;
+          const nextCard = cards[index + 1];
 
-        // When Card 3 comes up, Card 1 scales further from 0.7 down to 0.6
-        gsap.to(cards[0], {
-          scale: 0.6,
-          ease: "none",
-          immediateRender: false,
-          scrollTrigger: {
-            trigger: cards[2],
-            start: "top bottom",
-            end: "top top+=150px",
-            scrub: 1,
-            invalidateOnRefresh: true,
-          },
-        });
+          // Specific offsets for stacking effect
+          let pinOffset = 60;
+          if (index === 1) pinOffset = 100;
 
-        // Card 2 Animation:
-        // When Card 3 comes up, Card 2 scales to 0.6
-        gsap.to(cards[1], {
-          scale: 0.6,
-          ease: "none",
-          immediateRender: false,
-          scrollTrigger: {
-            trigger: cards[2],
-            start: "top bottom",
-            end: "top top+=150px",
-            scrub: 1,
+          // 1. PINNING LOGIC - Robust for stack stability
+          ScrollTrigger.create({
+            trigger: card,
+            start: `top ${pinOffset}px`,
+            endTrigger: containerRef.current,
+            end: "bottom bottom",
+            pin: true,
+            pinSpacing: false,
+            anticipatePin: 1,
             invalidateOnRefresh: true,
-          },
+            // Ensure zIndex is locked during pinning
+            onRefresh: (self) => {
+              gsap.set(card, { zIndex: index + 1 });
+            },
+            onEnter: () => gsap.set(card, { zIndex: index + 1 }),
+            onLeaveBack: () => gsap.set(card, { zIndex: index + 1 }),
+          });
+
+          // 2. UNIFIED SCALE LOGIC
+          if (!isLast) {
+            let nextPinOffset = 60;
+            if (index === 0) nextPinOffset = 100;
+            if (index === 1) nextPinOffset = 60;
+
+            gsap.to(card, {
+              scale: 0.94,
+              ease: "none",
+              force3D: true, // GPU acceleration
+              scrollTrigger: {
+                trigger: nextCard,
+                start: "top bottom",
+                end: `top ${nextPinOffset}px`,
+                scrub: 0.5, // Subtle smoothing to prevent jitter
+              },
+            });
+
+            if (index === 0 && cards[2]) {
+              gsap.to(card, {
+                scale: 0.88,
+                ease: "none",
+                force3D: true,
+                scrollTrigger: {
+                  trigger: cards[2],
+                  start: "top bottom",
+                  end: "top 60px",
+                  scrub: 0.5,
+                },
+              });
+            }
+          }
         });
       },
-      containerRef,
+      containerRef
     );
 
-    // Critical for SPA navigation: Refresh ScrollTrigger after a short delay
-    // to ensure the DOM is fully painted and any other scroll adjustments
-    // (like ScrollToTop) are finished.
     const refreshTimer = setTimeout(() => {
       ScrollTrigger.refresh();
     }, 100);
@@ -84,21 +97,23 @@ const OurSolutions = () => {
   const solutions = [
     {
       title: "MCAAT",
-      desc: "Compliance is not documentation. It’s control. MCAAT ensures audit trails in SAP cannot be disabled, altered, or bypassed.",
+      desc:
+        "Compliance is not documentation. It's control. MCAAT ensures audit trails in SAP cannot be disabled, altered, or bypassed.",
       subheading: "Built for Rule 11(g) Enforcement",
       features: [
         "Rule 11(g) compliance made enforceable",
         "Secure audit logging at source",
         "Audit-ready reporting on demand",
       ],
-      image: cardImage, // Using placeholder (unchanged)
+      image: cardImage,
       reverse: false,
-      link: "/mcaat", // unchanged
+      link: "/mcaat",
       btn: "Explore MCAAT",
     },
     {
       title: "ThreatSense AI Data Security (TADS)",
-      desc: "Prevent Data Leaks Before They Happen. Most data leaks are caused by trusted users. TADS enforces real-time controls to stop data misuse, unauthorized access, and silent exfiltration across endpoints and applications.",
+      desc:
+        "Prevent Data Leaks Before They Happen. Most data leaks are caused by trusted users.",
       subheading: "Prevent Data Leaks Before They Happen",
       features: [
         "Real-time data access enforcement",
@@ -106,49 +121,51 @@ const OurSolutions = () => {
         "Policy-driven data protection",
         "Tamper-resistant security layer",
       ],
-      image: cardImage, // unchanged
+      image: cardImage,
       reverse: true,
-      link: "/tads", // unchanged
+      link: "/tads",
       btn: "Explore TADS",
     },
     {
       title: "SIEM & SOAR",
-      desc: "AI-Driven Threat Detection & Response. ThreatSense AI SIEM & SOAR delivers real-time threat visibility and automated incident response across SAP and non-SAP environments.",
+      desc:
+        "AI-Driven Threat Detection & Response across SAP and non-SAP environments.",
       subheading: "AI-Driven Threat Detection & Response",
       features: [
-        "Continuous monitoring of SAP® and enterprise security events",
-        "Real-time alerts with contextual risk insights",
-        "Automated incident response and remediation workflows",
+        "Continuous monitoring",
+        "Real-time alerts",
+        "Automated incident response",
       ],
-      image: cardImage, // unchanged
+      image: cardImage,
       reverse: false,
-      link: "/siem-soar", // unchanged
+      link: "/siem-soar",
       btn: "Explore SIEM & SOAR",
     },
   ];
 
   return (
-    <div className="our-solutions-container" ref={containerRef} id="solutions">
+    <div
+      className="our-solutions-container"
+      ref={containerRef}
+      id="solutions"
+    >
       <div className="solutions-header">
         <div
           className="sub-para-text"
           style={{
-            marginBottom: "0px",
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
+            marginBottom: "0px",
           }}
         >
-          <AiFillInfoCircle
-            color="black"
-            size={18}
-            style={{ marginRight: "4px" }}
-          />{" "}
+          <AiFillInfoCircle size={18} style={{ marginRight: "4px" }} />
           Our Solutions
         </div>
+
         <h2 className="head-text">
-          Explore cybersecurity solutions <br /> built to protect enterprise
-          data
+          Explore cybersecurity solutions <br />
+          built to protect enterprise data
         </h2>
       </div>
 
@@ -160,24 +177,32 @@ const OurSolutions = () => {
             ref={(el) => (cardsRef.current[index] = el)}
           >
             <div
-              className={`solution-card ${solution.reverse ? "reverse" : ""}`}
+              className={`solution-card ${solution.reverse ? "reverse" : ""
+                }`}
             >
               <div className="card-content">
                 <h3 className="head-text">{solution.title}</h3>
+
                 <h4
                   className="sub-para-text"
                   style={{ fontSize: "18px", fontWeight: "bold" }}
                 >
                   {solution.subheading}
                 </h4>
-                <p className="solution-desc para-text">{solution.desc}</p>
+
+                <p className="solution-desc para-text">
+                  {solution.desc}
+                </p>
+
                 <ul className="features-list">
                   {solution.features.map((feature, i) => (
                     <li key={i} className="feature-item">
-                      <span className="check-icon">✓</span> {feature}
+                      <span className="check-icon">✓</span>
+                      {feature}
                     </li>
                   ))}
                 </ul>
+
                 <Link
                   to={solution.link}
                   className="white-button"
@@ -186,6 +211,7 @@ const OurSolutions = () => {
                   {solution.btn}
                 </Link>
               </div>
+
               <div className="card-image-section">
                 <img
                   src={solution.image}

@@ -20,8 +20,8 @@ const ThreatRadiation = () => {
     "Sensitive Data Overexposure",
     "Data Pasted into GenAI Tools",
     "Uploads to Personal Email",
-    "Test System Replication", // New Item
-    "Policy Bypass Attempts", // New Item
+    "Test System Replication", 
+    "Policy Bypass Attempts", 
   ];
 
   // Center point for the radiation effect

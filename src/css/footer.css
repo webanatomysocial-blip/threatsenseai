@@ -119,6 +119,7 @@
   opacity: 1;
   width: 100%;
   position: relative;
+  /* background: linear-gradient(black,gray); */
 }
 
 .footer-logo-img {
@@ -128,7 +129,7 @@
 .footer-logo-img-overlay {
   position: absolute;
   width: 100%;
-  height: 120px;
+  height: 270px;
   /* Option 1 - Very common & smooth */
   background: linear-gradient(
     to bottom,

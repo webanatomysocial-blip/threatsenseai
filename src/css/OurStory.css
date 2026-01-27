@@ -14,10 +14,10 @@
 
 .story-label {
   display: inline-block;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 600;
   letter-spacing: 1.5px;
-  color: var(--red-color);
+  color: black;
   margin-bottom: 14px;
 }
 

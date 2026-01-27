@@ -1,6 +1,6 @@
 .threat-radiation-section {
   position: relative;
-  padding: 100px 0px;
+  padding: 100px 20px 100px 120px;
   background-color: var(--progress-bg);
   overflow: hidden;
   display: flex;
@@ -103,7 +103,8 @@
 
 /* Visibility toggles */
 .mobile-threat-container {
-  display: none; /* Hidden by default on desktop */
+  display: none;
+  /* Hidden by default on desktop */
 }
 
 /* Responsive adjustments */
@@ -111,9 +112,11 @@
   .threat-pill span {
     font-size: 12px;
   }
+
   .radiation-container {
     height: 450px;
   }
+
   .bg-half-moon {
     max-width: 900px;
   }
@@ -152,12 +155,11 @@
     display: flex;
     align-items: center;
     gap: 12px;
-    background-color: rgba(
-      255,
-      255,
-      255,
-      0.7
-    ); /* Slight overlay for readability if bg is busy */
+    background-color: rgba(255,
+        255,
+        255,
+        0.7);
+    /* Slight overlay for readability if bg is busy */
     backdrop-filter: blur(2px);
   }
 }

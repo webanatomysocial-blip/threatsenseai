@@ -2,6 +2,7 @@ import React from "react";
 import "../css/OurStory.css";
 import { FiAlertTriangle, FiUserX, FiClipboard, FiBell } from "react-icons/fi";
 import AnimatedContent from "./AnimatedContent"; // make sure path is correct
+import { FaBookOpen } from "react-icons/fa";
 
 const gaps = [
   {
@@ -28,7 +29,10 @@ const OurStory = () => {
       <div className="our-story-container">
         {/* Left content */}
         <div className="our-story-left">
-          <span className="story-label">OUR STORY</span>
+          <span className="story-label" style={{ display: "flex", alignItems: "center", gap: "6px" }}>
+            <FaBookOpen size={18} color="black" />
+            Our Story
+          </span>
 
           <h2 className="head-text">Why We Built ThreatSense AI</h2>
 

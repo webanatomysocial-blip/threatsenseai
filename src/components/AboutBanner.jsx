@@ -44,7 +44,8 @@ export default function AboutBanner() {
 
   const splitLetters = (text) => {
     return text.split("").map((char, index) => (
-      <span key={index} className="split-text-char">
+      <span key={index} className="split-text-char"
+       style={{ font: "italic 400 1em 'Instrument Serif'" }}>
         {char === " " ? "\u00A0" : char}
       </span>
     ));

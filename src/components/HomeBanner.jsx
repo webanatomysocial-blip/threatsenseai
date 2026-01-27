@@ -64,7 +64,7 @@ const HomeBanner = () => {
                 fontStyle: isAnalyzer ? "italic" : "normal",
                 fontWeight: isAnalyzer ? "400" : "bold",
                 fontFamily: isAnalyzer ? "Instrument Serif" : "inherit",
-              }}
+              }}  
             >
               {word}
             </span>

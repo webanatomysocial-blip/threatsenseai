@@ -42,7 +42,7 @@ const SecurityHeadaches = () => {
   return (
     <div className="security-headaches-container">
       {/* Label */}
-      <div className="security-label">
+      <div className="Head-security-label">
         <MdSecurity size={18} style={{ marginRight: "4px" }} /> Cybersecurity &
         Data Security Reality
       </div>

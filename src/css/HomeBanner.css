@@ -20,9 +20,7 @@
   right: 130px;
   bottom: 0;
   z-index: -1;
-  /* background-color: #f0f0f0; */
   border-radius: 20px;
-  /* background-image: radial-gradient(circle, #e0e0e0 1px, transparent 1px); */
   background-size: 20px 20px;
   opacity: 0.5;
   overflow: hidden;
@@ -72,16 +70,17 @@
 }
 
 .stat-item-slide {
+  transform: translateX(-60px);
   border-right: 2px dashed #ccc;
   display: flex;
   flex-direction: column;
   justify-content: start;
   align-items: start;
   text-align: left;
-  padding: 40px 30px; /* Adjust padding as needed */
+  padding: 25px 100px ; 
   height: 100%;
   box-sizing: border-box;
-  /* width: 320px; */
+  /* width: 720px; */
 }
 
 .banner-stats {
@@ -139,6 +138,7 @@
     align-items: center;
     text-align: center;
     border-bottom: none;
+    transform: translateX(0px);
   }
 
   /* Center content in slide on mobile */

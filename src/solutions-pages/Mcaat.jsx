@@ -217,7 +217,9 @@ export default function Mcaat() {
         return <br key={index} />;
       }
       return (
-        <span key={index} className="split-text-char">
+        <span key={index} className="split-text-char"
+        style={{ font: "italic 400 1em 'Instrument Serif'" }}
+        >
           {char === " " ? "\u00A0" : char}
         </span>
       );

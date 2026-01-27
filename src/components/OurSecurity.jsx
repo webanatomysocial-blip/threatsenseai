@@ -1,6 +1,8 @@
 import React from "react";
 import "../css/OurSecurity.css";
-import AnimatedContent from "./AnimatedContent"; 
+import AnimatedContent from "./AnimatedContent";
+import { FaShieldAlt } from "react-icons/fa";
+
 const securitySteps = [
   {
     id: "01",
@@ -26,7 +28,10 @@ const OurSecurity = () => {
   return (
     <section className="our-security-section">
       <div className="our-security-container">
-        <span className="security-label">OUR SECURITY PHILOSOPHY</span>
+        <span className="our-security-label" style={{ display: "flex", alignItems: "center", gap: "6px" }}>
+          <FaShieldAlt size={18} color="white" />
+          Our Security Philosophy
+        </span>
 
         <h2 className="head-text-white">
           Prevent <span className="highlight-text">→</span> Enforce{" "}
