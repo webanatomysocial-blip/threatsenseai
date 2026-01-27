@@ -23,61 +23,78 @@ const OurSolutions = () => {
 
         cards.forEach((card, index) => {
           const isLast = index === cards.length - 1;
-          const nextCard = cards[index + 1];
 
-          // Specific offsets for stacking effect
-          let pinOffset = 60;
-          if (index === 1) pinOffset = 100;
-
-          // 1. PINNING LOGIC - Robust for stack stability
+          // 1. Pin Logic
           ScrollTrigger.create({
             trigger: card,
-            start: `top ${pinOffset}px`,
+            start: "top 10%",
             endTrigger: containerRef.current,
             end: "bottom bottom",
             pin: true,
             pinSpacing: false,
             anticipatePin: 1,
             invalidateOnRefresh: true,
-            // Ensure zIndex is locked during pinning
-            onRefresh: (self) => {
-              gsap.set(card, { zIndex: index + 1 });
-            },
             onEnter: () => gsap.set(card, { zIndex: index + 1 }),
             onLeaveBack: () => gsap.set(card, { zIndex: index + 1 }),
           });
 
-          // 2. UNIFIED SCALE LOGIC
-          if (!isLast) {
-            let nextPinOffset = 60;
-            if (index === 0) nextPinOffset = 100;
-            if (index === 1) nextPinOffset = 60;
+          // 2. Initial scale to "ready" state (1.0 -> 0.98)
+          // Range: When card is approaching its pin point
+          gsap.to(card, {
+            scale: 0.98,
+            ease: "none",
+            scrollTrigger: {
+              trigger: card,
+              start: "top 50%",
+              end: "top 10%",
+              scrub: 0.5,
+              immediateRender: false,
+            }
+          });
 
+          // 3. Sequential scale-down as subsequent cards arrive
+          if (index === 0) {
+            // Card 1 scales down when Card 2 arrives
             gsap.to(card, {
               scale: 0.94,
               ease: "none",
-              force3D: true, // GPU acceleration
               scrollTrigger: {
-                trigger: nextCard,
+                trigger: cards[1],
                 start: "top bottom",
-                end: `top ${nextPinOffset}px`,
-                scrub: 0.5, // Subtle smoothing to prevent jitter
-              },
+                end: "top 10%",
+                scrub: 0.5,
+                immediateRender: false,
+              }
             });
-
-            if (index === 0 && cards[2]) {
+            // Card 1 scales down even more when Card 3 arrives
+            if (cards[2]) {
               gsap.to(card, {
-                scale: 0.88,
+                scale: 0.90,
                 ease: "none",
-                force3D: true,
                 scrollTrigger: {
                   trigger: cards[2],
                   start: "top bottom",
-                  end: "top 60px",
+                  end: "top 10%",
                   scrub: 0.5,
-                },
+                  immediateRender: false,
+                }
               });
             }
+          }
+
+          if (index === 1 && cards[2]) {
+            // Card 2 scales down when Card 3 arrives
+            gsap.to(card, {
+              scale: 0.94,
+              ease: "none",
+              scrollTrigger: {
+                trigger: cards[2],
+                start: "top bottom",
+                end: "top 10%",
+                scrub: 0.5,
+                immediateRender: false,
+              }
+            });
           }
         });
       },
