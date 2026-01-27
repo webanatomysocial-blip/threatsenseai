@@ -167,7 +167,7 @@ export default function Mcaat() {
     {
       title: "Automated Monitoring of High-Risk System Activities",
       description:
-        "Sensitive actions such as DEBUG mode usage, audit policy deletion, or critical configuration changes are continuously monitored. MCAAT detects these high-risk activities instantly, preventing silent compliance breaches and reducing reliance on post-facto audit reviews.d",
+        "Sensitive actions such as DEBUG mode usage, audit policy deletion, or critical configuration changes are continuously monitored. MCAAT detects these high-risk activities instantly, preventing silent compliance breaches and reducing reliance on post-facto audit reviews.",
       link: "#",
       img: bgImage,
     },

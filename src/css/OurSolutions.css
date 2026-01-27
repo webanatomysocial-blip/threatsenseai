@@ -24,7 +24,8 @@
 }
 
 .solution-card-container {
-  margin-bottom: 120vh;
+  margin-bottom: 80vh;
+  /* Reduced from 120vh for faster travel */
   /* Increased scroll space between cards for a smoother, longer transition */
   height: 80vh;
   /* Set a consistent height for stacking */
