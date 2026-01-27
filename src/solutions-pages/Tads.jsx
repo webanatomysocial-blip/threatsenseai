@@ -203,7 +203,7 @@ export default function Tads() {
           </h1>
           <p className="sub-para-text">
             Protect sensitive SAP data from insider misuse, AI-driven data
-            leaks, and unauthorized access—across applications, browsers,
+            leaks, and unauthorized access across applications, browsers,
             endpoints, and databases.
           </p>
 
@@ -330,7 +330,7 @@ export default function Tads() {
       <Cta
         title="Control How SAP Data Leaves Your Enterprise"
         description="Real-time visibility and enforcement to prevent insider leaks, excessive access,
-        and unauthorized data sharing across SAP and beyond."
+        and unauthorized data sharing across SAP and beyond"
         backgroundImage={bg}
         buttonText="Book a Demo"
       />

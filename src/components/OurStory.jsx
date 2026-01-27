@@ -39,14 +39,14 @@ const OurStory = () => {
           <p className="para-text">
             Enterprise risk today is no longer driven only by external attackers.
             It is driven by how data is accessed, moved, copied, and misused
-            inside the organization—often through trusted users, business-critical
+            inside the organization, often through trusted users, business-critical
             systems, and modern tools like browsers and generative AI.
           </p>
 
           <p className="para-text">
             We design security solutions that work where enterprises actually
-            operate—across SAP applications, databases, browsers, third parties,
-            and modern AI tools—without disrupting business operations.
+            operate, across SAP applications, databases, browsers, third parties,
+            and modern AI tools, without disrupting business operations.
           </p>
         </div>
 
@@ -93,9 +93,9 @@ const OurStory = () => {
       >
         <p className="sub-head-text">
           ThreatSense AI exists to help organizations stay secure, compliant, and
-          in control of their most critical data—
+          in control of their most critical data  &nbsp;
           <span className="story-highlight-accent">
-            every day, not just during audits.
+            every day, not just during audits
           </span>
         </p>
       </AnimatedContent>

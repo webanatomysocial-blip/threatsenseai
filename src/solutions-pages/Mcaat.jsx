@@ -270,7 +270,7 @@ export default function Mcaat() {
       <ResultsComp />
       <UseCases
         label="Use Cases"
-        title={<>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</>}
+        title={<>Lorem ipsum dolor sit amet consectetur, adipisicing elit</>}
         list={useCasesList}
         image={img2}
       />
@@ -279,7 +279,7 @@ export default function Mcaat() {
         title="Always-On Audit Trail 
         Compliance for MCA Rule 11(g)"
         description="MCAAT continuously enforces, protects, and validates audit trails across SAP systems - automatically detecting tampering,
-        reinstating disabled controls, and preserving audit-ready evidence without manual intervention."
+        reinstating disabled controls, and preserving audit-ready evidence without manual intervention"
         backgroundImage={bg}
         buttonText="Get Started"
       />

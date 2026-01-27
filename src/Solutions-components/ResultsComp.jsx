@@ -12,21 +12,21 @@ const ResultsComp = () => {
       id: 1,
       title: "100% Continuous MCA Rule 11(g) Coverage",
       description:
-        "Ensures audit logs, policies, and controls are always enabled and enforced—eliminating blind spots caused by manual configuration gaps or accidental disabling",
+        "Ensures audit logs, policies, and controls are always enabled and enforced, eliminating blind spots caused by manual configuration gaps or accidental disabling",
       img: img1,
     },
     {
       id: 2,
       title: "Faster Audits with Ready-to-Use Evidence",
       description:
-        "Provides centralized, auditor-ready dashboards with timelines and tamper-proof evidence—cutting audit response time and minimizing back-and-forth with compliance teams",
+        "Provides centralized, auditor-ready dashboards with timelines and tamper-proof evidence, cutting audit response time and minimizing back-and-forth with compliance teams",
       img: img2,
     },
     {
       id: 3,
       title: "Real-Time Audit Policy Enforcement",
       description:
-        "Continuously monitors audit policies and log configurations, automatically reinstating them the moment they are altered, disabled, or deleted—without manual intervention",
+        "Continuously monitors audit policies and log configurations, automatically reinstating them the moment they are altered, disabled, or deleted without manual intervention",
       img: img3,
     },
     {

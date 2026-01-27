@@ -149,9 +149,10 @@ END
       <InNumbers/>
       <OurStory/>
       <Cta
-        title="Secure Your SAP Data. Everywhere It Moves."
+        title="Secure Your SAP Data 
+         Everywhere It Moves"
         description="Prevent data leaks across SAP, browsers, GenAI tools, and third-party access
-  with real-time enforcement, masking, and continuous compliance visibility."
+  with real-time enforcement, masking, and continuous compliance visibility"
         backgroundImage={bg}
         buttonText="Book a Demo"
       />

@@ -14,15 +14,14 @@ const WhyWeExist = () => {
         </span>
 
         <h2 className="head-text">
-          Enterprise Risk Has Changed.{" "}
-          <span className="muted-text">Security Hasn’t.</span>
+          Enterprise Risk Has Changed. Security Hasn’t.
         </h2>
 
         <p className="para-text why-description">
           Modern enterprises run on SAP and other mission-critical systems that
           process vast volumes of sensitive business, financial, and personal
           data. Yet most security controls still focus on perimeter defense and
-          access management—leaving significant blind spots around data
+          access management leaving significant blind spots around data
           movement, insider activity, and operational misuse.
         </p>
 
@@ -45,7 +44,7 @@ const WhyWeExist = () => {
           <div className="why-card">
             <div className="why-icon"><BsClipboard size={20} color="#F97015" /></div>
             <p className="sub-para-text">
-              How do we enforce compliance continuously—not just prove it during audits?
+              How do we enforce compliance continuously, not just prove it during audits?
             </p>
           </div>
         </AnimatedContent>

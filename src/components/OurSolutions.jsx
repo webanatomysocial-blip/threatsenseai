@@ -24,14 +24,19 @@ const OurSolutions = () => {
         cards.forEach((card, index) => {
           const isLast = index === cards.length - 1;
 
+          // Define top offsets: 100px, 130px, 100px
+          const topOffsets = ["100px", "130px", "100px"];
+          const currentOffset = topOffsets[index] || "100px";
+
           // 1. PINNING
           ScrollTrigger.create({
             trigger: card,
-            start: "top 10%",
+            start: `top ${currentOffset}`,
             endTrigger: containerRef.current,
             end: "bottom bottom",
             pin: true,
             pinSpacing: false,
+            anticipatePin: 1,
             invalidateOnRefresh: true,
             onEnter: () => gsap.set(card, { zIndex: index + 1 }),
             onLeaveBack: () => gsap.set(card, { zIndex: index + 1 }),
@@ -44,42 +49,46 @@ const OurSolutions = () => {
               start: "top 80%",
               endTrigger: containerRef.current,
               end: "bottom bottom",
-              scrub: 0.1, // Reduced from 0.5 for near-instant response
-            }
+              scrub: 0.5, // Smooth catching up without too much lag
+            },
           });
 
           // Phase A: Scale to initial size
           scaleTl.to(card, {
             scale: 0.98,
-            ease: "power2.out", // More responsive ease
-            duration: 0.5,
+            ease: "none", // Direct mapping to scroll
+            duration: 1,
           });
 
           if (!isLast) {
             // Recede logic
-            scaleTl.to(card, { scale: 0.98, duration: 1 }); // Less dwell time
+            scaleTl.to(card, { scale: 0.98, duration: 1 });
 
             scaleTl.to(card, {
               scale: 0.94,
-              ease: "power2.out",
-              duration: 0.5
+              ease: "none",
+              duration: 1,
             });
 
             if (index === 0 && cards[2]) {
-              scaleTl.to(card, { scale: 0.94, duration: 1 }); // Less dwell
+              scaleTl.to(card, { scale: 0.94, duration: 1 });
               scaleTl.to(card, {
-                scale: 0.90,
-                ease: "power2.out",
-                duration: 0.5
+                scale: 0.9,
+                ease: "none",
+                duration: 1,
               });
             }
           }
 
           // Final state hold
-          scaleTl.to(card, { scale: isLast ? 0.98 : (index === 0 ? 0.90 : 0.94), duration: 2 });
+          scaleTl.to(card, {
+            scale: isLast ? 0.98 : index === 0 ? 0.9 : 0.94,
+            duration: 2,
+            ease: "none",
+          });
         });
       },
-      containerRef
+      containerRef,
     );
 
     const refreshTimer = setTimeout(() => {
@@ -95,8 +104,7 @@ const OurSolutions = () => {
   const solutions = [
     {
       title: "MCAAT",
-      desc:
-        "Compliance is not documentation. It's control. MCAAT ensures audit trails in SAP cannot be disabled, altered, or bypassed.",
+      desc: "Compliance is not documentation. It's control. MCAAT ensures audit trails in SAP cannot be disabled, altered, or bypassed.",
       subheading: "Built for Rule 11(g) Enforcement",
       features: [
         "Rule 11(g) compliance made enforceable",
@@ -110,8 +118,7 @@ const OurSolutions = () => {
     },
     {
       title: "ThreatSense AI Data Security (TADS)",
-      desc:
-        "Prevent Data Leaks Before They Happen. Most data leaks are caused by trusted users.",
+      desc: "Prevent Data Leaks Before They Happen. Most data leaks are caused by trusted users.",
       subheading: "Prevent Data Leaks Before They Happen",
       features: [
         "Real-time data access enforcement",
@@ -126,8 +133,7 @@ const OurSolutions = () => {
     },
     {
       title: "SIEM & SOAR",
-      desc:
-        "AI-Driven Threat Detection & Response across SAP and non-SAP environments.",
+      desc: "AI-Driven Threat Detection & Response across SAP and non-SAP environments.",
       subheading: "AI-Driven Threat Detection & Response",
       features: [
         "Continuous monitoring",
@@ -142,11 +148,7 @@ const OurSolutions = () => {
   ];
 
   return (
-    <div
-      className="our-solutions-container"
-      ref={containerRef}
-      id="solutions"
-    >
+    <div className="our-solutions-container" ref={containerRef} id="solutions">
       <div className="solutions-header">
         <div
           className="sub-para-text"
@@ -175,8 +177,7 @@ const OurSolutions = () => {
             ref={(el) => (cardsRef.current[index] = el)}
           >
             <div
-              className={`solution-card ${solution.reverse ? "reverse" : ""
-                }`}
+              className={`solution-card ${solution.reverse ? "reverse" : ""}`}
             >
               <div className="card-content">
                 <h3 className="head-text">{solution.title}</h3>
@@ -188,9 +189,7 @@ const OurSolutions = () => {
                   {solution.subheading}
                 </h4>
 
-                <p className="solution-desc para-text">
-                  {solution.desc}
-                </p>
+                <p className="solution-desc para-text">{solution.desc}</p>
 
                 <ul className="features-list">
                   {solution.features.map((feature, i) => (

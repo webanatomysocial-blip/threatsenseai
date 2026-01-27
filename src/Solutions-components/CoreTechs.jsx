@@ -15,7 +15,7 @@ const CoreTechs = () => {
       id: "01",
       title: "TADS Protection",
       subtitle:
-        "Monitors and controls how sensitive data moves out of your enterprise, with a primary focus on SAP ERP—the most business-critical system.",
+        "Monitors and controls how sensitive data moves out of your enterprise, with a primary focus on SAP ERP, the most business-critical system.",
       description:
         "TADS prevents unauthorized exports, excessive data access, and insider misuse through real-time, policy-driven enforcement across SAP environments.",
       image: cardImage,
@@ -90,8 +90,8 @@ const CoreTechs = () => {
           Core Techs
         </div>
         <h2 className="head-text">
-          Data Protection, Insider Risk, AI Leakage,
-          <br /> Misuse Prevention
+          Data Protection, Insider Risk <br /> AI Leakage,
+          Misuse Prevention
         </h2>
       </div>
 

@@ -49,7 +49,7 @@ const SecurityHeadaches = () => {
 
       {/* Header */}
       <h2 className="head-text security-header">
-        Security Risks That Threaten <br /> Your Systems — and Your Data!
+        Security Risks That Threaten <br /> Your Systems and Your Data!
       </h2>
 
       {/* Marquee Section */}

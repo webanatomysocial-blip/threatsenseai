@@ -6,7 +6,8 @@ import "swiper/css/autoplay";
 import gsap from "gsap";
 import "../css/index.css";
 import "../css/HomeBanner.css";
-import LetterGlitch from "./LetterGlitch";
+// import LetterGlitch from "./LetterGlitch";
+import PixelBlast from "./createTouchTexture";
 // import LightRays from "./LightRays";
 
 const HomeBanner = () => {
@@ -64,7 +65,7 @@ const HomeBanner = () => {
                 fontStyle: isAnalyzer ? "italic" : "normal",
                 fontWeight: isAnalyzer ? "400" : "bold",
                 fontFamily: isAnalyzer ? "Instrument Serif" : "inherit",
-              }}  
+              }}
             >
               {word}
             </span>
@@ -96,26 +97,24 @@ const HomeBanner = () => {
     <div ref={containerRef} className="home-banner-container">
       {/* 4) Background video placeholder */}
       <div className="video-placeholder">
-        {/* <LightRays
-          raysOrigin="center-center"
-          raysColor="#ffffff"
-          raysSpeed={1}
-          lightSpread={0.5}
-          rayLength={3}
-          followMouse={false} // Auto-rotation enabled
-          mouseInfluence={0}
-          noiseAmount={0}
-          distortion={0}
-          className="custom-rays"
-          pulsating={false}
-          fadeDistance={1}
-          saturation={1}
-        /> */}
-        <LetterGlitch
-          glitchSpeed={50}
-          centerVignette={true}
-          outerVignette={true}
-          smooth={true}
+        <PixelBlast
+          variant="square"
+          pixelSize={4}
+          color="#c4c4c4"
+          patternScale={1}
+          patternDensity={2}
+          pixelSizeJitter={0}
+          enableRipples={false}
+          rippleSpeed={0.4}
+          rippleThickness={0.12}
+          rippleIntensityScale={1.5}
+          liquid={false}
+          liquidStrength={0.12}
+          liquidRadius={1.2}
+          liquidWobbleSpeed={5}
+          speed={0.5}
+          edgeFade={0.25}
+          transparent
         />
       </div>
 

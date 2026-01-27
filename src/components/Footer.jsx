@@ -22,7 +22,7 @@ const Footer = () => {
         <div className="footer-top">
           <div className="footer-left">
             <h2 className="head-text-white" style={{ marginBottom: "20px" }}>
-              Your data <br /> under control.
+              Your data <br /> under control
             </h2>
 
             <p
