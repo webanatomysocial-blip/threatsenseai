@@ -24,7 +24,7 @@ const OurSolutions = () => {
         cards.forEach((card, index) => {
           const isLast = index === cards.length - 1;
 
-          // 1. Pin Logic
+          // 1. PINNING - Stable across the whole container scroll
           ScrollTrigger.create({
             trigger: card,
             start: "top 10%",
@@ -32,70 +32,58 @@ const OurSolutions = () => {
             end: "bottom bottom",
             pin: true,
             pinSpacing: false,
-            anticipatePin: 1,
             invalidateOnRefresh: true,
             onEnter: () => gsap.set(card, { zIndex: index + 1 }),
             onLeaveBack: () => gsap.set(card, { zIndex: index + 1 }),
           });
 
-          // 2. Initial scale to "ready" state (1.0 -> 0.98)
-          // Range: When card is approaching its pin point
-          gsap.to(card, {
-            scale: 0.98,
-            ease: "none",
+          // 2. SCALING - A single timeline per card to prevent flickering (multiple triggers conflict)
+          // This timeline will manage the card's scale from entrance to the end of the section
+          const scaleTl = gsap.timeline({
             scrollTrigger: {
               trigger: card,
-              start: "top 50%",
-              end: "top 10%",
+              start: "top 80%", // Start scaling as it enters view
+              endTrigger: containerRef.current,
+              end: "bottom bottom",
               scrub: 0.5,
-              immediateRender: false,
+              toggleActions: "play none none reverse"
             }
           });
 
-          // 3. Sequential scale-down as subsequent cards arrive
-          if (index === 0) {
-            // Card 1 scales down when Card 2 arrives
-            gsap.to(card, {
+          // Phase A: Scale to initial "pinned" size (1.0 -> 0.98)
+          // We align this so it finishes exactly when the card reaches its pin position
+          scaleTl.to(card, {
+            scale: 0.98,
+            ease: "power1.inOut",
+            duration: 1, // Duration here is relative to the scroll distance
+          });
+
+          // Phase B: Dwell/Wait until next cards arrive
+          // If NOT the last card, we add further scale-downs
+          if (!isLast) {
+            // Gap/Dwell while the card is pinned but waiting for next card
+            scaleTl.to(card, { scale: 0.98, duration: 2 }); // Keep size while user scrolls the margin
+
+            // Scale down when next card arrives (0.98 -> 0.94)
+            scaleTl.to(card, {
               scale: 0.94,
-              ease: "none",
-              scrollTrigger: {
-                trigger: cards[1],
-                start: "top bottom",
-                end: "top 10%",
-                scrub: 0.5,
-                immediateRender: false,
-              }
+              ease: "power1.inOut",
+              duration: 1
             });
-            // Card 1 scales down even more when Card 3 arrives
-            if (cards[2]) {
-              gsap.to(card, {
+
+            // If it's the 1st card and there's a 3rd card, scale down even more (0.94 -> 0.90)
+            if (index === 0 && cards[2]) {
+              scaleTl.to(card, { scale: 0.94, duration: 2 }); // Dwell
+              scaleTl.to(card, {
                 scale: 0.90,
-                ease: "none",
-                scrollTrigger: {
-                  trigger: cards[2],
-                  start: "top bottom",
-                  end: "top 10%",
-                  scrub: 0.5,
-                  immediateRender: false,
-                }
+                ease: "power1.inOut",
+                duration: 1
               });
             }
           }
 
-          if (index === 1 && cards[2]) {
-            // Card 2 scales down when Card 3 arrives
-            gsap.to(card, {
-              scale: 0.94,
-              ease: "none",
-              scrollTrigger: {
-                trigger: cards[2],
-                start: "top bottom",
-                end: "top 10%",
-                scrub: 0.5,
-                immediateRender: false,
-              }
-            });
-          }
+          // Final dwell to keep the state until the end of the container
+          scaleTl.to(card, { scale: isLast ? 0.98 : (index === 0 ? 0.90 : 0.94), duration: 5 });
         });
       },
       containerRef
