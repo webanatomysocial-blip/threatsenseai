@@ -135,7 +135,7 @@ export default function SiemSoar() {
       <section className="siem-soar-banner">
         <div className="siem-soar-banner-content">
           <h1 ref={headerRef} className="big-text-head">
-            SIEM & SOAR — <br /> {splitLetters("AI-Powered Security")}
+            SIEM & SOAR  <br /> {splitLetters("AI-Powered Security")}
           </h1>
           <p className="sub-para-text">
             AI-Powered Security. Built for Business Protection. Protect your
