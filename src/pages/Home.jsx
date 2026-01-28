@@ -22,9 +22,9 @@ export default function Home() {
       <CustomerFeedback />
       <Cta
         title="Built to stop insider threats, 
-        data leaks, and security failures."
+        data leaks, and security failures"
         description="AI-powered cybersecurity and data security for SAP and enterprise environments.
-Detect threats, deter misuse, and defend sensitive data in real time."
+Detect threats, deter misuse, and defend sensitive data in real time"
         backgroundImage={bg}
         buttonText="Book a Demo"
       />

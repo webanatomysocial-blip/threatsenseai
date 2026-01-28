@@ -148,7 +148,7 @@ const OurSolutions = () => {
   ];
 
   return (
-    <div className="our-solutions-container" ref={containerRef} id="solutions">
+    <div className="our-solutions-container"  ref={containerRef} id="solutions">
       <div className="solutions-header">
         <div
           className="sub-para-text"
