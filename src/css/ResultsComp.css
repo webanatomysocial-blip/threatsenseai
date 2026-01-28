@@ -1,19 +1,22 @@
 .mcaat-res-container {
   width: 100%;
   position: relative;
-  padding: 120px 130px 120px 130px;
-  background-color: var(--progress-bg);
+  padding: 80px 130px 80px 130px;
+  background-color: #FDFDFD;
   display: flex;
   flex-direction: column;
-  gap: 150px; /* Increased gap for better sticky transition */
+  gap: 150px;
+  /* Increased gap for better sticky transition */
 }
+
 .mcaat-res-container .capabilities-header {
   margin-bottom: -80px;
 }
 
 .res-container {
   position: sticky;
-  top: 150px; /* Fixed top position for sticky cards */
+  top: 150px;
+  /* Fixed top position for sticky cards */
   height: 70vh;
   display: flex;
   width: 100%;
@@ -25,12 +28,15 @@
 .res-container-1 {
   z-index: 1;
 }
+
 .res-container-2 {
   z-index: 2;
 }
+
 .res-container-3 {
   z-index: 3;
 }
+
 .res-container-4 {
   z-index: 4;
 }
@@ -56,8 +62,10 @@
   transform: translate(-50%, -50%);
   font-size: 500px;
   font-weight: 600;
-  color: var(--progress-bg); /* Use brand orange */
-  opacity: 0.9; /* Very subtle */
+  color: var(--progress-bg);
+  /* Use brand orange */
+  opacity: 0.9;
+  /* Very subtle */
   filter: blur(0px);
   z-index: 1;
   user-select: none;
@@ -86,7 +94,8 @@
 }
 
 .right-res-container {
-  flex: 1.2; /* Slightly wider images look better in this layout */
+  flex: 1.2;
+  /* Slightly wider images look better in this layout */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -105,6 +114,7 @@
   .mcaat-res-container {
     padding: 0 60px 100px 60px;
   }
+
   .left-res-container {
     padding: 0 40px;
   }
@@ -112,9 +122,10 @@
 
 @media (max-width: 768px) {
   .mcaat-res-container {
-    padding: 0px 20px 60px 20px;
+    padding: 60px 20px 40px 20px;
     gap: 60px;
   }
+
   .mcaat-res-container .capabilities-header {
     margin-bottom: 0px;
   }

@@ -2,7 +2,7 @@
 
 .our-solutions-container {
   padding: 80px 130px;
-  padding-bottom: 500px;
+  padding-bottom: 550px;
   /* Increased padding to allow last card to stay pinned longer */
   background-color: var(--progress-bg);
   display: flex;

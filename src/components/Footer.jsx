@@ -67,7 +67,7 @@ const Footer = () => {
                   </li>
 
                   <li>
-                    <Link to="#solutions" className="para-text-white" style={{ fontSize: "14px", color: "#999" }}>
+                    <Link to="/#solutions" className="para-text-white" style={{ fontSize: "14px", color: "#999" }}>
                       Solutions
                     </Link>
                   </li>

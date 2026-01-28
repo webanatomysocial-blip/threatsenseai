@@ -1,6 +1,6 @@
 /* src/css/FAQ.css */
 .faq-container {
-  padding: 20px 0px 0px 0px;
+  padding: 60px 0px 0px 0px;
   background-color: var(--progress-bg);
   width: 100%;
 }
@@ -108,7 +108,7 @@
 /* Mobile Responsive */
 @media (max-width: 768px) {
   .faq-container {
-    padding: 60px 0px;
+    padding: 40px 0px;
   }
 
   .faq-border-wrapper {

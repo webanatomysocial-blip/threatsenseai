@@ -1,5 +1,5 @@
 .contact-page {
-  padding: 120px 130px;
+  padding: 120px 130px 80px 130px;
   background-color: var(--progress-bg);
   min-height: 100vh;
   display: flex;
@@ -113,7 +113,7 @@
 /* Connect Section */
 .connect-section {
   width: 100%;
-  padding: 120px 0;
+  padding: 80px 0;
   display: flex;
   border-top: 1px solid #eaeaea;
   flex-direction: column;
@@ -210,6 +210,7 @@
   }
 
   .connect-section {
+    margin-top: 60px;
     padding: 60px 0;
   }
 }

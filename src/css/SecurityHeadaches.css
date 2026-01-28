@@ -1,14 +1,14 @@
 /* src/css/SecurityHeadaches.css */
 
 .security-headaches-container {
-  padding: 80px 130px;
+  padding: 80px 130px 0px 130px;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
   background-color: var(--progress-bg); /* Light background similar to image */
   overflow: hidden;
-  margin-top: 380px;
+  margin-top: 330px;
 }
 
 .Head-security-label {

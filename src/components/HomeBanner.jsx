@@ -102,7 +102,7 @@ const HomeBanner = () => {
           pixelSize={4}
           color="#c4c4c4"
           patternScale={1}
-          patternDensity={2}
+          patternDensity={1}
           pixelSizeJitter={0}
           enableRipples={false}
           rippleSpeed={0.4}

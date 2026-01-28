@@ -1,6 +1,6 @@
 /* Accordion Section */
 .accordion-section {
-  padding: 100px 130px;
+  padding: 80px 130px;
   background-color: var(--progress-bg); /* Assuming white from image or light */
   display: flex;
   justify-content: center;

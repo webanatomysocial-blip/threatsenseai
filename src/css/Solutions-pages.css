@@ -2,7 +2,7 @@
 
 /* Solution Cards (Zig-Zag) start */
 .solution-cards-container {
-  padding: 100px 130px;
+  padding: 80px 130px;
   background-color: var(--progress-bg);
   display: flex;
   flex-direction: column;
@@ -58,7 +58,7 @@
 
 /* Accordion Section Reused Styles */
 .accordion-section {
-  padding: 100px 130px;
+  padding: 80px 130px;
   background-color: var(--progress-bg);
   display: flex;
   justify-content: center;
@@ -233,7 +233,7 @@
 /* use case section start */
 
 .use-cases-container {
-  padding: 100px 130px;
+  padding: 80px 130px;
   background-color: var(--progress-bg);
   /* Light background as seen */
   display: flex;
@@ -329,7 +329,7 @@
 
 @media (max-width: 768px) {
   .use-cases-container {
-    padding: 0px 20px 60px 20px;
+    padding:  60px 20px;
     flex-direction: column;
     gap: 40px;
   }
@@ -347,7 +347,7 @@
 
 /* Comparison Table Section */
 .comparison-section {
-  padding: 100px 130px;
+  padding: 80px 130px;
   background-color: var(
     --progress-bg
   ); /* Match background or use --progress-bg if preferred */
@@ -482,7 +482,7 @@
 .solution-carousel-wrapper-mcaat {
   width: 100%;
   background-color: var(--progress-bg);
-  padding: 0px 0px 120px 0px;
+  padding: 0px 0px 80px 0px;
   position: relative;
   overflow: hidden;
 }
@@ -629,7 +629,7 @@
 
 @media (max-width: 768px) {
   .protection-layer-section {
-    padding: 60px 20px;
+    padding: 60px 25px;
   }
 
   .protection-grid {
@@ -735,6 +735,7 @@
     gap: 10PX;
   }
 .leak-column, .block-column{
+  padding: 20px;
   gap: 10px;
 }
 .leak-column {
@@ -750,7 +751,7 @@
 
 /* mcaat start */
 .mcaat-banner {
-  padding: 120px 130px;
+  padding: 120px 130px 80px 130px;
   text-align: center;
   width: 100%;
   justify-content: center;
@@ -775,7 +776,7 @@
   .tads-banner,
   .mcaat-banner,
   .siem-soar-banner {
-    padding: 60px 20px 0px 20px;
+    padding: 60px 20px ;
   }
 
   .tads-banner-content .sub-para-text,
@@ -903,7 +904,7 @@
   }
 
   .solution-cards-container {
-    padding: 60px 20px 0px 20px;
+    padding: 60px 20px;
     gap: 0px;
   }
   .solution-cards-container .capabilities-header {

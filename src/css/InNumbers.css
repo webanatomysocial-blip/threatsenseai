@@ -64,6 +64,9 @@
         grid-template-columns: repeat(2, 1fr);
         margin: 20px;
     }
+    .in-numbers-section {
+        padding: 60px 0px !important;
+    }
 }
 
 @media (max-width: 640px) {
@@ -76,9 +79,6 @@
 
 }
 
-.in-numbers-section {
-    padding: 60px 0px !important;
-}
 
 .numbers-bottom {
     grid-template-columns: 1fr;
