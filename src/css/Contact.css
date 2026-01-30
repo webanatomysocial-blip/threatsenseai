@@ -143,9 +143,20 @@
 .connect-item:last-child {
   border-bottom: none;
 }
+.connect-content,
+.connect-arrow,
+.connect-icon-wrapper {
+  transition: transform 0.35s ease;
+}
+
+.connect-item:hover .connect-content,
+.connect-item:hover .connect-arrow,
+.connect-item:hover .connect-icon-wrapper {
+  transform: translateX(5px);
+}
 
 .connect-item:hover {
-  background-color: #ffd0b9;
+  background-color: #FFF1EB;
 }
 
 .connect-icon-wrapper {

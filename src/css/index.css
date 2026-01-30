@@ -139,7 +139,7 @@ h6 {
 /* Sub-headings: 24px */
 .sub-head-text {
   font-size: 24px !important;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 1.4;
   color: var(--black-color);
   white-space: pre-line;

@@ -19,6 +19,7 @@ export default function SolutionCards({ items, label, title, marginTop }) {
         "MCAAT continuously monitors audit policies and logging configurations across SAP application and database layers. If audit logging is disabled, intentionally or accidentally, MCAAT automatically restores it, ensuring uninterrupted audit trail availability and compliance with MCA Rule 11(g)..",
       link: "#",
       img: bgImage,
+      video: null,
     },
     {
       title: "Automated Detection of Audit Trail Tampering",
@@ -26,18 +27,21 @@ export default function SolutionCards({ items, label, title, marginTop }) {
         "Any attempt to delete, alter, or manipulate audit logs is detected in real time. MCAAT immediately records the event, preserves evidence, and triggers alerts or enforcement actions to maintain audit trail integrity and evidentiary reliability.",
       link: "#",
       img: bgImage,
+      video: null,
     },
     {
       title: "Automated Protection of Audit Evidence",
       description: "MCAAT safeguards audit logs, change records, and supporting evidence from unauthorized access or modification. This ensures audit data remains complete, accurate, and defensible during internal reviews, statutory audits, and forensic investigations.",
       link: "#",
       img: bgImage,
+      video: null,
     },
     {
       title: "Automated Monitoring of High-Risk System Activities",
       description: "Sensitive actions such as DEBUG mode usage, audit policy deletion, or critical configuration changes are continuously monitored. MCAAT detects these high-risk activities instantly, preventing silent compliance breaches and reducing reliance on post-facto audit reviews.d",
       link: "#",
       img: bgImage,
+      video: null,
     },
     {
       title: "Automated Enforcement and Corrective Actions",
@@ -45,6 +49,7 @@ export default function SolutionCards({ items, label, title, marginTop }) {
         "When compliance violations are detected, MCAAT automatically executes predefined actions such as user locking, escalation, or workflow initiation. This ensures policy breaches are not only identified but actively contained and addressed without manual intervention.",
       link: "#",
       img: bgImage,
+      video: null,
     },
     {
       title: "Automated Incident Creation and ITSM Integration",
@@ -52,6 +57,7 @@ export default function SolutionCards({ items, label, title, marginTop }) {
         "Every audit or compliance violation is automatically logged as an incident through API-based integration with enterprise ITSM platforms. MCAAT also supports an optional built-in ITSM module, ensuring consistent tracking, accountability, and resolution of compliance events.",
       link: "#",
       img: bgImage,
+      video: null,
     },
     {
       title: "Automated Cross Layer Change Visibility",
@@ -59,6 +65,7 @@ export default function SolutionCards({ items, label, title, marginTop }) {
         "MCAAT tracks changes consistently across SAP application and database layers, eliminating visibility gaps. This ensures all critical table, configuration, and structural changes are captured in a single, unified audit trail aligned with regulatory expectations.",
       link: "#",
       img: bgImage,
+      video: null,
     },
     {
       title: "Automated Audit-Ready Reporting",
@@ -66,6 +73,7 @@ export default function SolutionCards({ items, label, title, marginTop }) {
         "Audit dashboards and reports are generated automatically with structured, evidence-backed data. MCAAT reduces audit preparation effort by providing immediate access to traceable, regulator-ready information without manual compilation or reconciliation.",
       link: "#",
       img: bgImage,
+      video: null,
     },
   ];
 
@@ -93,7 +101,11 @@ export default function SolutionCards({ items, label, title, marginTop }) {
             </a>
           </div>
           <div className="solution-card-visual">
-            <img src={card.img} alt={cardData.title} />
+            {card.video ? (
+              <video src={card.video} autoPlay loop muted playsInline />
+            ) : (
+              <img src={card.img} alt={card.title} />
+            )}
           </div>
         </div>
       ))}

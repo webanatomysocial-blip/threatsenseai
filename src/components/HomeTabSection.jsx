@@ -10,18 +10,18 @@ import img3 from "../assets/home/tab-section/3.jpg";
 
 gsap.registerPlugin(ScrollTrigger);
 
+const tabs = [
+  { id: "detect", label: "Detect", image: img1 },
+  { id: "deter", label: "Deter", image: img2 },
+  { id: "defend", label: "Defend", image: img3 },
+];
+
 const HomeTabSection = () => {
   const [activeTab, setActiveTab] = useState("detect");
   const containerRef = useRef(null);
   const bgRef = useRef(null);
   const navRef = useRef(null);
   const indicatorRef = useRef(null);
-
-  const tabs = [
-    { id: "detect", label: "Detect", image: img1 },
-    { id: "deter", label: "Deter", image: img2 },
-    { id: "defend", label: "Defend", image: img3 },
-  ];
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -42,15 +42,15 @@ const HomeTabSection = () => {
   }, []);
 
   useEffect(() => {
-    const interval = setInterval(() => {
+    const timer = setTimeout(() => {
       setActiveTab(prev => {
         const index = tabs.findIndex(tab => tab.id === prev);
         return tabs[(index + 1) % tabs.length].id;
       });
-    }, 3000);
+    }, 4000);
 
-    return () => clearInterval(interval);
-  }, []);
+    return () => clearTimeout(timer);
+  }, [activeTab]);
 
   useEffect(() => {
     if (!navRef.current || !indicatorRef.current) return;

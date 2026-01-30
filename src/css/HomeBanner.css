@@ -100,7 +100,7 @@
 }
 
 .stat-value {
-  font-size: 32px;
+  font-size: 30px;
   font-weight: 500;
 }
 
@@ -141,6 +141,9 @@
     transform: translateX(0px);
   }
 
+.stat-value {
+  font-size: 26px;
+}
   /* Center content in slide on mobile */
   .stat-item-slide {
     align-items: center;

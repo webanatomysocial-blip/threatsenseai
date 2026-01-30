@@ -5,7 +5,8 @@ import "../css/OurSolutions.css";
 import cardImage from "../assets/home/Our-Solutions/bg1.png";
 import { AiFillInfoCircle } from "react-icons/ai";
 import { Link } from "react-router-dom";
-
+import mcaatvid1 from "../assets/home/Our-Solutions/Copy of Threatsense videos (4).mp4";
+import mcaatvid2 from "../assets/home/Our-Solutions/Copy of Threatsense videos (5).mp4";
 gsap.registerPlugin(ScrollTrigger);
 
 const OurSolutions = () => {
@@ -111,7 +112,8 @@ const OurSolutions = () => {
         "Secure audit logging at source",
         "Audit-ready reporting on demand",
       ],
-      image: cardImage,
+      // image: cardImage,
+      video: mcaatvid1,
       reverse: false,
       link: "/mcaat",
       btn: "Explore MCAAT",
@@ -119,14 +121,14 @@ const OurSolutions = () => {
     {
       title: "ThreatSense AI Data Security (TADS)",
       desc: "Prevent Data Leaks Before They Happen. Most data leaks are caused by trusted users.",
-      subheading: "Prevent Data Leaks Before They Happen",
+      subheading: null,
       features: [
         "Real-time data access enforcement",
         "Insider threat prevention controls",
         "Policy-driven data protection",
         "Tamper-resistant security layer",
       ],
-      image: cardImage,
+      video: mcaatvid2,
       reverse: true,
       link: "/tads",
       btn: "Explore TADS",
@@ -134,13 +136,14 @@ const OurSolutions = () => {
     {
       title: "SIEM & SOAR",
       desc: "AI-Driven Threat Detection & Response across SAP and non-SAP environments.",
-      subheading: "AI-Driven Threat Detection & Response",
+      subheading: null,
       features: [
         "Continuous monitoring",
         "Real-time alerts",
         "Automated incident response",
       ],
-      image: cardImage,
+      // video: mcaatvid2,
+      img: cardImage,
       reverse: false,
       link: "/siem-soar",
       btn: "Explore SIEM & SOAR",
@@ -148,7 +151,7 @@ const OurSolutions = () => {
   ];
 
   return (
-    <div className="our-solutions-container"  ref={containerRef} id="solutions">
+    <div className="our-solutions-container" ref={containerRef} id="solutions">
       <div className="solutions-header">
         <div
           className="sub-para-text"
@@ -182,12 +185,14 @@ const OurSolutions = () => {
               <div className="card-content">
                 <h3 className="head-text">{solution.title}</h3>
 
-                <h4
-                  className="sub-para-text"
-                  style={{ fontSize: "18px", fontWeight: "bold" }}
-                >
-                  {solution.subheading}
-                </h4>
+                {solution.subheading && (
+                  <h4
+                    className="sub-para-text"
+                    style={{ fontSize: "18px" }}
+                  >
+                    {solution.subheading}
+                  </h4>
+                )}
 
                 <p className="solution-desc para-text">{solution.desc}</p>
 
@@ -203,18 +208,29 @@ const OurSolutions = () => {
                 <Link
                   to={solution.link}
                   className="white-button"
-                  style={{ marginTop: "20px" }}
+                  style={{ marginTop: "10px" }}
                 >
                   {solution.btn}
                 </Link>
               </div>
 
               <div className="card-image-section">
-                <img
-                  src={solution.image}
-                  alt={solution.title}
-                  className="card-image"
-                />
+                {solution.video ? (
+                  <video
+                    src={solution.video}
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    className="card-image"
+                  />
+                ) : (
+                  <img
+                    src={solution.img || solution.image}
+                    alt={solution.title}
+                    className="card-image"
+                  />
+                )}
               </div>
             </div>
           </div>

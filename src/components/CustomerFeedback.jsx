@@ -111,7 +111,7 @@ const CustomerFeedback = () => {
                 <p className="feedback-text">{item.text}</p>
                 <div className="feedback-author">
                   <div className="author-icon">{item.icon}</div>
-                  <div className="author-info">
+                  <div className="author-info-cus">
                     <span className="author-name">{item.name}</span>
                     <span className="author-role">{item.role}</span>
                   </div>
@@ -137,7 +137,7 @@ const CustomerFeedback = () => {
                 <p className="feedback-text">{item.text}</p>
                 <div className="feedback-author">
                   <div className="author-icon">{item.icon}</div>
-                  <div className="author-info">
+                  <div className="author-info-cus">
                     <span className="author-name">{item.name}</span>
                     <span className="author-role">{item.role}</span>
                   </div>

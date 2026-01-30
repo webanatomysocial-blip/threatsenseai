@@ -81,14 +81,14 @@
 }
 
 .res-card-content h3 {
-  font-size: 32px;
+  font-size: 32px !important;
   font-weight: 600;
   color: #1a1a1a;
   line-height: 1.2;
 }
 
 .res-card-content p {
-  font-size: 17px;
+  font-size: 20px;
   color: #555;
   line-height: 1.6;
 }

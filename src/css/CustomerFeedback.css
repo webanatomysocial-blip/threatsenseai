@@ -97,9 +97,10 @@
   color: #666;
 }
 
-.author-info {
+.author-info-cus {
   display: flex;
   flex-direction: column;
+  gap: 5px;
 }
 
 .author-name {

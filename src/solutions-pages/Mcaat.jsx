@@ -12,6 +12,25 @@ import CapabilitiesSection from "../components/CapabilitiesSection";
 import UseCases from "../Solutions-components/UseCases";
 import ResultsComp from "../Solutions-components/ResultsComp";
 import bgImage from "../assets/home/Our-Solutions/bg1.png";
+import mcaat1 from "../assets/solutions/mcaat/1.jpg";
+import mcaat2 from "../assets/solutions/mcaat/2.jpg";
+import mcaat3 from "../assets/solutions/mcaat/3.jpg";
+import mcaat4 from "../assets/solutions/mcaat/4.jpg";
+import mcaat5 from "../assets/solutions/mcaat/5.jpg";
+import mcaat6 from "../assets/solutions/mcaat/6.jpg";
+import mcaat7 from "../assets/solutions/mcaat/7.jpg";
+import mcaat8 from "../assets/solutions/mcaat/8.jpg";
+import mcaat9 from "../assets/solutions/mcaat/9.jpg";
+import mcaat10 from "../assets/solutions/mcaat/10.jpg";
+import mcaat11 from "../assets/solutions/mcaat/11.jpg";
+import mcaat12 from "../assets/solutions/mcaat/12.jpg";
+import mcaat14 from "../assets/solutions/mcaat/14.jpg";
+import mcaat15 from "../assets/solutions/mcaat/15.jpg";
+import mcaat16 from "../assets/solutions/mcaat/16.jpg";
+import mcaat17 from "../assets/solutions/mcaat/17.jpg";
+
+
+import videomcaat1 from "../assets/solutions/mcaat/Copy of Threatsense videos (2).mp4";
 
 import {
   FaTh,
@@ -69,73 +88,73 @@ export default function Mcaat() {
   ];
   const content = [
     {
-      img: img1,
+      img: mcaat1,
       title: "Detect Log Tampering",
       description:
         "Standard logs can be altered or deleted without detection. MCAAT actively monitors audit trail integrity and immediately detects any attempt to tamper with logs, ensuring evidence remains trustworthy.",
     },
     {
-      img: img2,
+      img: mcaat2,
       title: "DDL/DML Growth (Database Footprint) Optimization",
       description:
         "Enabling DDL/DML logs increases database footprint and costs. With MCAAT, DDL/DML logging isn’t required. It captures critical DB activities automatically and maintains tamper-proof logs for compliance.",
     },
     {
-      img: img3,
+      img: mcaat3,
       title: "Monitor Critical Database Logins",
       description:
         "Database-level changes bypasses application logging. MCAAT tracks privileged and critical DB logins in real time, closing one of the most common audit blind spots.",
     },
     {
-      img: img, // Using the variable 'img' imported from line 7
+      img: mcaat4,
       title: "Real-Time Alerts for High-Risk Actions",
       description:
         "Standard methods capture changes after the fact - if at all. MCAAT raises real-time alerts for sensitive actions such as DEBUG-mode changes, enabling immediate investigation.",
     },
     {
-      img: img, // Using the variable 'img' imported from line 7
+      img: mcaat5,
       title: "Automatic Reactivation of SM19 Logging",
       description:
         "Audit logging can be manually disabled—intentionally or accidentally. MCAAT continuously checks logging status and automatically re-enables SM19 logs if they are turned off.",
     },
     {
-      img: img, // Using the variable 'img' imported from line 7
+      img: mcaat6,
       title: "Integrated Incident Logging (ITSM)",
       description:
         "Audit violations often remain undocumented or manually tracked. MCAAT automatically creates ITSM incidents, ensuring every compliance breach is logged, tracked, and resolved.",
     },
     {
-      img: img, // Using the variable 'img' imported from line 7
+      img: mcaat7,
       title: "Critical Table Change Monitoring",
       description:
         "Standard tools focus on application changes only. MCAAT monitors critical tables at both SAP application and database layers, ensuring no change goes unrecorded.",
     },
     {
-      img: img, // Using the variable 'img' imported from line 7
+      img: mcaat8,
       title: "Protection of Audit Evidence",
       description:
         "Logs without protection are not legally reliable. MCAAT safeguards audit evidence from deletion or manipulation, preserving integrity for statutory and forensic audits.",
     },
     {
-      img: img, // Using the variable 'img' imported from line 7
+      img: mcaat9,
       title: "Automated Enforcement Actions",
       description:
         "Most compliance tools stop at alerts. MCAAT can automatically trigger enforcement actions, such as locking users or escalating incidents, when violations occur.",
     },
     {
-      img: img, // Using the variable 'img' imported from line 7
+      img: mcaat10,
       title: "Protection of Audit Evidence",
       description:
         "Logs without protection are not legally reliable. MCAAT safeguards audit evidence from deletion or manipulation, preserving integrity for statutory and forensic audits.",
     },
     {
-      img: img, // Using the variable 'img' imported from line 7
+      img: mcaat11,
       title: "Protection of CDHDR and CDPOS Tables",
       description:
         "Change document tables are critical for audit reconstruction. MCAAT explicitly protects CDHDR and CDPOS tables, ensuring SAP change history remains intact and reliable.",
     },
     {
-      img: img, // Using the variable 'img' imported from line 7
+      img: mcaat12,
       title: "Auditor-Friendly Dashboards",
       description:
         "Raw logs are not audit-ready. MCAAT provides structured, auditor-friendly dashboards and reports, reducing audit preparation effort and risk of interpretation errors.",
@@ -148,35 +167,42 @@ export default function Mcaat() {
       description:
         "MCAAT continuously monitors audit policies and logging configurations across SAP application and database layers. If audit logging is disabled, intentionally or accidentally, MCAAT automatically restores it, ensuring uninterrupted audit trail availability and compliance with MCA Rule 11(g)..",
       link: "#",
-      img: bgImage,
+      img: null,
+      video: videomcaat1,
+
+
     },
     {
       title: "Automated Detection of Audit Trail Tampering",
       description:
         "Any attempt to delete, alter, or manipulate audit logs is detected in real time. MCAAT immediately records the event, preserves evidence, and triggers alerts or enforcement actions to maintain audit trail integrity and evidentiary reliability.",
       link: "#",
-      img: bgImage,
+      img: mcaat14 ,
+      video: null,
     },
     {
       title: "Automated Protection of Audit Evidence",
       description:
         "MCAAT safeguards audit logs, change records, and supporting evidence from unauthorized access or modification. This ensures audit data remains complete, accurate, and defensible during internal reviews, statutory audits, and forensic investigations.",
       link: "#",
-      img: bgImage,
+      img: mcaat15,
+      video: null,
     },
     {
       title: "Automated Monitoring of High-Risk System Activities",
       description:
         "Sensitive actions such as DEBUG mode usage, audit policy deletion, or critical configuration changes are continuously monitored. MCAAT detects these high-risk activities instantly, preventing silent compliance breaches and reducing reliance on post-facto audit reviews.",
       link: "#",
-      img: bgImage,
+      img: mcaat16,
+      video: null,
     },
     {
       title: "Automated Audit-Ready Reporting",
       description:
         "Audit dashboards and reports are generated automatically with structured, evidence-backed data. MCAAT reduces audit preparation effort by providing immediate access to traceable, regulator-ready information without manual compilation or reconciliation.",
       link: "#",
-      img: bgImage,
+      img: mcaat17,
+      video: null,
     },
   ];
 
@@ -218,7 +244,7 @@ export default function Mcaat() {
       }
       return (
         <span key={index} className="split-text-char"
-        style={{ font: "italic 400 1em 'Instrument Serif'" }}
+          style={{ font: "italic 400 1em 'Instrument Serif'" }}
         >
           {char === " " ? "\u00A0" : char}
         </span>
