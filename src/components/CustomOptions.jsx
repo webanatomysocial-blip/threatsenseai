@@ -3,6 +3,7 @@ import "../css/CustomOptions.css";
 import { AiFillAppstore } from "react-icons/ai";
 import img1 from "../assets/home/Custom-Options/1.png";
 import img2 from "../assets/home/Custom-Options/2.png";
+import img3 from "../assets/home/Custom-Options/3.png";
 import bgImage from "../assets/home/Custom-Options/bg.png";
 
 const CustomOptions = () => {
@@ -26,7 +27,7 @@ const CustomOptions = () => {
       id: 2,
       title: "Simplify SAP® Security Operations",
       desc: "Continuously monitor SAP environments, correlate risks,\n and act early proactively.",
-      image: img1,
+      image: img3,
     },
   ];
 

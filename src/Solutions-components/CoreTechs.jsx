@@ -7,10 +7,10 @@ import { FaCheckCircle } from "react-icons/fa";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const CoreTechs = () => {
+const CoreTechs = ({ technologies }) => {
   const containerRef = useRef(null);
 
-  const techs = [
+  const defaultTechs = [
     {
       id: "01",
       title: "TADS Protection",
@@ -19,15 +19,17 @@ const CoreTechs = () => {
       description:
         "TADS prevents unauthorized exports, excessive data access, and insider misuse through real-time, policy-driven enforcement across SAP environments.",
       image: cardImage,
+      video: null,
     },
     {
       id: "02",
       title: "DotLayer",
       subtitle:
-        "Monitors and controls sensitive data exposure at the browser layer, where most modern data leaks occur.n",
+        "Monitors and controls sensitive data exposure at the browser layer, where most modern data leaks occur.",
       description:
         "DotLayer prevents unauthorized data sharing into generative AI tools, personal email accounts, and cloud drives by enforcing real-time, context-aware controls on user actions.",
       image: cardImage,
+      video: null,
     },
     {
       id: "03",
@@ -36,8 +38,11 @@ const CoreTechs = () => {
       description:
         "Dynamically masks and scrambles sensitive SAP data in real time to enforce data minimization aivilend least-prge access principles. With DMSS, enterprises can ensure personal, financial, and regulated data is exposed only to authorized users.\n\nIt reduces risk of data misuse in production and non-production environments while maintaining business continuity.\n\nSupports regulatory compliance requirements under GDPR, DPDP, SOX, and similar data protection frameworks.",
       image: cardImage,
+      video: null,
     },
   ];
+
+  const techs = technologies || defaultTechs;
 
   useEffect(() => {
     const rows = containerRef.current.querySelectorAll(".tech-row");
@@ -90,8 +95,7 @@ const CoreTechs = () => {
           Core Techs
         </div>
         <h2 className="head-text">
-          Data Protection, Insider Risk <br /> AI Leakage,
-          Misuse Prevention
+          Data Protection, Insider Risk <br /> AI Leakage, Misuse Prevention
         </h2>
       </div>
 
@@ -109,7 +113,22 @@ const CoreTechs = () => {
 
             <div className="tech-image-container">
               <div className="image-blob-bg">
-                <img src={tech.image} alt={tech.title} className="tech-image" />
+                {tech.video ? (
+                  <video
+                    src={tech.video}
+                    className="tech-image"
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                  />
+                ) : (
+                  <img
+                    src={tech.image}
+                    alt={tech.title}
+                    className="tech-image"
+                  />
+                )}
               </div>
             </div>
 

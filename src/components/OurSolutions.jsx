@@ -7,6 +7,7 @@ import { AiFillInfoCircle } from "react-icons/ai";
 import { Link } from "react-router-dom";
 import mcaatvid1 from "../assets/home/Our-Solutions/Copy of Threatsense videos (4).mp4";
 import mcaatvid2 from "../assets/home/Our-Solutions/Copy of Threatsense videos (5).mp4";
+import mcaatvid3 from "../assets/home/Our-Solutions/siem.mp4";
 gsap.registerPlugin(ScrollTrigger);
 
 const OurSolutions = () => {
@@ -143,7 +144,8 @@ const OurSolutions = () => {
         "Automated incident response",
       ],
       // video: mcaatvid2,
-      img: cardImage,
+      // img: null,
+      video: mcaatvid3,
       reverse: false,
       link: "/siem-soar",
       btn: "Explore SIEM & SOAR",
@@ -186,10 +188,7 @@ const OurSolutions = () => {
                 <h3 className="head-text">{solution.title}</h3>
 
                 {solution.subheading && (
-                  <h4
-                    className="sub-para-text"
-                    style={{ fontSize: "18px" }}
-                  >
+                  <h4 className="sub-para-text" style={{ fontSize: "18px" }}>
                     {solution.subheading}
                   </h4>
                 )}

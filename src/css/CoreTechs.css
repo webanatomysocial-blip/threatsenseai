@@ -88,6 +88,16 @@
   /* padding: 15px; */
 }
 
+/* Remove borders and outlines from videos */
+.tech-image video,
+video.tech-image {
+  border: none;
+  outline: none;
+  box-shadow: none;
+  display: block;
+  scale: 1.01;
+}
+
 .tech-text-container {
   display: flex;
   flex-direction: column;

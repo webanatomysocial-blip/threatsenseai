@@ -1,64 +1,27 @@
-import one from '../blogs/blogs-images/1.png';
-import two from '../blogs/blogs-images/2.png';
-import three from '../blogs/blogs-images/3.jpeg';
-import four from '../blogs/blogs-images/4.jpeg';
+import one from '../blogs/blogs-images/1.jpg';
+import two from '../blogs/blogs-images/2.jpg';
 
 
 export const blogMetadata = [
   {
-    id: "FutureTrendsSaaS",
-    title: "Future Trends in SaaS: What's Next?",
-    category: "Trends",
-    slug: "future-trends-saas",
-    excerpt: "Explore tomorrow's innovations, today.",
-    image: one, // User requested 1.png for all for now
-    date: "Jan 19, 2026",
-    author: "Author Name",
+    id: "UnmaskingCyberThreats",
+    title: "Unmasking Cyber Threats in SAP: The Rising Need for Intelligent Security",
+    category: "SAP Security",
+    slug: "unmasking-cyber-threats-sap",
+    excerpt: "SAP systems are the lifeblood of many enterprises, handling critical business operations, financial transactions, and sensitive data. However, they have increasingly become lucrative targets for cybercriminals.",
+    image: one,
+    date: "Jan 31, 2026",
+    author: "ThreatSenseAI Team",
   },
   {
-    id: "SecurityEssentialsSaaS",
-    title: "Security Essentials for Modern SaaS Products",
-    category: "Security",
-    slug: "security-essentials-saas",
-    excerpt: "Essential security practices for modern cloud products.",
-    image: one,
-    date: "Jan 12, 2026",
-  },
-  {
-    id: "SaaSOnboarding",
-    title: "SaaS Onboarding That Delights Users",
-    category: "Onboarding",
-    slug: "saas-onboarding-delights",
-    excerpt: "Creating a seamless first experience for your customers.",
-    image: one,
-    date: "Jan 13, 2026",
-  },
-  {
-    id: "MustHaveIntegrations",
-    title: "Must-Have Integrations for Your SaaS stack",
-    category: "Integrations",
-    slug: "must-have-integrations",
-    excerpt: "The tools you need to connect for maximum efficiency.",
-    image: one,
-    date: "Jan 14, 2026",
-  },
-  {
-    id: "ComparingPricingModels",
-    title: "Comparing SaaS Pricing Models: What Fits You?",
-    category: "Pricing",
-    slug: "comparing-pricing-models",
-    excerpt: "Finding the right value proposition for your product.",
-    image: one,
-    date: "Jan 15, 2026",
-  },
-  {
-    id: "FiveReasonsProductivity",
-    title: "5 Reasons SaaS Improves Productivity",
-    category: "Productivity",
-    slug: "five-reasons-productivity",
-    excerpt: "How cloud tools are changing the way we work.",
-    image: one,
-    date: "Jan 16, 2026",
+    id: "CybersecurityImperative",
+    title: "The Cybersecurity Imperative: Safeguarding Enterprises in the Age of AI",
+    category: "AI Security",
+    slug: "cybersecurity-imperative-ai",
+    excerpt: "In an era where digital transformation is redefining industries, cybersecurity has never been more critical. Enterprises are increasingly relying on AI and automation to streamline operations.",
+    image: two,
+    date: "Jan 30, 2026",
+    author: "ThreatSenseAI Team",
   }
 ];
 

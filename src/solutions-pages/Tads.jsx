@@ -33,6 +33,9 @@ import img2 from "../assets/home/tab-section/2.jpg";
 import img3 from "../assets/home/tab-section/3.jpg";
 import ThreatRadiation from "../Solutions-components/ThreatRadiation";
 import CoreTechs from "../Solutions-components/CoreTechs";
+import video1 from "../assets/solutions/tads/1.mp4";
+import video2 from "../assets/solutions/tads/2.mp4";
+import video3 from "../assets/solutions/tads/3.mp4";
 
 export default function Tads() {
   const content = [
@@ -161,6 +164,38 @@ export default function Tads() {
     "Duis aute irure dolor in reprehenderit in voluptate velit esse",
   ];
 
+  const technologies = [
+    {
+      id: "01",
+      title: "TADS Protection",
+      subtitle:
+        "Monitors and controls how sensitive data moves out of your enterprise, with a primary focus on SAP ERP, the most business-critical system.",
+      description:
+        "TADS prevents unauthorized exports, excessive data access, and insider misuse through real-time, policy-driven enforcement across SAP environments.",
+      image: null,
+      video: video1,
+    },
+    {
+      id: "02",
+      title: "DotLayer",
+      subtitle:
+        "Monitors and controls sensitive data exposure at the browser layer, where most modern data leaks occur.",
+      description:
+        "DotLayer prevents unauthorized data sharing into generative AI tools, personal email accounts, and cloud drives by enforcing real-time, context-aware controls on user actions.",
+      image: null,
+      video: video2,
+    },
+    {
+      id: "03",
+      title: "DMSS – Data Masking & Scrambling Solution",
+      subtitle: "lorem ipsum dolor sit amet consectetur adipiscing elit",
+      description:
+        "Dynamically masks and scrambles sensitive SAP data in real time to enforce data minimization aivilend least-prge access principles. With DMSS, enterprises can ensure personal, financial, and regulated data is exposed only to authorized users.\n\nIt reduces risk of data misuse in production and non-production environments while maintaining business continuity.\n\nSupports regulatory compliance requirements under GDPR, DPDP, SOX, and similar data protection frameworks.",
+      image: null,
+      video: video3,
+    },
+  ];
+
   const headerRef = useRef(null);
 
   useEffect(() => {
@@ -187,7 +222,9 @@ export default function Tads() {
 
   const splitLetters = (text) => {
     return text.split("").map((char, index) => (
-      <span key={index} className="split-text-char"
+      <span
+        key={index}
+        className="split-text-char"
         style={{ font: "italic 400 1em 'Instrument Serif'" }}
       >
         {char === " " ? "\u00A0" : char}
@@ -212,7 +249,7 @@ export default function Tads() {
           </p>
         </div>
       </section>
-      <CoreTechs />
+      <CoreTechs technologies={technologies} />
       <ThreatRadiation />
 
       <CapabilitiesSection

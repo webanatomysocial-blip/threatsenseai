@@ -12,8 +12,8 @@ import CapabilitiesSection from "../components/CapabilitiesSection";
 import UseCases from "../Solutions-components/UseCases";
 import ResultsComp from "../Solutions-components/ResultsComp";
 import bgImage from "../assets/home/Our-Solutions/bg1.png";
-import mcaat1 from "../assets/solutions/mcaat/1.jpg";
-import mcaat2 from "../assets/solutions/mcaat/2.jpg";
+import mcaat1 from "../assets/solutions/mcaat/1.png";
+import mcaat2 from "../assets/solutions/mcaat/2.png";
 import mcaat3 from "../assets/solutions/mcaat/3.jpg";
 import mcaat4 from "../assets/solutions/mcaat/4.jpg";
 import mcaat5 from "../assets/solutions/mcaat/5.jpg";
@@ -28,7 +28,6 @@ import mcaat14 from "../assets/solutions/mcaat/14.jpg";
 import mcaat15 from "../assets/solutions/mcaat/15.jpg";
 import mcaat16 from "../assets/solutions/mcaat/16.jpg";
 import mcaat17 from "../assets/solutions/mcaat/17.jpg";
-
 
 import videomcaat1 from "../assets/solutions/mcaat/Copy of Threatsense videos (2).mp4";
 
@@ -169,15 +168,13 @@ export default function Mcaat() {
       link: "#",
       img: null,
       video: videomcaat1,
-
-
     },
     {
       title: "Automated Detection of Audit Trail Tampering",
       description:
         "Any attempt to delete, alter, or manipulate audit logs is detected in real time. MCAAT immediately records the event, preserves evidence, and triggers alerts or enforcement actions to maintain audit trail integrity and evidentiary reliability.",
       link: "#",
-      img: mcaat14 ,
+      img: mcaat14,
       video: null,
     },
     {
@@ -243,7 +240,9 @@ export default function Mcaat() {
         return <br key={index} />;
       }
       return (
-        <span key={index} className="split-text-char"
+        <span
+          key={index}
+          className="split-text-char"
           style={{ font: "italic 400 1em 'Instrument Serif'" }}
         >
           {char === " " ? "\u00A0" : char}
