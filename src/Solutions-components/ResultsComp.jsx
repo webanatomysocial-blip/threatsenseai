@@ -1,9 +1,9 @@
 import React from "react";
 import "../css/ResultsComp.css";
-import img1 from "../assets/home/Our-Solutions/bg1.png";
-import img2 from "../assets/home/Our-Solutions/bg1.png";
-import img3 from "../assets/home/Our-Solutions/bg1.png";
-import img4 from "../assets/home/Our-Solutions/bg1.png";
+import img1 from "../assets/solutions/mcaat/results/4.png";
+import img2 from "../assets/solutions/mcaat/results/5.png";
+import img3 from "../assets/solutions/mcaat/results/6.png";
+import img4 from "../assets/solutions/mcaat/results/7.png";
 import { FaGlobe } from "react-icons/fa";
 
 const ResultsComp = () => {
