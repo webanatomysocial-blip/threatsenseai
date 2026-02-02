@@ -204,10 +204,11 @@ export default function Mcaat() {
   ];
 
   const useCasesList = [
-    "Lorem ipsum dolor sit amet consectetur, adipisicing elit. ",
-    "Lorem ipsum dolor sit amet consectetur, adipisicing elit. ",
-    "Consequatur ex enim fuga necessitatibus quo ipsa id minima impedit eligendi saepe? Id eius laboriosam sed?",
-    "Consequatur ex enim fuga necessitatibus quo ipsa id minima impedit eligendi saepe? Id eius laboriosam sed?",
+    "Continuous audit trail is enforced across SAP application and database layers",
+    "All DDL and DML activities are captured automatically without performance impact",
+    "Each change records who performed the action, what was executed, and when it occurred",
+    "Audit evidence is stored securely at OS level and database level with tamper resistance",
+    "Audit policies are continuously monitored and automatically re-enabled if disabled",
   ];
 
   const headerRef = useRef(null);
@@ -295,7 +296,7 @@ export default function Mcaat() {
       <ResultsComp />
       <UseCases
         label="Use Cases"
-        title={<>Lorem ipsum dolor sit amet consectetur, adipisicing elit</>}
+        title={<>Always-On Audit Trail Compliance for MCA Rule 11(g)</>}
         list={useCasesList}
         image={img2}
       />

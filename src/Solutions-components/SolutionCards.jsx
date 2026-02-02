@@ -96,9 +96,7 @@ export default function SolutionCards({ items, label, title, marginTop }) {
           <div className="solution-card-text">
             <h3>{card.title}</h3>
             <p>{card.description}</p>
-            <a href={card.link} className="read-more-link">
-              Read More <BsArrowRight />
-            </a>
+           
           </div>
           <div className="solution-card-visual">
             {card.video ? (

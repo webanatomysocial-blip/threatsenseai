@@ -14,37 +14,37 @@ export default function RisingThreats() {
   const threatData = [
     {
       id: "01",
-      title: "Lorem ipsum dolor sit amet",
+      title: "How does Gen-AI increase insider data leakage risk?",
       description:
-        "Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "Employees can unknowingly paste sensitive SAP or enterprise data into public Gen-AI tools for testing, analysis, or development. Once shared, this data leaves organizational control and may be stored or reused externally.",
       image: bannerImg,
     },
     {
       id: "02",
-      title: "Duis aute irure dolor",
+      title: "Why does traditional DLP fail to stop insider threats?",
       description:
-        "In reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "Traditional DLP relies on static rules and file-based controls. It cannot detect real-time typing, contextual user intent, or data shared directly via browsers, AI tools, or screen actions.",
       image: bannerImg,
     },
     {
       id: "03",
-      title: "Sed ut perspiciatis unde",
+      title: "Why is SAP data especially vulnerable?",
       description:
-        "Omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
+        "SAP exposes critical business data directly on screens. Copying, screenshots, printing, or screen sharing can leak sensitive information without creating files bypassing most traditional security tools.",
       image: bannerImg,
     },
     {
       id: "04",
-      title: "Nemo enim ipsam voluptatem",
+      title: "How do screen sharing and screenshots cause data leaks?",
       description:
-        "Quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet.",
+        "Modern collaboration tools allow sensitive data to be shared visually. Most DLP tools cannot detect or block screenshots or live screen sharing of protected applications.",
       image: bannerImg,
     },
     {
       id: "05",
-      title: "Ut enim ad minima veniam",
+      title: "Why is real-time prevention critical for data protection?",
       description:
-        "Quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae.",
+        "Once data is copied, uploaded, or shared with AI tools, it cannot be recalled. Real-time enforcement is the only way to stop insider leaks before data leaves the organization.",
       image: bannerImg,
     },
   ];

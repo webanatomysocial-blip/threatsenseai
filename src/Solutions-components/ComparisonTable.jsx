@@ -8,37 +8,37 @@ export default function ComparisonTable() {
     {
       category: "SAP Integration",
       items: [
-        { name: "Lorem ipsum dolor sit amet", tads: true, legacy: false },
-        { name: "Consectetur adipiscing elit", tads: true, legacy: false },
-        { name: "Sed do eiusmod tempor", tads: true, legacy: false },
-        { name: "Incididunt ut labore et dolore", tads: true, legacy: false },
+        { name: "Native SAP GUI awareness", tads: true, legacy: false },
+        { name: "SAP screen-level data protection", tads: true, legacy: false },
+        { name: "SAP copy / paste control", tads: true, legacy: false },
+        { name: "SAP print & export monitoring", tads: true, legacy: false },
       ],
     },
     {
       category: "Protection Capabilities",
       items: [
-        { name: "Magna aliqua ut enim ad minim", tads: true, legacy: false },
-        { name: "Veniam quis nostrud exercitation", tads: true, legacy: false },
-        { name: "Ullamco laboris nisi ut aliquip", tads: true, legacy: false },
-        { name: "Ex ea commodo consequat", tads: true, legacy: false },
+        { name: "Real-time copy & paste protection", tads: true, legacy: false },
+        { name: "Gen-AI data leakage prevention", tads: true, legacy: false },
+        { name: "Browser upload & webmail protection", tads: true, legacy: false },
+        { name: "Screenshot & screen capture blocking", tads: true, legacy: false },
       ],
     },
     {
       category: "Deployment & Operations",
       items: [
         {
-          name: "Duis aute irure dolor in reprehenderit",
+          name: "Lightweight endpoint agent",
           tads: true,
           legacy: false,
         },
-        { name: "In voluptate velit esse cillum", tads: true, legacy: false },
+        { name: "Centralized policy management", tads: true, legacy: true },
         {
-          name: "D dolore eu fugiat nulla pariatur",
+          name: "Real-time policy enforcement",
           tads: true,
           legacy: false,
         },
         {
-          name: "Excepteur sint occaecat cupidatat",
+          name: "Unified dashboard & audit logs",
           tads: true,
           legacy: false,
         },

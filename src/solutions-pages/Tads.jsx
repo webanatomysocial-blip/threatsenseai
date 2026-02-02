@@ -158,10 +158,10 @@ export default function Tads() {
   ];
 
   const useCasesList = [
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-    "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
-    "Ut enim ad minim veniam, quis nostrud exercitation ullamco",
-    "Duis aute irure dolor in reprehenderit in voluptate velit esse",
+    "Real-time prevention of insider data leaks across SAP, endpoints, and browsers",
+    " Immediate visibility into user actions, policy violations, and risky behavior",
+    " Centralized control of devices, applications, and Gen-AI usage",
+    "Faster compliance, audits, and investigations with unified logging"
   ];
 
   const technologies = [
@@ -326,11 +326,11 @@ export default function Tads() {
             <h3>How Data Leaks</h3>
             <div className="pl-list">
               {[
-                "Lorem ipsum dolor sit amet",
-                "Consectetur adipiscing elit",
-                "Sed do eiusmod tempor",
-                "Incididunt ut labore et dolore",
-                "Magna aliqua",
+               "Copying sensitive SAP or enterprise data",
+               "Pasting Sensitive data into Gen-AI tools or browsers",
+               "Uploading files to external websites or email",
+               "Unauthorized Screenshots, screen sharing, and printing",
+               "Uncontrolled USB and device usage",
               ].map((item, i) => (
                 <div key={i} className="pl-item">
                   <div className="pl-icon-x">
@@ -346,11 +346,11 @@ export default function Tads() {
             <h3>How TADS Blocks It</h3>
             <div className="pl-list">
               {[
-                "Lorem ipsum dolor sit amet",
-                "Consectetur adipiscing elit",
-                "Sed do eiusmod tempor",
-                "Incididunt ut labore et dolore",
-                "Magna aliqua",
+               "Blocks copy, paste, and exports of sensitive data",
+               "Detects and stops data shared with Gen-AI tools",
+               "Prevents unauthorized uploads and email sharing",
+               "Blocks screenshots, screen capture, and screen sharing",
+               "Enforces device and peripheral access policies",
               ].map((item, i) => (
                 <div key={i} className="pl-item">
                   <div className="pl-icon-check">
