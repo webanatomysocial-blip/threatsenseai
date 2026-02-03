@@ -1,11 +1,19 @@
-import React, { useState } from "react";
+import React, { useState, useLayoutEffect, useRef } from 'react';
 import { BsArrowRight } from "react-icons/bs";
-import "../css/Solutions-pages.css";
-import bgImage from "../assets/home/Our-Solutions/bg1.png";
+import { AiFillInfoCircle } from "react-icons/ai";
 import { FaGlobe } from "react-icons/fa";
 import { MdKeyboardArrowDown, MdKeyboardArrowUp } from "react-icons/md";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import "../css/Solutions-pages.css";
+import "../css/newSoultion.css";
+import bgImage from "../assets/home/Our-Solutions/bg1.png";
 
-function SolutionCardRow({ card }) {
+gsap.registerPlugin(ScrollTrigger);
+
+// --- Original Zig-Zag Components ---
+
+function ZigZagCardRow({ card }) {
   const [isExpanded, setIsExpanded] = useState(false);
 
   return (
@@ -34,11 +42,10 @@ function SolutionCardRow({ card }) {
                 </>
               )}
             </button>
-
           </div>
         )}
 
-        {!card.readMoreContent && card.link && (
+        {card.link && card.link !== "#" && (
           <a href={card.link} className="solution-card-readmore">
             Read More <BsArrowRight />
           </a>
@@ -149,11 +156,111 @@ export default function SolutionCards({
           {label || defaultLabel}
         </div>
         <h2 className="head-text">{title || defaultTitle}</h2>
-        {description && <p className="sub-para-text">{description}</p>}
+        {description && (
+          <p className="sub-para-text">
+            {description.split("\n").map((line, i) => (
+              <React.Fragment key={i}>
+                {line}
+                {i < description.split("\n").length - 1 && <br />}
+              </React.Fragment>
+            ))}
+          </p>
+        )}
       </div>
       {displayItems.map((card, index) => (
-        <SolutionCardRow key={index} card={card} />
+        <ZigZagCardRow key={index} card={card} />
       ))}
     </section>
   );
 }
+
+// --- Named Exports for Scroll Stacking ---
+
+export const ScrollStackItem = ({ children, itemClassName = '' }) => (
+  <div className={`scroll-stack-card ${itemClassName}`.trim()}>{children}</div>
+);
+
+export const ScrollStackCards = ({
+  children,
+  className = '',
+  itemDistance = 80,
+  itemScale = 0.04,
+  label,
+  title,
+  icon,
+  ...props
+}) => {
+  const containerRef = useRef(null);
+
+  useLayoutEffect(() => {
+    const cards = containerRef.current.querySelectorAll('.scroll-stack-card');
+    if (!cards.length) return;
+
+    const mm = gsap.matchMedia();
+
+    mm.add("(min-width: 769px)", () => {
+      cards.forEach((card, index) => {
+        const isLast = index === cards.length - 1;
+        // Staggered offset only for the second card (index 1)
+        const topOffset = index === 1 ? 130 : 100;
+
+        // Add scroll depth between cards
+        if (!isLast) {
+          card.style.marginBottom = "50vh";
+        }
+
+        ScrollTrigger.create({
+          trigger: card,
+          start: `top ${topOffset}px`,
+          endTrigger: containerRef.current,
+          end: "bottom bottom",
+          pin: true,
+          pinSpacing: false,
+          invalidateOnRefresh: true,
+        });
+
+        // Progressive Scaling: Each card scales down further as every subsequent card arrives
+        for (let j = index + 1; j < cards.length; j++) {
+          gsap.to(card, {
+            scale: 1 - (itemScale * (j - index)),
+            scrollTrigger: {
+              trigger: cards[j],
+              start: "top 80%",
+              end: "top 20%",
+              scrub: true,
+            }
+          });
+        }
+      });
+    });
+
+    // Refresh triggers after a short delay to ensure correct calculations
+    const timer = setTimeout(() => ScrollTrigger.refresh(), 100);
+
+    return () => {
+      mm.revert();
+      clearTimeout(timer);
+    };
+  }, [itemScale]);
+
+  return (
+    <div
+      className={`scroll-stack-scroller window-scroll ${className}`.trim()}
+      ref={containerRef}
+      {...props}
+    >
+      <div className="scroll-stack-inner">
+        {(label || title) && (
+          <div className="capabilities-header" style={{ marginBottom: "60px", textAlign: "center" }}>
+            <div className="sub-para-text security-label" style={{ justifyContent: "center" }}>
+              {icon || <AiFillInfoCircle size={18} style={{ marginRight: "4px" }} />}
+              {label}
+            </div>
+            {title && <h2 className="head-text">{title}</h2>}
+          </div>
+        )}
+        {children}
+      </div>
+    </div>
+  );
+};

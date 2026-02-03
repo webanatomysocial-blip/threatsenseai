@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { BsCheckLg } from "react-icons/bs";
+import { Link } from "react-router-dom";
 import defaultImg from "../assets/home/tab-section/1.jpg";
 import "../css/Solutions-pages.css";
 import { FaGlobe } from "react-icons/fa";
@@ -71,7 +72,7 @@ const UseCases = ({ label, title, list, image }) => {
           ))}
         </ul>
 
-        <button className="black-button">Book A Free Demo</button>
+        <Link to="/contact" className="black-button">Book A Free Demo</Link>
       </div>
 
       <div className="uc-image-side">

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "../css/Solutions-pages.css";
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
@@ -13,7 +14,7 @@ import CapabilitiesSection from "../components/CapabilitiesSection";
 import UseCases from "../Solutions-components/UseCases";
 import ResultsComp from "../Solutions-components/ResultsComp";
 import bgImage from "../assets/home/Our-Solutions/bg1.png";
-import mcaat1 from "../assets/solutions/mcaat/sap-security-alert.png";
+import mcaat1 from "../assets/solutions/mcaat/Log detection MCAAT.png";
 import mcaat2 from "../assets/solutions/mcaat/2.png";
 import mcaat3 from "../assets/solutions/mcaat/3.jpg";
 import mcaat4 from "../assets/solutions/mcaat/4.jpg";
@@ -24,7 +25,7 @@ import mcaat8 from "../assets/solutions/mcaat/8.jpg";
 import mcaat9 from "../assets/solutions/mcaat/9.jpg";
 import mcaat10 from "../assets/solutions/mcaat/10.jpg";
 import mcaat11 from "../assets/solutions/mcaat/11.jpg";
-import mcaat12 from "../assets/solutions/mcaat/12.jpg";
+import mcaat12 from "../assets/solutions/mcaat/Audit Friendly MCAAT.png";
 import mcaat14 from "../assets/solutions/mcaat/14.jpg";
 import mcaat15 from "../assets/solutions/mcaat/15.jpg";
 import mcaat16 from "../assets/solutions/mcaat/16.jpg";
@@ -207,6 +208,14 @@ export default function Mcaat() {
     "Audit policies are continuously monitored and automatically re-enabled if disabled",
   ];
 
+  const [isMobile, setIsMobile] = React.useState(window.innerWidth <= 768);
+
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth <= 768);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   const headerRef = useRef(null);
 
   useEffect(() => {
@@ -229,7 +238,7 @@ export default function Mcaat() {
         delay: 0.2,
       },
     );
-  }, []);
+  }, [isMobile]); // Re-run if text changes to ensure animation hits new chars
 
   const splitLetters = (text) => {
     return text.split("").map((char, index) => {
@@ -252,21 +261,20 @@ export default function Mcaat() {
       <section className="mcaat-banner">
         <div className="mcaat-banner-content">
           <h1 ref={headerRef} className="big-text-head">
-            MCAAT — {splitLetters("MCA Audit Trail \n Enforcement for SAP")}
+            MCAAT —
+            {isMobile
+              ? splitLetters("  MCA Audit \n Trail Enforcement \n for SAP")
+              : splitLetters("  MCA Audit Trail \n Enforcement for SAP")}
           </h1>
-          {/* <p className="sub-para-text">
-            Continuous compliance with MCA Rule 11(g) through automated,
-            tamper-proof audit controls.
-          </p> */}
           <p className="sub-para-text">
             MCAAT is a purpose-built solution that monitors, secures, and
             enforces audit trail integrity across SAP databases, ensuring
             critical activities cannot go untracked, disabled, or altered
           </p>
           <div className="banner-buttons">
-            <a href="#" className="red-button">
+            <Link to="/contact" className="red-button">
               Request MCAAT Demo
-            </a>
+            </Link>
           </div>
         </div>
       </section>
@@ -274,8 +282,7 @@ export default function Mcaat() {
       <SolutionCards
         label="Automated Controls Delivered by MCAAT"
         title="Compliance that enforces itself"
-        description="MCAAT delivers automated compliance controls that continuously protect audit trails, enforce logging policies 
-        and respond instantly to violations, ensuring MCA Rule 11(g) requirements are met at all times."
+        description={isMobile ? "MCAAT delivers automated compliance controls that continuously protect audit trails,enforce logging policies and respond instantly to violations, ensuring MCA Rule 11(g) requirements are met at all times." : "MCAAT delivers automated compliance controls that continuously protect audit trails,enforce logging policies \n and respond instantly to violations, ensuring MCA Rule 11(g) requirements are met at all times."}
         items={Cardscontent}
         marginTop="0px"
       />

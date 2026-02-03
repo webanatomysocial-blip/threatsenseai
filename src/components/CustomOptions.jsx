@@ -1,9 +1,9 @@
 import React, { useState, useEffect, useRef } from "react";
 import "../css/CustomOptions.css";
 import { AiFillAppstore } from "react-icons/ai";
-import img1 from "../assets/home/Custom-Options/1.png";
-import img2 from "../assets/home/Custom-Options/2.png";
-import img3 from "../assets/home/Custom-Options/3.png";
+import img1 from "../assets/home/Custom-Options/Tag & Track.png";
+import img3 from "../assets/home/Custom-Options/Simplify.png";
+import img2 from "../assets/home/Custom-Options/Design Automated.png";
 import bgImage from "../assets/home/Custom-Options/bg.png";
 
 const CustomOptions = () => {
@@ -33,9 +33,12 @@ const CustomOptions = () => {
 
   const startTimer = () => {
     stopTimer();
-    intervalRef.current = setInterval(() => {
-      setActiveIndex((prev) => (prev + 1) % options.length);
-    }, 4000);
+    // Only start timer if screen is larger than mobile (768px)
+    if (window.innerWidth > 768) {
+      intervalRef.current = setInterval(() => {
+        setActiveIndex((prev) => (prev + 1) % options.length);
+      }, 4000);
+    }
   };
 
   const stopTimer = () => {
@@ -47,7 +50,21 @@ const CustomOptions = () => {
 
   useEffect(() => {
     startTimer();
-    return () => stopTimer();
+
+    // Re-check on resize to handle orientation/window changes
+    const handleResize = () => {
+      if (window.innerWidth <= 768) {
+        stopTimer();
+      } else if (!intervalRef.current) {
+        startTimer();
+      }
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => {
+      stopTimer();
+      window.removeEventListener("resize", handleResize);
+    };
   }, [options.length]);
 
   const handleCardClick = (index) => {
@@ -102,9 +119,8 @@ const CustomOptions = () => {
         {options.map((_, index) => (
           <div
             key={index}
-            className={`pagination-dot ${
-              activeIndex === index ? "active" : ""
-            }`}
+            className={`pagination-dot ${activeIndex === index ? "active" : ""
+              }`}
             onClick={() => handleCardClick(index)}
           >
             {activeIndex === index && (

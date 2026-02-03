@@ -5,6 +5,20 @@ import img from "../assets/home/Custom-Options/2.png";
 import img1 from "../assets/home/tab-section/1.jpg";
 import img2 from "../assets/home/tab-section/2.jpg";
 import img3 from "../assets/home/tab-section/3.jpg";
+
+import soar from '../assets/home/Custom-Options/SOAR Focus.png';
+import detect from '../assets/home/Custom-Options/Detection Focus.png';
+import govern from '../assets/home/Custom-Options/Governance focus.png';
+import platform from '../assets/home/Custom-Options/Focus Response.png';
+
+import comp from '../assets/home/Custom-Options/Compilance.png';
+import seam from '../assets/home/Custom-Options/Seamless Integration.png';
+import auto from '../assets/home/Custom-Options/Automated response.png';
+import mini from '../assets/home/Custom-Options/Minimal.png';
+import usecasessiem from '../assets/home/Custom-Options/SIEM Use CAses.png';
+import intell from '../assets/home/Custom-Options/Intelligent.png';
+import real from '../assets/home/Custom-Options/realtime.png';
+
 import SolutionCarousel from "../Solutions-components/SolutionCarousel";
 import SolutionCards from "../Solutions-components/SolutionCards";
 import CapabilitiesSection from "../components/CapabilitiesSection";
@@ -29,37 +43,37 @@ export default function SiemSoar() {
       title: "Real-time Alerts & Incident Creation",
       description:
         "Continuously monitors SAP security events and system activities to detect suspicious behavior in real time. Automatically generates alerts and security incidents, enabling faster investigation and response without manual intervention",
-      img: img,
+      img: real,
     },
     {
       title: "Intelligent Event Correlation",
       description:
         "Correlates events across SAP application servers, databases, and connected systems to identify complex attack patterns that isolated logs cannot reveal. Reduces noise while highlighting high-risk security signals.",
-      img: img1,
+      img: intell,
     },
     {
       title: "Automated Response Playbooks",
       description:
         "Triggers predefined response actions when threats are detected—such as session termination, alert escalation, or access control actions—ensuring consistent and rapid containment of security incidents.",
-      img: img2,
+      img: auto,
     },
     {
       title: "Compliance & Audit Readiness",
       description:
         "Maintains structured, centralized security records for SAP activities, supporting internal audits and regulatory requirements. Ensures traceability of events, alerts, and response actions without additional operational overhead.",
-      img: img3,
+      img: comp,
     },
     {
       title: "Seamless SAP Integration",
       description:
         "Integrates smoothly with existing SAP landscapes without requiring major architectural changes. Designed to work alongside current SAP security configurations and enterprise monitoring tools",
-      img: img3,
+      img: seam,
     },
     {
       title: "Minimal Performance Impact",
       description:
         "Delivers deep security visibility while keeping system and database overhead low. Designed to operate efficiently without affecting SAP performance or business operations.",
-      img: img3,
+      img: mini,
     },
   ];
   const cardcontent = [
@@ -68,7 +82,7 @@ export default function SiemSoar() {
       subtitle: "Orchestrated Incident Response",
       description:
         "When a security event is detected, response should be immediate and consistent. SIEM & SOAR for SAP enables automated response workflows that guide incidents through investigation, containment, and remediation—without relying on manual intervention.",
-      img: img,
+      img: soar,
       readMoreContent: (
         <>
           <ul>
@@ -88,7 +102,7 @@ export default function SiemSoar() {
       subtitle: "Immediate Threat Visibility",
       description:
         "SAP security events are identified and surfaced the moment they occur. Suspicious activities are converted into actionable alerts and structured incidents, enabling security teams to respond without delay.",
-      img: img,
+      img: detect,
       readMoreContent: (
         <>
           <ul>
@@ -108,7 +122,7 @@ export default function SiemSoar() {
       subtitle: "Built-in Audit Readiness",
       description:
         "Security monitoring should support audits—not complicate them. SIEM & SOAR for SAP maintains centralized, tamper-resistant records of security events and response actions, simplifying compliance and investigations.",
-      img: img,
+      img: govern,
       readMoreContent: (
         <>
           <ul>
@@ -123,11 +137,11 @@ export default function SiemSoar() {
       ),
     },
     {
-      title: " Platform Focus",
+      title: "Platform Focus",
       subtitle: "Native SAP Landscape Fit",
       description:
         "Security tooling should adapt to SAP—not the other way around. The solution integrates smoothly into existing SAP environments without introducing architectural complexity or operational overhead.",
-      img: img,
+      img: platform,
       readMoreContent: (
         <>
           <ul>
@@ -245,9 +259,9 @@ export default function SiemSoar() {
         data={content}
       />
       <SolutionCards
-        label="lorem ipsum dolor sit amet"
-        title="lorem ipsum dolor sit amet lorem ipsum dolor sit amet"
-        description="lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet" items={cardcontent} marginTop="0px" />
+        label="Automated Threat Detection & Response"
+        title="Security that watches, detects and acts automatically"
+        description="" items={cardcontent} marginTop="0px" />
       <CapabilitiesSection
         items={core}
         gridTemplateColumns="repeat(3, 1fr)"
@@ -266,7 +280,7 @@ export default function SiemSoar() {
           </>
         }
         list={useCasesList}
-        image={img1}
+        image={usecasessiem}
       />
       <Cta
         title="Stay Ahead of Threats with

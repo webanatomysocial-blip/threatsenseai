@@ -10,7 +10,7 @@ import mcaatvid2 from "../assets/home/Our-Solutions/Copy of Threatsense videos (
 import mcaatvid3 from "../assets/home/Our-Solutions/siem.mp4";
 gsap.registerPlugin(ScrollTrigger);
 
-const OurSolutions = () => {
+const OurSolutions = ({ id }) => {
   const containerRef = useRef(null);
   const cardsRef = useRef([]);
 
@@ -95,11 +95,17 @@ const OurSolutions = () => {
 
     const refreshTimer = setTimeout(() => {
       ScrollTrigger.refresh();
-    }, 100);
+    }, 500); // Wait longer for layout to stabilize
+
+    const handleLoad = () => {
+      ScrollTrigger.refresh();
+    };
+    window.addEventListener("load", handleLoad);
 
     return () => {
       mm.revert();
       clearTimeout(refreshTimer);
+      window.removeEventListener("load", handleLoad);
     };
   }, []);
 
@@ -153,7 +159,7 @@ const OurSolutions = () => {
   ];
 
   return (
-    <div className="our-solutions-container" ref={containerRef} id="solutions">
+    <div className="our-solutions-container" ref={containerRef} id={id}>
       <div className="solutions-header">
         <div
           className="sub-para-text"
@@ -204,13 +210,15 @@ const OurSolutions = () => {
                   ))}
                 </ul>
 
-                <Link
-                  to={solution.link}
-                  className="white-button"
-                  style={{ marginTop: "10px" }}
-                >
-                  {solution.btn}
-                </Link>
+                {solution.link && (
+                  <Link
+                    to={solution.link}
+                    className="white-button"
+                    style={{ marginTop: "10px" }}
+                  >
+                    {solution.btn}
+                  </Link>
+                )}
               </div>
 
               <div className="card-image-section">

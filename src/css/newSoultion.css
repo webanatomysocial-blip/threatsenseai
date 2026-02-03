@@ -1,0 +1,272 @@
+.scroll-stack-scroller {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: visible;
+    overscroll-behavior: contain;
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+    will-change: scroll-position;
+}
+
+.scroll-stack-scroller.window-scroll {
+    height: auto;
+    overflow: visible;
+}
+
+.scroll-stack-inner {
+    padding: 15vh 0 15vh;
+    /* Much more reasonable padding */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.scroll-stack-card-wrapper {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.scroll-stack-card {
+    transform-origin: top center;
+    will-change: transform, filter;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+
+    height: 480px;
+    /* Fixed pixel height for stability */
+    max-width: 1200px;
+    width: 100%;
+    margin: 0;
+    /* Margin handled by itemDistance prop */
+    padding: 0;
+    border-radius: 20px;
+    box-sizing: border-box;
+    background: white;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.solution-desc {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+.features-list {
+    list-style: none;
+    padding: 0;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    color: #333;
+    font-weight: 400;
+}
+
+/* Inner Layout */
+.scroll-stack-card .card-content-wrapper {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.scroll-stack-card .card-content-wrapper.subsequent {
+    flex-direction: row-reverse;
+}
+
+/* Text Section */
+.scroll-stack-card .card-text-section {
+    flex: 1;
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    z-index: 2;
+
+    gap: 20px;
+
+}
+
+.scroll-stack-card .card-title {
+    font-family: 'Inter', system-ui, sans-serif;
+    font-size: 3rem;
+    font-weight: 700;
+    margin: 0 0 1rem 0;
+    color: #111;
+    letter-spacing: -0.02em;
+}
+
+.scroll-stack-card .card-subtitle {
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+    color: #333;
+}
+
+.scroll-stack-card .card-description {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #666;
+    margin-bottom: 2rem;
+    max-width: 90%;
+}
+
+.scroll-stack-card .card-features-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 2.5rem 0;
+}
+
+.scroll-stack-card .card-feature-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.75rem;
+    font-size: 11px;
+    color: #444;
+}
+
+.scroll-stack-card .check-icon {
+    /* Renamed to avoid collision if necessary, but keep for now if it works */
+    color: #444;
+    margin-right: 0.75rem;
+    display: inline-flex;
+}
+
+.scroll-stack-card .card-button {
+    background: transparent;
+    border: 1px solid #e1e1e1;
+    border-radius: 12px;
+    padding: 12px 24px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #111;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+
+
+/* Visual Section */
+.scroll-stack-card .card-image-section {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+    background: #f8f8f8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Abstract Gradients for Visuals */
+.scroll-stack-card .gradient-bg-1 {
+    background: linear-gradient(135deg, #FF6B6B 0%, #FF8E53 100%);
+    background-size: cover;
+}
+
+.scroll-stack-card .gradient-bg-2 {
+    background: radial-gradient(circle at top right, #6EE7B7 0%, #3B82F6 100%);
+}
+
+.scroll-stack-card .gradient-bg-3 {
+    background: conic-gradient(from 180deg at 50% 50%, #A78BFA 0deg, #F472B6 180deg, #A78BFA 360deg);
+}
+
+.floating-card {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 2.5rem;
+    border-radius: 20px;
+
+    width: 70%;
+    max-width: 340px;
+}
+
+.floating-card-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    font-weight: 500;
+    color: #333;
+}
+
+.floating-card-item:last-child {
+    margin-bottom: 0;
+}
+
+.green-check {
+    color: #10B981;
+    margin-right: 1rem;
+    font-size: 1.2rem;
+}
+
+
+
+
+
+
+
+.scroll-stack-scroller .security-label svg {
+    color: #111;
+}
+
+
+.scroll-stack-end {
+    width: 100%;
+    height: 1px;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+    .scroll-stack-inner {
+        padding: 5vh 20px;
+    }
+
+    .scroll-stack-card {
+        height: auto;
+        min-height: auto;
+        border-radius: 20px;
+        margin-bottom: 15px;
+    }
+
+    .scroll-stack-card .card-content-wrapper,
+    .scroll-stack-card .card-content-wrapper.subsequent {
+        flex-direction: column-reverse;
+    }
+
+    .scroll-stack-card .card-text-section {
+        padding: 2rem 1.5rem;
+        gap: 15px;
+    }
+
+    .scroll-stack-card .card-image-section {
+        height: 250px;
+        width: 100%;
+    }
+
+    .scroll-stack-card .card-title {
+        font-size: 2rem;
+    }
+
+    .scroll-stack-card .card-description {
+        font-size: 0.95rem;
+        max-width: 100%;
+    }
+
+    .feature-item {
+        font-size: 14px;
+        margin-bottom: 12px;
+    }
+}

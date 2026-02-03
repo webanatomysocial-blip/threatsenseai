@@ -1,5 +1,5 @@
 .core-techs-section {
-  padding: 80px 130px;
+  padding: 80px 130px 100px 130px;
   background-color: var(--progress-bg);
   position: relative;
 }
@@ -82,7 +82,7 @@
   width: 100%;
   height: auto;
   /* max-width: 400px; */
-  /* border-radius: 20px; */
+  border-radius: 20px;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
   /* background: #fff; */
   /* padding: 15px; */

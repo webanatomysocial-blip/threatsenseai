@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 function ScrollToTop() {
   const { pathname, hash } = useLocation();
@@ -18,6 +19,10 @@ function ScrollToTop() {
             });
           } else {
             elem.scrollIntoView({ behavior: "smooth" });
+          }
+          // Ensure GSAP knows where everything is after the scroll
+          if (ScrollTrigger) {
+            ScrollTrigger.refresh();
           }
         }
       }, 100);

@@ -4,7 +4,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "../css/AboutBanner.css";
 import bannerImg from "../assets/about-images/banner.jpg";
 import bannerImg2 from "../assets/about-images/banner1.jpg";
-import bannerImg3 from "../assets/about-images/banner3.webp";
+import bannerImg3 from "../assets/about-images/banner3.jpg";
 
 gsap.registerPlugin(ScrollTrigger);
 

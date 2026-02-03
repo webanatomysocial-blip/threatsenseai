@@ -136,7 +136,6 @@ const CoreTechs = ({ technologies }) => {
               <h3 className="head-text">{tech.title}</h3>
               <h4 className="sub-para-text tech-subtitle">{tech.subtitle}</h4>
               <p className="para-text tech-desc">{tech.description}</p>
-              <button className="white-button">Learn More</button>
             </div>
           </div>
         ))}

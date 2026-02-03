@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from "react";
+import { Link } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/css";
@@ -141,12 +142,12 @@ const HomeBanner = () => {
 
           {/* Buttons */}
           <div className="banner-buttons">
-            <a href="#" className="red-button">
+            <a href="#solutions" className="red-button">
               Get Started
             </a>
-            <a href="#" className="white-button">
+            <Link to="/contact" className="white-button">
               Book a Demo
-            </a>
+            </Link>
           </div>
 
           {/* Footer Stats / Dashed Border Section */}
@@ -156,8 +157,9 @@ const HomeBanner = () => {
               spaceBetween={20}
               slidesPerView={1}
               loop={true}
+              speed={2000}
               autoplay={{
-                delay: 2500,
+                delay: 3000,
                 disableOnInteraction: false,
               }}
               breakpoints={{

@@ -36,7 +36,10 @@ import CoreTechs from "../Solutions-components/CoreTechs";
 import video1 from "../assets/solutions/tads/1.mp4";
 import video2 from "../assets/solutions/tads/2.mp4";
 import video3 from "../assets/solutions/tads/3.mp4";
-
+import dmssimg from "../assets/solutions/tads/DMSS.png";
+import tadsimg from "../assets/solutions/tads/TADS Protection.png";
+import dotimg from "../assets/solutions/tads/DOT Layer.png";
+import usecaseimg from "../assets/solutions/tads/TADS Use Cases.png";
 export default function Tads() {
   const content = [
     {
@@ -172,8 +175,8 @@ export default function Tads() {
         "Monitors and controls how sensitive data moves out of your enterprise, with a primary focus on SAP ERP, the most business-critical system.",
       description:
         "TADS prevents unauthorized exports, excessive data access, and insider misuse through real-time, policy-driven enforcement across SAP environments.",
-      image: null,
-      video: video1,
+      image: tadsimg,
+      video: null,
     },
     {
       id: "02",
@@ -182,19 +185,27 @@ export default function Tads() {
         "Monitors and controls sensitive data exposure at the browser layer, where most modern data leaks occur.",
       description:
         "DotLayer prevents unauthorized data sharing into generative AI tools, personal email accounts, and cloud drives by enforcing real-time, context-aware controls on user actions.",
-      image: null,
-      video: video2,
+      image: dotimg,
+      video: null,
     },
     {
       id: "03",
       title: "DMSS – Data Masking & Scrambling Solution",
-      subtitle: "lorem ipsum dolor sit amet consectetur adipiscing elit",
+      subtitle: "Secure Real-Time Data Protection and Compliance for SAP Environments",
       description:
         "Dynamically masks and scrambles sensitive SAP data in real time to enforce data minimization aivilend least-prge access principles. With DMSS, enterprises can ensure personal, financial, and regulated data is exposed only to authorized users.\n\nIt reduces risk of data misuse in production and non-production environments while maintaining business continuity.\n\nSupports regulatory compliance requirements under GDPR, DPDP, SOX, and similar data protection frameworks.",
-      image: null,
-      video: video3,
+      image: dmssimg,
+      video: null,
     },
   ];
+
+  const [isMobile, setIsMobile] = React.useState(window.innerWidth <= 768);
+
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth <= 768);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   const headerRef = useRef(null);
 
@@ -218,25 +229,33 @@ export default function Tads() {
         delay: 0.2,
       },
     );
-  }, []);
+  }, [isMobile]);
 
   const splitLetters = (text) => {
-    return text.split("").map((char, index) => (
-      <span
-        key={index}
-        className="split-text-char"
-        style={{ font: "italic 400 1em 'Instrument Serif'" }}
-      >
-        {char === " " ? "\u00A0" : char}
-      </span>
-    ));
+    return text.split("").map((char, index) => {
+      if (char === "\n") {
+        return <br key={index} />;
+      }
+      return (
+        <span
+          key={index}
+          className="split-text-char"
+          style={{ font: "italic 400 1em 'Instrument Serif'" }}
+        >
+          {char === " " ? "\u00A0" : char}
+        </span>
+      );
+    });
   };
   return (
     <>
       <section className="tads-banner">
         <div className="tads-banner-content">
           <h1 ref={headerRef} className="big-text-head">
-            TADS — {splitLetters("ThreatSense AI Data Security")}
+            TADS —
+            {isMobile
+              ? splitLetters("  ThreatSense \n AI Data Security")
+              : splitLetters("  ThreatSense AI Data Security")}
           </h1>
           <p className="sub-para-text">
             Protect sensitive SAP data from insider misuse, AI-driven data
@@ -257,37 +276,6 @@ export default function Tads() {
         gridTemplateColumns="repeat(2, 1fr)"
       />
 
-      {/* <SolutionCarousel
-        label="Why TADS?"
-        title={
-          <>
-            Built for Data <br /> Protection
-          </>
-        }
-        data={content}
-        paddingTop="120px"
-      /> */}
-      {/* <SolutionCards
-        items={content}
-        label="Why TADS?"
-        title={
-          <>
-            Built for Data <br /> Protection
-          </>
-        }
-        marginTop="0px"
-      /> */}
-      {/* 
-      <CapabilitiesSection
-        items={core}
-        gridTemplateColumns="repeat(2, 1fr)"
-        header={{
-          icon: <FaGlobe size={16} />,
-          label: "Key Capabilities",
-          title: "Core Capabilities",
-        }}
-      /> */}
-
       <ComparisonTable />
 
       <UseCases
@@ -298,7 +286,7 @@ export default function Tads() {
           </>
         }
         list={useCasesList}
-        image={img1}
+        image={usecaseimg}
       />
       <CapabilitiesSection
         header={{
@@ -326,11 +314,11 @@ export default function Tads() {
             <h3>How Data Leaks</h3>
             <div className="pl-list">
               {[
-               "Copying sensitive SAP or enterprise data",
-               "Pasting Sensitive data into Gen-AI tools or browsers",
-               "Uploading files to external websites or email",
-               "Unauthorized Screenshots, screen sharing, and printing",
-               "Uncontrolled USB and device usage",
+                "Copying sensitive SAP or enterprise data",
+                "Pasting Sensitive data into Gen-AI tools or browsers",
+                "Uploading files to external websites or email",
+                "Unauthorized Screenshots, screen sharing, and printing",
+                "Uncontrolled USB and device usage",
               ].map((item, i) => (
                 <div key={i} className="pl-item">
                   <div className="pl-icon-x">
@@ -346,11 +334,11 @@ export default function Tads() {
             <h3>How TADS Blocks It</h3>
             <div className="pl-list">
               {[
-               "Blocks copy, paste, and exports of sensitive data",
-               "Detects and stops data shared with Gen-AI tools",
-               "Prevents unauthorized uploads and email sharing",
-               "Blocks screenshots, screen capture, and screen sharing",
-               "Enforces device and peripheral access policies",
+                "Blocks copy, paste, and exports of sensitive data",
+                "Detects and stops data shared with Gen-AI tools",
+                "Prevents unauthorized uploads and email sharing",
+                "Blocks screenshots, screen capture, and screen sharing",
+                "Enforces device and peripheral access policies",
               ].map((item, i) => (
                 <div key={i} className="pl-item">
                   <div className="pl-icon-check">

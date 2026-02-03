@@ -186,7 +186,6 @@
   .custom-options-container {
     padding: 60px 20px;
     height: auto;
-    /* Allow container to grow */
   }
 
   .custom-options-wrapper {
@@ -195,57 +194,70 @@
     gap: 30px;
   }
 
-  /* Force all cards to look "active" / expanded */
   .option-card {
     height: auto !important;
-    /* Allow card to grow with content */
+    min-height: 250px;
     flex-basis: auto !important;
-    /* Prevent flex-basis: 0 from collapsing height */
     flex-grow: 0;
     width: 100%;
     margin-bottom: 0;
     padding: 30px;
+    /* Static background */
+    background-image: url(../assets/home/Custom-Options/bg.png) !important;
+    background-size: cover !important;
+    background-position: center !important;
+    opacity: 1 !important;
+    cursor: default;
   }
 
+  /* Disable dynamic active overrides */
   .option-card.active {
-    height: auto !important;
-    margin-bottom: 0;
+    flex-grow: 1;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
   }
 
-  /* Make sure title flows normally */
+  .active-bg-image {
+    display: none !important;
+  }
+
   .option-title,
   .option-card.active .option-title {
     white-space: normal;
-    font-size: 24px;
-    margin-bottom: 15px;
+    font-size: 22px;
+    margin-bottom: 12px;
   }
 
-  /* Always show description */
+  /* Force description to be visible and static */
   .option-desc {
-    display: block !important;
+    max-height: 500px !important;
     opacity: 1 !important;
-    transform: none !important;
+    display: block !important;
+    overflow: visible !important;
     white-space: pre-line;
     margin-bottom: 20px;
+    font-size: 15px;
   }
 
-  /* Always show image container */
   .option-image-container {
     display: flex;
     width: 100%;
     height: auto;
     border-radius: 12px;
+    margin-top: 20px;
   }
 
-  /* Size the image appropriately for the card */
   .option-image,
   .option-card.active .option-image {
     width: 100%;
     height: 180px;
     object-fit: contain;
+    object-position: center;
   }
 
-  /* Hide pagination on mobile since we scroll */
+  .custom-options-header {
+    margin-bottom: 30px;
+  }
+
   .options-pagination {
     display: none;
   }

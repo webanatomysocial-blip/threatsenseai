@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "../css/About-Us.css";
 import { FaCheckCircle, FaShieldAlt } from "react-icons/fa";
 import bgImage from "../assets/home/Our-Solutions/bg1.png";
@@ -32,9 +33,9 @@ const Benefits = () => {
             ))}
           </div>
 
-          <a href="#" className="red-button">
+          <Link to="/contact" className="red-button">
             Book A Free Demo
-          </a>
+          </Link>
         </div>
 
         {/* Right Image */}
