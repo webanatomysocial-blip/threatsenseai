@@ -1,10 +1,67 @@
-import React from "react";
+import React, { useState } from "react";
 import { BsArrowRight } from "react-icons/bs";
 import "../css/Solutions-pages.css";
 import bgImage from "../assets/home/Our-Solutions/bg1.png";
 import { FaGlobe } from "react-icons/fa";
+import { MdKeyboardArrowDown, MdKeyboardArrowUp } from "react-icons/md";
 
-export default function SolutionCards({ items, label, title, marginTop }) {
+function SolutionCardRow({ card }) {
+  const [isExpanded, setIsExpanded] = useState(false);
+
+  return (
+    <div className="solution-card-row">
+      <div className="solution-card-text">
+        <h3>{card.title}</h3>
+        {card.subtitle && <p style={{ fontWeight: 600, color: "#444", marginTop: "-10px", marginBottom: "15px" }}>{card.subtitle}</p>}
+        <p>{card.description}</p>
+
+        {card.readMoreContent && (
+          <div className="read-more-wrapper-card">
+            <div className={`read-more-content ${isExpanded ? "expanded" : ""}`}>
+              {card.readMoreContent}
+            </div>
+            <button
+              className="solution-card-readmore section-readmore-btn"
+              onClick={() => setIsExpanded(!isExpanded)}
+            >
+              {isExpanded ? (
+                <>
+                  Read Less <MdKeyboardArrowUp />
+                </>
+              ) : (
+                <>
+                  Read More <MdKeyboardArrowDown />
+                </>
+              )}
+            </button>
+
+          </div>
+        )}
+
+        {!card.readMoreContent && card.link && (
+          <a href={card.link} className="solution-card-readmore">
+            Read More <BsArrowRight />
+          </a>
+        )}
+      </div>
+      <div className="solution-card-visual">
+        {card.video ? (
+          <video src={card.video} autoPlay loop muted playsInline />
+        ) : (
+          <img src={card.img} alt={card.title} />
+        )}
+      </div>
+    </div>
+  );
+}
+
+export default function SolutionCards({
+  items,
+  label,
+  title,
+  description,
+  marginTop,
+}) {
   const defaultLabel = "Why MCAAT?";
   const defaultTitle = (
     <>
@@ -31,14 +88,16 @@ export default function SolutionCards({ items, label, title, marginTop }) {
     },
     {
       title: "Automated Protection of Audit Evidence",
-      description: "MCAAT safeguards audit logs, change records, and supporting evidence from unauthorized access or modification. This ensures audit data remains complete, accurate, and defensible during internal reviews, statutory audits, and forensic investigations.",
+      description:
+        "MCAAT safeguards audit logs, change records, and supporting evidence from unauthorized access or modification. This ensures audit data remains complete, accurate, and defensible during internal reviews, statutory audits, and forensic investigations.",
       link: "#",
       img: bgImage,
       video: null,
     },
     {
       title: "Automated Monitoring of High-Risk System Activities",
-      description: "Sensitive actions such as DEBUG mode usage, audit policy deletion, or critical configuration changes are continuously monitored. MCAAT detects these high-risk activities instantly, preventing silent compliance breaches and reducing reliance on post-facto audit reviews.d",
+      description:
+        "Sensitive actions such as DEBUG mode usage, audit policy deletion, or critical configuration changes are continuously monitored. MCAAT detects these high-risk activities instantly, preventing silent compliance breaches and reducing reliance on post-facto audit reviews.",
       link: "#",
       img: bgImage,
       video: null,
@@ -90,22 +149,10 @@ export default function SolutionCards({ items, label, title, marginTop }) {
           {label || defaultLabel}
         </div>
         <h2 className="head-text">{title || defaultTitle}</h2>
+        {description && <p className="sub-para-text">{description}</p>}
       </div>
       {displayItems.map((card, index) => (
-        <div className="solution-card-row" key={index}>
-          <div className="solution-card-text">
-            <h3>{card.title}</h3>
-            <p>{card.description}</p>
-           
-          </div>
-          <div className="solution-card-visual">
-            {card.video ? (
-              <video src={card.video} autoPlay loop muted playsInline />
-            ) : (
-              <img src={card.img} alt={card.title} />
-            )}
-          </div>
-        </div>
+        <SolutionCardRow key={index} card={card} />
       ))}
     </section>
   );

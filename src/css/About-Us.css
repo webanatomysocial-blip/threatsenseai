@@ -99,7 +99,7 @@
 
 /* Capabilities Section */
 .capabilities-section {
-  padding: 80px 130px ;
+  padding: 80px 130px;
   background-color: var(--progress-bg);
   display: flex;
   flex-direction: column;
@@ -112,8 +112,32 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0px;
+  gap: 15px;
+  /* Increased gap */
 }
+
+.capabilities-header .security-label {
+  display: inline-flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 8px;
+  text-align: center;
+  width: auto;
+  max-width: 100%;
+}
+
+.capabilities-header .security-label svg {
+  margin-top: 4px;
+  /* Optically align with text cap-height/line-height */
+  flex-shrink: 0;
+}
+
+.capabilities-header .security-label span {
+  text-align: left;
+  /* Allow text to align naturally or center if preferred, but usually next to icon means left-aligned relative to icon */
+  text-align: center;
+}
+
 
 .capabilities-grid {
   display: grid;
@@ -161,6 +185,7 @@
   .capabilities-section {
     padding: 60px 20px;
   }
+
   .capabilities-grid {
     grid-template-columns: 1fr;
   }
@@ -170,6 +195,7 @@
   .capabilities-section {
     padding: 60px 20px;
   }
+
   .capabilities-grid {
     grid-template-columns: 1fr;
   }
@@ -220,10 +246,12 @@
   background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
   color: #fff;
 }
+
 .vision-sub-head-text {
   font-size: 40px !important;
   font-weight: 500 !important;
 }
+
 .vision-quote {
   font-size: 18px;
   font-weight: 500;
@@ -281,6 +309,7 @@
   .vision-section {
     padding: 80px 40px;
   }
+
   .vision-grid {
     gap: 30px;
   }
@@ -291,6 +320,7 @@
     grid-template-columns: 1fr;
     gap: 40px;
   }
+
   .vision-image-card {
     height: 350px;
     max-width: 500px;

@@ -24,8 +24,8 @@ const UseCases = ({ label, title, list, image }) => {
         ease: "none",
         scrollTrigger: {
           trigger: el,
-          start: "top 25%",
-          end: "top 25%",
+          start: "top bottom",
+          end: "bottom top",
           scrub: 1,
           // markers: true,
         },

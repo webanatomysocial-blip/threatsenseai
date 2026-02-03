@@ -8,11 +8,12 @@ import img from "../assets/home/Custom-Options/2.png";
 import img1 from "../assets/home/tab-section/1.jpg";
 import img2 from "../assets/home/tab-section/2.jpg";
 import img3 from "../assets/home/tab-section/3.jpg";
+import img4 from "../assets/home/tab-section/use cases.png";
 import CapabilitiesSection from "../components/CapabilitiesSection";
 import UseCases from "../Solutions-components/UseCases";
 import ResultsComp from "../Solutions-components/ResultsComp";
 import bgImage from "../assets/home/Our-Solutions/bg1.png";
-import mcaat1 from "../assets/solutions/mcaat/1.png";
+import mcaat1 from "../assets/solutions/mcaat/sap-security-alert.png";
 import mcaat2 from "../assets/solutions/mcaat/2.png";
 import mcaat3 from "../assets/solutions/mcaat/3.jpg";
 import mcaat4 from "../assets/solutions/mcaat/4.jpg";
@@ -165,7 +166,6 @@ export default function Mcaat() {
       title: "Automated Audit Policy Enforcement",
       description:
         "MCAAT continuously monitors audit policies and logging configurations across SAP application and database layers. If audit logging is disabled, intentionally or accidentally, MCAAT automatically restores it, ensuring uninterrupted audit trail availability and compliance with MCA Rule 11(g)..",
-      link: "#",
       img: null,
       video: videomcaat1,
     },
@@ -173,7 +173,6 @@ export default function Mcaat() {
       title: "Automated Detection of Audit Trail Tampering",
       description:
         "Any attempt to delete, alter, or manipulate audit logs is detected in real time. MCAAT immediately records the event, preserves evidence, and triggers alerts or enforcement actions to maintain audit trail integrity and evidentiary reliability.",
-      link: "#",
       img: mcaat14,
       video: null,
     },
@@ -181,7 +180,6 @@ export default function Mcaat() {
       title: "Automated Protection of Audit Evidence",
       description:
         "MCAAT safeguards audit logs, change records, and supporting evidence from unauthorized access or modification. This ensures audit data remains complete, accurate, and defensible during internal reviews, statutory audits, and forensic investigations.",
-      link: "#",
       img: mcaat15,
       video: null,
     },
@@ -189,7 +187,6 @@ export default function Mcaat() {
       title: "Automated Monitoring of High-Risk System Activities",
       description:
         "Sensitive actions such as DEBUG mode usage, audit policy deletion, or critical configuration changes are continuously monitored. MCAAT detects these high-risk activities instantly, preventing silent compliance breaches and reducing reliance on post-facto audit reviews.",
-      link: "#",
       img: mcaat16,
       video: null,
     },
@@ -197,7 +194,6 @@ export default function Mcaat() {
       title: "Automated Audit-Ready Reporting",
       description:
         "Audit dashboards and reports are generated automatically with structured, evidence-backed data. MCAAT reduces audit preparation effort by providing immediate access to traceable, regulator-ready information without manual compilation or reconciliation.",
-      link: "#",
       img: mcaat17,
       video: null,
     },
@@ -278,7 +274,8 @@ export default function Mcaat() {
       <SolutionCards
         label="Automated Controls Delivered by MCAAT"
         title="Compliance that enforces itself"
-        description="MCAAT delivers automated compliance controls that continuously protect audit trails, enforce logging policies, and respond instantly to violations, ensuring MCA Rule 11(g) requirements are met at all times."
+        description="MCAAT delivers automated compliance controls that continuously protect audit trails, enforce logging policies 
+        and respond instantly to violations, ensuring MCA Rule 11(g) requirements are met at all times."
         items={Cardscontent}
         marginTop="0px"
       />
@@ -298,7 +295,7 @@ export default function Mcaat() {
         label="Use Cases"
         title={<>Always-On Audit Trail Compliance for MCA Rule 11(g)</>}
         list={useCasesList}
-        image={img2}
+        image={img4}
       />
 
       <Cta

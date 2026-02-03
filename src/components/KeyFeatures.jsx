@@ -42,13 +42,13 @@ const KeyFeatures = () => {
     {
       id: 4,
       icon: <FiToggleLeft />,
-      title: "Automated Incident Response",
+      title: "Automated Incident\nResponse",
       desc: "Trigger automated remediation actions to reduce response time and limit impact.",
     },
     {
       id: 5,
       icon: <FiBox />,
-      title: "Privacy & Data Protection",
+      title: "Privacy & Data \nProtection",
       desc: "Built-in controls to protect sensitive data, enforce policies, and support regulatory compliance.",
     },
     {

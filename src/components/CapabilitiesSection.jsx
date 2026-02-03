@@ -17,7 +17,7 @@ const CapabilitiesSection = ({
     <section className="capabilities-section">
       <div className="capabilities-header">
         <div className="sub-para-text security-label">
-          {header.icon} {header.label}
+          {header.icon} <span>{header.label}</span>
         </div>
 
         <h2 className="head-text">{header.title}</h2>

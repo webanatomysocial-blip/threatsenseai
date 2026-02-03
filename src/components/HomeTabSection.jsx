@@ -4,9 +4,9 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "../css/HomeTabSection.css";
 
 import bgImage from "../assets/home/tab-section/bg-image.png";
-import img1 from "../assets/home/tab-section/1.jpg";
-import img2 from "../assets/home/tab-section/2.jpg";
-import img3 from "../assets/home/tab-section/3.jpg";
+import img1 from "../assets/home/tab-section/d5.png";
+import img2 from "../assets/home/tab-section/d8.png";
+import img3 from "../assets/home/tab-section/d9.png";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -93,18 +93,18 @@ const HomeTabSection = () => {
       </div>
 
       <div className="tab-content-container">
-        {tabs.map(
-          tab =>
-            activeTab === tab.id && (
-              <div key={tab.id} className="tab-panel">
-                <img
-                  src={tab.image}
-                  alt={`${tab.label} Dashboard`}
-                  className="tab-image"
-                />
-              </div>
-            )
-        )}
+        {tabs.map((tab) => (
+          <div
+            key={tab.id}
+            className={`tab-panel ${activeTab === tab.id ? "active" : ""}`}
+          >
+            <img
+              src={tab.image}
+              alt={`${tab.label} Dashboard`}
+              className="tab-image"
+            />
+          </div>
+        ))}
       </div>
     </div>
   );
