@@ -99,15 +99,16 @@ const CustomOptions = () => {
             )}
 
             <div className="option-content">
-              <h3 className="option-title">{option.title}</h3>
-              <p className="option-desc">{option.desc}</p>
-
               <div className="option-image-container">
                 <img
                   src={option.image}
                   alt={option.title}
                   className="option-image"
                 />
+              </div>
+              <div className="option-text-container">
+                <h3 className="option-title">{option.title}</h3>
+                <p className="option-desc">{option.desc}</p>
               </div>
             </div>
           </div>
