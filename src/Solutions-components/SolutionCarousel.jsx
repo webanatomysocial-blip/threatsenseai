@@ -14,7 +14,7 @@ export default function SolutionCarousel({ label, title, data, paddingTop }) {
   const defaultLabel = "Why MCAAT?";
   const defaultTitle = (
     <>
-      We Don’t Just Log  <br /> We Secure Beyond Basic Logging
+      We Don’t Just Log <br /> We Secure Beyond Basic Logging
     </>
   );
 
@@ -92,21 +92,11 @@ export default function SolutionCarousel({ label, title, data, paddingTop }) {
                 <div className="card-gradient-top">
                   <div className="card-visual-inner">
                     <div className="visual-content-placeholder">
-                      <span
-                        style={{
-                          color: "#ff5722",
-                          fontWeight: "600",
-                          display: "flex",
-                          alignItems: "center",
-                          gap: "8px",
-                        }}
-                      >
-                        <img
-                          src={item.img}
-                          className="img-carousel"
-                          alt={item.title}
-                        />
-                      </span>
+                      <img
+                        src={item.img}
+                        className="img-carousel"
+                        alt={item.title}
+                      />
                     </div>
                   </div>
                 </div>

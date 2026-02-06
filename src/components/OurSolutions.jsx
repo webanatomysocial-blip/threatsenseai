@@ -2,12 +2,13 @@ import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "../css/OurSolutions.css";
-import cardImage from "../assets/home/Our-Solutions/bg1.png";
-import { AiFillInfoCircle } from "react-icons/ai";
+import { FaLayerGroup } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import mcaatvid1 from "../assets/home/Our-Solutions/Copy of Threatsense videos (4).mp4";
-import mcaatvid2 from "../assets/home/Our-Solutions/Copy of Threatsense videos (5).mp4";
-import mcaatvid3 from "../assets/home/Our-Solutions/siem.mp4";
+
+import mcaatGif1 from "../assets/home/Our-Solutions/mcaat.mp4";
+import mcaatGif2 from "../assets/home/Our-Solutions/tads.mp4";
+import mcaatGif3 from "../assets/home/Our-Solutions/siem.mp4";
+
 gsap.registerPlugin(ScrollTrigger);
 
 const OurSolutions = ({ id }) => {
@@ -26,11 +27,9 @@ const OurSolutions = ({ id }) => {
         cards.forEach((card, index) => {
           const isLast = index === cards.length - 1;
 
-          // Define top offsets: 100px, 130px, 100px
           const topOffsets = ["100px", "130px", "100px"];
           const currentOffset = topOffsets[index] || "100px";
 
-          // 1. PINNING
           ScrollTrigger.create({
             trigger: card,
             start: `top ${currentOffset}`,
@@ -44,45 +43,28 @@ const OurSolutions = ({ id }) => {
             onLeaveBack: () => gsap.set(card, { zIndex: index + 1 }),
           });
 
-          // 2. SCALING - Faster/Snappier scrub
           const scaleTl = gsap.timeline({
             scrollTrigger: {
               trigger: card,
               start: "top 80%",
               endTrigger: containerRef.current,
               end: "bottom bottom",
-              scrub: 0.5, // Smooth catching up without too much lag
+              scrub: 0.5,
             },
           });
 
-          // Phase A: Scale to initial size
-          scaleTl.to(card, {
-            scale: 0.98,
-            ease: "none", // Direct mapping to scroll
-            duration: 1,
-          });
+          scaleTl.to(card, { scale: 0.98, ease: "none", duration: 1 });
 
           if (!isLast) {
-            // Recede logic
             scaleTl.to(card, { scale: 0.98, duration: 1 });
-
-            scaleTl.to(card, {
-              scale: 0.94,
-              ease: "none",
-              duration: 1,
-            });
+            scaleTl.to(card, { scale: 0.94, ease: "none", duration: 1 });
 
             if (index === 0 && cards[2]) {
               scaleTl.to(card, { scale: 0.94, duration: 1 });
-              scaleTl.to(card, {
-                scale: 0.9,
-                ease: "none",
-                duration: 1,
-              });
+              scaleTl.to(card, { scale: 0.9, ease: "none", duration: 1 });
             }
           }
 
-          // Final state hold
           scaleTl.to(card, {
             scale: isLast ? 0.98 : index === 0 ? 0.9 : 0.94,
             duration: 2,
@@ -95,17 +77,14 @@ const OurSolutions = ({ id }) => {
 
     const refreshTimer = setTimeout(() => {
       ScrollTrigger.refresh();
-    }, 500); // Wait longer for layout to stabilize
+    }, 500);
 
-    const handleLoad = () => {
-      ScrollTrigger.refresh();
-    };
-    window.addEventListener("load", handleLoad);
+    window.addEventListener("load", ScrollTrigger.refresh);
 
     return () => {
       mm.revert();
       clearTimeout(refreshTimer);
-      window.removeEventListener("load", handleLoad);
+      window.removeEventListener("load", ScrollTrigger.refresh);
     };
   }, []);
 
@@ -119,8 +98,7 @@ const OurSolutions = ({ id }) => {
         "Secure audit logging at source",
         "Audit-ready reporting on demand",
       ],
-      // image: cardImage,
-      video: mcaatvid1,
+      media: mcaatGif1,
       reverse: false,
       link: "/mcaat",
       btn: "Explore MCAAT",
@@ -128,30 +106,27 @@ const OurSolutions = ({ id }) => {
     {
       title: "ThreatSense AI Data Security (TADS)",
       desc: "Prevent Data Leaks Before They Happen. Most data leaks are caused by trusted users.",
-      subheading: null,
       features: [
         "Real-time data access enforcement",
         "Insider threat prevention controls",
         "Policy-driven data protection",
         "Tamper-resistant security layer",
       ],
-      video: mcaatvid2,
+      media: mcaatGif2,
       reverse: true,
       link: "/tads",
       btn: "Explore TADS",
+      videoClass: "tads-card-video",
     },
     {
       title: "SIEM & SOAR",
       desc: "AI-Driven Threat Detection & Response across SAP and non-SAP environments.",
-      subheading: null,
       features: [
         "Continuous monitoring",
         "Real-time alerts",
         "Automated incident response",
       ],
-      // video: mcaatvid2,
-      // img: null,
-      video: mcaatvid3,
+      media: mcaatGif3,
       reverse: false,
       link: "/siem-soar",
       btn: "Explore SIEM & SOAR",
@@ -165,12 +140,11 @@ const OurSolutions = ({ id }) => {
           className="sub-para-text"
           style={{
             display: "flex",
-            alignItems: "center",
             justifyContent: "center",
-            marginBottom: "0px",
+            alignItems: "center",
           }}
         >
-          <AiFillInfoCircle size={18} style={{ marginRight: "4px" }} />
+          <FaLayerGroup size={18} style={{ marginRight: "4px" }} />
           Our Solutions
         </div>
 
@@ -194,9 +168,7 @@ const OurSolutions = ({ id }) => {
                 <h3 className="head-text">{solution.title}</h3>
 
                 {solution.subheading && (
-                  <h4 className="sub-para-text" style={{ fontSize: "18px" }}>
-                    {solution.subheading}
-                  </h4>
+                  <h4 className="sub-para-text">{solution.subheading}</h4>
                 )}
 
                 <p className="solution-desc para-text">{solution.desc}</p>
@@ -210,34 +182,20 @@ const OurSolutions = ({ id }) => {
                   ))}
                 </ul>
 
-                {solution.link && (
-                  <Link
-                    to={solution.link}
-                    className="white-button"
-                    style={{ marginTop: "10px" }}
-                  >
-                    {solution.btn}
-                  </Link>
-                )}
+                <Link to={solution.link} className="white-button">
+                  {solution.btn}
+                </Link>
               </div>
 
               <div className="card-image-section">
-                {solution.video ? (
-                  <video
-                    src={solution.video}
-                    autoPlay
-                    loop
-                    muted
-                    playsInline
-                    className="card-image"
-                  />
-                ) : (
-                  <img
-                    src={solution.img || solution.image}
-                    alt={solution.title}
-                    className="card-image"
-                  />
-                )}
+                <video
+                  src={solution.media}
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  className={`card-image ${solution.videoClass || ""}`}
+                />
               </div>
             </div>
           </div>

@@ -120,7 +120,7 @@ export default function RisingThreats() {
             muted
             playsInline
             className="accordion-image"
-            style={{ width: "100%", height: "100%", objectFit: "cover", borderRadius: "20px" }}
+            style={{ width: "100%", objectFit: "cover", borderRadius: "20px" }}
           />
         </div>
       </div>

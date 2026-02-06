@@ -14,24 +14,24 @@ import CapabilitiesSection from "../components/CapabilitiesSection";
 import UseCases from "../Solutions-components/UseCases";
 import ResultsComp from "../Solutions-components/ResultsComp";
 import bgImage from "../assets/home/Our-Solutions/bg1.png";
-import mcaat1 from "../assets/solutions/mcaat/Log detection MCAAT.png";
+import mcaat1 from "../assets/solutions/mcaat/detect-log.png";
 import mcaat2 from "../assets/solutions/mcaat/2.png";
-import mcaat3 from "../assets/solutions/mcaat/3.jpg";
-import mcaat4 from "../assets/solutions/mcaat/4.jpg";
+import mcaat3 from "../assets/solutions/mcaat/3.png";
+import mcaat4 from "../assets/solutions/mcaat/4.png";
 import mcaat5 from "../assets/solutions/mcaat/5.jpg";
-import mcaat6 from "../assets/solutions/mcaat/6.jpg";
-import mcaat7 from "../assets/solutions/mcaat/7.jpg";
-import mcaat8 from "../assets/solutions/mcaat/8.jpg";
+import mcaat6 from "../assets/solutions/mcaat/6.png";
+import mcaat7 from "../assets/solutions/mcaat/7.png";
+import mcaat8 from "../assets/solutions/mcaat/8.png";
 import mcaat9 from "../assets/solutions/mcaat/9.jpg";
 import mcaat10 from "../assets/solutions/mcaat/10.jpg";
-import mcaat11 from "../assets/solutions/mcaat/11.jpg";
-import mcaat12 from "../assets/solutions/mcaat/Audit Friendly MCAAT.png";
+import mcaat11 from "../assets/solutions/mcaat/11.png";
+import mcaat12 from "../assets/solutions/mcaat/12.png";
 import mcaat14 from "../assets/solutions/mcaat/14.jpg";
 import mcaat15 from "../assets/solutions/mcaat/15.jpg";
 import mcaat16 from "../assets/solutions/mcaat/16.jpg";
 import mcaat17 from "../assets/solutions/mcaat/17.jpg";
 
-import videomcaat1 from "../assets/solutions/mcaat/Copy of Threatsense videos (2).mp4";
+import videomcaat1 from "../assets/solutions/mcaat/Copy-audit.mp4";
 
 import {
   FaTh,
@@ -113,7 +113,7 @@ export default function Mcaat() {
         "Standard methods capture changes after the fact - if at all. MCAAT raises real-time alerts for sensitive actions such as DEBUG-mode changes, enabling immediate investigation.",
     },
     {
-      img: mcaat5,
+      img: mcaat4,
       title: "Automatic Reactivation of SM19 Logging",
       description:
         "Audit logging can be manually disabled—intentionally or accidentally. MCAAT continuously checks logging status and automatically re-enables SM19 logs if they are turned off.",
@@ -132,18 +132,6 @@ export default function Mcaat() {
     },
     {
       img: mcaat8,
-      title: "Protection of Audit Evidence",
-      description:
-        "Logs without protection are not legally reliable. MCAAT safeguards audit evidence from deletion or manipulation, preserving integrity for statutory and forensic audits.",
-    },
-    {
-      img: mcaat9,
-      title: "Automated Enforcement Actions",
-      description:
-        "Most compliance tools stop at alerts. MCAAT can automatically trigger enforcement actions, such as locking users or escalating incidents, when violations occur.",
-    },
-    {
-      img: mcaat10,
       title: "Protection of Audit Evidence",
       description:
         "Logs without protection are not legally reliable. MCAAT safeguards audit evidence from deletion or manipulation, preserving integrity for statutory and forensic audits.",

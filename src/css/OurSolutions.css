@@ -117,6 +117,14 @@ video.card-image {
   /* Helps with sub-pixel edge artifacts */
 }
 
+/* Specific override for TADS video as requested */
+.tads-card-video {
+  object-fit: fill !important;
+  transform: none !important;
+  width: 100% !important;
+  height: 100% !important;
+}
+
 .solution-title {
   font-size: 24px;
   font-weight: 600;
@@ -178,10 +186,10 @@ video.card-image {
     padding: 30px;
     gap: 10px;
   }
-.solutions-header {
-  text-align: center;
-  margin-bottom: 40px;
-}
+  .solutions-header {
+    text-align: center;
+    margin-bottom: 40px;
+  }
   .card-image-section {
     height: 250px;
     width: 100%;
