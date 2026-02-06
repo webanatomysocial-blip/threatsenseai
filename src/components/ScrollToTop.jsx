@@ -6,6 +6,26 @@ function ScrollToTop() {
   const { pathname, hash } = useLocation();
 
   useEffect(() => {
+    const handleSameHashClick = (e) => {
+      const link = e.target.closest("a");
+      if (link && link.hash && link.hash === window.location.hash && link.pathname === window.location.pathname) {
+        const elem = document.querySelector(link.hash);
+        if (elem) {
+          if (window.lenis) {
+            window.lenis.scrollTo(elem, {
+              offset: -100,
+              duration: 1.5,
+              easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+            });
+          } else {
+            elem.scrollIntoView({ behavior: "smooth" });
+          }
+        }
+      }
+    };
+
+    document.addEventListener("click", handleSameHashClick);
+
     if (hash) {
       // Small timeout to ensure DOM is ready if it's a fresh navigation
       setTimeout(() => {
@@ -37,6 +57,10 @@ function ScrollToTop() {
         window.scrollTo({ top: 0, behavior: "smooth" });
       }
     }
+
+    return () => {
+      document.removeEventListener("click", handleSameHashClick);
+    };
   }, [pathname, hash]);
 
   return null;

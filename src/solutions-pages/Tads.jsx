@@ -353,7 +353,8 @@ export default function Tads() {
       </section>
       <RisingThreats />
       <Cta
-        title="Control How SAP Data Leaves Your Enterprise"
+        title="Control How SAP Data Leaves 
+        Your Enterprise"
         description="Real-time visibility and enforcement to prevent insider leaks, excessive access,
         and unauthorized data sharing across SAP and beyond"
         backgroundImage={bg}

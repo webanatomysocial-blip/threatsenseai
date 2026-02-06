@@ -54,7 +54,7 @@ export default function SiemSoar() {
     {
       title: "Automated Response Playbooks",
       description:
-        "Triggers predefined response actions when threats are detected—such as session termination, alert escalation, or access control actions—ensuring consistent and rapid containment of security incidents.",
+        "Triggers predefined response actions when threats are detected, such as session termination, alert escalation, or access control actions, ensuring consistent and rapid containment of security incidents",
       img: auto,
     },
     {
@@ -81,7 +81,7 @@ export default function SiemSoar() {
       title: "SOAR Focus",
       subtitle: "Orchestrated Incident Response",
       description:
-        "When a security event is detected, response should be immediate and consistent. SIEM & SOAR for SAP enables automated response workflows that guide incidents through investigation, containment, and remediation—without relying on manual intervention.",
+        "When a security event is detected, response should be immediate and consistent. SIEM & SOAR for SAP enables automated response workflows that guide incidents through investigation, containment, and remediation, without relying on manual intervention.",
       img: soar,
       readMoreContent: (
         <>
@@ -121,7 +121,7 @@ export default function SiemSoar() {
       title: " Governance Focus",
       subtitle: "Built-in Audit Readiness",
       description:
-        "Security monitoring should support audits—not complicate them. SIEM & SOAR for SAP maintains centralized, tamper-resistant records of security events and response actions, simplifying compliance and investigations.",
+        "Security monitoring should support audits, not complicate them. SIEM & SOAR for SAP maintains centralized, tamper-resistant records of security events and response actions, simplifying compliance and investigations.",
       img: govern,
       readMoreContent: (
         <>
@@ -140,7 +140,7 @@ export default function SiemSoar() {
       title: "Platform Focus",
       subtitle: "Native SAP Landscape Fit",
       description:
-        "Security tooling should adapt to SAP—not the other way around. The solution integrates smoothly into existing SAP environments without introducing architectural complexity or operational overhead.",
+        "Security tooling should adapt to SAP, not the other way around. The solution integrates smoothly into existing SAP environments without introducing architectural complexity or operational overhead.",
       img: platform,
       readMoreContent: (
         <>
@@ -169,7 +169,7 @@ export default function SiemSoar() {
       icon: <FaUserShield />,
       title: "User & Privilege Activity Monitoring",
       description:
-        "Tracks user actions and privilege usage across SAP systems to identify risky behavior patterns. Helps security teams understand who did what, when, and where—with full context.",
+        "Tracks user actions and privilege usage across SAP systems to identify risky behavior patterns. Helps security teams understand who did what, when, and where, with full context.",
     },
     {
       icon: <FaBullseye />,
@@ -187,7 +187,7 @@ export default function SiemSoar() {
       icon: <FaMicroscope />,
       title: "Proactive Threat Discovery",
       description:
-        "Actively searches for hidden or emerging threats across SAP environments by analyzing patterns, indicators, and historical activity—not just reacting to alerts.",
+        "Actively searches for hidden or emerging threats across SAP environments by analyzing patterns, indicators, and historical activity, not just reacting to alerts.",
     },
     {
       icon: <FaMagic />,

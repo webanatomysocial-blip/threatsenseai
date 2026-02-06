@@ -80,7 +80,7 @@ const Footer = () => {
 
                   <li>
                     <Link to="/blogs" className="para-text-white" style={{ fontSize: "14px", color: "#999" }}>
-                      Blog
+                      Blogs
                     </Link>
                   </li>
 
@@ -97,9 +97,9 @@ const Footer = () => {
                   </span>
 
                   <div className="social-icons">
-                    <a href="#" aria-label="X (Twitter)">
+                    {/* <a href="#" aria-label="X (Twitter)">
                       <FaXTwitter size={24} color="white" />
-                    </a>
+                    </a> */}
 
                     <a
                       href="https://www.linkedin.com/company/threatsenseai/"
@@ -110,9 +110,9 @@ const Footer = () => {
                       <FaLinkedin size={24} color="white" />
                     </a>
 
-                    <a href="#" aria-label="Instagram">
+                    {/* <a href="#" aria-label="Instagram">
                       <FaInstagram size={24} color="white" />
-                    </a>
+                    </a> */}
                   </div>
                 </div>
               </div>
@@ -130,19 +130,19 @@ const Footer = () => {
                   </li>
 
                   <li>
-                    <Link to="/terms" className="para-text-white" style={{ fontSize: "14px", color: "#999" }}>
-                      Terms & Condition
+                    <Link to="/terms-and-conditions" className="para-text-white" style={{ fontSize: "14px", color: "#999" }}>
+                      Terms & Conditions
                     </Link>
                   </li>
 
                   <li>
-                    <Link to="/cookies" className="para-text-white" style={{ fontSize: "14px", color: "#999" }}>
+                    <Link to="/cookie-policy" className="para-text-white" style={{ fontSize: "14px", color: "#999" }}>
                       Cookie Policy
                     </Link>
                   </li>
 
                   <li>
-                    <Link to="/accessibility" className="para-text-white" style={{ fontSize: "14px", color: "#999" }}>
+                    <Link to="/accessibility-statement" className="para-text-white" style={{ fontSize: "14px", color: "#999" }}>
                       Accessibility Statement
                     </Link>
                   </li>
@@ -174,18 +174,6 @@ const Footer = () => {
         <div className="footer-credits">
           <p className="sub-para-text-white">
             Copyright © 2026 ThreatSense. All Rights Reserved.
-          </p>
-
-          <p className="sub-para-text-white">
-            Designed & Developed by{" "}
-            <a
-              href="https://webanatomy.in/"
-              target="_blank"
-              rel="noreferrer"
-              style={{ color: "grey", textDecoration: "none" }}
-            >
-              @Web Anatomy
-            </a>
           </p>
         </div>
       </div>

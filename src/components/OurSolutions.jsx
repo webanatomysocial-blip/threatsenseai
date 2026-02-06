@@ -159,8 +159,8 @@ const OurSolutions = ({ id }) => {
   ];
 
   return (
-    <div className="our-solutions-container" ref={containerRef} id={id}>
-      <div className="solutions-header">
+    <div className="our-solutions-container" ref={containerRef}>
+      <div className="solutions-header" id={id}>
         <div
           className="sub-para-text"
           style={{

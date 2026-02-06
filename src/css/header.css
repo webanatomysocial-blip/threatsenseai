@@ -46,13 +46,15 @@
 }
 
 .nav-link {
-  position: relative; /* ← very important for absolute child */
+  position: relative;
   text-decoration: none;
   color: #000;
   font-weight: 400;
   font-size: 16px;
   transition: color 0.3s ease;
-  display: inline-block; /* or block/flex depending on layout */
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }
 
 .nav-link::before {
@@ -60,20 +62,76 @@
   position: absolute;
   width: 0;
   height: 1px;
-  bottom: -2px; /* more reliable than top:100% */
+  bottom: -2px;
+  /* more reliable than top:100% */
   left: 0;
   background-color: #555;
-  transition: width 0.3s ease; /* smooth animation */
+  transition: width 0.3s ease;
+  /* smooth animation */
 }
 
 .nav-link:hover {
-    color: var(--red-color);
+  color: var(--red-color);
 
-  
+
 }
 
 .nav-link:hover::before {
-  width: 100%; /* this actually creates the underline */
+  width: 100%;
+  /* this actually creates the underline */
+}
+
+/* Desktop Dropdown Styles */
+.solutions-dropdown-wrapper {
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  min-width: 180px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 10px 0;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+}
+
+.solutions-dropdown-wrapper:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(5px);
+}
+
+.dropdown-item {
+  padding: 12px 20px;
+  text-decoration: none;
+  color: #333;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.dropdown-item:hover {
+  background-color: #f7f7f8;
+  color: var(--red-color);
+  padding-left: 25px;
+}
+
+.dropdown-arrow {
+  font-size: 14px;
+  transition: transform 0.3s ease;
+}
+
+.solutions-dropdown-wrapper:hover .dropdown-arrow {
+  transform: rotate(180deg);
 }
 
 .header-right {
@@ -90,7 +148,8 @@
   flex-direction: column;
   gap: 6px;
   cursor: pointer;
-  z-index: 1001; /* Above overlay */
+  z-index: 1001;
+  /* Above overlay */
   transition: all 0.3s ease;
 }
 
@@ -157,6 +216,69 @@
   color: #333;
   text-decoration: none;
   font-family: var(--font-primary);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.mobile-solutions-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.solutions-trigger.active {
+  color: var(--red-color);
+}
+
+.mobile-nav-link-text {
+  text-decoration: none;
+  color: inherit;
+  flex: 1;
+}
+
+.mobile-arrow-wrapper {
+  padding: 10px 0 10px 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.mobile-arrow {
+  transition: transform 0.3s ease;
+}
+
+.mobile-arrow.rotated {
+  transform: rotate(180deg);
+}
+
+.mobile-dropdown {
+  max-height: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding-left: 15px;
+  transition: all 0.3s ease-in-out;
+  opacity: 0;
+}
+
+.mobile-dropdown.open {
+  max-height: 200px;
+  opacity: 1;
+  margin-top: 5px;
+}
+
+.mobile-dropdown-link {
+  font-size: 16px;
+  color: #666;
+  text-decoration: none;
+  font-weight: 400;
+  transition: color 0.2s ease;
+}
+
+.mobile-dropdown-link:hover {
+  color: var(--red-color);
 }
 
 .mobile-cta-btn {
@@ -174,7 +296,8 @@
 @media (max-width: 768px) {
   .header-container-new {
     padding: 0 20px;
-    height: 70px; /* Reduced height on mobile */
+    height: 70px;
+    /* Reduced height on mobile */
   }
 
   .only-windows {

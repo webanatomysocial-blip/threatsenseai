@@ -26,11 +26,14 @@
 .about-banner-layout {
   display: flex;
   width: 100%;
+  height: 500px;
   gap: 30px;
   align-items: stretch;
 }
-.about-banner-layout img {
-  width: 33%;
+
+.about-banner-layout img,
+.about-banner-layout video {
+  width: 100%;
   height: auto;
   border-radius: 20px;
   object-fit: cover;
@@ -101,11 +104,14 @@
   .about-banner-layout {
     flex-direction: column;
   }
-  .about-banner-layout img {
+
+  .about-banner-layout img,
+  .about-banner-layout video {
     width: 100%;
     height: auto;
     border-radius: 20px;
   }
+
   .about-banner-image-box {
     height: 300px;
   }

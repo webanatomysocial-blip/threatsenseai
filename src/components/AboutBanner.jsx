@@ -3,7 +3,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "../css/AboutBanner.css";
 import bannerImg from "../assets/about-images/banner.jpg";
-import bannerImg2 from "../assets/about-images/banner1.jpg";
+import bannerImg2 from "../assets/about-images/banner68.mp4";
 import bannerImg3 from "../assets/about-images/banner3.jpg";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -21,10 +21,10 @@ export default function AboutBanner() {
       { opacity: 1, y: 0, filter: "blur(0px)", duration: 0.8, stagger: 0.05, ease: "power2.out", delay: 0.2 }
     );
 
-    // Animate the banner images in layout
-    const images = layoutRef.current.querySelectorAll("img");
+    // Animate the banner images and video in layout
+    const mediaItems = layoutRef.current.querySelectorAll("img, video");
     gsap.fromTo(
-      images,
+      mediaItems,
       { opacity: 0, y: 50, scale: 0.95 },
       {
         opacity: 1,
@@ -45,7 +45,7 @@ export default function AboutBanner() {
   const splitLetters = (text) => {
     return text.split("").map((char, index) => (
       <span key={index} className="split-text-char"
-       style={{ font: "italic 400 1em 'Instrument Serif'" }}>
+        style={{ font: "italic 400 1em 'Instrument Serif'" }}>
         {char === " " ? "\u00A0" : char}
       </span>
     ));
@@ -67,9 +67,10 @@ export default function AboutBanner() {
 
       {/* Animate banner layout images */}
       <div className="about-banner-layout" ref={layoutRef}>
-        <img src={bannerImg} alt="" />
-        <img src={bannerImg2} alt="" />
-        <img src={bannerImg3} alt="" />
+        {/* <img src={bannerImg} alt="" /> */}
+        {/* <img src={bannerImg2} alt="" /> */}
+        <video src={bannerImg2} autoPlay loop muted playsInline />
+        {/* <img src={bannerImg3} alt="" /> */}
       </div>
     </section>
   );

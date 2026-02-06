@@ -549,12 +549,12 @@
 }
 
 .icon-check-red {
-  color: #ff5400;
+  color: green;
   font-size: 16px;
 }
 
 .icon-times-gray {
-  color: #ccc;
+  color: red;
   font-size: 18px;
 }
 

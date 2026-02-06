@@ -20,24 +20,31 @@ const ThreatRadiation = () => {
     "Sensitive Data Overexposure",
     "Data Pasted into GenAI Tools",
     "Uploads to Personal Email",
-    "Test System Replication", 
-    "Policy Bypass Attempts", 
+    "Unapproved Cloud Drive Sharing",
+    "Copy–Paste Data Leakage",
+    
   ];
 
   // Center point for the radiation effect
   const centerX = 50; // 50%
-  const centerY = 90; // 90% from top
+  const centerY = 95; // 90% from top
 
   const getPillPosition = (index, total) => {
-    // Stagger layout: alternating radii to prevent overlap
-    const isOuter = index % 2 === 0;
-    const r = isOuter ? 44 : 26; // Increased separation between layers
+    // 3 layers of radii to spread out 22 items
+    const layer = index % 3;
+    const radii = [58, 40, 22]; // Outer, Middle, Inner layers (more vertical spread)
+    const r = radii[layer];
 
-    const startAngle = 175;
-    const endAngle = 5;
+    // Narrower angle range to spread to top instead of extreme sides
+    const startAngle = 155;
+    const endAngle = 25;
     const angleRange = startAngle - endAngle;
 
-    const angleDeg = startAngle - (index / (total - 1)) * angleRange;
+    // Apply a slight offset to each layer to prevent alignment on the same radius
+    const layerOffset = (layer * 3); // 3 degree offset per layer
+
+    // Distribute angles based on total items
+    const angleDeg = startAngle - (index / (total - 1)) * angleRange + layerOffset;
     const angleRad = (angleDeg * Math.PI) / 180;
 
     const left = centerX + r * Math.cos(angleRad);
@@ -48,7 +55,6 @@ const ThreatRadiation = () => {
 
   useEffect(() => {
     // Only animate if not mobile (or if elements exist in the radiation container)
-    // CSS hides radiation-container features on mobile, but we should ensure GSAP doesn't break
     const items = containerRef.current.querySelectorAll(".threat-pill-desktop");
     const lines = svgRef.current
       ? svgRef.current.querySelectorAll(".radiation-line")

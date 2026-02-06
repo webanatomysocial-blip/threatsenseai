@@ -3,6 +3,7 @@ import { AiOutlinePlus } from "react-icons/ai";
 import { FaGlobe } from "react-icons/fa";
 import "../css/Solutions-pages.css"; // Ensure it uses the new CSS
 import bannerImg from "../assets/about-images/banner.jpg";
+import bannerVideo from "../assets/about-images/banner1.mp4";
 
 export default function RisingThreats() {
   const [activeAccordion, setActiveAccordion] = useState(0);
@@ -67,9 +68,8 @@ export default function RisingThreats() {
             {threatData.map((item, index) => (
               <div
                 key={index}
-                className={`accordion-item ${
-                  activeAccordion === index ? "active" : ""
-                }`}
+                className={`accordion-item ${activeAccordion === index ? "active" : ""
+                  }`}
               >
                 <button
                   className="accordion-header"
@@ -113,14 +113,14 @@ export default function RisingThreats() {
         </div>
 
         <div className="accordion-image-side">
-          <img
-            src={
-              activeAccordion !== null
-                ? threatData[activeAccordion].image
-                : bannerImg
-            } // Fallback or active image
-            alt="Rising Threats"
+          <video
+            src={bannerVideo}
+            autoPlay
+            loop
+            muted
+            playsInline
             className="accordion-image"
+            style={{ width: "100%", height: "100%", objectFit: "cover", borderRadius: "20px" }}
           />
         </div>
       </div>
