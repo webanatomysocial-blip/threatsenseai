@@ -151,8 +151,8 @@ const CybersecurityImperative = ({ dynamicRecentPosts }) => {
 
   return (
     <BlogLayout
-      category="AI Security"
-      title="The Cybersecurity Imperative: Safeguarding Enterprises in the Age of AI"
+      category="SAP Security"
+      title="Unmasking Cyber Threats in SAP: The Rising Need for Intelligent Security"
       image={heroImage}
       content={content}
       recentPosts={recentPosts}

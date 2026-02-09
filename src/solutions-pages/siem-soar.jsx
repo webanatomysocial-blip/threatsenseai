@@ -11,7 +11,7 @@ import detect from '../assets/home/Custom-Options/Detection Focus.png';
 import govern from '../assets/home/Custom-Options/Governance focus.png';
 import platform from '../assets/home/Custom-Options/Focus Response.png';
 
-import comp from '../assets/home/Custom-Options/Compilance.png';
+import comp from '../assets/home/Custom-Options/Compilance.png'; 
 import seam from '../assets/home/Custom-Options/Seamless Integration.png';
 import auto from '../assets/home/Custom-Options/Automated response.png';
 import mini from '../assets/home/Custom-Options/Minimal.png';

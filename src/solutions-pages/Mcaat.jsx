@@ -26,10 +26,10 @@ import mcaat9 from "../assets/solutions/mcaat/9.jpg";
 import mcaat10 from "../assets/solutions/mcaat/10.jpg";
 import mcaat11 from "../assets/solutions/mcaat/11.png";
 import mcaat12 from "../assets/solutions/mcaat/12.png";
-import mcaat14 from "../assets/solutions/mcaat/14.jpg";
-import mcaat15 from "../assets/solutions/mcaat/15.jpg";
-import mcaat16 from "../assets/solutions/mcaat/16.jpg";
-import mcaat17 from "../assets/solutions/mcaat/17.jpg";
+import mcaat14 from "../assets/solutions/mcaat/14.png";
+import mcaat15 from "../assets/solutions/mcaat/15.png";
+import mcaat16 from "../assets/solutions/mcaat/16.png";
+import mcaat17 from "../assets/solutions/mcaat/17.png";
 
 import videomcaat1 from "../assets/solutions/mcaat/Copy-audit.mp4";
 
@@ -105,12 +105,6 @@ export default function Mcaat() {
       title: "Monitor Critical Database Logins",
       description:
         "Database-level changes bypasses application logging. MCAAT tracks privileged and critical DB logins in real time, closing one of the most common audit blind spots.",
-    },
-    {
-      img: mcaat4,
-      title: "Real-Time Alerts for High-Risk Actions",
-      description:
-        "Standard methods capture changes after the fact - if at all. MCAAT raises real-time alerts for sensitive actions such as DEBUG-mode changes, enabling immediate investigation.",
     },
     {
       img: mcaat4,

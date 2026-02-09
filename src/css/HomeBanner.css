@@ -135,8 +135,8 @@
 
   .banner-stats {
     flex-direction: column;
-    /* Though Swiper handles direction, this container style might need reset */
     margin-left: 0px;
+    margin-bottom: 10px;
   }
 
   .stat-item-slide {

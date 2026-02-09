@@ -36,9 +36,9 @@ import CoreTechs from "../Solutions-components/CoreTechs";
 import video1 from "../assets/solutions/tads/1.mp4";
 import video2 from "../assets/solutions/tads/2.mp4";
 import video3 from "../assets/solutions/tads/3.mp4";
-import dmssimg from "../assets/solutions/tads/DMSS.png";
-import tadsimg from "../assets/solutions/tads/TADS Protection.png";
-import dotimg from "../assets/solutions/tads/DOT Layer.png";
+import dmssimg from "../assets/solutions/tads/TADS Sec 1.3.png";
+import tadsimg from "../assets/solutions/tads/TADS Sec 1.1.png";
+import dotimg from "../assets/solutions/tads/TADS Sec 1.2.png";
 import usecaseimg from "../assets/solutions/tads/TADS Use Cases.png";
 export default function Tads() {
   const content = [

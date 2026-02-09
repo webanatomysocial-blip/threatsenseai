@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useRef } from "react";
 import "../css/CustomOptions.css";
 import { AiFillAppstore } from "react-icons/ai";
-import img1 from "../assets/home/Custom-Options/Tag & Track.png";
-import img3 from "../assets/home/Custom-Options/Simplify.png";
+import img1 from "../assets/home/Custom-Options/Tag & Track.jpeg";
+import img3 from "../assets/home/Custom-Options/Simplify.jpeg";
 import img2 from "../assets/home/Custom-Options/Design Automated.png";
 import bgImage from "../assets/home/Custom-Options/bg.png";
 
@@ -67,7 +67,7 @@ const CustomOptions = () => {
     };
   }, [options.length]);
 
-  const handleCardClick = (index) => {
+  const handleCardClick = (index) => { 
     setActiveIndex(index);
     startTimer();
   };
