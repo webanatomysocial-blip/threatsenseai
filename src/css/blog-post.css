@@ -6,9 +6,9 @@
 
 /* 1. Hero Section */
 .pod-hero-section {
-    max-width: 1400px;
-    margin: 0px 0px 0px 100px;
-    padding: 120px 0px 100px 40px;
+  max-width: 1400px;
+  margin: 0px 0px 0px 100px;
+  padding: 120px 0px 100px 40px;
 }
 
 .pod-split-header {
@@ -272,4 +272,77 @@
 
 .pod-body li {
   margin-bottom: 15px;
+}
+
+@media (max-width: 900px) {
+  .pod-container.three-column-layout {
+    grid-template-columns: 1fr;
+    /* Stack everything on mobile */
+    padding: 60px 20px;
+  }
+
+  .pod-container.two-column-layout {
+    grid-template-columns: 1fr;
+    padding: 60px 20px;
+  }
+
+  .pod-body h2 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-top: 30px;
+    margin-bottom: 25px;
+    color: #000;
+  }
+
+  .pod-body {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #333;
+  }
+
+  .pod-sidebar-left,
+  .pod-sidebar-right {
+    display: none;
+    /* User said 'remove the side bar for mobile' */
+  }
+
+  .pod-main-content {
+    order: 1;
+  }
+
+
+  .pod-header-content {
+    padding: 10px 20px;
+    gap: 20px;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+
+  .pod-header-title {
+    font-size: 10px;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .pod-hero-section {
+    padding: 60px 20px;
+    margin: 0px;
+  }
+
+  .pod-split-header {
+    flex-direction: column;
+    gap: 30px;
+    text-align: center;
+  }
+
+  .pod-hero-img-container img {
+    width: 100%;
+  }
+
+  .pod-title-section .head-text {
+    font-size: 24px;
+  }
 }
