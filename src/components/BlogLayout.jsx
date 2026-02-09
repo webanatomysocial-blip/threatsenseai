@@ -140,7 +140,6 @@ const PodLayout = ({
         </div>
       </div>
 
-      <Footer />
     </>
   );
 };
