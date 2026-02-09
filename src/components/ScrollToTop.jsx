@@ -27,7 +27,6 @@ function ScrollToTop() {
     document.addEventListener("click", handleSameHashClick);
 
     if (hash) {
-      // Small timeout to ensure DOM is ready if it's a fresh navigation
       setTimeout(() => {
         const elem = document.querySelector(hash);
         if (elem) {
@@ -40,7 +39,6 @@ function ScrollToTop() {
           } else {
             elem.scrollIntoView({ behavior: "smooth" });
           }
-          // Ensure GSAP knows where everything is after the scroll
           if (ScrollTrigger) {
             ScrollTrigger.refresh();
           }
