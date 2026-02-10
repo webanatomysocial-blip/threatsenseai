@@ -145,9 +145,9 @@ const HomeBanner = () => {
             <a href="#solutions" className="red-button">
               Get Started
             </a>
-            <Link to="/contact" className="white-button">
+            <a href="https://tidycal.com/threatsenseai/" className="white-button">
               Book a Demo
-            </Link>
+            </a>
           </div>
 
           {/* Footer Stats / Dashed Border Section */}

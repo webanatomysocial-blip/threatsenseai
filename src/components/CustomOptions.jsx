@@ -1,9 +1,9 @@
 import React, { useState, useEffect, useRef } from "react";
 import "../css/CustomOptions.css";
 import { AiFillAppstore } from "react-icons/ai";
-import img1 from "../assets/home/Custom-Options/Tag & Track.jpeg";
-import img3 from "../assets/home/Custom-Options/Simplify.jpeg";
+import img1 from "../assets/home/Custom-Options/Tag & Track.png";
 import img2 from "../assets/home/Custom-Options/Design Automated.png";
+import img3 from "../assets/home/Custom-Options/Simplify.png";
 import bgImage from "../assets/home/Custom-Options/bg.png";
 
 const CustomOptions = () => {
@@ -11,7 +11,7 @@ const CustomOptions = () => {
   const intervalRef = useRef(null);
 
   const options = [
-    {
+    { 
       id: 0,
       title: "Tag and Track Threat Assets with Precision",
       desc: "Identify, classify, and monitor critical assets, users,\n and data contextually.",

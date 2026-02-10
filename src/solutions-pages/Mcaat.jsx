@@ -254,9 +254,9 @@ export default function Mcaat() {
             critical activities cannot go untracked, disabled, or altered
           </p>
           <div className="banner-buttons">
-            <Link to="/contact" className="red-button">
+            <a href="https://tidycal.com/threatsenseai/mca-audit-trail-rule-11g-demo" className="red-button">
               Request MCAAT Demo
-            </Link>
+            </a>
           </div>
         </div>
       </section>
@@ -294,6 +294,7 @@ export default function Mcaat() {
         reinstating disabled controls, and preserving audit-ready evidence without manual intervention"
         backgroundImage={bg}
         buttonText="Get Started"
+        link="https://tidycal.com/threatsenseai/mca-audit-trail-rule-11g-demo"
       />
     </>
   );

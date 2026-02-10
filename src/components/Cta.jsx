@@ -1,6 +1,8 @@
-import { Link } from "react-router-dom";
 import "../css/cta.css";
+
 export default function Cta(props) {
+  const { link = "https://tidycal.com/threatsenseai/" } = props;
+
   return (
     <div
       className="cta-section"
@@ -9,7 +11,7 @@ export default function Cta(props) {
       <div className="cta-content">
         <h1 className="big-text-head-white">{props.title}</h1>
         <p className="para-text-white">{props.description}</p>
-        <Link to="/contact" className="black-button">{props.buttonText}</Link>
+        <a href={link} className="black-button">{props.buttonText}</a>
       </div>
     </div>
   );

@@ -359,6 +359,7 @@ export default function Tads() {
         and unauthorized data sharing across SAP and beyond"
         backgroundImage={bg}
         buttonText="Book a Demo"
+        link="https://tidycal.com/threatsenseai/tads"
       />
     </>
   );

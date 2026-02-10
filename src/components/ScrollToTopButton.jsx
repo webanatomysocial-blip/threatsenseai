@@ -51,7 +51,7 @@ const ScrollToTopButton = () => {
         >
             <div
                 style={{
-                    backgroundColor: "var(--black-color)",
+                    backgroundColor: "#5900EA",
                     color: "var(--white-color)",
                     width: "50px",
                     height: "50px",
@@ -62,12 +62,10 @@ const ScrollToTopButton = () => {
                     boxShadow: "0 4px 6px rgba(0,0,0,0.1)",
                 }}
                 onMouseEnter={(e) => {
-                    e.currentTarget.style.transform = "scale(1.1)";
-                    e.currentTarget.style.backgroundColor = "#333";
+                    e.currentTarget.style.transform = "scale(1.02)";
                 }}
                 onMouseLeave={(e) => {
                     e.currentTarget.style.transform = "scale(1)";
-                    e.currentTarget.style.backgroundColor = "var(--black-color)";
                 }}
             >
                 <FaArrowUp size={20} />

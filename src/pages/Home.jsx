@@ -27,6 +27,7 @@ export default function Home() {
 Detect threats, deter misuse, and defend sensitive data in real time"
         backgroundImage={bg}
         buttonText="Book a Demo"
+        link="https://tidycal.com/threatsenseai/"
       />
     </>
   );

@@ -290,6 +290,7 @@ AI-Powered Security"
         the power of ThreatSense AI today!"
         backgroundImage={bg}
         buttonText="Get Started"
+        link="https://tidycal.com/threatsenseai/siem-soar-sap"
       />
     </>
   );

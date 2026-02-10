@@ -85,9 +85,9 @@ const Footer = () => {
                   </li>
 
                   <li>
-                    <Link to="/contact" className="para-text-white" style={{ fontSize: "14px", color: "#999" }}>
+                    <a href="https://tidycal.com/threatsenseai/" className="para-text-white" style={{ fontSize: "14px", color: "#999" }}>
                       Contact
-                    </Link>
+                    </a>
                   </li>
                 </ul>
 
@@ -173,7 +173,7 @@ const Footer = () => {
 
         <div className="footer-credits">
           <p className="sub-para-text-white">
-            Copyright © 2026 ThreatSense. All Rights Reserved.
+             All Rights Reserved @ThreatSenseAi LLP.
           </p>
         </div>
       </div>

@@ -23,7 +23,7 @@
   gap: 20px;
   width: 100%;
   max-width: 1200px;
-  height: 400px;
+  height: 300px;
   margin-bottom: 40px;
   padding: 0px 20px;
   /* Space for pagination */
@@ -35,28 +35,35 @@
   background-position: center;
   background-repeat: no-repeat;
   border-radius: 20px;
+  height: 300px;
   padding: 0;
   cursor: pointer;
   position: relative;
   overflow: hidden;
-  /* Use simple flex transition */
-  /* Use simple flex transition */
-  transition: flex-grow 0.6s cubic-bezier(0.22, 1, 0.36, 1);
-  /* Slightly smoother easing */
+  /* Smooth width transition with ease-in-out */
+  transition: all 0.8s cubic-bezier(0.65, 0, 0.35, 1);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-  flex-grow: 1;
-  flex-basis: 0;
-  min-width: 0;
-  /* Important for flex items to shrink properly */
+  /* Default: equal width for all cards */
+  width: calc((100% - 40px) / 3);
+  flex-shrink: 1;
+}
+
+/* When a card is NOT active but another card IS active */
+.option-card:not(.active) {
+  width: calc((100% - 40px) / 3);
+}
+
+/* Shrink non-active cards when one is active */
+.custom-options-wrapper:has(.option-card.active) .option-card:not(.active) {
+  width: calc((100% - 40px) / 5);
 }
 
 .option-card.active {
-  flex-grow: 2.2;
-  /* Increased slightly >2 to overshoot and ensure image doesn't shrink */
-  height: 100%;
+  /* Active card takes more space - calculated to fit with 2 smaller cards */
+  width: calc((100% - 40px) - (2 * (100% - 40px) / 5));
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
 }
 
@@ -100,7 +107,7 @@
 
   overflow: hidden;
   text-overflow: ellipsis;
-  transition: all 0.5s ease;
+  transition: all 0.6s ease;
 }
 
 .option-card.active .option-title {
@@ -117,52 +124,46 @@
   opacity: 0;
   overflow: hidden;
 
-  transition: opacity 0.4s ease, max-height 0.4s ease, transform 0.4s ease;
+  transition: opacity 0.5s ease 0.3s, max-height 0.5s ease 0.3s, transform 0.5s ease 0.3s;
   word-wrap: break-word;
   overflow-wrap: break-word;
   hyphens: auto;
   line-height: 1.5;
-  transform: translateY(0);
+  transform: translateY(-10px);
 }
 
 .option-card.active .option-desc {
   max-height: 500px;
   opacity: 1;
   transform: translateY(0);
-  transition-delay: 0.1s;
 }
 
-/* Text container using flex shrink/grow for smooth slide */
+/* Text container using width for smooth slide */
 .option-text-container {
-  flex: 0 0 0;
-  /* Start with 0 width */
+  width: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
   opacity: 0;
   visibility: hidden;
   overflow: hidden;
-  overflow: hidden;
-  /* Transition flex-grow/basis instead of max-width */
-  /* Split transitions for open vs close state via override to ensure smooth behavior */
-  transition: flex-grow 0.5s cubic-bezier(0.25, 0.8, 0.25, 1), opacity 0.2s ease, padding 0.5s ease;
+  /* Smooth width transition */
+  transition: width 0.8s cubic-bezier(0.65, 0, 0.35, 1), opacity 0.4s ease 0.1s, padding 0.8s cubic-bezier(0.65, 0, 0.35, 1);
   padding: 0;
   word-wrap: break-word;
   overflow-wrap: break-word;
   position: relative;
   z-index: 2;
-  min-width: 0;
-  /* Prevent content from forcing width */
+  flex-shrink: 0;
 }
 
 .option-card.active .option-text-container {
-  flex: 1 0 0;
-  /* Grow to fill space */
+  width: 50%;
   opacity: 1;
   visibility: visible;
   padding: 30px;
-  /* Delay opacity slightly so it appears after space is made */
-  transition: flex-grow 0.5s cubic-bezier(0.25, 0.8, 0.25, 1), opacity 0.4s ease 0.2s, padding 0.5s ease;
+  /* Delay opacity so it appears after space is made */
+  transition: width 0.8s cubic-bezier(0.65, 0, 0.35, 1), opacity 0.5s ease 0.3s, padding 0.8s cubic-bezier(0.65, 0, 0.35, 1);
 }
 
 .option-image-container {
@@ -173,19 +174,18 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  /* Smooth flex transition matching text container and card grow */
-  transition: flex-grow 0.5s cubic-bezier(0.25, 0.8, 0.25, 1), border-radius 0.5s ease;
+  /* Smooth transition matching card timing */
+  transition: width 0.8s cubic-bezier(0.65, 0, 0.35, 1), border-radius 0.8s ease;
   border-radius: 20px;
   z-index: 1;
-  /* flex: 1 0 auto; */
-  /* Default: take available space */
-  padding: 20px;
-  /* Add padding around the image */
+  /* Take full width when not active */
+  width: 100%;
+  flex-shrink: 0;
 }
 
-/* When active, share space with text (flex: 1 vs flex: 1 means 50/50 freely distributed) */
+/* When active, share space with text */
 .option-card.active .option-image-container {
-  flex: 1 0 0;
+  width: 50%;
   border-radius: 20px 0 0 20px;
 }
 
@@ -199,9 +199,9 @@
 }
 
 .option-card.active .option-image {
-  width: 100%;
+  /* Keep same size as non-active state */
+  width: 90%;
   height: 100%;
-  /* Restore full height usage */
 }
 
 /* Pagination at Bottom */
