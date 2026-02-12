@@ -52,16 +52,7 @@ export default function RisingThreats() {
 
   return (
     <div className="accordion-section">
-      <div className="accordion-header-group">
-        <div className="sub-para-text security-label d-flex-col">
-          <div style={{ display: "flex", alignItems: "center" }}>
-            <FaGlobe size={16} style={{ marginRight: "4px" }} /> Rising Threat
-            Vector
-          </div>
-          <h2 className="head-text">AI & Insider Data Exfiltration</h2>
-        </div>
-      </div>
-
+      
       <div className="accordion-container">
         <div className="accordion-content-side">
           <div className="accordion-list">
@@ -113,15 +104,15 @@ export default function RisingThreats() {
         </div>
 
         <div className="accordion-image-side">
-          <video
-            src={bannerVideo}
-            autoPlay
-            loop
-            muted
-            playsInline
-            className="accordion-image"
-            style={{ width: "100%", objectFit: "cover", borderRadius: "20px" }}
-          />
+          <div className="accordion-header-group">
+        <div className="sub-para-text security-label d-flex-col">
+          <div style={{ display: "flex", alignItems: "center" }}>
+            <FaGlobe size={16} style={{ marginRight: "4px" }} /> Rising Threat Vector
+          </div>
+          <h2 className="head-text">AI & Insider Data Exfiltration</h2>
+        </div>
+      </div>
+
         </div>
       </div>
     </div>

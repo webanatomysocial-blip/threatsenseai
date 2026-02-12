@@ -24,6 +24,8 @@ import CapabilitiesSection from "../components/CapabilitiesSection";
 import UseCases from "../Solutions-components/UseCases";
 import Cta from "../components/Cta";
 import bg from "../assets/home/tab-section/bg-image.png";
+
+import usecasessiem from "../assets/solutions/siem/usecase.png";
 import {
   FaTh,
   FaLock,
@@ -288,7 +290,7 @@ export default function SiemSoar() {
           </>
         }
         list={useCasesList}
-        // image={usecasessiem}
+        image={usecasessiem}
       />
       <Cta
         title="Stay Ahead of Threats with

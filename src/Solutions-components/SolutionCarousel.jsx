@@ -61,7 +61,7 @@ export default function SolutionCarousel({ label, title, data, paddingTop }) {
           <h2 className="head-text">{title || defaultTitle}</h2>
         </div>
         <Swiper
-          slidesPerView={3}
+          slidesPerView={2}
           spaceBetween={20}
           loop={true}
           autoplay={{
@@ -80,7 +80,7 @@ export default function SolutionCarousel({ label, title, data, paddingTop }) {
               slidesPerView: 2,
             },
             1024: {
-              slidesPerView: 3,
+              slidesPerView: 2,
             },
           }}
           modules={[Pagination, Autoplay]}

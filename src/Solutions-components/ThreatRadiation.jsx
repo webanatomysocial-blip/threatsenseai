@@ -27,7 +27,7 @@ const ThreatRadiation = () => {
 
   // Center point for the radiation effect
   const centerX = 50; // 50%
-  const centerY = 95; // 90% from top
+  const centerY = 100; // 90% from top
 
   const getPillPosition = (index, total) => {
     // 3 layers of radii to spread out 22 items
