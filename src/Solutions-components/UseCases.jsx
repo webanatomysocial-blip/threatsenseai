@@ -72,7 +72,9 @@ const UseCases = ({ label, title, list, image }) => {
           ))}
         </ul>
 
-        <Link to="/contact" className="black-button">Book A Free Demo</Link>
+        <a href="https://tidycal.com/threatsenseai/" className="black-button">
+          Book A Free Demo
+        </a>
       </div>
 
       <div className="uc-image-side">

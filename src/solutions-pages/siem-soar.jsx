@@ -6,18 +6,17 @@ import img1 from "../assets/home/tab-section/1.jpg";
 import img2 from "../assets/home/tab-section/2.jpg";
 import img3 from "../assets/home/tab-section/3.jpg";
 
-import soar from '../assets/home/Custom-Options/SOAR Focus.png';
-import detect from '../assets/home/Custom-Options/Detection Focus.png';
-import govern from '../assets/home/Custom-Options/Governance focus.png';
-import platform from '../assets/home/Custom-Options/Focus Response.png';
+import soar from "../assets/home/Custom-Options/SOAR Focus.png";
+import detect from "../assets/home/Custom-Options/Detection Focus.png";
+import govern from "../assets/home/Custom-Options/Governance focus.png";
+import platform from "../assets/home/Custom-Options/Focus Response.png";
 
-import comp from '../assets/home/Custom-Options/Compilance.png'; 
-import seam from '../assets/home/Custom-Options/Seamless Integration.png';
-import auto from '../assets/home/Custom-Options/Automated response.png';
-import mini from '../assets/home/Custom-Options/Minimal.png';
-import usecasessiem from '../assets/home/Custom-Options/SIEM Use CAses.png';
-import intell from '../assets/home/Custom-Options/Intelligent.png';
-import real from '../assets/home/Custom-Options/realtime.png';
+import real from "../assets/solutions/siem/1.png";
+import real1 from "../assets/solutions/siem/2.png";
+import real2 from "../assets/solutions/siem/3.png";
+import real3 from "../assets/solutions/siem/4.png";
+import real4 from "../assets/solutions/siem/5.png";
+import real5 from "../assets/solutions/siem/6.png";
 
 import SolutionCarousel from "../Solutions-components/SolutionCarousel";
 import SolutionCards from "../Solutions-components/SolutionCards";
@@ -49,35 +48,35 @@ export default function SiemSoar() {
       title: "Intelligent Event Correlation",
       description:
         "Correlates events across SAP application servers, databases, and connected systems to identify complex attack patterns that isolated logs cannot reveal. Reduces noise while highlighting high-risk security signals.",
-      img: intell,
+      img: real1,
     },
     {
       title: "Automated Response Playbooks",
       description:
         "Triggers predefined response actions when threats are detected, such as session termination, alert escalation, or access control actions, ensuring consistent and rapid containment of security incidents",
-      img: auto,
+      img: real2,
     },
     {
       title: "Compliance & Audit Readiness",
       description:
         "Maintains structured, centralized security records for SAP activities, supporting internal audits and regulatory requirements. Ensures traceability of events, alerts, and response actions without additional operational overhead.",
-      img: comp,
+      img: real3,
     },
     {
       title: "Seamless SAP Integration",
       description:
         "Integrates smoothly with existing SAP landscapes without requiring major architectural changes. Designed to work alongside current SAP security configurations and enterprise monitoring tools",
-      img: seam,
+      img: real4,
     },
     {
       title: "Minimal Performance Impact",
       description:
         "Delivers deep security visibility while keeping system and database overhead low. Designed to operate efficiently without affecting SAP performance or business operations.",
-      img: mini,
+      img: real5,
     },
   ];
   const cardcontent = [
-     {
+    {
       title: "SOAR Focus",
       subtitle: "Orchestrated Incident Response",
       description:
@@ -131,7 +130,8 @@ export default function SiemSoar() {
             <li>Reduced manual audit preparation</li>
           </ul>
           <p>
-            <strong>Outcome:</strong>  Audit readiness becomes continuous, not reactive.
+            <strong>Outcome:</strong> Audit readiness becomes continuous, not
+            reactive.
           </p>
         </>
       ),
@@ -150,12 +150,12 @@ export default function SiemSoar() {
             <li>No performance disruption</li>
           </ul>
           <p>
-            <strong>Outcome:</strong>  Security enhancement without operational compromise.
+            <strong>Outcome:</strong> Security enhancement without operational
+            compromise.
           </p>
         </>
       ),
     },
-    
   ];
 
   const core = [
@@ -244,10 +244,15 @@ export default function SiemSoar() {
       <section className="siem-soar-banner">
         <div className="siem-soar-banner-content">
           <h1 ref={headerRef} className="big-text-head">
-            SIEM & SOAR for SAP<br /> {splitLetters("Intelligent Threat Detection & Automated Response")}
+            SIEM & SOAR for SAP
+            <br />{" "}
+            {splitLetters("Intelligent Threat Detection & Automated Response")}
           </h1>
           <p className="sub-para-text">
-            AI-powered visibility and response to SAP environments. Correlate security events across SAP systems, detect suspicious activity early, and trigger automated response workflows to reduce risk, response time, and operational overhead.
+            AI-powered visibility and response to SAP environments. Correlate
+            security events across SAP systems, detect suspicious activity
+            early, and trigger automated response workflows to reduce risk,
+            response time, and operational overhead.
           </p>
         </div>
       </section>
@@ -261,7 +266,10 @@ export default function SiemSoar() {
       <SolutionCards
         label="Automated Threat Detection & Response"
         title="Security that watches, detects and acts automatically"
-        description="" items={cardcontent} marginTop="0px" />
+        description=""
+        items={cardcontent}
+        marginTop="0px"
+      />
       <CapabilitiesSection
         items={core}
         gridTemplateColumns="repeat(3, 1fr)"
@@ -280,7 +288,7 @@ export default function SiemSoar() {
           </>
         }
         list={useCasesList}
-        image={usecasessiem}
+        // image={usecasessiem}
       />
       <Cta
         title="Stay Ahead of Threats with

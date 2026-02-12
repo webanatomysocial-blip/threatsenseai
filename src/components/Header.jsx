@@ -49,9 +49,15 @@ const Header = ({ onSearch }) => {
               Solutions <IoIosArrowDown className="dropdown-arrow" />
             </Link>
             <div className="dropdown-menu">
-              <Link to="/mcaat" className="dropdown-item">MCAAT</Link>
-              <Link to="/tads" className="dropdown-item">TADS</Link>
-              <Link to="/siem-soar" className="dropdown-item">SIEM & SOAR</Link>
+              <Link to="/mcaat" className="dropdown-item">
+                MCAAT
+              </Link>
+              <Link to="/tads" className="dropdown-item">
+                TADS
+              </Link>
+              <Link to="/siem-soar" className="dropdown-item">
+                SIEM & SOAR
+              </Link>
             </div>
           </div>
           <Link to="/about" className="nav-link">
@@ -96,7 +102,9 @@ const Header = ({ onSearch }) => {
             <Link to="/" className="mobile-nav-link" onClick={toggleMenu}>
               Home
             </Link>
-            <div className={`mobile-solutions-wrapper ${isSolutionsOpen ? "active" : ""}`}>
+            <div
+              className={`mobile-solutions-wrapper ${isSolutionsOpen ? "active" : ""}`}
+            >
               <div className="mobile-nav-link solutions-trigger">
                 <Link
                   to="/#solutions"
@@ -114,14 +122,28 @@ const Header = ({ onSearch }) => {
                   />
                 </div>
               </div>
-              <div className={`mobile-dropdown ${isSolutionsOpen ? "open" : ""}`}>
-                <Link to="/mcaat" className="mobile-dropdown-link" onClick={toggleMenu}>
+              <div
+                className={`mobile-dropdown ${isSolutionsOpen ? "open" : ""}`}
+              >
+                <Link
+                  to="/mcaat"
+                  className="mobile-dropdown-link"
+                  onClick={toggleMenu}
+                >
                   MCAAT
                 </Link>
-                <Link to="/tads" className="mobile-dropdown-link" onClick={toggleMenu}>
+                <Link
+                  to="/tads"
+                  className="mobile-dropdown-link"
+                  onClick={toggleMenu}
+                >
                   TADS
                 </Link>
-                <Link to="/siem-soar" className="mobile-dropdown-link" onClick={toggleMenu}>
+                <Link
+                  to="/siem-soar"
+                  className="mobile-dropdown-link"
+                  onClick={toggleMenu}
+                >
                   SIEM & SOAR
                 </Link>
               </div>
@@ -132,13 +154,13 @@ const Header = ({ onSearch }) => {
             <Link to="/blogs" className="mobile-nav-link" onClick={toggleMenu}>
               Blogs
             </Link>
-            <Link
-              to="/contact"
+            <a
+              href="https://tidycal.com/threatsenseai/"
               className="mobile-nav-link"
               onClick={toggleMenu}
             >
               Contact
-            </Link>
+            </a>
           </div>
         </div>
       </header>

@@ -11,22 +11,22 @@ const CustomOptions = () => {
   const intervalRef = useRef(null);
 
   const options = [
-    { 
+    {
       id: 0,
       title: "Tag and Track Threat Assets with Precision",
-      desc: "Identify, classify, and monitor critical assets, users,\n and data contextually.",
+      desc: "Identify, classify, and monitor critical assets, users, and data contextually.",
       image: img1,
     },
     {
       id: 1,
       title: "Design Automated Response Runbooks Faster",
-      desc: "Build customizable SOAR playbooks automating investigation,\n containment, and remediation.",
+      desc: "Build customizable SOAR playbooks automating investigation, containment, and remediation.",
       image: img2,
     },
     {
       id: 2,
       title: "Simplify SAP® Security Operations",
-      desc: "Continuously monitor SAP environments, correlate risks,\n and act early proactively.",
+      desc: "Continuously monitor SAP environments, correlate risks, and act early proactively.",
       image: img3,
     },
   ];
@@ -67,7 +67,7 @@ const CustomOptions = () => {
     };
   }, [options.length]);
 
-  const handleCardClick = (index) => { 
+  const handleCardClick = (index) => {
     setActiveIndex(index);
     startTimer();
   };
@@ -120,8 +120,9 @@ const CustomOptions = () => {
         {options.map((_, index) => (
           <div
             key={index}
-            className={`pagination-dot ${activeIndex === index ? "active" : ""
-              }`}
+            className={`pagination-dot ${
+              activeIndex === index ? "active" : ""
+            }`}
             onClick={() => handleCardClick(index)}
           >
             {activeIndex === index && (

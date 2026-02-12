@@ -47,23 +47,23 @@
   justify-content: space-between;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
   /* Default: equal width for all cards */
-  width: calc((100% - 40px) / 3);
-  flex-shrink: 1;
+  width: 30%;
+  flex-shrink: 0;
 }
 
 /* When a card is NOT active but another card IS active */
 .option-card:not(.active) {
-  width: calc((100% - 40px) / 3);
+  width: 30%;
 }
 
 /* Shrink non-active cards when one is active */
 .custom-options-wrapper:has(.option-card.active) .option-card:not(.active) {
-  width: calc((100% - 40px) / 5);
+  width: 20%;
 }
 
 .option-card.active {
   /* Active card takes more space - calculated to fit with 2 smaller cards */
-  width: calc((100% - 40px) - (2 * (100% - 40px) / 5));
+  width: 60%;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
 }
 
@@ -90,6 +90,7 @@
   position: relative;
   z-index: 1;
   overflow: hidden;
+  /* text-wrap: nowrap; */
   /* Prevent spill during transition */
 }
 
@@ -124,7 +125,10 @@
   opacity: 0;
   overflow: hidden;
 
-  transition: opacity 0.5s ease 0.3s, max-height 0.5s ease 0.3s, transform 0.5s ease 0.3s;
+  transition:
+    opacity 0.5s ease 0.3s,
+    max-height 0.5s ease 0.3s,
+    transform 0.5s ease 0.3s;
   word-wrap: break-word;
   overflow-wrap: break-word;
   hyphens: auto;
@@ -148,7 +152,10 @@
   visibility: hidden;
   overflow: hidden;
   /* Smooth width transition */
-  transition: width 0.8s cubic-bezier(0.65, 0, 0.35, 1), opacity 0.4s ease 0.1s, padding 0.8s cubic-bezier(0.65, 0, 0.35, 1);
+  transition:
+    width 0.8s cubic-bezier(0.65, 0, 0.35, 1),
+    opacity 0.4s ease 0.1s,
+    padding 0.8s cubic-bezier(0.65, 0, 0.35, 1);
   padding: 0;
   word-wrap: break-word;
   overflow-wrap: break-word;
@@ -163,7 +170,10 @@
   visibility: visible;
   padding: 30px;
   /* Delay opacity so it appears after space is made */
-  transition: width 0.8s cubic-bezier(0.65, 0, 0.35, 1), opacity 0.5s ease 0.3s, padding 0.8s cubic-bezier(0.65, 0, 0.35, 1);
+  transition:
+    width 0.8s cubic-bezier(0.65, 0, 0.35, 1),
+    opacity 0.5s ease 0.3s,
+    padding 0.8s cubic-bezier(0.65, 0, 0.35, 1);
 }
 
 .option-image-container {
@@ -175,7 +185,9 @@
   align-items: center;
   justify-content: center;
   /* Smooth transition matching card timing */
-  transition: width 0.8s cubic-bezier(0.65, 0, 0.35, 1), border-radius 0.8s ease;
+  transition:
+    width 0.8s cubic-bezier(0.65, 0, 0.35, 1),
+    border-radius 0.8s ease;
   border-radius: 20px;
   z-index: 1;
   /* Take full width when not active */

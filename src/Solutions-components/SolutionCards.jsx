@@ -1,4 +1,4 @@
-import React, { useState, useLayoutEffect, useRef } from 'react';
+import React, { useState, useLayoutEffect, useRef } from "react";
 import { BsArrowRight } from "react-icons/bs";
 import { AiFillInfoCircle } from "react-icons/ai";
 import { FaGlobe } from "react-icons/fa";
@@ -20,12 +20,25 @@ function ZigZagCardRow({ card }) {
     <div className="solution-card-row">
       <div className="solution-card-text">
         <h3>{card.title}</h3>
-        {card.subtitle && <p style={{ fontWeight: 600, color: "#444", marginTop: "-10px", marginBottom: "15px" }}>{card.subtitle}</p>}
+        {card.subtitle && (
+          <p
+            style={{
+              fontWeight: 600,
+              color: "#444",
+              marginTop: "-10px",
+              marginBottom: "15px",
+            }}
+          >
+            {card.subtitle}
+          </p>
+        )}
         <p>{card.description}</p>
 
         {card.readMoreContent && (
           <div className="read-more-wrapper-card">
-            <div className={`read-more-content ${isExpanded ? "expanded" : ""}`}>
+            <div
+              className={`read-more-content ${isExpanded ? "expanded" : ""}`}
+            >
               {card.readMoreContent}
             </div>
             <button
@@ -176,13 +189,13 @@ export default function SolutionCards({
 
 // --- Named Exports for Scroll Stacking ---
 
-export const ScrollStackItem = ({ children, itemClassName = '' }) => (
+export const ScrollStackItem = ({ children, itemClassName = "" }) => (
   <div className={`scroll-stack-card ${itemClassName}`.trim()}>{children}</div>
 );
 
 export const ScrollStackCards = ({
   children,
-  className = '',
+  className = "",
   itemDistance = 80,
   itemScale = 0.04,
   label,
@@ -193,7 +206,7 @@ export const ScrollStackCards = ({
   const containerRef = useRef(null);
 
   useLayoutEffect(() => {
-    const cards = containerRef.current.querySelectorAll('.scroll-stack-card');
+    const cards = containerRef.current.querySelectorAll(".scroll-stack-card");
     if (!cards.length) return;
 
     const mm = gsap.matchMedia();
@@ -222,13 +235,13 @@ export const ScrollStackCards = ({
         // Progressive Scaling: Each card scales down further as every subsequent card arrives
         for (let j = index + 1; j < cards.length; j++) {
           gsap.to(card, {
-            scale: 1 - (itemScale * (j - index)),
+            scale: 1 - itemScale * (j - index),
             scrollTrigger: {
               trigger: cards[j],
               start: "top 80%",
               end: "top 20%",
               scrub: true,
-            }
+            },
           });
         }
       });
@@ -251,9 +264,17 @@ export const ScrollStackCards = ({
     >
       <div className="scroll-stack-inner">
         {(label || title) && (
-          <div className="capabilities-header" style={{ marginBottom: "60px", textAlign: "center" }}>
-            <div className="sub-para-text security-label" style={{ justifyContent: "center" }}>
-              {icon || <AiFillInfoCircle size={18} style={{ marginRight: "4px" }} />}
+          <div
+            className="capabilities-header"
+            style={{ marginBottom: "60px", textAlign: "center" }}
+          >
+            <div
+              className="sub-para-text security-label"
+              style={{ justifyContent: "center" }}
+            >
+              {icon || (
+                <AiFillInfoCircle size={18} style={{ marginRight: "4px" }} />
+              )}
               {label}
             </div>
             {title && <h2 className="head-text">{title}</h2>}

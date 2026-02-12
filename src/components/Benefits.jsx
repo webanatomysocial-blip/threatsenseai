@@ -33,9 +33,9 @@ const Benefits = () => {
             ))}
           </div>
 
-          <Link to="/contact" className="red-button">
+          <a href="https://tidycal.com/threatsenseai/" className="red-button">
             Book A Free Demo
-          </Link>
+          </a>
         </div>
 
         {/* Right Image */}
