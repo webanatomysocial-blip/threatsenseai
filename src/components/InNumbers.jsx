@@ -2,6 +2,12 @@ import React from "react";
 import "../css/InNumbers.css";
 import AnimatedContent from "./AnimatedContent";
 import { FaChartBar } from "react-icons/fa";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Pagination, Navigation } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+import "swiper/css/autoplay";
 
 const topStats = [
   { value: "5", label: "Innovative security tools" },
@@ -20,7 +26,7 @@ const InNumbers = () => {
     <section className="in-numbers-section">
       <div className="in-numbers-container">
         {/* Label */}
-        <span className="numbers-label" style={{ display: "flex", alignItems: "center", gap: "6px" ,justifyContent:"center"}}>
+        <span className="numbers-label" style={{ display: "flex", alignItems: "center", gap: "6px", justifyContent: "center" }}>
           <FaChartBar size={18} color="black" />
           ThreatSenseAi In Numbers
         </span>
@@ -34,22 +40,50 @@ const InNumbers = () => {
           direction="vertical"
           reverse={false}
           threshold={0.2}
-          className="numbers-grid"
+          className="numbers-carousel-wrapper"
         >
-          {topStats.map((item, index) => (
-            <AnimatedContent
-              key={index}
-              distance={30}
-              direction="vertical"
-              reverse={false}
-              duration={0.6}
-              delay={index * 0.15} // stagger each number-item
-              className="number-item"
-            >
-              <h3 className="sub-head-text numbers-value">{item.value}</h3>
-              <p className="para-text">{item.label}</p>
-            </AnimatedContent>
-          ))}
+          <Swiper
+            modules={[Autoplay, Pagination, Navigation]}
+            spaceBetween={30}
+            slidesPerView={1}
+            loop={true}
+            navigation={true}
+            autoplay={{
+              delay: 2500,
+              disableOnInteraction: false,
+            }}
+            pagination={{ clickable: true }}
+            observer={true}
+            observeParents={true}
+            breakpoints={{
+              640: {
+                slidesPerView: 2,
+                spaceBetween: 40,
+              },
+              1024: {
+                slidesPerView: 4,
+                spaceBetween: 60,
+              },
+            }}
+            className="numbers-grid"
+          >
+            {/* Duplicate stats to ensure loop works smoothly even if slidesPerView matches item count */}
+            {[...topStats, ...topStats].map((item, index) => (
+              <SwiperSlide key={index}>
+                <AnimatedContent
+                  distance={30}
+                  direction="vertical"
+                  reverse={false}
+                  duration={0.6}
+                  delay={index * 0.15}
+                  className="number-item"
+                >
+                  <h3 className="sub-head-text numbers-value">{item.value}</h3>
+                  <p className="para-text">{item.label}</p>
+                </AnimatedContent>
+              </SwiperSlide>
+            ))}
+          </Swiper>
         </AnimatedContent>
 
         {/* Bottom cards (optional, can animate the same way if needed) */}

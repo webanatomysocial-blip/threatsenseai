@@ -20,10 +20,33 @@
 }
 
 .numbers-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 40px;
     margin: 60px 0 70px;
+    padding-bottom: 80px;
+    /* Increased space for pagination */
+}
+
+/* Swiper Pagination Styling */
+.in-numbers-section .swiper-pagination-bullet {
+    background: #000;
+    opacity: 0.2;
+}
+
+.in-numbers-section .swiper-pagination-bullet-active {
+    background: var(--red-color);
+    opacity: 1;
+}
+
+/* Swiper Navigation Styling */
+.in-numbers-section .swiper-button-next,
+.in-numbers-section .swiper-button-prev {
+    color: #000;
+    transform: scale(0.6);
+    transition: color 0.3s ease;
+}
+
+.in-numbers-section .swiper-button-next:hover,
+.in-numbers-section .swiper-button-prev:hover {
+    color: var(--red-color);
 }
 
 .numbers-value {
@@ -64,6 +87,7 @@
         grid-template-columns: repeat(2, 1fr);
         margin: 20px;
     }
+
     .in-numbers-section {
         padding: 60px 0px !important;
     }
