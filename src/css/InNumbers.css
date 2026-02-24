@@ -36,18 +36,7 @@
     opacity: 1;
 }
 
-/* Swiper Navigation Styling */
-.in-numbers-section .swiper-button-next,
-.in-numbers-section .swiper-button-prev {
-    color: #000;
-    transform: scale(0.6);
-    transition: color 0.3s ease;
-}
-
-.in-numbers-section .swiper-button-next:hover,
-.in-numbers-section .swiper-button-prev:hover {
-    color: var(--red-color);
-}
+/* Swiper Pagination Styling */
 
 .numbers-value {
     color: var(--red-color);

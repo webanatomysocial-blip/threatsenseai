@@ -52,7 +52,7 @@ export default function RisingThreats() {
 
   return (
     <div className="accordion-section">
-      
+
       <div className="accordion-container">
         <div className="accordion-content-side">
           <div className="accordion-list">
@@ -91,8 +91,7 @@ export default function RisingThreats() {
                 <div className="accordion-body-wrapper">
                   <div className="accordion-body">
                     <p
-                      className="sub-para-text"
-                      style={{ paddingLeft: "40px" }}
+                      className="sub-para-text accordion-body-text"
                     >
                       {item.description}
                     </p>
@@ -105,13 +104,13 @@ export default function RisingThreats() {
 
         <div className="accordion-image-side">
           <div className="accordion-header-group">
-        <div className="sub-para-text security-label d-flex-col">
-          <div style={{ display: "flex", alignItems: "center" }}>
-            <FaGlobe size={16} style={{ marginRight: "4px" }} /> Rising Threat Vector
+            <div className="sub-para-text security-label d-flex-col">
+              <div style={{ display: "flex", alignItems: "center" }}>
+                <FaGlobe size={16} style={{ marginRight: "4px" }} /> Rising Threat Vector
+              </div>
+              <h2 className="head-text">AI & Insider Data Exfiltration</h2>
+            </div>
           </div>
-          <h2 className="head-text">AI & Insider Data Exfiltration</h2>
-        </div>
-      </div>
 
         </div>
       </div>

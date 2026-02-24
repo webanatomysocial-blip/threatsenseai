@@ -303,7 +303,10 @@
   .only-windows {
     display: none !important;
   }
+.mobile-solutions-wrapper {
 
+  gap: 0px;
+}
   .header-left {
     width: 60%;
   }

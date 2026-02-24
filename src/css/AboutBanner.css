@@ -103,6 +103,7 @@
 
   .about-banner-layout {
     flex-direction: column;
+    height: fit-content;
   }
 
   .about-banner-layout img,

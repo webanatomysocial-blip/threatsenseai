@@ -159,7 +159,7 @@ const Header = ({ onSearch }) => {
               className="mobile-nav-link"
               onClick={toggleMenu}
             >
-              Contact
+              Free Consultation
             </a>
           </div>
         </div>

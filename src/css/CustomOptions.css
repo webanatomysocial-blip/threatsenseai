@@ -258,35 +258,35 @@
 /* Mobile responsive */
 @media (max-width: 768px) {
   .custom-options-container {
-    padding: 60px 0;
-    /* Remove horizontal padding */
-    height: auto;
+    padding: 60px 20px !important;
+    height: auto !important;
+    min-height: auto !important;
+    display: block !important;
   }
 
   .custom-options-wrapper {
-    flex-direction: column;
-    height: auto;
-    gap: 30px;
-  }
-
-  .option-card {
+    display: flex !important;
+    flex-direction: column !important;
     height: auto !important;
-    min-height: 250px;
-    flex-basis: auto !important;
-    flex-grow: 0;
-    width: 100%;
-    margin-bottom: 0;
-    padding: 0;
-    background-image: none !important;
-    background-color: #fff;
-    cursor: default;
+    gap: 40px !important;
+    padding: 0 !important;
   }
 
-  /* Disable dynamic active overrides */
-  .option-card.active {
-    flex-grow: 0;
-    /* Reset flex-grow for mobile stack */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  /* Extreme specificity override for mobile widths */
+  .custom-options-wrapper .option-card,
+  .custom-options-wrapper:has(.option-card.active) .option-card:not(.active),
+  .custom-options-wrapper .option-card.active,
+  .option-card {
+    width: 100% !important;
+    height: auto !important;
+    min-height: auto !important;
+    flex: 0 0 auto !important;
+    margin-bottom: 0 !important;
+    background-image: none !important;
+    background-color: #fff !important;
+    border: 1px solid #eee !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05) !important;
+    transform: none !important;
   }
 
   .active-bg-image {
@@ -295,74 +295,77 @@
 
   .option-title,
   .option-card.active .option-title {
-    white-space: normal;
-    font-size: 22px;
-    margin-bottom: 12px;
+    white-space: normal !important;
+    font-size: 20px !important;
+    margin-bottom: 12px !important;
+    overflow: visible !important;
+    width: 100% !important;
   }
 
-  /* Force description to be visible and static */
   .option-desc {
-    max-height: 1000px !important;
+    max-height: none !important;
     opacity: 1 !important;
     display: block !important;
     overflow: visible !important;
-    white-space: pre-line;
-    margin-bottom: 20px;
-    font-size: 15px;
+    white-space: normal !important;
+    margin-bottom: 0 !important;
+    font-size: 14px !important;
     transform: none !important;
+    color: #666 !important;
+    line-height: 1.5 !important;
   }
 
   .option-content {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0;
-    padding-left: 0 !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 0 !important;
+    padding: 0 !important;
+    height: auto !important;
+    width: 100% !important;
   }
 
   .option-text-container,
   .option-card.active .option-text-container {
     opacity: 1 !important;
     visibility: visible !important;
-    max-width: 100% !important;
-    flex: 1 0 auto !important;
-    /* Force flex behavior for mobile */
-    padding: 20px 20px 30px 20px !important;
-    order: 2;
+    width: 100% !important;
+    padding: 25px !important;
+    order: 2 !important;
+    display: block !important;
   }
 
   .option-image-container,
   .option-card.active .option-image-container {
-    position: relative !important;
-    display: flex;
+    display: flex !important;
     width: 100% !important;
-    flex: 0 0 auto !important;
-    /* Fixed height container */
-    height: 350px;
-    /* Increased further for better mobile visibility */
-    border-radius: 0 !important;
-    order: 1;
-    left: auto !important;
-    top: auto !important;
-    bottom: auto !important;
+    height: 250px !important;
+    border-radius: 20px 20px 0 0 !important;
+    order: 1 !important;
+    background-color: #fcfcfc !important;
+    position: relative !important;
   }
 
   .option-image,
   .option-card.active .option-image {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    /* Ensure full image is visible without cutting */
-    object-position: center;
-    padding: 10px;
-    /* Add slight padding for breathing room if needed, matching desktop vibe */
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: contain !important;
+    padding: 20px !important;
   }
 
   .custom-options-header {
-    margin-bottom: 30px;
-    padding: 0px 20px;
+    margin-bottom: 40px !important;
+    padding: 0 !important;
+    text-align: center !important;
+  }
+
+  .custom-options-header .head-text {
+    font-size: 28px !important;
+    line-height: 1.2 !important;
+    white-space: normal !important;
   }
 
   .options-pagination {
-    display: none;
+    display: none !important;
   }
 }

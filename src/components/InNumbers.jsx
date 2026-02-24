@@ -3,10 +3,9 @@ import "../css/InNumbers.css";
 import AnimatedContent from "./AnimatedContent";
 import { FaChartBar } from "react-icons/fa";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Pagination, Navigation } from "swiper/modules";
+import { Autoplay, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
-import "swiper/css/navigation";
 import "swiper/css/autoplay";
 
 const topStats = [
@@ -43,11 +42,10 @@ const InNumbers = () => {
           className="numbers-carousel-wrapper"
         >
           <Swiper
-            modules={[Autoplay, Pagination, Navigation]}
+            modules={[Autoplay, Pagination]}
             spaceBetween={30}
             slidesPerView={1}
             loop={true}
-            navigation={true}
             autoplay={{
               delay: 2500,
               disableOnInteraction: false,
