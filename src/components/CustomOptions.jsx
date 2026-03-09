@@ -1,9 +1,9 @@
 import React, { useState, useEffect, useRef } from "react";
 import "../css/CustomOptions.css";
 import { AiFillAppstore } from "react-icons/ai";
-import img1 from "../assets/home/Custom-Options/Tag & Track.png";
-import img2 from "../assets/home/Custom-Options/Design Automated.png";
-import img3 from "../assets/home/Custom-Options/Simplify.png";
+import img1 from "../assets/home/Custom-Options/DMSS-Visualization.jpeg";
+import img2 from "../assets/home/Custom-Options/Design Automated.jpeg";
+import img3 from "../assets/home/Custom-Options/Correction-Engine.jpeg";
 import bgImage from "../assets/home/Custom-Options/bg.png";
 
 const CustomOptions = () => {

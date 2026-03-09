@@ -16,75 +16,51 @@ const OurSolutions = ({ id }) => {
   const cardsRef = useRef([]);
 
   useEffect(() => {
-    const mm = gsap.matchMedia();
+    const ctx = gsap.context(() => {
+      const mm = gsap.matchMedia();
 
-    mm.add(
-      "(min-width: 769px)",
-      () => {
-        const cards = cardsRef.current;
-        if (!cards[0] || !cards[1] || !cards[2]) return;
+      mm.add("(min-width: 769px)", () => {
+        const cards = cardsRef.current.filter(Boolean);
+        if (cards.length === 0) return;
 
         cards.forEach((card, index) => {
           const isLast = index === cards.length - 1;
 
-          const topOffsets = ["100px", "130px", "100px"];
-          const currentOffset = topOffsets[index] || "100px";
-
+          // Pinning logic
           ScrollTrigger.create({
             trigger: card,
-            start: `top ${currentOffset}`,
+            start: "top 100px",
             endTrigger: containerRef.current,
             end: "bottom bottom",
             pin: true,
             pinSpacing: false,
             anticipatePin: 1,
             invalidateOnRefresh: true,
-            onEnter: () => gsap.set(card, { zIndex: index + 1 }),
-            onLeaveBack: () => gsap.set(card, { zIndex: index + 1 }),
           });
 
-          const scaleTl = gsap.timeline({
-            scrollTrigger: {
-              trigger: card,
-              start: "top 80%",
-              endTrigger: containerRef.current,
-              end: "bottom bottom",
-              scrub: 0.5,
-            },
-          });
-
-          scaleTl.to(card, { scale: 0.98, ease: "none", duration: 1 });
-
+          // Scale animation as cards stack
           if (!isLast) {
-            scaleTl.to(card, { scale: 0.98, duration: 1 });
-            scaleTl.to(card, { scale: 0.94, ease: "none", duration: 1 });
-
-            if (index === 0 && cards[2]) {
-              scaleTl.to(card, { scale: 0.94, duration: 1 });
-              scaleTl.to(card, { scale: 0.9, ease: "none", duration: 1 });
-            }
+            gsap.to(card, {
+              scale: 0.9,
+              scrollTrigger: {
+                trigger: cards[index + 1],
+                start: "top 80%",
+                end: "top 20%",
+                scrub: true,
+              },
+            });
           }
-
-          scaleTl.to(card, {
-            scale: isLast ? 0.98 : index === 0 ? 0.9 : 0.94,
-            duration: 2,
-            ease: "none",
-          });
         });
-      },
-      containerRef,
-    );
+      });
+    }, containerRef);
 
     const refreshTimer = setTimeout(() => {
       ScrollTrigger.refresh();
     }, 500);
 
-    window.addEventListener("load", ScrollTrigger.refresh);
-
     return () => {
-      mm.revert();
+      ctx.revert();
       clearTimeout(refreshTimer);
-      window.removeEventListener("load", ScrollTrigger.refresh);
     };
   }, []);
 

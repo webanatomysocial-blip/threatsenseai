@@ -2,57 +2,51 @@
 
 .our-solutions-container {
   padding: 80px 130px;
-  padding-bottom: 550px;
-  /* Increased padding to allow last card to stay pinned longer */
+  padding-bottom: 200px; /* Reduced as pinning logic is more vertical now */
   background-color: var(--progress-bg);
   display: flex;
   flex-direction: column;
   align-items: center;
   position: relative;
+  overflow: clip; /* Prevent horizontal scroll from scaling */
 }
 
 .solutions-header {
   text-align: center;
   margin-bottom: 80px;
+  position: relative;
+  z-index: 10; /* Keep header above pinned cards */
 }
 
 .cards-wrapper {
   width: 100%;
-  /* max-width: 1200px; */
   position: relative;
-  padding-bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .solution-card-container {
-  margin-bottom: 80vh;
-  /* Reduced from 120vh for faster travel */
-  /* Increased scroll space between cards for a smoother, longer transition */
+  margin-bottom: 150px; /* Space between cards */
   height: 80vh;
-  /* Set a consistent height for stacking */
-  min-height: 500px;
+  min-height: 600px;
   width: 100%;
-  /* max-width: 1100px; */
   display: flex;
   justify-content: center;
   align-items: center;
-  transform-origin: top center;
   position: relative;
   will-change: transform;
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
 }
 
-/* Base Z-indices */
+/* Dynamic Z-indices */
 .solution-card-container:nth-child(1) {
-  z-index: 1;
+  z-index: 10;
 }
-
 .solution-card-container:nth-child(2) {
-  z-index: 2;
+  z-index: 11;
 }
-
 .solution-card-container:nth-child(3) {
-  z-index: 3;
+  z-index: 12;
 }
 
 .solution-card-container:last-child {
