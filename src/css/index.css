@@ -250,7 +250,7 @@ h6 {
 }
 
 .red-button {
-  background-color: var(--red-color);
+  background-color: var(--blue-color);
   color: #fff;
   padding: 12px 24px;
   border-radius: 12px;
@@ -265,7 +265,7 @@ h6 {
 }
 
 .red-button:hover {
-  background-color: #cc4300; /* Darker shade of orange-red */
+  background-color: #300096; /* Darker shade of orange-red */
 }
 
 .read-more-link {

@@ -2,7 +2,7 @@
   width: 100%;
   position: relative;
   padding: 100px 130px;
-  background-color: #FDFDFD;
+  background-color: #fdfdfd;
   display: flex;
   flex-direction: column;
   gap: 150px;
@@ -94,7 +94,7 @@
 }
 
 .right-res-container {
-  flex: 1.2;
+  flex: 1.5;
   /* Slightly wider images look better in this layout */
   display: flex;
   align-items: center;
@@ -114,7 +114,6 @@
   .mcaat-res-container {
     padding: 0 60px 100px 60px;
   }
-
 }
 
 @media (max-width: 768px) {

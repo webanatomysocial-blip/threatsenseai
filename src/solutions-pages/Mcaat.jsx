@@ -9,27 +9,24 @@ import img from "../assets/home/Custom-Options/2.png";
 import img1 from "../assets/home/tab-section/1.jpg";
 import img2 from "../assets/home/tab-section/2.jpg";
 import img3 from "../assets/home/tab-section/3.jpg";
-import img4 from "../assets/home/tab-section/use cases.png";
+import img4 from "../assets/solutions/mcaat/results/cta.png";
 import CapabilitiesSection from "../components/CapabilitiesSection";
 import UseCases from "../Solutions-components/UseCases";
 import ResultsComp from "../Solutions-components/ResultsComp";
 import bgImage from "../assets/home/Our-Solutions/bg1.png";
-import mcaat1 from "../assets/solutions/mcaat/detect-log.png";
-import mcaat2 from "../assets/solutions/mcaat/2.png";
-import mcaat3 from "../assets/solutions/mcaat/3.png";
-import mcaat4 from "../assets/solutions/mcaat/4.png";
-import mcaat5 from "../assets/solutions/mcaat/5.jpg";
-import mcaat6 from "../assets/solutions/mcaat/6.png";
-import mcaat7 from "../assets/solutions/mcaat/7.png";
-import mcaat8 from "../assets/solutions/mcaat/8.png";
-import mcaat9 from "../assets/solutions/mcaat/9.jpg";
-import mcaat10 from "../assets/solutions/mcaat/10.jpg";
-import mcaat11 from "../assets/solutions/mcaat/11.png";
-import mcaat12 from "../assets/solutions/mcaat/12.png";
-import mcaat14 from "../assets/solutions/mcaat/14.png";
-import mcaat15 from "../assets/solutions/mcaat/15.png";
-import mcaat16 from "../assets/solutions/mcaat/16.png";
-import mcaat17 from "../assets/solutions/mcaat/17.png";
+import mcaat1 from "../assets/solutions/mcaat/car/1.png";
+import mcaat2 from "../assets/solutions/mcaat/car/2.png";
+import mcaat3 from "../assets/solutions/mcaat/car/3.png";
+import mcaat4 from "../assets/solutions/mcaat/car/4.png";
+import mcaat5 from "../assets/solutions/mcaat/car/5.png";
+import mcaat6 from "../assets/solutions/mcaat/car/6.png";
+import mcaat7 from "../assets/solutions/mcaat/car/7.png";
+import mcaat8 from "../assets/solutions/mcaat/car/8.png";
+import mcaat9 from "../assets/solutions/mcaat/car/9.png";
+import mcaat14 from "../assets/solutions/mcaat/Compliance/2.png";
+import mcaat15 from "../assets/solutions/mcaat/Compliance/3.png";
+import mcaat16 from "../assets/solutions/mcaat/Compliance/4.png";
+import mcaat17 from "../assets/solutions/mcaat/Compliance/5.png";
 
 import videomcaat1 from "../assets/solutions/mcaat/Copy-audit.mp4";
 
@@ -113,31 +110,31 @@ export default function Mcaat() {
         "Audit logging can be manually disabled—intentionally or accidentally. MCAAT continuously checks logging status and automatically re-enables SM19 logs if they are turned off.",
     },
     {
-      img: mcaat6,
+      img: mcaat5,
       title: "Integrated Incident Logging (ITSM)",
       description:
         "Audit violations often remain undocumented or manually tracked. MCAAT automatically creates ITSM incidents, ensuring every compliance breach is logged, tracked, and resolved.",
     },
     {
-      img: mcaat7,
+      img: mcaat6,
       title: "Critical Table Change Monitoring",
       description:
         "Standard tools focus on application changes only. MCAAT monitors critical tables at both SAP application and database layers, ensuring no change goes unrecorded.",
     },
     {
-      img: mcaat8,
+      img: mcaat7,
       title: "Protection of Audit Evidence",
       description:
         "Logs without protection are not legally reliable. MCAAT safeguards audit evidence from deletion or manipulation, preserving integrity for statutory and forensic audits.",
     },
     {
-      img: mcaat11,
+      img: mcaat8,
       title: "Protection of CDHDR and CDPOS Tables",
       description:
         "Change document tables are critical for audit reconstruction. MCAAT explicitly protects CDHDR and CDPOS tables, ensuring SAP change history remains intact and reliable.",
     },
     {
-      img: mcaat12,
+      img: mcaat9,
       title: "Auditor-Friendly Dashboards",
       description:
         "Raw logs are not audit-ready. MCAAT provides structured, auditor-friendly dashboards and reports, reducing audit preparation effort and risk of interpretation errors.",
@@ -254,7 +251,10 @@ export default function Mcaat() {
             critical activities cannot go untracked, disabled, or altered
           </p>
           <div className="banner-buttons">
-            <a href="https://tidycal.com/threatsenseai/mca-audit-trail-rule-11g-demo" className="red-button">
+            <a
+              href="https://tidycal.com/threatsenseai/mca-audit-trail-rule-11g-demo"
+              className="red-button"
+            >
               Request MCAAT Demo
             </a>
           </div>
@@ -264,7 +264,11 @@ export default function Mcaat() {
       <SolutionCards
         label="Automated Controls Delivered by MCAAT"
         title="Compliance that enforces itself"
-        description={isMobile ? "MCAAT delivers automated compliance controls that continuously protect audit trails,enforce logging policies and respond instantly to violations, ensuring MCA Rule 11(g) requirements are met at all times." : "MCAAT delivers automated compliance controls that continuously protect audit trails,enforce logging policies \n and respond instantly to violations, ensuring MCA Rule 11(g) requirements are met at all times."}
+        description={
+          isMobile
+            ? "MCAAT delivers automated compliance controls that continuously protect audit trails,enforce logging policies and respond instantly to violations, ensuring MCA Rule 11(g) requirements are met at all times."
+            : "MCAAT delivers automated compliance controls that continuously protect audit trails,enforce logging policies \n and respond instantly to violations, ensuring MCA Rule 11(g) requirements are met at all times."
+        }
         items={Cardscontent}
         marginTop="0px"
       />

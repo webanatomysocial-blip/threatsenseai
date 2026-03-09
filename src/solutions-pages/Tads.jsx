@@ -33,13 +33,10 @@ import img2 from "../assets/home/tab-section/2.jpg";
 import img3 from "../assets/home/tab-section/3.jpg";
 import ThreatRadiation from "../Solutions-components/ThreatRadiation";
 import CoreTechs from "../Solutions-components/CoreTechs";
-import video1 from "../assets/solutions/tads/1.mp4";
-import video2 from "../assets/solutions/tads/2.mp4";
-import video3 from "../assets/solutions/tads/3.mp4";
-import dmssimg from "../assets/solutions/tads/TADS Sec 1.3.png";
-import tadsimg from "../assets/solutions/tads/TADS Sec 1.1.png";
-import dotimg from "../assets/solutions/tads/TADS Sec 1.2.png";
-import usecaseimg from "../assets/solutions/tads/TADS Use Cases.png";
+import dmssimg from "../assets/solutions/tads/tads-in/3.png";
+import tadsimg from "../assets/solutions/tads/tads-in/1.png";
+import dotimg from "../assets/solutions/tads/tads-in/2.png";
+import usecaseimg from "../assets/solutions/tads/tads-in/cta.png";
 export default function Tads() {
   const content = [
     {
@@ -164,13 +161,13 @@ export default function Tads() {
     "Real-time prevention of insider data leaks across SAP, endpoints, and browsers",
     " Immediate visibility into user actions, policy violations, and risky behavior",
     " Centralized control of devices, applications, and Gen-AI usage",
-    "Faster compliance, audits, and investigations with unified logging"
+    "Faster compliance, audits, and investigations with unified logging",
   ];
 
   const technologies = [
     {
       id: "01",
-      title: "TADS Protection",
+      title: "TADS Protect",
       subtitle:
         "Monitors and controls how sensitive data moves out of your enterprise, with a primary focus on SAP ERP, the most business-critical system.",
       description:
@@ -191,7 +188,8 @@ export default function Tads() {
     {
       id: "03",
       title: "DMSS – Data Masking & Scrambling Solution",
-      subtitle: "Secure Real-Time Data Protection and Compliance for SAP Environments",
+      subtitle:
+        "Secure Real-Time Data Protection and Compliance for SAP Environments",
       description:
         "Dynamically masks and scrambles sensitive SAP data in real time to enforce data minimization aivilend least-prge access principles. With DMSS, enterprises can ensure personal, financial, and regulated data is exposed only to authorized users.\n\nIt reduces risk of data misuse in production and non-production environments while maintaining business continuity.\n\nSupports regulatory compliance requirements under GDPR, DPDP, SOX, and similar data protection frameworks.",
       image: dmssimg,

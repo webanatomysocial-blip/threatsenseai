@@ -6,10 +6,10 @@ import img1 from "../assets/home/tab-section/1.jpg";
 import img2 from "../assets/home/tab-section/2.jpg";
 import img3 from "../assets/home/tab-section/3.jpg";
 
-import soar from "../assets/home/Custom-Options/SOAR Focus.png";
-import detect from "../assets/home/Custom-Options/Detection Focus.png";
-import govern from "../assets/home/Custom-Options/Governance focus.png";
-import platform from "../assets/home/Custom-Options/Focus Response.png";
+import soar from "../assets/solutions/siem/Security/1.png";
+import detect from "../assets/solutions/siem/Security/2.png";
+import govern from "../assets/solutions/siem/Security/3.png";
+import platform from "../assets/solutions/siem/Security/4.png";
 
 import real from "../assets/solutions/siem/1.png";
 import real1 from "../assets/solutions/siem/2.png";
