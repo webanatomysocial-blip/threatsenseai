@@ -82,7 +82,7 @@ export default function SiemSoar() {
       title: "SOAR Focus",
       subtitle: "Orchestrated Incident Response",
       description:
-        "When a security event is detected, response should be immediate and consistent. SIEM & SOAR for SAP enables automated response workflows that guide incidents through investigation, containment, and remediation, without relying on manual intervention.",
+        "When a security event is detected, response should be immediate and consistent. ThreatSense ITDAR for SAP enables automated response workflows that guide incidents through investigation, containment, and remediation, without relying on manual intervention.",
       img: soar,
       readMoreContent: (
         <>
@@ -122,7 +122,7 @@ export default function SiemSoar() {
       title: " Governance Focus",
       subtitle: "Built-in Audit Readiness",
       description:
-        "Security monitoring should support audits, not complicate them. SIEM & SOAR for SAP maintains centralized, tamper-resistant records of security events and response actions, simplifying compliance and investigations.",
+        "Security monitoring should support audits, not complicate them. ThreatSense ITDAR for SAP maintains centralized, tamper-resistant records of security events and response actions, simplifying compliance and investigations.",
       img: govern,
       readMoreContent: (
         <>
@@ -246,7 +246,7 @@ export default function SiemSoar() {
       <section className="siem-soar-banner">
         <div className="siem-soar-banner-content">
           <h1 ref={headerRef} className="big-text-head">
-            SIEM & SOAR for SAP
+            ThreatSense ITDAR for SAP
             <br />{" "}
             {splitLetters("Intelligent Threat Detection & Automated Response")}
           </h1>
@@ -260,9 +260,9 @@ export default function SiemSoar() {
       </section>
 
       <SolutionCarousel
-        label="Why SIEM & SOAR for SAP?"
+        label="Why ThreatSense ITDAR for SAP?"
         title="We Don’t Just Log, We Detect, Correlate and Respond"
-        description="Basic logging only records events. SIEM & SOAR for SAP transforms those events into actionable intelligence with real-time detection and automated response."
+        description="Basic logging only records events. ThreatSense ITDAR for SAP transforms those events into actionable intelligence with real-time detection and automated response."
         data={content}
       />
       <SolutionCards
@@ -278,7 +278,7 @@ export default function SiemSoar() {
         header={{
           icon: <FaGlobe size={16} />,
           label: "We Don’t Just Log, We Detect, Correlate and Respond",
-          title: "Why SIEM & SOAR for SAP?",
+          title: "Why ThreatSense ITDAR for SAP?",
         }}
       />
 
@@ -286,7 +286,7 @@ export default function SiemSoar() {
         label="Use Cases"
         title={
           <>
-            Where ThreatSense <br /> SIEM & SOAR Delivers <br /> Immediate Value
+            Where ThreatSense <br /> ThreatSense ITDAR Delivers <br /> Immediate Value
           </>
         }
         list={useCasesList}

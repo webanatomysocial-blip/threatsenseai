@@ -50,13 +50,13 @@ const Header = ({ onSearch }) => {
             </Link>
             <div className="dropdown-menu">
               <Link to="/mcaat" className="dropdown-item">
-                MCAAT
+                ThreatSenseAI ATE
               </Link>
               <Link to="/tads" className="dropdown-item">
-                TADS
+                ThreatSenseAI ADS
               </Link>
               <Link to="/siem-soar" className="dropdown-item">
-                SIEM & SOAR
+                ThreatSense ITDAR
               </Link>
             </div>
           </div>
@@ -130,21 +130,21 @@ const Header = ({ onSearch }) => {
                   className="mobile-dropdown-link"
                   onClick={toggleMenu}
                 >
-                  MCAAT
+                  ThreatSenseAI ATE
                 </Link>
                 <Link
                   to="/tads"
                   className="mobile-dropdown-link"
                   onClick={toggleMenu}
                 >
-                  TADS
+                  ThreatSenseAI ADS
                 </Link>
                 <Link
                   to="/siem-soar"
                   className="mobile-dropdown-link"
                   onClick={toggleMenu}
                 >
-                  SIEM & SOAR
+                  ThreatSense ITDAR
                 </Link>
               </div>
             </div>

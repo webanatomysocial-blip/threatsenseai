@@ -51,7 +51,7 @@ export default function Mcaat() {
       icon: <FaSync />,
       title: "Always-On\n Audit Readiness",
       description:
-        "Eliminates reliance on manual checks by ensuring audit trails are always active. Even if logs are disabled during maintenance or misuse, MCAAT restores continuity automatically, removing one of the most common causes of audit non-compliance.",
+        "Eliminates reliance on manual checks by ensuring audit trails are always active. Even if logs are disabled during maintenance or misuse, ThreatSenseAI ATE restores continuity automatically, removing one of the most common causes of audit non-compliance.",
     },
     {
       icon: <FaHistory />,
@@ -63,7 +63,7 @@ export default function Mcaat() {
       icon: <FaUserShield />,
       title: "Protection from Audit \nTrail Tampering",
       description:
-        "Shifts audit integrity from trust-based to control-based. By preventing and detecting tampering attempts in real time, MCAAT ensures audit data remains legally defensible and reliable for regulators, auditors, and internal investigations.",
+        "Shifts audit integrity from trust-based to control-based. By preventing and detecting tampering attempts in real time, ThreatSenseAI ATE ensures audit data remains legally defensible and reliable for regulators, auditors, and internal investigations.",
     },
     {
       icon: <FaChartBar />,
@@ -81,7 +81,7 @@ export default function Mcaat() {
       icon: <FaCloud />,
       title: "Solution for MS SQL,\n SAP HANA & RISE",
       description:
-        "Delivers consistent audit controls across on-premise, hybrid, and cloud SAP landscapes. MCAAT adapts to modern SAP architectures without requiring system redesign, ensuring compliance continuity during migrations and transformations. ",
+        "Delivers consistent audit controls across on-premise, hybrid, and cloud SAP landscapes. ThreatSenseAI ATE adapts to modern SAP architectures without requiring system redesign, ensuring compliance continuity during migrations and transformations. ",
     },
   ];
   const content = [
@@ -89,55 +89,55 @@ export default function Mcaat() {
       img: mcaat1,
       title: "Detect Log Tampering",
       description:
-        "Standard logs can be altered or deleted without detection. MCAAT actively monitors audit trail integrity and immediately detects any attempt to tamper with logs, ensuring evidence remains trustworthy.",
+        "Standard logs can be altered or deleted without detection. ThreatSenseAI ATE actively monitors audit trail integrity and immediately detects any attempt to tamper with logs, ensuring evidence remains trustworthy.",
     },
     {
       img: mcaat2,
       title: "DDL/DML Growth (Database Footprint) Optimization",
       description:
-        "Enabling DDL/DML logs increases database footprint and costs. With MCAAT, DDL/DML logging isn’t required. It captures critical DB activities automatically and maintains tamper-proof logs for compliance.",
+        "Enabling DDL/DML logs increases database footprint and costs. With ThreatSenseAI ATE, DDL/DML logging isn’t required. It captures critical DB activities automatically and maintains tamper-proof logs for compliance.",
     },
     {
       img: mcaat3,
       title: "Monitor Critical Database Logins",
       description:
-        "Database-level changes bypasses application logging. MCAAT tracks privileged and critical DB logins in real time, closing one of the most common audit blind spots.",
+        "Database-level changes bypasses application logging. ThreatSenseAI ATE tracks privileged and critical DB logins in real time, closing one of the most common audit blind spots.",
     },
     {
       img: mcaat4,
       title: "Automatic Reactivation of SM19 Logging",
       description:
-        "Audit logging can be manually disabled—intentionally or accidentally. MCAAT continuously checks logging status and automatically re-enables SM19 logs if they are turned off.",
+        "Audit logging can be manually disabled—intentionally or accidentally. ThreatSenseAI ATE continuously checks logging status and automatically re-enables SM19 logs if they are turned off.",
     },
     {
       img: mcaat5,
       title: "Integrated Incident Logging (ITSM)",
       description:
-        "Audit violations often remain undocumented or manually tracked. MCAAT automatically creates ITSM incidents, ensuring every compliance breach is logged, tracked, and resolved.",
+        "Audit violations often remain undocumented or manually tracked. ThreatSenseAI ATE automatically creates ITSM incidents, ensuring every compliance breach is logged, tracked, and resolved.",
     },
     {
       img: mcaat6,
       title: "Critical Table Change Monitoring",
       description:
-        "Standard tools focus on application changes only. MCAAT monitors critical tables at both SAP application and database layers, ensuring no change goes unrecorded.",
+        "Standard tools focus on application changes only. ThreatSenseAI ATE monitors critical tables at both SAP application and database layers, ensuring no change goes unrecorded.",
     },
     {
       img: mcaat7,
       title: "Protection of Audit Evidence",
       description:
-        "Logs without protection are not legally reliable. MCAAT safeguards audit evidence from deletion or manipulation, preserving integrity for statutory and forensic audits.",
+        "Logs without protection are not legally reliable. ThreatSenseAI ATE safeguards audit evidence from deletion or manipulation, preserving integrity for statutory and forensic audits.",
     },
     {
       img: mcaat8,
       title: "Protection of CDHDR and CDPOS Tables",
       description:
-        "Change document tables are critical for audit reconstruction. MCAAT explicitly protects CDHDR and CDPOS tables, ensuring SAP change history remains intact and reliable.",
+        "Change document tables are critical for audit reconstruction. ThreatSenseAI ATE explicitly protects CDHDR and CDPOS tables, ensuring SAP change history remains intact and reliable.",
     },
     {
       img: mcaat9,
       title: "Auditor-Friendly Dashboards",
       description:
-        "Raw logs are not audit-ready. MCAAT provides structured, auditor-friendly dashboards and reports, reducing audit preparation effort and risk of interpretation errors.",
+        "Raw logs are not audit-ready. ThreatSenseAI ATE provides structured, auditor-friendly dashboards and reports, reducing audit preparation effort and risk of interpretation errors.",
     },
   ];
 
@@ -145,35 +145,35 @@ export default function Mcaat() {
     {
       title: "Automated Audit Policy Enforcement",
       description:
-        "MCAAT continuously monitors audit policies and logging configurations across SAP application and database layers. If audit logging is disabled, intentionally or accidentally, MCAAT automatically restores it, ensuring uninterrupted audit trail availability and compliance with MCA Rule 11(g)..",
+        "ThreatSenseAI ATE continuously monitors audit policies and logging configurations across SAP application and database layers. If audit logging is disabled, intentionally or accidentally, ThreatSenseAI ATE automatically restores it, ensuring uninterrupted audit trail availability and compliance with MCA Rule 11(g)..",
       img: null,
       video: videomcaat1,
     },
     {
       title: "Automated Detection of Audit Trail Tampering",
       description:
-        "Any attempt to delete, alter, or manipulate audit logs is detected in real time. MCAAT immediately records the event, preserves evidence, and triggers alerts or enforcement actions to maintain audit trail integrity and evidentiary reliability.",
+        "Any attempt to delete, alter, or manipulate audit logs is detected in real time. ThreatSenseAI ATE immediately records the event, preserves evidence, and triggers alerts or enforcement actions to maintain audit trail integrity and evidentiary reliability.",
       img: mcaat14,
       video: null,
     },
     {
       title: "Automated Protection of Audit Evidence",
       description:
-        "MCAAT safeguards audit logs, change records, and supporting evidence from unauthorized access or modification. This ensures audit data remains complete, accurate, and defensible during internal reviews, statutory audits, and forensic investigations.",
+        "ThreatSenseAI ATE safeguards audit logs, change records, and supporting evidence from unauthorized access or modification. This ensures audit data remains complete, accurate, and defensible during internal reviews, statutory audits, and forensic investigations.",
       img: mcaat15,
       video: null,
     },
     {
       title: "Automated Monitoring of High-Risk System Activities",
       description:
-        "Sensitive actions such as DEBUG mode usage, audit policy deletion, or critical configuration changes are continuously monitored. MCAAT detects these high-risk activities instantly, preventing silent compliance breaches and reducing reliance on post-facto audit reviews.",
+        "Sensitive actions such as DEBUG mode usage, audit policy deletion, or critical configuration changes are continuously monitored. ThreatSenseAI ATE detects these high-risk activities instantly, preventing silent compliance breaches and reducing reliance on post-facto audit reviews.",
       img: mcaat16,
       video: null,
     },
     {
       title: "Automated Audit-Ready Reporting",
       description:
-        "Audit dashboards and reports are generated automatically with structured, evidence-backed data. MCAAT reduces audit preparation effort by providing immediate access to traceable, regulator-ready information without manual compilation or reconciliation.",
+        "Audit dashboards and reports are generated automatically with structured, evidence-backed data. ThreatSenseAI ATE reduces audit preparation effort by providing immediate access to traceable, regulator-ready information without manual compilation or reconciliation.",
       img: mcaat17,
       video: null,
     },
@@ -240,13 +240,13 @@ export default function Mcaat() {
       <section className="mcaat-banner">
         <div className="mcaat-banner-content">
           <h1 ref={headerRef} className="big-text-head">
-            MCAAT —
+            ThreatSenseAI ATE —
             {isMobile
               ? splitLetters("  MCA Audit \n Trail Enforcement \n for SAP")
               : splitLetters("  MCA Audit Trail \n Enforcement for SAP")}
           </h1>
           <p className="sub-para-text">
-            MCAAT is a purpose-built solution that monitors, secures, and
+            ThreatSenseAI ATE is a purpose-built solution that monitors, secures, and
             enforces audit trail integrity across SAP databases, ensuring
             critical activities cannot go untracked, disabled, or altered
           </p>
@@ -255,19 +255,19 @@ export default function Mcaat() {
               href="https://tidycal.com/threatsenseai/mca-audit-trail-rule-11g-demo"
               className="red-button"
             >
-              Request MCAAT Demo
+              Request ThreatSenseAI ATE Demo
             </a>
           </div>
         </div>
       </section>
       <SolutionCarousel data={content} />
       <SolutionCards
-        label="Automated Controls Delivered by MCAAT"
+        label="Automated Controls Delivered by ThreatSenseAI ATE"
         title="Compliance that enforces itself"
         description={
           isMobile
-            ? "MCAAT delivers automated compliance controls that continuously protect audit trails,enforce logging policies and respond instantly to violations, ensuring MCA Rule 11(g) requirements are met at all times."
-            : "MCAAT delivers automated compliance controls that continuously protect audit trails,enforce logging policies \n and respond instantly to violations, ensuring MCA Rule 11(g) requirements are met at all times."
+            ? "ThreatSenseAI ATE delivers automated compliance controls that continuously protect audit trails,enforce logging policies and respond instantly to violations, ensuring MCA Rule 11(g) requirements are met at all times."
+            : "ThreatSenseAI ATE delivers automated compliance controls that continuously protect audit trails,enforce logging policies \n and respond instantly to violations, ensuring MCA Rule 11(g) requirements are met at all times."
         }
         items={Cardscontent}
         marginTop="0px"
@@ -294,7 +294,7 @@ export default function Mcaat() {
       <Cta
         title="Always-On Audit Trail 
         Compliance for MCA Rule 11(g)"
-        description="MCAAT continuously enforces, protects, and validates audit trails across SAP systems - automatically detecting tampering,
+        description="ThreatSenseAI ATE continuously enforces, protects, and validates audit trails across SAP systems - automatically detecting tampering,
         reinstating disabled controls, and preserving audit-ready evidence without manual intervention"
         backgroundImage={bg}
         buttonText="Get Started"

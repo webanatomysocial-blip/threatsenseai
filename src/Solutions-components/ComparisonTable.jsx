@@ -52,7 +52,7 @@ export default function ComparisonTable() {
         <div className="sub-para-text security-label">
           <FaGlobe size={16} style={{ marginRight: "4px" }} /> Comparison
         </div>
-        <h2 className="head-text">TADS vs Traditional DLP</h2>
+        <h2 className="head-text">ThreatSenseAI ADS vs Traditional DLP</h2>
       </div>
 
       <div className="comparison-table-container">
@@ -69,7 +69,7 @@ export default function ComparisonTable() {
             </p>
           </div>
           <div className="comp-cell col-tads header-center">
-            <span className="brand-name">TADS</span>
+            <span className="brand-name">ThreatSenseAI ADS</span>
            
           </div>
           <div className="comp-cell col-legacy header-center">

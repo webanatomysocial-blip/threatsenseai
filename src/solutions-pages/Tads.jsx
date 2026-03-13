@@ -167,11 +167,11 @@ export default function Tads() {
   const technologies = [
     {
       id: "01",
-      title: "TADS Protect",
+      title: "ThreatSenseAI ADS Protect",
       subtitle:
         "Monitors and controls how sensitive data moves out of your enterprise, with a primary focus on SAP ERP, the most business-critical system.",
       description:
-        "TADS prevents unauthorized exports, excessive data access, and insider misuse through real-time, policy-driven enforcement across SAP environments.",
+        "ThreatSenseAI ADS prevents unauthorized exports, excessive data access, and insider misuse through real-time, policy-driven enforcement across SAP environments.",
       image: tadsimg,
       video: null,
     },
@@ -250,7 +250,7 @@ export default function Tads() {
       <section className="tads-banner">
         <div className="tads-banner-content">
           <h1 ref={headerRef} className="big-text-head">
-            TADS —
+            ThreatSenseAI ADS —
             {isMobile
               ? splitLetters("  ThreatSense \n AI Data Security")
               : splitLetters("  ThreatSense AI Data Security")}
@@ -280,7 +280,8 @@ export default function Tads() {
         label="Use Cases"
         title={
           <>
-            Where ThreatSense <br /> TADS Delivers <br /> Immediate Value
+            Where ThreatSense <br /> ThreatSenseAI ADS Delivers <br /> Immediate
+            Value
           </>
         }
         list={useCasesList}
@@ -290,7 +291,7 @@ export default function Tads() {
         header={{
           icon: <FaGlobe size={16} />,
           label: "Benefits",
-          title: "Who TADS is Built For",
+          title: "Who ThreatSenseAI ADS is Built For",
         }}
         border="none"
         borderRadius="20px"
@@ -329,7 +330,7 @@ export default function Tads() {
           </div>
 
           <div className="block-column">
-            <h3>How TADS Blocks It</h3>
+            <h3>How ThreatSenseAI ADS Blocks It</h3>
             <div className="pl-list">
               {[
                 "Blocks copy, paste, and exports of sensitive data",

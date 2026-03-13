@@ -39,7 +39,7 @@ const CustomerFeedback = () => {
     },
     {
       id: 4,
-      text: "MCA Rule 11(g) compliance was a constant risk; MCAAT delivered SAP audit visibility and confidence, making audits stress-free and reliable.",
+      text: "MCA Rule 11(g) compliance was a constant risk; ThreatSenseAI ATE delivered SAP audit visibility and confidence, making audits stress-free and reliable.",
       name: "Head of Internal Audit",
       role: "Large Manufacturing Enterprise",
       icon: <FiUserCheck />,
@@ -49,14 +49,14 @@ const CustomerFeedback = () => {
   const testimonialsBottom = [
     {
       id: 5,
-      text: "Insider data leakage worried us, especially in SAP. TADS enforced real-time endpoint and application controls, stopping unauthorized access before breaches.",
+      text: "Insider data leakage worried us, especially in SAP. ThreatSenseAI ADS enforced real-time endpoint and application controls, stopping unauthorized access before breaches.",
       name: "Chief Information Security Officer",
       role: "Global Services Organization",
       icon: <FiSmile />,
     },
     {
       id: 6,
-      text: "ThreatSense AI’s SIEM and SOAR transformed incident response, cutting alert noise, automating actions, and freeing teams to focus on threats..",
+      text: "ThreatSense AI’s ThreatSense ITDAR transformed incident response, cutting alert noise, automating actions, and freeing teams to focus on threats..",
       name: "SOC Manager",
       role: "Financial Services Enterprise",
       icon: <FiLayers />,

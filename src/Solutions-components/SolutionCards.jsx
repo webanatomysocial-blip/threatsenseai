@@ -82,7 +82,7 @@ export default function SolutionCards({
   description,
   marginTop,
 }) {
-  const defaultLabel = "Why MCAAT?";
+  const defaultLabel = "Why ThreatSenseAI ATE?";
   const defaultTitle = (
     <>
       It goes beyond basic <br /> logging
@@ -93,7 +93,7 @@ export default function SolutionCards({
     {
       title: "Automated Audit Policy Enforcement",
       description:
-        "MCAAT continuously monitors audit policies and logging configurations across SAP application and database layers. If audit logging is disabled, intentionally or accidentally, MCAAT automatically restores it, ensuring uninterrupted audit trail availability and compliance with MCA Rule 11(g)..",
+        "ThreatSenseAI ATE continuously monitors audit policies and logging configurations across SAP application and database layers. If audit logging is disabled, intentionally or accidentally, ThreatSenseAI ATE automatically restores it, ensuring uninterrupted audit trail availability and compliance with MCA Rule 11(g)..",
       link: "#",
       img: bgImage,
       video: null,
@@ -101,7 +101,7 @@ export default function SolutionCards({
     {
       title: "Automated Detection of Audit Trail Tampering",
       description:
-        "Any attempt to delete, alter, or manipulate audit logs is detected in real time. MCAAT immediately records the event, preserves evidence, and triggers alerts or enforcement actions to maintain audit trail integrity and evidentiary reliability.",
+        "Any attempt to delete, alter, or manipulate audit logs is detected in real time. ThreatSenseAI ATE immediately records the event, preserves evidence, and triggers alerts or enforcement actions to maintain audit trail integrity and evidentiary reliability.",
       link: "#",
       img: bgImage,
       video: null,
@@ -109,7 +109,7 @@ export default function SolutionCards({
     {
       title: "Automated Protection of Audit Evidence",
       description:
-        "MCAAT safeguards audit logs, change records, and supporting evidence from unauthorized access or modification. This ensures audit data remains complete, accurate, and defensible during internal reviews, statutory audits, and forensic investigations.",
+        "ThreatSenseAI ATE safeguards audit logs, change records, and supporting evidence from unauthorized access or modification. This ensures audit data remains complete, accurate, and defensible during internal reviews, statutory audits, and forensic investigations.",
       link: "#",
       img: bgImage,
       video: null,
@@ -117,7 +117,7 @@ export default function SolutionCards({
     {
       title: "Automated Monitoring of High-Risk System Activities",
       description:
-        "Sensitive actions such as DEBUG mode usage, audit policy deletion, or critical configuration changes are continuously monitored. MCAAT detects these high-risk activities instantly, preventing silent compliance breaches and reducing reliance on post-facto audit reviews.",
+        "Sensitive actions such as DEBUG mode usage, audit policy deletion, or critical configuration changes are continuously monitored. ThreatSenseAI ATE detects these high-risk activities instantly, preventing silent compliance breaches and reducing reliance on post-facto audit reviews.",
       link: "#",
       img: bgImage,
       video: null,
@@ -125,7 +125,7 @@ export default function SolutionCards({
     {
       title: "Automated Enforcement and Corrective Actions",
       description:
-        "When compliance violations are detected, MCAAT automatically executes predefined actions such as user locking, escalation, or workflow initiation. This ensures policy breaches are not only identified but actively contained and addressed without manual intervention.",
+        "When compliance violations are detected, ThreatSenseAI ATE automatically executes predefined actions such as user locking, escalation, or workflow initiation. This ensures policy breaches are not only identified but actively contained and addressed without manual intervention.",
       link: "#",
       img: bgImage,
       video: null,
@@ -133,7 +133,7 @@ export default function SolutionCards({
     {
       title: "Automated Incident Creation and ITSM Integration",
       description:
-        "Every audit or compliance violation is automatically logged as an incident through API-based integration with enterprise ITSM platforms. MCAAT also supports an optional built-in ITSM module, ensuring consistent tracking, accountability, and resolution of compliance events.",
+        "Every audit or compliance violation is automatically logged as an incident through API-based integration with enterprise ITSM platforms. ThreatSenseAI ATE also supports an optional built-in ITSM module, ensuring consistent tracking, accountability, and resolution of compliance events.",
       link: "#",
       img: bgImage,
       video: null,
@@ -141,7 +141,7 @@ export default function SolutionCards({
     {
       title: "Automated Cross Layer Change Visibility",
       description:
-        "MCAAT tracks changes consistently across SAP application and database layers, eliminating visibility gaps. This ensures all critical table, configuration, and structural changes are captured in a single, unified audit trail aligned with regulatory expectations.",
+        "ThreatSenseAI ATE tracks changes consistently across SAP application and database layers, eliminating visibility gaps. This ensures all critical table, configuration, and structural changes are captured in a single, unified audit trail aligned with regulatory expectations.",
       link: "#",
       img: bgImage,
       video: null,
@@ -149,7 +149,7 @@ export default function SolutionCards({
     {
       title: "Automated Audit-Ready Reporting",
       description:
-        "Audit dashboards and reports are generated automatically with structured, evidence-backed data. MCAAT reduces audit preparation effort by providing immediate access to traceable, regulator-ready information without manual compilation or reconciliation.",
+        "Audit dashboards and reports are generated automatically with structured, evidence-backed data. ThreatSenseAI ATE reduces audit preparation effort by providing immediate access to traceable, regulator-ready information without manual compilation or reconciliation.",
       link: "#",
       img: bgImage,
       video: null,

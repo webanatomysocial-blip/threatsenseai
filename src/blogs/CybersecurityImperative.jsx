@@ -108,7 +108,7 @@ const CybersecurityImperative = ({ dynamicRecentPosts }) => {
 
       <h3>Automated Incident Response</h3>
       <p>
-        Integrate SIEM+SOAR solutions to enable rapid response and automated
+        Integrate ThreatSense ITDAR solutions to enable rapid response and automated
         remediation of security incidents, minimizing damage and reducing
         downtime.
       </p>
@@ -139,7 +139,7 @@ const CybersecurityImperative = ({ dynamicRecentPosts }) => {
 
       <p>
         ThreatSenseAI is revolutionizing cybersecurity by seamlessly integrating
-        advanced SIEM and SOAR capabilities into one powerful solution. Our
+        advanced ThreatSense ITDAR capabilities into one powerful solution. Our
         platform is engineered to provide deep, real-time threat detection and
         automated incident response, empowering enterprises to proactively
         safeguard their digital assets.

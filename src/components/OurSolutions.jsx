@@ -5,9 +5,9 @@ import "../css/OurSolutions.css";
 import { FaLayerGroup } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
-import mcaatGif1 from "../assets/home/Our-Solutions/mcaat.mp4";
-import mcaatGif2 from "../assets/home/Our-Solutions/tads.mp4";
-import mcaatGif3 from "../assets/home/Our-Solutions/siem.mp4";
+import mcaatGif2 from "../assets/videos/Log-files.mp4";
+import mcaatGif1 from "../assets/videos/Checklist.mp4";
+import mcaatGif3 from "../assets/videos/Alert.mp4";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -66,8 +66,8 @@ const OurSolutions = ({ id }) => {
 
   const solutions = [
     {
-      title: "MCAAT",
-      desc: "Compliance is not documentation. It's control. MCAAT ensures audit trails in SAP cannot be disabled, altered, or bypassed.",
+      title: "ThreatSenseAI ATE",
+      desc: "Compliance is not documentation. It's control. ThreatSenseAI ATE ensures audit trails in SAP cannot be disabled, altered, or bypassed.",
       subheading: "Built for Rule 11(g) Enforcement",
       features: [
         "Rule 11(g) compliance made enforceable",
@@ -77,10 +77,10 @@ const OurSolutions = ({ id }) => {
       media: mcaatGif1,
       reverse: false,
       link: "/mcaat",
-      btn: "Explore MCAAT",
+      btn: "Explore ThreatSenseAI ATE",
     },
     {
-      title: "ThreatSense AI Data Security (TADS)",
+      title: "ThreatSenseAI ADS",
       desc: "Prevent Data Leaks Before They Happen. Most data leaks are caused by trusted users.",
       features: [
         "Real-time data access enforcement",
@@ -91,11 +91,11 @@ const OurSolutions = ({ id }) => {
       media: mcaatGif2,
       reverse: true,
       link: "/tads",
-      btn: "Explore TADS",
+      btn: "Explore ThreatSenseAI ADS",
       videoClass: "tads-card-video",
     },
     {
-      title: "SIEM & SOAR",
+      title: "ThreatSense ITDAR",
       desc: "AI-Driven Threat Detection & Response across SAP and non-SAP environments.",
       features: [
         "Continuous monitoring",
@@ -105,7 +105,7 @@ const OurSolutions = ({ id }) => {
       media: mcaatGif3,
       reverse: false,
       link: "/siem-soar",
-      btn: "Explore SIEM & SOAR",
+      btn: "Explore ThreatSense ITDAR",
     },
   ];
 

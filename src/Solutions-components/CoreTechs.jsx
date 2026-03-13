@@ -13,11 +13,11 @@ const CoreTechs = ({ technologies }) => {
   const defaultTechs = [
     {
       id: "01",
-      title: "TADS Protection",
+      title: "ThreatSenseAI ADS Protection",
       subtitle:
         "Monitors and controls how sensitive data moves out of your enterprise, with a primary focus on SAP ERP, the most business-critical system.",
       description:
-        "TADS prevents unauthorized exports, excessive data access, and insider misuse through real-time, policy-driven enforcement across SAP environments.",
+        "ThreatSenseAI ADS prevents unauthorized exports, excessive data access, and insider misuse through real-time, policy-driven enforcement across SAP environments.",
       image: cardImage,
       video: null,
     },

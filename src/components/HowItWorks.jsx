@@ -28,7 +28,7 @@ const HowItWorks = () => {
       icon: <FaBrain />,
       title: "AI-Powered\n Threat Detection & Analysis",
       description:
-        "Our advanced SIEM & SOAR engine analyzes patterns, identifies anomalies, and flags potential threats instantly.",
+        "Our advanced ThreatSense ITDAR engine analyzes patterns, identifies anomalies, and flags potential threats instantly.",
     },
     {
       icon: <FaRegBell />,

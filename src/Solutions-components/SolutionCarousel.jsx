@@ -11,7 +11,7 @@ import img3 from "../assets/home/tab-section/3.jpg";
 import { FaGlobe } from "react-icons/fa";
 
 export default function SolutionCarousel({ label, title, data, paddingTop }) {
-  const defaultLabel = "Why MCAAT?";
+  const defaultLabel = "Why ThreatSenseAI ATE?";
   const defaultTitle = (
     <>
       We Don’t Just Log <br /> We Secure Beyond Basic Logging

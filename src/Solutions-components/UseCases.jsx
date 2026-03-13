@@ -46,7 +46,7 @@ const UseCases = ({ label, title, list, image }) => {
   const displayTitle = title || (
     <>
       Where ThreatSense <br />
-      SIEM & SOAR Delivers <br />
+      ThreatSense ITDAR Delivers <br />
       Immediate Value
     </>
   );
