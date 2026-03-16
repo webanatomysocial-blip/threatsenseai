@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import "../css/CustomOptions.css";
 import { AiFillAppstore } from "react-icons/ai";
+import { IoChevronForward, IoChevronDown } from "react-icons/io5";
 import img1 from "../assets/home/Custom-Options/DMSS-Visualization.jpeg";
 import img2 from "../assets/home/Custom-Options/Design Automated.jpeg";
 import img3 from "../assets/home/Custom-Options/Correction-Engine.jpeg";
@@ -13,20 +14,20 @@ const CustomOptions = () => {
   const options = [
     {
       id: 0,
-      title: "Tag and Track Threat Assets with Precision",
-      desc: "Identify, classify, and monitor critical assets, users, and data contextually.",
+      title: "Tag and Track AI Assets with Clarity",
+      desc: "Define routes, fallbacks, and checks that match your flow.",
       image: img1,
     },
     {
       id: 1,
-      title: "Design Automated Response Runbooks Faster",
+      title: "Compose Orchestration Runbooks Fast",
       desc: "Build customizable SOAR playbooks automating investigation, containment, and remediation.",
       image: img2,
     },
     {
       id: 2,
-      title: "Simplify SAP® Security Operations",
-      desc: "Continuously monitor SAP environments, correlate risks, and act early proactively.",
+      title: "Share Reviews Safely with Guardrails",
+      desc: "Continuously monitor environments, correlate risks, and act early proactively.",
       image: img3,
     },
   ];
@@ -74,62 +75,53 @@ const CustomOptions = () => {
 
   return (
     <div className="custom-options-container">
-      <div className="custom-options-header">
-        <div
-          className="sub-para-text"
-          style={{ display: "flex", alignItems: "center", gap: "5px" }}
-        >
-          <AiFillAppstore /> Custom Options
-        </div>
-        <h2 className="head-text">
-          Build Threat Intelligence <br></br> Around Your Business, Not the Tool
-        </h2>
-      </div>
-
-      <div className="custom-options-wrapper">
-        {options.map((option, index) => (
-          <div
-            key={option.id}
-            className={`option-card ${activeIndex === index ? "active" : ""}`}
-            onClick={() => handleCardClick(index)}
-          >
-            {/* Background Image for Active Card */}
-            {activeIndex === index && (
-              <img src={bgImage} alt="bg" className="active-bg-image" />
-            )}
-
-            <div className="option-content">
-              <div className="option-image-container">
-                <img
-                  src={option.image}
-                  alt={option.title}
-                  className="option-image"
-                />
-              </div>
-              <div className="option-text-container">
-                <h3 className="option-title">{option.title}</h3>
-                <p className="option-desc">{option.desc}</p>
-              </div>
+      <div className="custom-wrapper">
+        <div className="custom-left">
+          <div className="custom-options-header">
+            <div className="sub-para-text">
+              <AiFillAppstore /> Custom Options
             </div>
+            <h2 className="head-text">
+              Customize Threat <br /> Intelligence Your Way
+            </h2>
           </div>
-        ))}
-      </div>
+          <div className="co-accordion-list">
+            {options.map((option, index) => (
+              <div
+                key={option.id}
+                className={`co-accordion-item ${activeIndex === index ? "active" : ""}`}
+                onClick={() => handleCardClick(index)}
+              >
+                <div className="co-accordion-header">
+                  <span className="co-accordion-title">{option.title}</span>
+                  <span className="co-accordion-icon">
+                    {activeIndex === index ? (
+                      <IoChevronDown />
+                    ) : (
+                      <IoChevronForward />
+                    )}
+                  </span>
+                </div>
+                <div className="co-accordion-content">
+                  <p className="co-accordion-desc">{option.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
 
-      {/* Pagination / Progress Indicators at Bottom */}
-      <div className="options-pagination">
-        {options.map((_, index) => (
-          <div
-            key={index}
-            className={`pagination-dot ${
-              activeIndex === index ? "active" : ""
-            }`}
-            onClick={() => handleCardClick(index)}
-          >
-            {activeIndex === index && (
-              <div className="pagination-progress"></div>
-            )}
+        <div className="custom-right">
+          <div className="image-display-container">
+            {options.map((option, index) => (
+              <img
+                key={option.id}
+                src={option.image}
+                alt={option.title}
+                className={`display-image ${activeIndex === index ? "visible" : ""}`}
+              />
+            ))}
           </div>
-        ))}
+        </div>
       </div>
     </div>
   );

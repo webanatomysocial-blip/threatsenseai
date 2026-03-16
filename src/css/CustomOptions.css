@@ -1,371 +1,173 @@
-/* src/css/CustomOptions.css */
-
 .custom-options-container {
-  padding: 80px 130px;
-  background-color: #f7f7f8;
+  padding: 100px 130px;
+  background-color: #fff;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.custom-wrapper {
+  display: flex;
+  gap: 80px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.custom-left {
+  flex: 1;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  min-height: 80vh;
 }
 
 .custom-options-header {
   margin-bottom: 60px;
+}
+
+.sub-para-text {
   display: flex;
-  flex-direction: column;
-  text-align: center;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
+  color: #333;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 20px;
 }
 
-.custom-options-wrapper {
-  display: flex;
-  gap: 20px;
-  width: 100%;
-  max-width: 1200px;
-  height: 300px;
-  margin-bottom: 40px;
-  padding: 0px 20px;
-  /* Space for pagination */
+.head-text {
+  font-size: 3rem;
+  line-height: 1.2;
+  font-weight: 600;
+  color: #000;
+  margin: 0;
 }
 
-.option-card {
-  background-image: url(../assets/home/Custom-Options/bg.png);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  border-radius: 20px;
-  height: 300px;
-  padding: 0;
-  cursor: pointer;
-  position: relative;
-  overflow: hidden;
-  /* Smooth width transition with ease-in-out */
-  transition: all 0.8s cubic-bezier(0.65, 0, 0.35, 1);
+.co-accordion-list {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-  /* Default: equal width for all cards */
-  width: 30%;
-  flex-shrink: 0;
+  border-top: 1px solid #ccc;
 }
 
-/* When a card is NOT active but another card IS active */
-.option-card:not(.active) {
-  width: 30%;
+.co-accordion-item {
+  border-bottom: 1px solid #ccc;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  overflow: hidden;
 }
 
-/* Shrink non-active cards when one is active */
-.custom-options-wrapper:has(.option-card.active) .option-card:not(.active) {
-  width: 20%;
-}
-
-.option-card.active {
-  /* Active card takes more space - calculated to fit with 2 smaller cards */
-  width: 60%;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
-}
-
-/* Active BG Image */
-.active-bg-image {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: 0;
-  opacity: 0.5;
-  /* Slight transparency so text is readable */
-}
-
-.option-content {
+.co-accordion-header {
   display: flex;
-  flex-direction: row;
-  align-items: stretch;
-  /* Ensure full height */
-  height: 100%;
-  width: 100%;
-  position: relative;
-  z-index: 1;
-  overflow: hidden;
-  /* text-wrap: nowrap; */
-  /* Prevent spill during transition */
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 0;
 }
 
-/* Base state for content styling */
-.option-card .option-content {
-  justify-content: flex-start;
+.co-accordion-title {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #000;
 }
 
-.option-title {
-  font-size: 20px;
-  font-weight: 600;
-  margin-bottom: 15px;
-  color: #333;
-  white-space: nowrap;
-
-  overflow: hidden;
-  text-overflow: ellipsis;
-  transition: all 0.6s ease;
+.co-accordion-icon {
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
 }
 
-.option-card.active .option-title {
-  white-space: normal;
-  font-size: 24px;
-}
-
-.option-desc {
-  font-size: 16px;
-  color: #555;
-  margin-bottom: 20px;
-
+.co-accordion-content {
   max-height: 0;
   opacity: 0;
-  overflow: hidden;
-
-  transition:
-    opacity 0.5s ease 0.3s,
-    max-height 0.5s ease 0.3s,
-    transform 0.5s ease 0.3s;
-  word-wrap: break-word;
-  overflow-wrap: break-word;
-  hyphens: auto;
-  line-height: 1.5;
-  transform: translateY(-10px);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.option-card.active .option-desc {
-  max-height: 500px;
+.co-accordion-item.active .co-accordion-content {
+  max-height: 200px;
   opacity: 1;
-  transform: translateY(0);
+  padding-bottom: 30px;
 }
 
-/* Text container using width for smooth slide */
-.option-text-container {
-  width: 0;
+.co-accordion-desc {
+  color: #666;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.custom-right {
+  flex: 1.2;
   display: flex;
-  flex-direction: column;
   justify-content: center;
-  opacity: 0;
-  visibility: hidden;
-  overflow: hidden;
-  /* Smooth width transition */
-  transition:
-    width 0.8s cubic-bezier(0.65, 0, 0.35, 1),
-    opacity 0.4s ease 0.1s,
-    padding 0.8s cubic-bezier(0.65, 0, 0.35, 1);
-  padding: 0;
-  word-wrap: break-word;
-  overflow-wrap: break-word;
+  align-items: center;
   position: relative;
-  z-index: 2;
-  flex-shrink: 0;
 }
 
-.option-card.active .option-text-container {
-  width: 50%;
-  opacity: 1;
-  visibility: visible;
-  padding: 30px;
-  /* Delay opacity so it appears after space is made */
-  transition:
-    width 0.8s cubic-bezier(0.65, 0, 0.35, 1),
-    opacity 0.5s ease 0.3s,
-    padding 0.8s cubic-bezier(0.65, 0, 0.35, 1);
+.image-display-container {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  position: relative;
+  /* background-color: #f5f3ff */
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
 }
 
-.option-image-container {
-  position: relative;
-  height: 100%;
-  overflow: hidden;
-  background-color: transparent;
+.floating-label {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: white;
+  padding: 8px 16px;
+  border-radius: 6px;
   display: flex;
   align-items: center;
-  justify-content: center;
-  /* Smooth transition matching card timing */
-  transition:
-    width 0.8s cubic-bezier(0.65, 0, 0.35, 1),
-    border-radius 0.8s ease;
-  border-radius: 20px;
-  z-index: 1;
-  /* Take full width when not active */
-  width: 100%;
-  flex-shrink: 0;
-}
-
-/* When active, share space with text */
-.option-card.active .option-image-container {
-  width: 50%;
-  border-radius: 20px 0 0 20px;
-}
-
-.option-image {
-  height: 100%;
-  width: 100%;
-  object-fit: contain;
-  object-position: center;
-  transition: opacity 0.4s ease;
-}
-
-.option-card.active .option-image {
-  /* Keep same size as non-active state */
-  width: 90%;
-  height: 100%;
-}
-
-/* Pagination at Bottom */
-.options-pagination {
-  display: flex;
   gap: 10px;
-  padding: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  z-index: 10;
 }
 
-.pagination-dot {
-  width: 40px;
-  height: 4px;
-  background-color: #e0e0e0;
-  border-radius: 2px;
-  cursor: pointer;
-  overflow: hidden;
-  position: relative;
+.display-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  height: 90%;
+  object-fit: contain;
+  opacity: 0;
+  transition: opacity 0.5s ease;
 }
 
-.pagination-dot.active {
-  background-color: #d0d0d0;
-  /* Base color when active but not filled */
+.display-image.visible {
+  opacity: 1;
 }
 
-.pagination-progress {
-  height: 100%;
-  width: 0%;
-  background-color: #000;
-  /* Or var(--blue-color) */
-  animation: progressFill 4s linear forwards;
-}
-
-@keyframes progressFill {
-  from {
-    width: 0%;
+/* Mobile Responsive */
+@media (max-width: 1024px) {
+  .custom-options-container {
+    padding: 60px 5%;
   }
 
-  to {
-    width: 100%;
+  .custom-wrapper {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .head-text {
+    font-size: 2.5rem;
   }
 }
 
-/* Mobile responsive */
 @media (max-width: 768px) {
   .custom-options-container {
-    padding: 60px 20px !important;
-    height: auto !important;
-    min-height: auto !important;
-    display: block !important;
+    padding: 40px 20px;
   }
 
-  .custom-options-wrapper {
-    display: flex !important;
-    flex-direction: column !important;
-    height: auto !important;
-    gap: 40px !important;
-    padding: 0 !important;
+  .head-text {
+    font-size: 2rem;
   }
 
-  /* Extreme specificity override for mobile widths */
-  .custom-options-wrapper .option-card,
-  .custom-options-wrapper:has(.option-card.active) .option-card:not(.active),
-  .custom-options-wrapper .option-card.active,
-  .option-card {
-    width: 100% !important;
-    height: auto !important;
-    min-height: auto !important;
-    flex: 0 0 auto !important;
-    margin-bottom: 0 !important;
-    background-image: none !important;
-    background-color: #fff !important;
-    border: 1px solid #eee !important;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05) !important;
-    transform: none !important;
-  }
-
-  .active-bg-image {
-    display: none !important;
-  }
-
-  .option-title,
-  .option-card.active .option-title {
-    white-space: normal !important;
-    font-size: 20px !important;
-    margin-bottom: 12px !important;
-    overflow: visible !important;
-    width: 100% !important;
-  }
-
-  .option-desc {
-    max-height: none !important;
-    opacity: 1 !important;
-    display: block !important;
-    overflow: visible !important;
-    white-space: normal !important;
-    margin-bottom: 0 !important;
-    font-size: 14px !important;
-    transform: none !important;
-    color: #666 !important;
-    line-height: 1.5 !important;
-  }
-
-  .option-content {
-    flex-direction: column !important;
-    align-items: flex-start !important;
-    gap: 0 !important;
-    padding: 0 !important;
-    height: auto !important;
-    width: 100% !important;
-  }
-
-  .option-text-container,
-  .option-card.active .option-text-container {
-    opacity: 1 !important;
-    visibility: visible !important;
-    width: 100% !important;
-    padding: 25px !important;
-    order: 2 !important;
-    display: block !important;
-  }
-
-  .option-image-container,
-  .option-card.active .option-image-container {
-    display: flex !important;
-    width: 100% !important;
-    height: 250px !important;
-    border-radius: 20px 20px 0 0 !important;
-    order: 1 !important;
-    background-color: #fcfcfc !important;
-    position: relative !important;
-  }
-
-  .option-image,
-  .option-card.active .option-image {
-    width: 100% !important;
-    height: 100% !important;
-    object-fit: contain !important;
-    padding: 20px !important;
-  }
-
-  .custom-options-header {
-    margin-bottom: 40px !important;
-    padding: 0 !important;
-    text-align: center !important;
-  }
-
-  .custom-options-header .head-text {
-    font-size: 28px !important;
-    line-height: 1.2 !important;
-    white-space: normal !important;
-  }
-
-  .options-pagination {
-    display: none !important;
+  .co-accordion-title {
+    font-size: 1.2rem;
   }
 }

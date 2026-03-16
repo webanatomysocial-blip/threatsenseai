@@ -69,8 +69,6 @@
 
 .accordion-header {
   width: 100%;
-  padding: 25px 0; /* FAQ has 25px 40px but here we are in a column, maybe 25px 0 is better or keep padding? */
-  /* User wants SAME design. FAQ has padding: 25px 40px. But let's check context. */
   padding: 25px 0px;
   display: flex;
   align-items: center;
