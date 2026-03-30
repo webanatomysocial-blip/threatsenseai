@@ -13,6 +13,10 @@ import PrivacyPolicy from "./Resources/Privacy-Policy";
 import Cookies from "./Resources/Cookies";
 import TermsAndConditions from "./Resources/Terms";
 import AccessibilityStatement from "./Resources/Accessibility";
+import TadsProtect from "./solutions-pages/TadsProtect";
+import DotLayer from "./solutions-pages/DotLayer";
+import Dmss from "./solutions-pages/Dmss";
+import BecomeAPartner from "./solutions-pages/BecomeApartner";
 
 function App() {
   return (
@@ -30,8 +34,12 @@ function App() {
         <Route path="cookie-policy" element={<Cookies />} />
         <Route path="terms-and-conditions" element={<TermsAndConditions />} />
         <Route path="accessibility-statement" element={<AccessibilityStatement />} />
-        
+
+        <Route path="tads-protect" element={<TadsProtect />} />
+        <Route path="dot-layer" element={<DotLayer />} />
+        <Route path="dmss" element={<Dmss />} />
         <Route path="blogs/:blogId" element={<DynamicBlog />} />
+        <Route path="become-a-partner" element={<BecomeAPartner />} />
         {/* Redirect any other path to Home */}
         <Route path="*" element={<Navigate to="/" replace />} />
       </Route>

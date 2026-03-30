@@ -2,9 +2,17 @@
 
 .key-features-container {
   padding: 80px 130px;
-  background-color: var(
-    --progress-bg
-  ); /* Assuming light bg based on image/context */
+  background-color: var(--progress-bg);
+  /* Assuming light bg based on image/context */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.partner-features-container {
+  padding: 80px 130px;
+  background-color: #F7F8FC;
+  /* Assuming light bg based on image/context */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -22,7 +30,8 @@
 .key-features-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 60px 40px; /* Vertical gap 60px, Horizontal 40px */
+  gap: 60px 40px;
+  /* Vertical gap 60px, Horizontal 40px */
   width: 100%;
   max-width: 1200px;
   background-color: #fff;
@@ -36,13 +45,15 @@
   flex-direction: column;
   align-items: flex-start;
   gap: 15px;
-  opacity: 0; /* Initial state for GSAP */
+  opacity: 0;
+  /* Initial state for GSAP */
 }
 
 .feature-icon-wrapper {
   margin-bottom: 10px;
   font-size: 24px;
-  color: #333; /* Dark icon color */
+  color: #333;
+  /* Dark icon color */
 }
 
 .feature-content {
@@ -67,6 +78,7 @@
   .key-features-container {
     padding: 60px 40px;
   }
+
   .key-features-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -76,11 +88,13 @@
   .key-features-container {
     padding: 60px 20px;
   }
+
   .key-features-grid {
     grid-template-columns: 1fr;
     padding: 30px;
     gap: 40px;
   }
+
   .feature-card {
     align-items: center;
     text-align: center;

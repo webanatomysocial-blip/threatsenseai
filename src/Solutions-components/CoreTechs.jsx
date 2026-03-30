@@ -4,6 +4,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "../css/CoreTechs.css";
 import cardImage from "../assets/home/Our-Solutions/bg1.png"; // Using requested placeholder
 import { FaCheckCircle } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -20,6 +21,7 @@ const CoreTechs = ({ technologies }) => {
         "ThreatSenseAI ADS prevents unauthorized exports, excessive data access, and insider misuse through real-time, policy-driven enforcement across SAP environments.",
       image: cardImage,
       video: null,
+      url:"/tads-protect"
     },
     {
       id: "02",
@@ -30,6 +32,7 @@ const CoreTechs = ({ technologies }) => {
         "DotLayer prevents unauthorized data sharing into generative AI tools, personal email accounts, and cloud drives by enforcing real-time, context-aware controls on user actions.",
       image: cardImage,
       video: null,
+      url:"/dot-layer"
     },
     {
       id: "03",
@@ -38,7 +41,8 @@ const CoreTechs = ({ technologies }) => {
       description:
         "Dynamically masks and scrambles sensitive SAP data in real time to enforce data minimization aivilend least-prge access principles. With DMSS, enterprises can ensure personal, financial, and regulated data is exposed only to authorized users.\n\nIt reduces risk of data misuse in production and non-production environments while maintaining business continuity.\n\nSupports regulatory compliance requirements under GDPR, DPDP, SOX, and similar data protection frameworks.",
       image: cardImage,
-      video: null,
+      video: null,  
+      url:"/dmss"
     },
   ];
 
@@ -130,12 +134,16 @@ const CoreTechs = ({ technologies }) => {
                   />
                 )}
               </div>
+              
             </div>
 
             <div className="tech-text-container">
               <h3 className="head-text">{tech.title}</h3>
               <h4 className="sub-para-text tech-subtitle">{tech.subtitle}</h4>
               <p className="para-text tech-desc">{tech.description}</p>
+            <Link to={tech.url} className="ev-cta" style={{width:"fit-content"}}>
+               Read More
+              </Link>
             </div>
           </div>
         ))}

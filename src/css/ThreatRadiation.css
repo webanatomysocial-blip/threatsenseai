@@ -1,165 +1,109 @@
+/* ── ThreatRadiation Section ──────────────────────────────── */
 .threat-radiation-section {
   position: relative;
-padding: 80px 130px 80px 230px;
-  background-color: var(--progress-bg);
+  padding: 80px 0 90px;
+  background-color: #ffffff;
   overflow: hidden;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
+/* ── Header ──────────────────────────────────────────────── */
 .radiation-header {
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 48px;
   z-index: 15;
+  padding: 0 20px;
 }
 
-.radiation-container {
-  position: relative;
-  width: 100%;
-  max-width: 1400px;
-  height: 450px;
-  margin: 0 auto;
+
+.swiper-wrapper {
+  transition-timing-function: linear !important;
+}
+
+/* Optional: cleaner slides */
+.threat-swiper-slide {
+  width: auto !important;
+}
+
+/* ── Carousel Wrapper ────────────────────────────────────── */
+.threat-carousel-wrapper {
+  width: 60%;
   display: flex;
-  justify-content: center;
-  align-items: flex-end;
-}
-
-.bg-half-moon {
-  position: absolute;
-  bottom: 0%;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100%;
-  max-width: 1100px;
-  z-index: 1;
-  opacity: 1;
-  border-top-left-radius: 550px;
-  border-top-right-radius: 550px;
+  flex-direction: column;
+  gap: 18px;
   overflow: hidden;
-  display: flex;
-  align-items: flex-end;
+-webkit-mask-image: linear-gradient(to right, transparent, black 40%, black 60%, transparent);
+mask-image: linear-gradient(to right, transparent, black 40%, black 60%, transparent);
 }
 
-.bg-half-moon img {
+/* ── Swiper Row ──────────────────────────────────────────── */
+.threat-swiper {
   width: 100%;
-  height: auto;
-  display: block;
+  overflow: visible;
 }
 
-.radiation-svg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 2;
-  pointer-events: none;
+.threat-swiper-slide {
+  width: auto !important;
 }
 
-.threat-pill {
-  position: absolute;
+/* ── Pill Card ───────────────────────────────────────────── */
+.threat-pill-carousel {
   background: #ffffff;
-  padding: 8px 16px;
+  padding: 10px 20px;
   border-radius: 100px;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: 8px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-  border: 1px solid #e0e0e0;
-  z-index: 10;
+  box-shadow: 0 2px 14px rgba(0, 0, 0, 0.07);
+  border: 1.5px solid #e5e7eb;
   white-space: nowrap;
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease,
-    border-color 0.3s ease;
-  transform: translate(-50%, -50%);
   cursor: default;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
-.threat-pill:hover {
-  transform: translate(-50%, -60%) scale(1.05) !important;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-  border-color: #000;
-  z-index: 11;
-}
 
-.threat-pill span {
-  font-size: 13px;
+.threat-pill-carousel span {
+  font-size: 13.5px;
   font-weight: 500;
-  color: #000;
+  color: #111111;
 }
 
-.pill-check {
-  color: #000;
-  font-size: 15px;
+/* ── Check Icon ──────────────────────────────────────────── */
+.pill-check-carousel {
+  color: #7c3aed;
+  font-size: 16px;
   flex-shrink: 0;
 }
 
-.radiation-line {
-  stroke: #000;
-  opacity: 0.35;
+/* ── Hide old arc / mobile layouts ──────────────────────── */
+.desktop-only,
+.mobile-threat-container,
+.bg-half-moon,
+.radiation-svg {
+  display: none !important;
 }
 
-/* Visibility toggles */
-.mobile-threat-container {
-  display: none;
-  /* Hidden by default on desktop */
-}
-
-/* Responsive adjustments */
-@media (max-width: 1100px) {
-  .threat-pill span {
-    font-size: 12px;
-  }
-
-  .radiation-container {
-    height: 450px;
-  }
-
-  .bg-half-moon {
-    max-width: 900px;
-  }
-}
-
+/* ── Responsive ──────────────────────────────────────────── */
 @media (max-width: 768px) {
   .threat-radiation-section {
-    padding: 60px 20px;
+    padding: 60px 0 70px;
   }
 
-  /* Hide the desktop arc layout */
-  .desktop-only {
-    display: none !important;
+  .radiation-header {
+    margin-bottom: 36px;
   }
 
-  /* Show the mobile grid layout */
-  .mobile-threat-container {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 15px;
-    width: 100%;
-    max-width: 400px;
-    padding-top: 30px;
+  .threat-pill-carousel {
+    padding: 9px 16px;
   }
 
-  .mobile-threat-box {
-    width: 100%;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-    border: 1px solid rgba(0, 0, 0, 0.05);
+  .threat-pill-carousel span {
+    font-size: 12.5px;
   }
 
-  .mobile-box-content {
-    padding: 16px 20px;
-    display: flex;
-    align-items: center;
+  .threat-carousel-wrapper {
     gap: 12px;
-    background-color: rgba(255,
-        255,
-        255,
-        0.7);
-    /* Slight overlay for readability if bg is busy */
-    backdrop-filter: blur(2px);
   }
 }

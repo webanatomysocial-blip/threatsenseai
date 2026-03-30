@@ -1,117 +1,116 @@
 import React from "react";
-import { FaCheck, FaTimes, FaGlobe } from "react-icons/fa";
+import { FaCheckCircle, FaGlobe } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import "../css/Solutions-pages.css";
+import "../css/ComparisonTable.css";
+
+const plans = [
+  {
+    name: "Starter",
+    description:
+      "Organizations needing core endpoint DLP protection",
+  },
+  {
+    name: "Enterprise",
+    description:
+      "Companies requiring contextual access control and stronger endpoint governance",
+  },
+  {
+    name: "Emerging",
+    description:
+      "Enterprises needing SAP specific data protection and insider threat monitoring",
+  },
+];
+
+const features = [
+  {
+    name: "Basic features",
+    values: [true, true, true],
+  },
+  {
+    name: "Automated workflows",
+    values: [false, false, true],
+  },
+  {
+    name: "Financial dashboard",
+    values: [true, true, true],
+  },
+  {
+    name: "Income tracking",
+    values: [true, true, true],
+  },
+  {
+    name: "Custom reports",
+    values: [false, false, true],
+  },
+];
 
 export default function ComparisonTable() {
-  const comparisonData = [
-    {
-      category: "SAP Integration",
-      items: [
-        { name: "Native SAP GUI awareness", tads: true, legacy: false },
-        { name: "SAP screen-level data protection", tads: true, legacy: false },
-        { name: "SAP copy / paste control", tads: true, legacy: false },
-        { name: "SAP print & export monitoring", tads: true, legacy: false },
-      ],
-    },
-    {
-      category: "Protection Capabilities",
-      items: [
-        { name: "Real-time copy & paste protection", tads: true, legacy: false },
-        { name: "Gen-AI data leakage prevention", tads: true, legacy: false },
-        { name: "Browser upload & webmail protection", tads: true, legacy: false },
-        { name: "Screenshot & screen capture blocking", tads: true, legacy: false },
-      ],
-    },
-    {
-      category: "Deployment & Operations",
-      items: [
-        {
-          name: "Lightweight endpoint agent",
-          tads: true,
-          legacy: false,
-        },
-        { name: "Centralized policy management", tads: true, legacy: true },
-        {
-          name: "Real-time policy enforcement",
-          tads: true,
-          legacy: false,
-        },
-        {
-          name: "Unified dashboard & audit logs",
-          tads: true,
-          legacy: false,
-        },
-      ],
-    },
-  ];
-
   return (
-    <section className="comparison-section">
-      <div className="capabilities-header">
-        <div className="sub-para-text security-label">
-          <FaGlobe size={16} style={{ marginRight: "4px" }} /> Comparison
+    <section className="ct-section">
+      {/* Header */}
+      <div className="ct-header">
+        <div
+          className="security-label"
+          style={{ justifyContent: "center", marginBottom: "14px" }}
+        >
+          <FaGlobe size={16} style={{ marginRight: "6px" }} /> Comparison
         </div>
-        <h2 className="head-text">ThreatSenseAI ADS vs Traditional DLP</h2>
+        <h2 className="head-text">
+          Select the pricing plan <br /> that best suits your needs.
+        </h2>
       </div>
 
-      <div className="comparison-table-container">
-        {/* Sticky Header */}
-        <div className="comp-header-row ">
-          <div className="comp-cell col-capability header-cell-main">
-            <h3 className="head-text" style={{ color: "var(--red-color)" }}>
-              Capability
-            </h3>
-            <p
-              className="sub-para-text"
-              style={{ fontSize: "14px", margin: 0 }}
-            >
-            </p>
-          </div>
-          <div className="comp-cell col-tads header-center">
-            <span className="brand-name">ThreatSenseAI ADS</span>
-           
-          </div>
-          <div className="comp-cell col-legacy header-center">
-            <span className="brand-name">Legacy DLP</span>
-          </div>
-        </div>
+      {/* Table Card */}
+      <div className="ct-card">
 
-        {/* Rows */}
-        <div className="comp-body">
-          {comparisonData.map((section, sIndex) => (
-            <React.Fragment key={sIndex}>
-              {/* Section Header */}
-              <div className="comp-section-row">
-                <div className="comp-cell full-width">
-                  <h4>{section.category}</h4>
-                </div>
-              </div>
-              {/* Items */}
-              {section.items.map((item, iIndex) => (
-                <div className="comp-row" key={iIndex}>
-                  <div className="comp-cell col-capability">
-                    <span className="feature-name">{item.name}</span>
-                  </div>
-                  <div className="comp-cell col-tads center-content">
-                    {item.tads ? (
-                      <FaCheck className="icon-check-red" />
-                    ) : (
-                      <FaTimes className="icon-times-gray" />
-                    )}
-                  </div>
-                  <div className="comp-cell col-legacy center-content">
-                    {item.legacy ? (
-                      <FaCheck className="icon-check-red" />
-                    ) : (
-                      <FaTimes className="icon-times-gray" />
-                    )}
-                  </div>
-                </div>
-              ))}
-            </React.Fragment>
+        {/* Column Header Row */}
+        <div className="ct-row ct-header-row">
+          <div className="ct-col ct-feature-col ct-col-label">Feature</div>
+          {plans.map((plan, i) => (
+            <div key={i} className="ct-col ct-plan-col ct-col-label">
+              {plan.name}
+            </div>
           ))}
         </div>
+
+        {/* Best fit for */}
+        <div className="ct-row">
+          <div className="ct-col ct-feature-col">Best fit for</div>
+          {plans.map((plan, i) => (
+            <div key={i} className="ct-col ct-plan-col ct-desc-cell">
+              {plan.description}
+            </div>
+          ))}
+        </div>
+
+        {/* Feature Rows */}
+        {features.map((feature, fi) => (
+          <div key={fi} className="ct-row">
+            <div className="ct-col ct-feature-col">{feature.name}</div>
+            {feature.values.map((val, vi) => (
+              <div key={vi} className="ct-col ct-plan-col ct-icon-cell">
+                {val ? (
+                  <FaCheckCircle className="ct-check-icon" />
+                ) : (
+                  <span className="ct-dash">—</span>
+                )}
+              </div>
+            ))}
+          </div>
+        ))}
+
+        {/* CTA Row */}
+        <div className="ct-row ct-cta-row">
+          <div className="ct-col ct-feature-col ct-cta-label">·</div>
+          {plans.map((_, i) => (
+            <div key={i} className="ct-col ct-plan-col ct-cta-cell">
+              <Link to="/contact" className="ct-cta-btn">
+                Contact Sales
+              </Link>
+            </div>
+          ))}
+        </div>
+
       </div>
     </section>
   );

@@ -1,0 +1,98 @@
+/* GLOBAL FIX */
+body {
+  overflow-x: hidden;
+}
+
+/* SECTION */
+.recognitions-section {
+  overflow: hidden;
+  width: 100%;
+}
+
+.partners-section {
+  background-color: var(--white-color);
+  color: var(--black-color);
+}
+
+.awards-section {
+  background-color: var(--black-color);
+  color: var(--white-color);
+}
+
+/* CONTAINER */
+.recognitions-container {
+  background-color: #F7F7F8;
+  padding: 60px 0px 100px 0px;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+/* MARQUEE COLUMN */
+.recognitions-marquee-col {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+/* NEW WRAPPER (IMPORTANT FIX) */
+.marquee-wrapper {
+  width: 100%;
+  overflow: hidden;
+}
+
+/* TRACK */
+.recognitions-marquee-track {
+  display: flex;
+  gap: 10px;
+  min-width: 200%; /* ensures smooth loop */
+  animation: scroll-marquee 25s linear infinite;
+}
+
+/* FIXED ANIMATION */
+@keyframes scroll-marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* ITEM */
+.recognition-item {
+  background: white;
+  width: 250px;
+  height: 150px;
+  border-radius: 15px;
+  padding: 0px 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+/* IMAGE */
+.recognition-img {
+  width: 80%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .recognitions-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .recognitions-marquee-col {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .recognitions-section {
+    padding: 60px 20px;
+  }
+}

@@ -174,6 +174,7 @@ export default function Tads() {
         "ThreatSenseAI ADS prevents unauthorized exports, excessive data access, and insider misuse through real-time, policy-driven enforcement across SAP environments.",
       image: tadsimg,
       video: null,
+      url: "/tads-protect",
     },
     {
       id: "02",
@@ -184,6 +185,7 @@ export default function Tads() {
         "DotLayer prevents unauthorized data sharing into generative AI tools, personal email accounts, and cloud drives by enforcing real-time, context-aware controls on user actions.",
       image: dotimg,
       video: null,
+      url: "/dot-layer",
     },
     {
       id: "03",
@@ -194,6 +196,7 @@ export default function Tads() {
         "Dynamically masks and scrambles sensitive SAP data in real time to enforce data minimization aivilend least-prge access principles. With DMSS, enterprises can ensure personal, financial, and regulated data is exposed only to authorized users.\n\nIt reduces risk of data misuse in production and non-production environments while maintaining business continuity.\n\nSupports regulatory compliance requirements under GDPR, DPDP, SOX, and similar data protection frameworks.",
       image: dmssimg,
       video: null,
+      url: "/dmss",
     },
   ];
 

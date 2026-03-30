@@ -1,0 +1,78 @@
+.tads-cap-card {
+    background: white;
+    padding: 30px 30px;
+    /* border: 1px solid #000000; */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    opacity: 0;
+}
+
+.partner-cap-card {
+    background: white;
+    padding: 30px 30px;
+    /* border: 1px solid #000000; */
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    opacity: 0;
+}
+
+.tads-cap-features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    width: 100%;
+    max-width: 1200px;
+    /* background-color: #fff; */
+    border-radius: 20px;
+    /* justify-items: center; */
+}
+
+
+.number-circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #6946FF;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.partner-items-list {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0 0 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+}
+
+.partner-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #000;
+}
+
+.partner-item-num {
+    font-size: 0.65rem;
+    color: #666;
+    font-weight: 500;
+    min-width: 18px;
+    opacity: 0.8;
+}
+
+.partner-item-text {
+    font-size: 1rem;
+    font-family: 'Instrument Sans', sans-serif;
+    letter-spacing: -0.01em;
+}

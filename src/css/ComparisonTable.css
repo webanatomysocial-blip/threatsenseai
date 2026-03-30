@@ -1,0 +1,179 @@
+/* ── Section ─────────────────────────────────────────────── */
+.ct-section {
+  padding: 90px 200px;
+  background-color: #f4f4f4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ── Header ──────────────────────────────────────────────── */
+.ct-header {
+  text-align: center;
+  margin-bottom: 52px;
+}
+
+/* ── Card ────────────────────────────────────────────────── */
+.ct-card {
+  width: 100%;
+  background: #ffffff;
+  border-radius: 18px;
+  border: 1px solid #e8e8e8;
+  overflow: hidden;
+  box-shadow: 0 6px 32px rgba(0, 0, 0, 0.07);
+}
+
+/* ── Rows ────────────────────────────────────────────────── */
+.ct-row {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.ct-row:last-child {
+  border-bottom: none;
+}
+
+/* ── Cells ───────────────────────────────────────────────── */
+.ct-col {
+  padding: 20px 26px;
+  font-size: 14px;
+  color: #333;
+  display: flex;
+  align-items: center;
+}
+
+/* Column header label row */
+.ct-header-row {
+  background: #fff;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.ct-col-label {
+  font-weight: 700;
+  font-size: 15px;
+  color: #111;
+}
+
+/* Left feature name column */
+.ct-feature-col {
+  border-right: 1px solid #f0f0f0;
+  font-size: 14px;
+  color: #333;
+  font-weight: 400;
+}
+
+/* Right plan columns */
+.ct-plan-col {
+  justify-content: center;
+  text-align: center;
+}
+
+/* Description cell (Best fit for row) */
+.ct-desc-cell {
+  font-size: 13px;
+  color: #555;
+  line-height: 1.6;
+  align-items: flex-start;
+  text-align: left;
+  justify-content: flex-start;
+}
+
+/* Icon cell */
+.ct-icon-cell {
+  justify-content: center;
+  align-items: center;
+}
+
+/* Orange check icon */
+.ct-check-icon {
+  color: #e84b23;
+  font-size: 22px;
+}
+
+/* Dash for missing feature */
+.ct-dash {
+  color: #bbb;
+  font-size: 22px;
+  line-height: 1;
+  font-weight: 300;
+}
+
+/* ── CTA Row ─────────────────────────────────────────────── */
+.ct-cta-row {
+  background: #fff;
+}
+
+.ct-cta-label {
+  color: #bbb;
+  font-size: 18px;
+}
+
+.ct-cta-cell {
+  justify-content: center;
+  padding: 26px 20px;
+}
+
+.ct-cta-btn {
+  display: inline-block;
+  background: #e84b23;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 12px 26px;
+  border-radius: 10px;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background 0.25s ease, transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.ct-cta-btn:hover {
+  background: #c73d1a;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(232, 75, 35, 0.35);
+}
+
+/* ── Responsive ──────────────────────────────────────────── */
+@media (max-width: 900px) {
+  .ct-section {
+    padding: 70px 20px;
+  }
+
+  .ct-card {
+    overflow-x: auto;
+  }
+
+  .ct-row {
+    grid-template-columns: 1.2fr 1fr 1fr 1fr;
+    min-width: 560px;
+  }
+
+  .ct-col {
+    padding: 16px 14px;
+    font-size: 12.5px;
+  }
+
+  .ct-col-label {
+    font-size: 13px;
+  }
+
+  .ct-desc-cell {
+    font-size: 11.5px;
+  }
+
+  .ct-cta-btn {
+    font-size: 12px;
+    padding: 10px 16px;
+  }
+
+  .ct-check-icon {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 520px) {
+  .ct-row {
+    min-width: 480px;
+  }
+}

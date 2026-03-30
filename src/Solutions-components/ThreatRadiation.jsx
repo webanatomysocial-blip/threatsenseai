@@ -1,186 +1,95 @@
-import React, { useEffect, useRef } from "react";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import React from "react";
 import { FaCheckCircle } from "react-icons/fa";
-import "../css/ThreatRadiation.css";
-import halfCircleBg from "../assets/solutions/tads/half-circle.png";
-import mobileBg from "../assets/home/Our-Solutions/bg1.png"; // Import bg1.png for mobile
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper/modules";
 
-gsap.registerPlugin(ScrollTrigger);
+import "swiper/css";
+import "swiper/css/autoplay";
+import "../css/ThreatRadiation.css";
+
 
 const ThreatRadiation = () => {
-  const sectionRef = useRef(null);
-  const containerRef = useRef(null);
-  const svgRef = useRef(null);
+  const rowOne = [
+  "Excessive SAP Data Exports",
+  "Privileged User Misuse",
+  "Unauthorized Table Access",
+  "Sensitive Data Overexposure",
+];
 
-  const subheadings = [
-    "Excessive SAP Data Exports",
-    "Privileged User Misuse",
-    "Unauthorized Table Access",
-    "Sensitive Data Overexposure",
-    "Data Pasted into GenAI Tools",
-    "Uploads to Personal Email",
-    "Unapproved Cloud Drive Sharing",
-    "Copy–Paste Data Leakage",
-    
-  ];
+const rowTwo = [
+  "Data Pasted into GenAI Tools",
+  "Uploads to Personal Email",
+  "Unapproved Cloud Drive Sharing",
+  "Copy–Paste Data Leakage",
+];
 
-  // Center point for the radiation effect
-  const centerX = 50; // 50%
-  const centerY = 100; // 90% from top
+const rowThree = [
+  "Non-Production Data Exposure",
+  "Unmasked PII & Financial Data",
+  "Mass Data Downloads",
+  "Debug Mode Changes",
+];
 
-  const getPillPosition = (index, total) => {
-    // 3 layers of radii to spread out 22 items
-    const layer = index % 3;
-    const radii = [58, 40, 22]; // Outer, Middle, Inner layers (more vertical spread)
-    const r = radii[layer];
-
-    // Narrower angle range to spread to top instead of extreme sides
-    const startAngle = 155;
-    const endAngle = 25;
-    const angleRange = startAngle - endAngle;
-
-    // Apply a slight offset to each layer to prevent alignment on the same radius
-    const layerOffset = (layer * 3); // 3 degree offset per layer
-
-    // Distribute angles based on total items
-    const angleDeg = startAngle - (index / (total - 1)) * angleRange + layerOffset;
-    const angleRad = (angleDeg * Math.PI) / 180;
-
-    const left = centerX + r * Math.cos(angleRad);
-    const top = centerY - r * Math.sin(angleRad);
-
-    return { left, top, angleRad };
+const rowFour = [
+  "Direct DB Access",
+  "Unmonitored Data Extracts",
+  "GenAI & Browser Risks",
+  "Prompt Data Leakage",
+];
+  // ✅ FIXED SWIPER SETTINGS
+  const swiperOptions = {
+    modules: [Autoplay],
+    slidesPerView: "auto",
+    spaceBetween: 14,
+    loop: true,
+    speed: 6000, // 🔥 reduced for smoothness
+    allowTouchMove: false, // 🔥 prevents lag
+    freeMode: true, // 🔥 smoother continuous motion
   };
 
-  useEffect(() => {
-    // Only animate if not mobile (or if elements exist in the radiation container)
-    const items = containerRef.current.querySelectorAll(".threat-pill-desktop");
-    const lines = svgRef.current
-      ? svgRef.current.querySelectorAll(".radiation-line")
-      : [];
-
-    if (items.length > 0) {
-      const tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: sectionRef.current,
-          start: "top 75%",
-        },
-      });
-
-      tl.fromTo(
-        lines,
-        { strokeDasharray: "100%", strokeDashoffset: "100%", opacity: 0 },
-        {
-          strokeDashoffset: "0%",
-          opacity: 0.4,
-          duration: 1.5,
-          stagger: 0.05,
-          ease: "power2.out",
-        },
-      );
-
-      tl.fromTo(
-        items,
-        { scale: 0, opacity: 0, y: 10 },
-        {
-          scale: 1,
-          opacity: 1,
-          y: 0,
-          duration: 0.5,
-          stagger: 0.05,
-          ease: "back.out(1.5)",
-        },
-        "-=1.2",
-      );
-    }
-  }, []);
+  const renderRow = (items, reverse = false) => (
+    <Swiper
+      {...swiperOptions}
+      autoplay={{
+        delay: 1, // 🔥 IMPORTANT: never 0
+        disableOnInteraction: false,
+        reverseDirection: reverse,
+      }}
+      className="threat-swiper"
+    >
+      {/* ✅ reduced duplication for performance */}
+      {[...items, ...items].map((text, index) => (
+        <SwiperSlide key={index} className="threat-swiper-slide">
+          <div className="threat-pill-carousel">
+            <FaCheckCircle className="pill-check-carousel" />
+            <span>{text}</span>
+          </div>
+        </SwiperSlide>
+      ))}
+    </Swiper>
+  );
 
   return (
-    <section className="threat-radiation-section" ref={sectionRef}>
+    <section className="threat-radiation-section">
       <div className="radiation-header">
         <div
           className="security-label"
           style={{ justifyContent: "center", marginBottom: "15px" }}
         >
-          <FaCheckCircle size={16} style={{ marginRight: "4px" }} /> Risks The
-          Challenge
-        </div>
-        <h2 className="head-text">Where does data actually leak?</h2>
-      </div>
-
-      {/* Desktop/Tablet Arc Layout */}
-      <div className="radiation-container desktop-only" ref={containerRef}>
-        <div className="bg-half-moon">
-          <img src={halfCircleBg} alt="Background" />
+          <FaCheckCircle size={16} style={{ marginRight: "4px" }} />
+          Risks &amp; Challenges
         </div>
 
-        <svg
-          className="radiation-svg"
-          ref={svgRef}
-          viewBox="0 0 100 100"
-          preserveAspectRatio="none"
-        >
-          {subheadings.map((_, index) => {
-            const { left, top } = getPillPosition(index, subheadings.length);
-
-            return (
-              <line
-                key={index}
-                className="radiation-line"
-                x1={centerX}
-                y1={centerY}
-                x2={left}
-                y2={top}
-                stroke="#000"
-                strokeWidth="0.1"
-              />
-            );
-          })}
-        </svg>
-
-        {subheadings.map((text, index) => {
-          const { left, top } = getPillPosition(index, subheadings.length);
-
-          return (
-            <div
-              key={index}
-              className="threat-pill threat-pill-desktop"
-              style={{
-                left: `${left}%`,
-                top: `${top}%`,
-              }}
-            >
-              <FaCheckCircle className="pill-check" />
-              <span>{text}</span>
-            </div>
-          );
-        })}
+        <h2 className="head-text">
+          Where does data actually leak?
+        </h2>
       </div>
 
-      {/* Mobile Box Layout */}
-      <div className="mobile-threat-container">
-        {subheadings.map((text, index) => (
-          <div
-            key={index}
-            className="mobile-threat-box"
-            style={{
-              backgroundImage: `url(${mobileBg})`,
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-            }}
-          >
-            <div className="mobile-box-content">
-              <FaCheckCircle className="pill-check" style={{ color: "#000" }} />
-              <span
-                className="sub-para-text"
-                style={{ fontWeight: "500", color: "#000" }}
-              >
-                {text}
-              </span>
-            </div>
-          </div>
-        ))}
+      <div className="threat-carousel-wrapper">
+        {renderRow(rowOne, false)}
+        {renderRow(rowTwo, true)}
+        {renderRow(rowThree, false)}
+        {renderRow(rowFour, true)}
       </div>
     </section>
   );

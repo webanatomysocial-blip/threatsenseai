@@ -1,0 +1,38 @@
+.real-build-to-pro-con{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 40px;
+  padding: 100px 130px;
+}
+
+.real-build-to-pro-left img{
+    width: 100%;
+    border-radius: 15px;
+    height: 100%;
+}
+.real-build-to-pro-left{
+    border-radius: 15px;
+    width: 50%;
+    height: 100%;
+}
+
+.real-build-to-pro-right{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.check-icons {
+    background-color: var(--red-color);
+    color: #ffffff;
+    display: inline-flex;
+    border-radius: 5px;
+    padding: 5px;
+}
