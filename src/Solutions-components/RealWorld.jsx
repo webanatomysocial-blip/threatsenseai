@@ -5,16 +5,15 @@ import "../css/RealWorld.css";
 import { FaInfoCircle } from "react-icons/fa";
 
 
-import img1 from "../assets/solutions/tads/tads-in/1.png";
 
-const RealWorld = ({ subtitle = "", icon: Icon, title, desc = "", ctaText = "", ctaLink = "", features = [], direction = "row", enddesc = "" }) => {
+const RealWorld = ({ subtitle = "", icon: Icon, title, desc = "", ctaText = "", ctaLink = "", features = [], direction = "row", enddesc = "", img }) => {
 
 
     return (
         <>
             <div className="real-build-to-pro-con" style={{ flexDirection: direction }}>
                 <div className="real-build-to-pro-left">
-                    <img src={img1} alt="" />
+                    <img src={img} alt="" />
                 </div>
                 <div className="real-build-to-pro-right">
                     {subtitle && (

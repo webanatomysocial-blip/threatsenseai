@@ -10,6 +10,10 @@ import AdsProtectWorks from "../Solutions-components/AdsProtectWorks";
 import Cta from "../components/Cta";
 import bg from "../assets/home/tab-section/bg-image.png";
 
+import img1 from "../assets/solutions/tadsprotect/1.png";
+import img2 from "../assets/solutions/tadsprotect/2.png";
+import img3 from "../assets/solutions/tadsprotect/3.png";
+import img4 from "../assets/solutions/tadsprotect/4.png";
 import { FaPrint, FaUsb, FaDesktop, FaFileAlt } from "react-icons/fa";
 import { FiSend, FiCpu, FiGitMerge, FiToggleLeft, FiBox, FiSliders } from "react-icons/fi";
 
@@ -147,6 +151,7 @@ const TadsProtect = () => {
                 ctaText="Book A Free Demo"
                 ctaLink="https://tidycal.com/threatsenseai/tads"
                 features={endpointFeatures} 
+                img={[img1, img2]}
             />
             
             <BuildToProtect 
@@ -154,6 +159,7 @@ const TadsProtect = () => {
                 title={<>Built to Protect SAP Data <br /> Where It’s Most Exposed</>}
                 desc="Traditional security tools monitor networks or endpoints but they rarely understand SAP data flows. ThreatSenseAI TADS Protect adds a dedicated SAP-aware protection layer at the endpoint to prevent unauthorized access, data leakage, and insider misuse."
                 features={buildToProtectFeatures} 
+                img={img3}
             />
             
             <TadsCap 
@@ -181,6 +187,7 @@ const TadsProtect = () => {
                 ctaText="Protect Your Data Today"
                 ctaLink="https://tidycal.com/threatsenseai/tads"
                 features={realWorldFeatures} 
+                img={img4}
             />
 
             <Cta

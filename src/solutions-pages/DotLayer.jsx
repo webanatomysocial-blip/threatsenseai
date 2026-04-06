@@ -12,10 +12,15 @@ import AdvancedTabs from "../Solutions-components/AdvancedTabs";
 import Cta from "../components/Cta";
 import bg from "../assets/home/tab-section/bg-image.png";
 
-import tabImg1 from "../assets/home/tab-section/1.jpg";
-import tabImg2 from "../assets/home/tab-section/2.jpg";
-import tabImg3 from "../assets/home/tab-section/3.jpg";
-import tabImg4 from "../assets/home/tab-section/d5.png";
+import tab1 from "../assets/solutions/dotlayer/tab1.png";
+import tab2 from "../assets/solutions/dotlayer/tab2.png";
+import tab3 from "../assets/solutions/dotlayer/tab3.png";
+import tab4 from "../assets/solutions/dotlayer/tab4.png";
+
+import img1 from "../assets/solutions/dotlayer/1.png";
+import img2 from "../assets/solutions/dotlayer/2.png";
+import img3 from "../assets/solutions/dotlayer/3.png";
+import img4 from "../assets/solutions/dotlayer/cta.png";
 
 const DotLayer = () => {
     const endpointFeatures = [
@@ -92,7 +97,7 @@ const DotLayer = () => {
             "Masks or restricts sensitive responses",
             "Controls data exposure across AI platforms",
           ],
-          image: tabImg1,
+          image: tab1,
         },
         {
           label: "Personal Email",
@@ -103,7 +108,7 @@ const DotLayer = () => {
             "Restricts attachments with sensitive content",
             "Controls web-based email platforms (Gmail, Outlook)",
           ],
-          image: tabImg2,
+          image: tab2,
         },
         {
           label: "File Uploads",
@@ -114,7 +119,7 @@ const DotLayer = () => {
             "Restricts uploads to unauthorized platforms",
             "Applies policies across SaaS and cloud apps",
           ],
-          image: tabImg3,
+          image: tab3,
         },
         {
           label: "Copy-Paste",
@@ -125,7 +130,7 @@ const DotLayer = () => {
             "Controls data flow between browser sessions",
             "Stops hidden data leakage via copy actions",
           ],
-          image: tabImg4,
+          image: tab4,
         },
       ];
 
@@ -152,6 +157,8 @@ const DotLayer = () => {
                 ctaText="Book A Free Demo"
                 ctaLink="https://tidycal.com/threatsenseai/tads"
                 features={endpointFeatures}
+                img={[img1,img2]}
+                margin="40px"
             />
             <RealWorld
                 subtitle='Browser Data Risks '
@@ -163,6 +170,7 @@ const DotLayer = () => {
                 features={realWorldFeatures}
                 direction='row'
                 enddesc="Sensitive data is exposed the moment it is typed, pasted, or uploaded often without any control or visibility. "
+                img={img3}
             />
             <TadsCap 
                 label="Browser Protection Layer "
@@ -191,6 +199,7 @@ const DotLayer = () => {
                 ctaLink="https://tidycal.com/threatsenseai/tads"
                 features={realWorldFeatures2} 
                 enddesc='Stops data leaks at the point of entry before it can be typed, shared, or uploaded. '
+                img={img4}
             />
               <Cta
                 title={<>Protect Your Data Before <br /> It Leaves the Browser </>}

@@ -4,14 +4,13 @@ import "../css/BuildToProtect.css";
 import { FaInfoCircle } from "react-icons/fa";
 
 
-import img1 from "../assets/solutions/tads/tads-in/1.png";
 
-const BuildToProtect = ({ label, title, desc, features = [] }) => {
+const BuildToProtect = ({ label, title, desc, features = [], img }) => {
     return (
         <>
             <div className="build-to-pro-con">
                 <div className="build-to-pro-left">
-                    <img src={img1} alt="" />
+                    <img src={img} alt="" />
                 </div>
                 <div className="build-to-pro-right">
                     <div className="ev-label">

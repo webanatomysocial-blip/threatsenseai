@@ -9,6 +9,12 @@ import { FiEyeOff, FiShuffle, FiLock, FiUserCheck, FiLayers } from "react-icons/
 import SecurityControls from "../Solutions-components/SecurityControls";
 import Cta from "../components/Cta";
 import bg from "../assets/home/tab-section/bg-image.png";
+
+import img1 from "../assets/solutions/dmss/1.png";
+import img2 from "../assets/solutions/dmss/2.png";
+import img3 from "../assets/solutions/dmss/3.png";
+
+
 const Dmss = () => {
 
     const securityControlsData = [
@@ -131,7 +137,7 @@ const Dmss = () => {
                 ctaText="Book A Free Demo"
                 ctaLink="https://tidycal.com/threatsenseai/tads"
                 features={[]}
-
+                img={img1}
                 direction='row-reverse'
             />
             <RealWorld
@@ -141,7 +147,7 @@ const Dmss = () => {
                 ctaText=""
                 ctaLink="https://tidycal.com/threatsenseai/tads"
                 features={realWorldFeatures2}
-
+                img={img2}
                 direction='row'
             />
             <TadsCap
@@ -173,7 +179,7 @@ const Dmss = () => {
                 ctaText="Book A Free Demo"
                 ctaLink="https://tidycal.com/threatsenseai/tads"
                 features={realWorldFeatures}
-
+                img={img3}
                 direction='row'
             />
             <Cta

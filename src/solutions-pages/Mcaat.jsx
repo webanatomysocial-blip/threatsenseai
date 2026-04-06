@@ -23,6 +23,7 @@ import mcaat6 from "../assets/solutions/mcaat/car/6.png";
 import mcaat7 from "../assets/solutions/mcaat/car/7.png";
 import mcaat8 from "../assets/solutions/mcaat/car/8.png";
 import mcaat9 from "../assets/solutions/mcaat/car/9.png";
+
 import mcaat14 from "../assets/solutions/mcaat/Compliance/2.png";
 import mcaat15 from "../assets/solutions/mcaat/Compliance/3.png";
 import mcaat16 from "../assets/solutions/mcaat/Compliance/4.png";
