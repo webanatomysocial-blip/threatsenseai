@@ -36,3 +36,16 @@
   gap: 30px;
   width: 100%;
 }
+
+@media (max-width: 768px) {
+  .build-to-pro-con{
+    padding: 60px 20px;
+    flex-direction: column;
+  }
+  .build-to-pro-left{
+    width: 100%;
+  }
+  .build-to-pro-right{
+    width: 100%;
+  }
+}

@@ -13,7 +13,7 @@ const Benefits = () => {
 
   return (
     <div className="benefits-section">
-      <div className="benefits-container">
+      <div className="about-benefits-container">
         {/* Left Content */}
         <div className="benefits-content">
           <div className="benefits-label">

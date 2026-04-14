@@ -22,7 +22,10 @@
 
 @media (max-width: 768px) {
   .cta-section {
-    padding: 60px 20px 60px 20px;
-    /* margin-top: 40px; */
+    padding: 60px 20px;
+    height: 60vh;
+  }
+  .cta-content {
+    gap: 20px;
   }
 }

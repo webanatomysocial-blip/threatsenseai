@@ -6,7 +6,7 @@
   justify-content: center;
 }
 
-.benefits-container {
+.about-benefits-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -77,7 +77,7 @@
 
 /* Responsive */
 @media (max-width: 1024px) {
-  .benefits-container {
+  .about-benefits-container {
     flex-direction: column;
     text-align: center;
     gap: 40px;

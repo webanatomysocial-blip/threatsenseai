@@ -9,6 +9,7 @@ import { FiSend, FiCpu, FiGitMerge, FiToggleLeft, FiBox, FiSliders } from "react
 import PartnerSuccess from '../Solutions-components/PartnerSuccess';
 import Cta from '../components/Cta';
 import bg from "../assets/home/tab-section/bg-image.png";
+import img from "../assets/solutions/tadsprotect/partner.png";
 
 export default function BecomeAPartner() {
   const realWorldFeatures = [
@@ -106,10 +107,10 @@ export default function BecomeAPartner() {
           <p className="sub-para-text" style={{ color: "#fff", margin: "10px" }}>
             Join the ThreatSenseAI partner ecosystem and help organizations protect their most critical data across SAP and enterprise environments.
           </p>
-          <a href="#" className="white-button">   Apply to become a Partner</a>
+          <a href="https://tidycal.com/threatsenseai/threatsense-ai-partner-discovery-call" className="white-button">   Apply to become a Partner</a>
         </div>
       </section>
-      <MentorCarousel />
+      {/* <MentorCarousel /> */}
       <RealWorld
         subtitle="Why Partner With ThreatSenseAI"
         title="Unlock New Opportunities in Data Security"
@@ -118,6 +119,7 @@ export default function BecomeAPartner() {
         ctaLink="https://tidycal.com/threatsenseai/tads"
         features={realWorldFeatures}
         icon={FaInfoCircle}
+        img={img}
       />
       <PartnerBenefits />
 
@@ -146,7 +148,7 @@ export default function BecomeAPartner() {
         description={<>Join ThreatSense AI’s global partner ecosystem and deliver advanced security solutions <br/> to your customers while expanding your business opportunities.</>}
         backgroundImage={bg}
         buttonText="Become a Partner"
-        link="#"
+        link="https://tidycal.com/threatsenseai/threatsense-ai-partner-discovery-call"
       />
 
 

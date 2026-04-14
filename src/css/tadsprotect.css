@@ -30,3 +30,12 @@
   flex-direction: column;
   gap: 30px;
 }
+
+@media (max-width: 768px) {
+  .tads-protect-banner, .tads-protect-banner-2 {
+    padding: 80px 20px;
+  }
+  .tads-banner-content {
+    gap: 15px;
+  }
+}

@@ -18,13 +18,15 @@ import ShareButton from "./ShareButton";
 import Footer from "./Footer";
 // import "../css/interactive.css";
 
-const PodLayout = ({
+const BlogLayout = ({
   category,
   title,
   content,
   image,
   recentPosts,
   sponsoredImage,
+  date,
+  author,
 }) => {
   const progressBarRef = useRef(null);
   const headerRef = useRef(null);
@@ -51,7 +53,17 @@ const PodLayout = ({
         <div className="pod-hero-section">
           <div className="pod-split-header">
             <div className="pod-title-section">
+              {category && (
+                <span className="blog-category-badge">{category}</span>
+              )}
               <h1 className="head-text">{title}</h1>
+              {(date || author) && (
+                <div className="blog-hero-meta">
+                  {author && <span className="blog-hero-author">{author}</span>}
+                  {author && date && <span className="blog-hero-sep">·</span>}
+                  {date && <span className="blog-hero-date">{date}</span>}
+                </div>
+              )}
             </div>
             <div className="pod-hero-img-container">
               <img src={image} alt={title} />
@@ -144,4 +156,4 @@ const PodLayout = ({
   );
 };
 
-export default PodLayout;
+export default BlogLayout;

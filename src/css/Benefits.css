@@ -1,4 +1,4 @@
-.benefits-container {
+.partner-benefits-container {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -89,4 +89,43 @@
     background-color: #6946FF;
     padding: 10px;
     border-radius: 10px;
+}
+
+/* Responsiveness */
+@media (max-width: 1024px) {
+    .benefits-cards-con {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .ben-card {
+        width: calc(50% - 20px);
+        height: auto;
+        min-height: 250px;
+    }
+}
+
+@media (max-width: 768px) {
+    .partner-benefits-container {
+        padding: 40px 20px;
+        margin: 10px;
+    }
+
+    .benefits-cards-con {
+        flex-direction: column;
+        width: 100%;
+        padding: 0;
+        margin: 20px 0;
+    }
+
+    .ben-card {
+        width: 100%;
+        height: auto;
+        min-height: 200px;
+    }
+
+    .benefits-header {
+        text-align: center;
+    }
 }

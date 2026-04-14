@@ -50,7 +50,7 @@ const InNumbers = () => {
               delay: 2500,
               disableOnInteraction: false,
             }}
-            pagination={{ clickable: true }}
+            // pagination={{ clickable: true,hid }}
             observer={true}
             observeParents={true}
             breakpoints={{

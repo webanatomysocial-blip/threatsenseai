@@ -93,7 +93,7 @@
 
 @media (max-width: 1024px) {
   .sc-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr)  !important;
   }
 }
 
@@ -102,7 +102,7 @@
     padding: 80px 20px;
   }
   .sc-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr !important;
   }
   .sc-card {
     min-height: auto;

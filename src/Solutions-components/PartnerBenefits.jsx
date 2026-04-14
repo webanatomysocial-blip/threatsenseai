@@ -5,7 +5,7 @@ import "../css/Benefits.css";
 const PartnerBenefits = () => {
   return (
     <>
-      <div className="benefits-container">
+      <div className="partner-benefits-container">
         <div className="benefits-header">
           <p className="sub-para-text">
             <FaInfoCircle /> What Our Partners Receive

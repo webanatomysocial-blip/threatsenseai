@@ -292,6 +292,7 @@ export default function Mcaat() {
         image={img4}
       />
 
+      <p className="para-text" style={{marginTop:"-70px",marginBottom:"40px",marginLeft:"120px"}}>*This solution is marketed as MCAAT in India to address MCA Rule 11(g) requirements.</p>
       <Cta
         title="Always-On Audit Trail 
         Compliance for MCA Rule 11(g)"

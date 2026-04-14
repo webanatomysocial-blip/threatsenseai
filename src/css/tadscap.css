@@ -76,3 +76,23 @@
     font-family: 'Instrument Sans', sans-serif;
     letter-spacing: -0.01em;
 }
+
+@media (max-width: 1024px) {
+    .tads-cap-features-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        padding: 40px;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .tads-cap-features-grid {
+        grid-template-columns: 1fr !important;
+        padding: 0px;
+        gap: 30px;
+    }
+
+    .partner-cap-card, .tads-cap-card {
+        padding: 20px;
+    }
+}

@@ -262,9 +262,8 @@ export default function Tads() {
             Protect sensitive SAP data from insider misuse, AI-driven data
             leaks, and unauthorized access across applications, browsers,
             endpoints, and databases.
-          </p>
-
-          <p className="sub-para-text">
+            <br />
+            <br />
             Built for modern data risks. Crafted for SAP landscapes.
           </p>
         </div>

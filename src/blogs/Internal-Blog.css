@@ -15,7 +15,9 @@
   overflow: hidden;
   position: relative;
 }
-
+img{
+  height: 500px;
+}
 .blog-right-text{
     display: flex;
     align-items: center;
@@ -312,6 +314,9 @@
   width: 0;
   background-color: #003377;
   transition: width 0.3s ease;
+}
+img{
+  height: 300px;
 }
 
 .back-btn:hover::after {

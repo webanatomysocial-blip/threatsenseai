@@ -14,7 +14,7 @@ import img1 from "../assets/solutions/tadsprotect/1.png";
 import img2 from "../assets/solutions/tadsprotect/2.png";
 import img3 from "../assets/solutions/tadsprotect/3.png";
 import img4 from "../assets/solutions/tadsprotect/4.png";
-import { FaPrint, FaUsb, FaDesktop, FaFileAlt } from "react-icons/fa";
+import { FaPrint, FaUsb, FaDesktop, FaFileAlt, FaShieldAlt } from "react-icons/fa";
 import { FiSend, FiCpu, FiGitMerge, FiToggleLeft, FiBox, FiSliders } from "react-icons/fi";
 
 const TadsProtect = () => {
@@ -174,6 +174,7 @@ const TadsProtect = () => {
                 title="How TADS Protect Works"
                 desc="Four-step real-time protection pipeline"
                 features={adsProtectWorksFeatures} 
+                icon={FaShieldAlt}
             />
             
             <SecurityControls 

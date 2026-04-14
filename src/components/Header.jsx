@@ -71,7 +71,7 @@ const Header = ({ onSearch }) => {
         {/* Desktop Right */}
         <div className="header-right only-windows">
           <a href="https://tidycal.com/threatsenseai/" className="black-button">
-            Free Consultation
+            Contact Us
           </a>
         </div>
 
@@ -159,7 +159,7 @@ const Header = ({ onSearch }) => {
               className="mobile-nav-link"
               onClick={toggleMenu}
             >
-              Free Consultation
+              Contact Us
             </a>
           </div>
         </div>

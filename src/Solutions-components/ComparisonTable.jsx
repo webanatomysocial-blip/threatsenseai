@@ -6,42 +6,39 @@ import "../css/ComparisonTable.css";
 const plans = [
   {
     name: "Starter",
-    description:
-      "Organizations needing core endpoint DLP protection",
-  },
-  {
-    name: "Enterprise",
-    description:
-      "Companies requiring contextual access control and stronger endpoint governance",
+    description: "Organizations needing core endpoint DLP protection",
   },
   {
     name: "Emerging",
-    description:
-      "Enterprises needing SAP specific data protection and insider threat monitoring",
+    description: "Companies requiring contextual access control and stronger endpoint governance",
+  },
+  {
+    name: "Enterprise",
+    description: "Enterprises needing SAP-specific data protection and insider threat monitoring",
   },
 ];
 
 const features = [
-  {
-    name: "Basic features",
-    values: [true, true, true],
-  },
-  {
-    name: "Automated workflows",
-    values: [false, false, true],
-  },
-  {
-    name: "Financial dashboard",
-    values: [true, true, true],
-  },
-  {
-    name: "Income tracking",
-    values: [true, true, true],
-  },
-  {
-    name: "Custom reports",
-    values: [false, false, true],
-  },
+  { name: "Download restrictions", values: [true, true, true] },
+  { name: "USB device control / USB locking", values: [true, true, true] },
+  { name: "Remote device locking", values: [true, true, true] },
+  { name: "Remote device wipe", values: [true, true, true] },
+  { name: "URL / website blocking", values: [true, true, true] },
+  { name: "Wi-Fi network restrictions", values: [true, true, true] },
+  { name: "Basic device monitoring dashboard", values: [true, true, true] },
+  { name: "Policy-based endpoint security controls", values: [true, true, true] },
+  { name: "Time-bound login controls", values: [false, true, true] },
+  { name: "Location-based login restrictions (Lat/Long)", values: [false, true, true] },
+  { name: "Attribute-based login policies", values: [false, true, true] },
+  { name: "Application-specific access controls", values: [false, true, true] },
+  { name: "Context-aware security policies", values: [false, true, true] },
+  { name: "Centralized policy management", values: [true, true, true] },
+  { name: "SAP transaction access monitoring", values: [false, false, true] },
+  { name: "SAP sensitive data download monitoring", values: [false, false, true] },
+  { name: "SAP table extraction monitoring", values: [false, false, true] },
+  { name: "SAP report / ALV data export control", values: [false, false, true] },
+  { name: "SAP user behaviour (UBA) monitoring", values: [false, false, true] },
+  { name: "Enterprise SAP data protection dashboard", values: [false, false, true] },
 ];
 
 export default function ComparisonTable() {
@@ -104,9 +101,9 @@ export default function ComparisonTable() {
           <div className="ct-col ct-feature-col ct-cta-label">·</div>
           {plans.map((_, i) => (
             <div key={i} className="ct-col ct-plan-col ct-cta-cell">
-              <Link to="/contact" className="ct-cta-btn">
+              <a href="https://tidycal.com/threatsenseai/"  className="ct-cta-btn">
                 Contact Sales
-              </Link>
+              </a>
             </div>
           ))}
         </div>

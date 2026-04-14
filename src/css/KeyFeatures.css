@@ -75,7 +75,8 @@
 
 /* Mobile Responsive */
 @media (max-width: 1024px) {
-  .key-features-container {
+  .key-features-container,
+  .partner-features-container {
     padding: 60px 40px;
   }
 
@@ -85,7 +86,8 @@
 }
 
 @media (max-width: 768px) {
-  .key-features-container {
+  .key-features-container,
+  .partner-features-container {
     padding: 60px 20px;
   }
 
