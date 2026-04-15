@@ -27,14 +27,15 @@
 }
 
 .solution-card-container {
-  margin-bottom: 150px; /* Space between cards */
+  margin-bottom: 50px; /* Space between cards */
   height: 80vh;
   min-height: 600px;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
+  position: sticky;
+  top: 100px;
   will-change: transform;
 }
 

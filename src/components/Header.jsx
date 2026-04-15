@@ -49,13 +49,13 @@ const Header = ({ onSearch }) => {
               Solutions <IoIosArrowDown className="dropdown-arrow" />
             </Link>
             <div className="dropdown-menu">
-              <Link to="/mcaat" className="dropdown-item">
+              <Link to="/threatsenseai-ate" className="dropdown-item">
                 ThreatSenseAI ATE
               </Link>
-              <Link to="/tads" className="dropdown-item">
+              <Link to="/threatsenseai-ads" className="dropdown-item">
                 ThreatSenseAI ADS
               </Link>
-              <Link to="/siem-soar" className="dropdown-item">
+              <Link to="/threatsense-itdar-for-sap" className="dropdown-item">
                 ThreatSense ITDAR
               </Link>
             </div>
@@ -126,21 +126,21 @@ const Header = ({ onSearch }) => {
                 className={`mobile-dropdown ${isSolutionsOpen ? "open" : ""}`}
               >
                 <Link
-                  to="/mcaat"
+                  to="/threatsenseai-ate"
                   className="mobile-dropdown-link"
                   onClick={toggleMenu}
                 >
                   ThreatSenseAI ATE
                 </Link>
                 <Link
-                  to="/tads"
+                  to="/threatsenseai-ads"
                   className="mobile-dropdown-link"
                   onClick={toggleMenu}
                 >
                   ThreatSenseAI ADS
                 </Link>
                 <Link
-                  to="/siem-soar"
+                  to="/threatsense-itdar-for-sap"
                   className="mobile-dropdown-link"
                   onClick={toggleMenu}
                 >

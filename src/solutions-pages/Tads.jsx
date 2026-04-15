@@ -253,10 +253,10 @@ export default function Tads() {
       <section className="tads-banner">
         <div className="tads-banner-content">
           <h1 ref={headerRef} className="big-text-head">
-            ThreatSenseAI ADS —
+            ThreatSenseAI ADS 
             {isMobile
               ? splitLetters("  ThreatSense \n AI Data Security")
-              : splitLetters("  ThreatSense AI Data Security")}
+              : splitLetters(" \n ThreatSense AI Data Security")}
           </h1>
           <p className="sub-para-text">
             Protect sensitive SAP data from insider misuse, AI-driven data

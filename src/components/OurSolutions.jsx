@@ -26,21 +26,9 @@ const OurSolutions = ({ id }) => {
         cards.forEach((card, index) => {
           const isLast = index === cards.length - 1;
 
-          // Pinning logic
-          ScrollTrigger.create({
-            trigger: card,
-            start: "top 100px",
-            endTrigger: containerRef.current,
-            end: "bottom bottom",
-            pin: true,
-            pinSpacing: false,
-            anticipatePin: 1,
-            invalidateOnRefresh: true,
-          });
-
           // Scale animation as cards stack
           if (!isLast) {
-            gsap.to(card, {
+            gsap.to(card.querySelector(".solution-card"), {
               scale: 0.9,
               scrollTrigger: {
                 trigger: cards[index + 1],
@@ -54,13 +42,8 @@ const OurSolutions = ({ id }) => {
       });
     }, containerRef);
 
-    const refreshTimer = setTimeout(() => {
-      ScrollTrigger.refresh();
-    }, 500);
-
     return () => {
       ctx.revert();
-      clearTimeout(refreshTimer);
     };
   }, []);
 
@@ -76,7 +59,7 @@ const OurSolutions = ({ id }) => {
       ],
       media: mcaatGif1,
       reverse: false,
-      link: "/mcaat",
+      link: "/threatsenseai-ate",
       btn: "Explore ThreatSenseAI ATE",
     },
     {
@@ -90,7 +73,7 @@ const OurSolutions = ({ id }) => {
       ],
       media: mcaatGif2,
       reverse: true,
-      link: "/tads",
+      link: "/threatsenseai-ads",
       btn: "Explore ThreatSenseAI ADS",
       videoClass: "tads-card-video",
     },
@@ -104,7 +87,7 @@ const OurSolutions = ({ id }) => {
       ],
       media: mcaatGif3,
       reverse: false,
-      link: "/siem-soar",
+      link: "/threatsense-itdar-for-sap",
       btn: "Explore ThreatSense ITDAR",
     },
   ];

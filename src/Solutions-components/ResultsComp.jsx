@@ -10,7 +10,7 @@ const ResultsComp = () => {
   const results = [
     {
       id: 1,
-      title: "100% Continuous MCA Rule 11(g) Coverage",
+      title: "100% Continuous ATE Rule 11(g) Coverage",
       description:
         "Ensures audit logs, policies, and controls are always enabled and enforced, eliminating blind spots caused by manual configuration gaps or accidental disabling",
       img: img1,

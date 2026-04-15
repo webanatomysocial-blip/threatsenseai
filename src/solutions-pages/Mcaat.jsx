@@ -241,7 +241,7 @@ export default function Mcaat() {
       <section className="mcaat-banner">
         <div className="mcaat-banner-content">
           <h1 ref={headerRef} className="big-text-head">
-            ThreatSenseAI ATE —
+            ThreatSenseAI ATE 
             {isMobile
               ? splitLetters("  MCA Audit \n Trail Enforcement \n for SAP")
               : splitLetters("  MCA Audit Trail \n Enforcement for SAP")}
@@ -287,7 +287,7 @@ export default function Mcaat() {
       <ResultsComp />
       <UseCases
         label="Use Cases"
-        title={<>Always-On Audit Trail Compliance for MCA Rule 11(g)</>}
+        title={<>Always-On Audit Trail Compliance for ATE Rule 11(g)</>}
         list={useCasesList}
         image={img4}
       />
@@ -295,7 +295,7 @@ export default function Mcaat() {
       <p className="para-text" style={{marginTop:"-70px",marginBottom:"40px",marginLeft:"120px"}}>*This solution is marketed as MCAAT in India to address MCA Rule 11(g) requirements.</p>
       <Cta
         title="Always-On Audit Trail 
-        Compliance for MCA Rule 11(g)"
+        Compliance for ATE Rule 11(g)"
         description="ThreatSenseAI ATE continuously enforces, protects, and validates audit trails across SAP systems - automatically detecting tampering,
         reinstating disabled controls, and preserving audit-ready evidence without manual intervention"
         backgroundImage={bg}

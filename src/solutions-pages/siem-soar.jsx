@@ -261,7 +261,7 @@ export default function SiemSoar() {
 
       <SolutionCarousel
         label="Why ThreatSense ITDAR for SAP?"
-        title="We Don’t Just Log, We Detect, Correlate and Respond"
+        title={<>We Don’t Just Log, We Detect, <br /> Correlate and Respond</>}
         description="Basic logging only records events. ThreatSense ITDAR for SAP transforms those events into actionable intelligence with real-time detection and automated response."
         data={content}
       />
