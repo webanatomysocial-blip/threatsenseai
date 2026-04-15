@@ -267,8 +267,8 @@ export default function Mcaat() {
         title="Compliance that enforces itself"
         description={
           isMobile
-            ? "ThreatSenseAI ATE delivers automated compliance controls that continuously protect audit trails,enforce logging policies and respond instantly to violations, ensuring MCA Rule 11(g) requirements are met at all times."
-            : "ThreatSenseAI ATE delivers automated compliance controls that continuously protect audit trails,enforce logging policies \n and respond instantly to violations, ensuring MCA Rule 11(g) requirements are met at all times."
+            ? "ThreatSenseAI ATE delivers always-on audit trail enforcement with automated controls that protect logs, enforce policies, and instantly respond to violations, keeping your systems continuously compliant and audit-ready."
+            : "ThreatSenseAI ATE delivers always-on audit trail enforcement with automated controls that protect logs, enforce policies, \n and instantly respond to violations, keeping your systems continuously compliant and audit-ready."
         }
         items={Cardscontent}
         marginTop="0px"
