@@ -26,9 +26,9 @@ function App() {
         <Route path="blogs" element={<BlogsPage />} />
         {/* <Route path="contact" element={<Contact />} /> */}
         <Route path="about" element={<AboutUs />} />
-        <Route path="threatsenseai-ads" element={<Tads />} />
-        <Route path="threatsenseai-ate" element={<Mcaat />} />
-        <Route path="threatsense-itdar-for-sap" element={<SiemSoar />} />
+        <Route path="threatsenseai-data-security" element={<Tads />} />
+        <Route path="audit-trail-enforcer" element={<Mcaat />} />
+        <Route path="threatops-for-sap" element={<SiemSoar />} />
 
         <Route path="privacy-policy" element={<PrivacyPolicy />} />
         <Route path="cookie-policy" element={<Cookies />} />

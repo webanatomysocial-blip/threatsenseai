@@ -39,7 +39,7 @@ const CustomerFeedback = () => {
     },
     {
       id: 4,
-      text: "MCA Rule 11(g) compliance was a constant risk; ThreatSenseAI ATE delivered SAP audit visibility and confidence, making audits stress-free and reliable.",
+      text: "MCA Rule 11(g) compliance was a constant risk; Audit Trail Enforcer delivered SAP audit visibility and confidence, making audits stress-free and reliable.",
       name: "Head of Internal Audit",
       role: "Large Manufacturing Enterprise",
       icon: <FiUserCheck />,

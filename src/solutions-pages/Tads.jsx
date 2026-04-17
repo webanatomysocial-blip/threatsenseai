@@ -3,6 +3,7 @@ import gsap from "gsap";
 import "../css/Solutions-pages.css";
 import SolutionCards from "../Solutions-components/SolutionCards";
 import RisingThreats from "../Solutions-components/RisingThreats";
+import { Link } from "react-router-dom";
 import {
   FaTh,
   FaLock,
@@ -19,6 +20,8 @@ import {
   FaCogs,
   FaUserLock,
   FaServer,
+  FaBalanceScale,
+  FaChartPie,
 } from "react-icons/fa";
 
 import CapabilitiesSection from "../components/CapabilitiesSection";
@@ -87,8 +90,9 @@ export default function Tads() {
       icon: <FaBell />,
       title: "Smart Alerting",
       description:
-        "Generates high-fidelity, context-aware alerts for real data risk scenarios, not noise. Prioritizes insider misuse, mass data access, and policy violations, with seamless integration into SIEM, SOAR, and ITSM platforms for faster investigation and response.",
+        "Automate regulatory obligations across GDPR, DPDPA, CCPA, and evolving privacy laws with built-in workflows, controls, and evidence reporting. ",
     },
+
   ];
 
   const capabilities = [
@@ -116,6 +120,19 @@ export default function Tads() {
       description:
         "Generates high-fidelity, context-aware alerts for real data risk scenarios, not noise. Prioritizes insider misuse, mass data access, and policy violations, with seamless integration into SIEM, SOAR, and ITSM platforms for faster investigation and response.",
     },
+    {
+      icon: <FaBalanceScale />,
+      title: "Privacy Compliance Made Operational",
+      description:
+        "Automate regulatory obligations across GDPR, DPDPA, CCPA, and evolving privacy laws with built-in workflows, controls, and evidence reporting. ",
+    },
+    {
+      icon: <FaChartPie />,
+      title: "Data Risk Analytics ",
+      description:
+        "Provides unified visibility into data exposure, policy violations, user behavior, and emerging risks through dashboards, trends, and actionable insights. ",
+    },
+
   ];
 
   const Benefits = [
@@ -123,80 +140,95 @@ export default function Tads() {
       icon: <FaUserShield />,
       title: "CISO & Security Leaders",
       description:
-        "Reduce enterprise risk exposure and demonstrate proactive data protection to leadership and regulators. Gain unified visibility into SAP data flows, insider risk, and data leakage paths across the organization.",
+        "Reduce enterprise data risk, strengthen governance, and gain executive visibility into insider threats, policy violations, and sensitive data movement.",
     },
     {
       icon: <FaShieldAlt />,
       title: "SAP Security & GRC Teams",
       description:
-        "Extend SAP security beyond access controls. Enforce data-centric policies aligned with SAP roles and authorizations while detecting unauthorized data exports, excessive access, and policy violations in real time.",
+        "Extend SAP security beyond access controls with data-centric policies that prevent unauthorized exports, excessive access, and misuse in real time.",
     },
     {
       icon: <FaClipboardCheck />,
       title: "Audit & Compliance Teams",
       description:
-        "Meet regulatory and statutory requirements with automated evidence collection. Maintain continuous compliance across GDPR, DPDP, SOX, and industry mandates with audit-ready reports and traceable data access logs.",
+        "Meet regulatory requirements with automated evidence collection, continuous monitoring, and audit-ready reporting across key compliance frameworks.",
     },
     {
       icon: <FaCogs />,
       title: "Enterprise Architects",
       description:
-        "Deploy seamlessly across complex SAP landscapes without redesign. Support hybrid, cloud, and RISE environments using a scalable, non-intrusive architecture aligned with enterprise security standards.",
+        "Deploy seamlessly across SAP ECC, S/4HANA, HANA, cloud, hybrid, and RISE environments with scalable enterprise-ready architecture.",
     },
     {
       icon: <FaUserLock />,
-      title: "Data Protection Officer (DPO) & Privacy Office",
+      title: "Data Privacy Officers",
       description:
-        "Enforce privacy-by-design and data minimization principles. Prevent overexposure of PII and sensitive data while demonstrating accountability, lawful processing, and continuous compliance with global privacy regulations.",
+        "Operationalize privacy programs with consent governance, retention controls, rights requests, and defensible evidence for evolving regulations.",
     },
     {
       icon: <FaServer />,
-      title: "IT Operations & Basis Teams",
+      title: "IT Operations Teams",
       description:
-        "Maintain SAP performance and stability while supporting security controls. Gain real-time visibility into risky data activities without disrupting transports, system operations, or day-to-day SAP administration.",
+        "Centralize policy enforcement, streamline administration, and reduce operational overhead with unified controls across systems, browsers, and endpoints.",
     },
   ];
 
   const useCasesList = [
-    "Real-time prevention of insider data leaks across SAP, endpoints, and browsers",
-    " Immediate visibility into user actions, policy violations, and risky behavior",
-    " Centralized control of devices, applications, and Gen-AI usage",
-    "Faster compliance, audits, and investigations with unified logging",
+    "Prevent insider-driven data leaks across SAP, browsers, and connected environments in real time ",
+    " Gain immediate visibility into user actions, policy violations, and high-risk behavior ",
+    "Centrally govern data movement across applications, devices, and GenAI usage channels",
+    "Accelerate audits, investigations, and compliance readiness with unified evidence and reporting ",
   ];
 
   const technologies = [
     {
       id: "01",
-      title: "ThreatSenseAI ADS Protect",
+      title: "TADS Protect",
       subtitle:
-        "Monitors and controls how sensitive data moves out of your enterprise, with a primary focus on SAP ERP, the most business-critical system.",
+        "Prevents unauthorized SAP data exports, excessive access, insider misuse, and risky data movement through real-time, policy-driven controls built for SAP environments.",
       description:
-        "ThreatSenseAI ADS prevents unauthorized exports, excessive data access, and insider misuse through real-time, policy-driven enforcement across SAP environments.",
+        "TADS Protect ensures that sensitive SAP data remains within the enterprise by enforcing context-aware security policies at the point of access and egress.",
       image: tadsimg,
       video: null,
       url: "/tads-protect",
+      btnText: "Explore TADS Protect",
     },
     {
       id: "02",
-      title: "DotLayer",
+      title: "Dot Layer",
       subtitle:
-        "Monitors and controls sensitive data exposure at the browser layer, where most modern data leaks occur.",
+        "Stops browser-based data leaks by controlling copy, paste, upload, print, screenshot, and AI prompt actions - without agents or complex endpoint deployments.",
       description:
-        "DotLayer prevents unauthorized data sharing into generative AI tools, personal email accounts, and cloud drives by enforcing real-time, context-aware controls on user actions.",
+        "Dot Layer provides a secure browser environment for SAP, preventing data leakage through common web-based actions without impacting user experience.",
       image: dotimg,
       video: null,
       url: "/dot-layer",
+      btnText: "Explore Dot Layer",
     },
     {
       id: "03",
-      title: "DMSS – Data Masking & Scrambling Solution",
+      title: "DMSS – Data Masking & Scrambling",
       subtitle:
-        "Secure Real-Time Data Protection and Compliance for SAP Environments",
+        "Masks and scrambles sensitive SAP data in production and non-production systems to reduce exposure, enable safe testing, and support privacy compliance.",
       description:
-        "Dynamically masks and scrambles sensitive SAP data in real time to enforce data minimization aivilend least-prge access principles. With DMSS, enterprises can ensure personal, financial, and regulated data is exposed only to authorized users.\n\nIt reduces risk of data misuse in production and non-production environments while maintaining business continuity.\n\nSupports regulatory compliance requirements under GDPR, DPDP, SOX, and similar data protection frameworks.",
+        "DMSS ensures that sensitive data is only visible to authorized personnel, protecting privacy and maintaining regulatory compliance across SAP landscapes.",
       image: dmssimg,
       video: null,
       url: "/dmss",
+      btnText: "Explore DMSS",
+    },
+    {
+      id: "04",
+      title: "DPRM – Data Privacy Regulation Manager",
+      subtitle:
+        "Operationalizes privacy laws such as GDPR, DPDPA, CCPA, and similar regulations through consent governance, data subject rights workflows, retention controls, and compliance reporting.",
+      description:
+        "DPRM streamlines privacy management by automating regulatory workflows and providing comprehensive reporting for global privacy standards.",
+      image: tadsimg, // Using tadsimg as a fallback for the new product
+      video: null,
+      url: "/dprm",
+      btnText: "Explore DPRM",
     },
   ];
 
@@ -253,22 +285,37 @@ export default function Tads() {
       <section className="tads-banner">
         <div className="tads-banner-content">
           <h1 ref={headerRef} className="big-text-head">
-            ThreatSenseAI ADS 
+            ThreatSenseAI ADS
             {isMobile
-              ? splitLetters("  ThreatSense \n AI Data Security")
-              : splitLetters(" \n ThreatSense AI Data Security")}
+              ? splitLetters("\nData Security Suite (TADS)")``
+              : splitLetters("\nData Security Suite (TADS)")}
           </h1>
           <p className="sub-para-text">
-            Protect sensitive SAP data from insider misuse, AI-driven data
-            leaks, and unauthorized access across applications, browsers,
-            endpoints, and databases.
+            Unified protection for SAP data across leaks, privacy, masking, browsers, and compliance.
+
             <br />
             <br />
+
+            Four products. One platform. Complete SAP data protection.
+
+            <br />
+            <br />
+
+
+            Protect sensitive enterprise data across SAP applications, browsers, databases, endpoints, and AI-driven workflows with an integrated suite built for modern data risks.
+
             Built for modern data risks. Crafted for SAP landscapes.
           </p>
+          <a href="https://tidycal.com/threatsenseai/tads" className="black-button">
+            Explore the Suite
+          </a>
         </div>
       </section>
-      <CoreTechs technologies={technologies} />
+      <CoreTechs
+        technologies={technologies}
+        subheading="Complete SAP Data Protection Across Every Risk Layer"
+        description="Prevent data leaks, reduce insider risk, secure sensitive data usage, and stay compliant with global privacy regulations - all from one integrated suite."
+      />
       <ThreatRadiation />
 
       <CapabilitiesSection
@@ -282,18 +329,19 @@ export default function Tads() {
         label="Use Cases"
         title={
           <>
-            Where ThreatSense <br /> ThreatSenseAI ADS Delivers <br /> Immediate
-            Value
+            Where ThreatSense AI Data Security Suite Delivers Immediate Value
           </>
         }
         list={useCasesList}
         image={usecaseimg}
+        btnName="Explore the Suite"
+        srcbtn="https://tidycal.com/threatsenseai/tads"
       />
       <CapabilitiesSection
         header={{
           icon: <FaGlobe size={16} />,
           label: "Benefits",
-          title: "Who ThreatSenseAI ADS is Built For",
+          title: "Built for Teams That Protect Enterprise Data",
         }}
         border="none"
         borderRadius="20px"
@@ -304,22 +352,21 @@ export default function Tads() {
       <section className="protection-layer-section">
         <div className="capabilities-header">
           <div className="sub-para-text security-label">
-            <FaGlobe size={16} style={{ marginRight: "4px" }} /> Protection
-            layer.
+            <FaGlobe size={16} style={{ marginRight: "4px" }} /> Unified Protection
           </div>
-          <h2 className="head-text">Complete Data Leak Protection</h2>
+          <h2 className="head-text">Complete Protection Against Modern Data Leaks</h2>
         </div>
 
         <div className="protection-grid">
           <div className="leak-column">
-            <h3>How Data Leaks</h3>
+            <h3>How Data Leaks Happen</h3>
             <div className="pl-list">
               {[
                 "Copying sensitive SAP or enterprise data",
-                "Pasting Sensitive data into Gen-AI tools or browsers",
-                "Uploading files to external websites or email",
-                "Unauthorized Screenshots, screen sharing, and printing",
-                "Uncontrolled USB and device usage",
+                "Pasting data into AI tools, browsers, or chat apps",
+                "Uploading files to personal email or external sites",
+                "Screenshots, screen sharing, or unauthorized printing",
+                "Uncontrolled USB and peripheral device usage",
               ].map((item, i) => (
                 <div key={i} className="pl-item">
                   <div className="pl-icon-x">
@@ -332,14 +379,14 @@ export default function Tads() {
           </div>
 
           <div className="block-column">
-            <h3>How ThreatSenseAI ADS Blocks It</h3>
+            <h3>How ThreatSense AI Blocks It</h3>
             <div className="pl-list">
               {[
-                "Blocks copy, paste, and exports of sensitive data",
-                "Detects and stops data shared with Gen-AI tools",
-                "Prevents unauthorized uploads and email sharing",
-                "Blocks screenshots, screen capture, and screen sharing",
-                "Enforces device and peripheral access policies",
+                "Blocks copy, paste, downloads, and data exports",
+                "Detects and stops data shared with AI tools",
+                "Prevents unauthorized uploads and external sharing",
+                "Restricts screenshots, screen capture, and printing",
+                "Enforces USB, device, and peripheral controls",
               ].map((item, i) => (
                 <div key={i} className="pl-item">
                   <div className="pl-icon-check">
@@ -351,13 +398,16 @@ export default function Tads() {
             </div>
           </div>
         </div>
+        <a href="https://tidycal.com/threatsenseai/tads" className="black-button">
+          Request a Live Demo
+        </a>
       </section>
       <RisingThreats />
       <Cta
-        title="Control How SAP Data Leaves 
-        Your Enterprise"
-        description="Real-time visibility and enforcement to prevent insider leaks, excessive access,
-        and unauthorized data sharing across SAP and beyond"
+        title="Take Control of How SAP Data Moves
+         Across Your Enterprise "
+        description="Gain real-time visibility and policy enforcement to prevent insider leaks, excessive access,
+         and unauthorized data sharing across SAP, browsers, and connected systems. "
         backgroundImage={bg}
         buttonText="Book a Demo"
         link="https://tidycal.com/threatsenseai/tads"

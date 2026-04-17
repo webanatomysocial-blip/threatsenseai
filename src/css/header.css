@@ -41,7 +41,7 @@
 .header-nav {
   display: flex;
   gap: 40px;
-  width: 30%;
+  width: 42%;
   justify-content: center;
 }
 
@@ -303,10 +303,12 @@
   .only-windows {
     display: none !important;
   }
-.mobile-solutions-wrapper {
 
-  gap: 0px;
-}
+  .mobile-solutions-wrapper {
+
+    gap: 0px;
+  }
+
   .header-left {
     width: 60%;
   }

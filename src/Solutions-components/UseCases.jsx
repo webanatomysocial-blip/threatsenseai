@@ -9,7 +9,7 @@ import { FaGlobe } from "react-icons/fa";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const UseCases = ({ label, title, list, image }) => {
+const UseCases = ({ label, title, list, image, btnName, para, srcbtn }) => {
   const containerRef = useRef(null);
   const imgRef = useRef(null);
 
@@ -60,6 +60,7 @@ const UseCases = ({ label, title, list, image }) => {
         </div>
 
         <h2 className="head-text">{displayTitle}</h2>
+        <p className="para-text">{para}</p>
 
         <ul className="uc-list">
           {displayList.map((item, index) => (
@@ -72,8 +73,8 @@ const UseCases = ({ label, title, list, image }) => {
           ))}
         </ul>
 
-        <a href="https://tidycal.com/threatsenseai/" className="black-button">
-          Book A Free Demo
+        <a href={srcbtn || "https://tidycal.com/threatsenseai/"} className="black-button">
+          {btnName || "Book A Free Demo"}
         </a>
       </div>
 

@@ -145,7 +145,7 @@ export default function BecomeAPartner() {
       />
       <Cta
         title={<>Partner With Us to  <br />Drive Growth and Innovation </>}
-        description={<>Join ThreatSense AI’s global partner ecosystem and deliver advanced security solutions <br/> to your customers while expanding your business opportunities.</>}
+        description={<>Join ThreatSense AI’s global partner ecosystem and deliver advanced security solutions <br /> to your customers while expanding your business opportunities.</>}
         backgroundImage={bg}
         buttonText="Become a Partner"
         link="https://tidycal.com/threatsenseai/threatsense-ai-partner-discovery-call"

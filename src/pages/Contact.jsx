@@ -29,6 +29,39 @@ export default function Contact() {
     },
   ];
 
+  const faqData = [
+    {
+      question: "How does ThreatSenseAI detect SAP threats in real-time?",
+      answer:
+        "ThreatSenseAI uses advanced AI and machine learning algorithms to monitor SAP system logs and network traffic constantly. It identifies patterns indicative of threats and alerts security teams instantly.",
+    },
+    {
+      question: "Does it integrate with ServiceNow and MS Teams?",
+      answer:
+        "Yes, ThreatSenseAI offers seamless integration with popular ITSM and collaboration tools like ServiceNow and MS Teams for automated icon reporting and communication.",
+    },
+    {
+      question: "Can it provide automated incident response?",
+      answer:
+        "Absolutely. Beyond detection, it can be configured to take automated actions to isolate threats or mitigate risks according to your predefined security policies.",
+    },
+    {
+      question: "How long is deployment for SAP systems?",
+      answer:
+        "Our deployment process is optimized for speed, typically taking only a few days to get fully integrated and operational within your SAP environment.",
+    },
+    {
+      question: "What compliance standards are supported?",
+      answer:
+        "ThreatSenseAI helps you meet various compliance requirements, including GDPR, SOX, and HIPAA, by providing comprehensive auditing and reporting capabilities.",
+    },
+    {
+      question: "Is it difficult for security teams to use?",
+      answer:
+        "No, we've designed an intuitive dashboard that simplifies complex security data, making it easy for teams to monitor and respond to threats without needing specialized SAP expertise.",
+    },
+  ];
+
   return (
     <div className="contact-page">
       <div className="contact-header">
@@ -112,7 +145,7 @@ export default function Contact() {
         </div>
       </section>
 
-      <FAQ />
+      <FAQ items={faqData} />
     </div>
   );
 }

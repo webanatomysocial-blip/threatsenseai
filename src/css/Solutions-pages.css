@@ -111,8 +111,9 @@
 .accordion-container {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: stretch;
   width: 100%;
+  height: 100%;
   gap: 60px;
   transition: all 0.3s ease-in-out;
 }
@@ -143,7 +144,7 @@
   transform: translateY(-6px);
 }
 
-.read-more-content > * {
+.read-more-content>* {
   overflow: hidden;
 }
 
@@ -194,11 +195,13 @@
 
 .accordion-header-group {
   display: flex;
-  flex-direction: row;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
   margin-bottom: 40px;
   justify-content: space-between;
   transition: all 0.3s ease-in-out;
+  position: sticky;
+  top: 150px;
 }
 
 .accordion-header-group .head-text {
@@ -986,6 +989,7 @@
 }
 
 @media (max-width: 768px) {
+
   .tads-banner,
   .mcaat-banner,
   .siem-soar-banner {
@@ -1110,6 +1114,7 @@
 }
 
 @media (max-width: 768px) {
+
   .Solution-cap-container,
   .mcaat-header-container,
   .mcaat-title-container,

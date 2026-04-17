@@ -8,41 +8,55 @@ import { Link } from "react-router-dom";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const CoreTechs = ({ technologies }) => {
+const CoreTechs = ({ technologies, subheading, description }) => {
   const containerRef = useRef(null);
 
   const defaultTechs = [
     {
       id: "01",
-      title: "ThreatSenseAI ADS Protection",
+      title: "TADS Protect",
       subtitle:
-        "Monitors and controls how sensitive data moves out of your enterprise, with a primary focus on SAP ERP, the most business-critical system.",
-      description:
-        "ThreatSenseAI ADS prevents unauthorized exports, excessive data access, and insider misuse through real-time, policy-driven enforcement across SAP environments.",
+        "Prevents unauthorized SAP data exports, excessive access, insider misuse, and risky data movement through real-time, policy-driven controls built for SAP environments.",
       image: cardImage,
       video: null,
-      url:"/tads-protect"
+      url: "/tads-protect",
+      btnText: "Explore TADS Protect"
     },
     {
       id: "02",
-      title: "DotLayer",
+      title: "Dot Layer",
       subtitle:
-        "Monitors and controls sensitive data exposure at the browser layer, where most modern data leaks occur.",
+        "Stops browser-based data leaks by controlling copy, paste, upload, print, screenshot, and AI prompt actions - without agents or complex endpoint deployments.",
       description:
-        "DotLayer prevents unauthorized data sharing into generative AI tools, personal email accounts, and cloud drives by enforcing real-time, context-aware controls on user actions.",
+        "Dot Layer provides a secure browser environment for SAP, preventing data leakage through common web-based actions without impacting user experience.",
       image: cardImage,
       video: null,
-      url:"/dot-layer"
+      url: "/dot-layer",
+      btnText: "Explore Dot Layer"
     },
     {
       id: "03",
-      title: "DMSS – Data Masking & Scrambling Solution",
-      subtitle: "lorem ipsum dolor sit amet consectetur adipiscing elit",
+      title: "DMSS – Data Masking & Scrambling",
+      subtitle:
+        "Masks and scrambles sensitive SAP data in production and non-production systems to reduce exposure, enable safe testing, and support privacy compliance.",
       description:
-        "Dynamically masks and scrambles sensitive SAP data in real time to enforce data minimization aivilend least-prge access principles. With DMSS, enterprises can ensure personal, financial, and regulated data is exposed only to authorized users.\n\nIt reduces risk of data misuse in production and non-production environments while maintaining business continuity.\n\nSupports regulatory compliance requirements under GDPR, DPDP, SOX, and similar data protection frameworks.",
+        "DMSS ensures that sensitive data is only visible to authorized personnel, protecting privacy and maintaining regulatory compliance across SAP landscapes.",
       image: cardImage,
-      video: null,  
-      url:"/dmss"
+      video: null,
+      url: "/dmss",
+      btnText: "Explore DMSS"
+    },
+    {
+      id: "04",
+      title: "DPRM – Data Privacy Regulation Manager",
+      subtitle:
+        "Operationalizes privacy laws such as GDPR, DPDPA, CCPA, and similar regulations through consent governance, data subject rights workflows, retention controls, and compliance reporting.",
+      description:
+        "DPRM streamlines privacy management by automating regulatory workflows and providing comprehensive reporting for global privacy standards.",
+      image: cardImage,
+      video: null,
+      url: "/dprm",
+      btnText: "Explore DPRM"
     },
   ];
 
@@ -95,12 +109,17 @@ const CoreTechs = ({ technologies }) => {
           className="sub-para-text security-label"
           style={{ justifyContent: "center" }}
         >
-          <FaCheckCircle size={16} style={{ marginRight: "4px" }} />
-          Core Techs
+          {/* <FaCheckCircle size={16} style={{ marginRight: "4px" }} />
+          {subheading} */}
         </div>
         <h2 className="head-text">
-          Data Protection, Insider Risk <br /> AI Leakage, Misuse Prevention
+          {subheading || "Complete SAP Data Protection  Across Every Risk Layer"}
         </h2>
+        {description && (
+          <p className="para-text" style={{ textAlign: "center", maxWidth: "800px", margin: "20px auto" }}>
+            {description}
+          </p>
+        )}
       </div>
 
       <div className="techs-timeline">
@@ -134,15 +153,15 @@ const CoreTechs = ({ technologies }) => {
                   />
                 )}
               </div>
-              
+
             </div>
 
             <div className="tech-text-container">
               <h3 className="head-text">{tech.title}</h3>
-              <h4 className="sub-para-text tech-subtitle">{tech.subtitle}</h4>
-              <p className="para-text tech-desc">{tech.description}</p>
-            <Link to={tech.url} className="ev-cta" style={{width:"fit-content"}}>
-               Read More
+              <h4 className="para-text tech-subtitle">{tech.subtitle}</h4>
+              {/* <p className="para-text tech-desc">{tech.description}</p> */}
+              <Link to={tech.url} className="ev-cta " style={{ width: "fit-content" }}>
+                {tech.btnText || "Read More"}
               </Link>
             </div>
           </div>

@@ -20,13 +20,11 @@
   top: 0;
   bottom: 0;
   width: 2px;
-  background: linear-gradient(
-    to bottom,
-    transparent,
-    #ff7a55,
-    #ff7a55,
-    transparent
-  );
+  background: linear-gradient(to bottom,
+      transparent,
+      #ff7a55,
+      #ff7a55,
+      transparent);
   transform: translateX(-50%);
   z-index: 1;
 }
@@ -104,11 +102,7 @@ video.tech-image {
   gap: 15px;
 }
 
-.tech-subtitle {
-  font-weight: 500;
-  font-size: 18px !important;
-  color: var(--black-color);
-}
+
 
 .tech-desc {
   color: #666;

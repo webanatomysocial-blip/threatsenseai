@@ -5,40 +5,49 @@ import "../css/ComparisonTable.css";
 
 const plans = [
   {
-    name: "Starter",
-    description: "Organizations needing core endpoint DLP protection",
+    name: "Protect",
+    includes: "Essential SAP Data Protection",
+    scope: "Core SAP DLP",
   },
   {
-    name: "Emerging",
-    description: "Companies requiring contextual access control and stronger endpoint governance",
+    name: "Advanced",
+    includes: "Integrated Data Protection",
+    scope: "Protect + Browser Security + DMSS",
   },
   {
     name: "Enterprise",
-    description: "Enterprises needing SAP-specific data protection and insider threat monitoring",
+    includes: "Unified Enterprise Data Security",
+    scope: "Full Suite + DPRM",
   },
 ];
 
 const features = [
-  { name: "Download restrictions", values: [true, true, true] },
-  { name: "USB device control / USB locking", values: [true, true, true] },
-  { name: "Remote device locking", values: [true, true, true] },
-  { name: "Remote device wipe", values: [true, true, true] },
-  { name: "URL / website blocking", values: [true, true, true] },
-  { name: "Wi-Fi network restrictions", values: [true, true, true] },
-  { name: "Basic device monitoring dashboard", values: [true, true, true] },
-  { name: "Policy-based endpoint security controls", values: [true, true, true] },
-  { name: "Time-bound login controls", values: [false, true, true] },
-  { name: "Location-based login restrictions (Lat/Long)", values: [false, true, true] },
-  { name: "Attribute-based login policies", values: [false, true, true] },
-  { name: "Application-specific access controls", values: [false, true, true] },
-  { name: "Context-aware security policies", values: [false, true, true] },
+  { name: "SAP data leak prevention policies", values: [true, true, true] },
+  { name: "Sensitive download monitoring", values: [true, true, true] },
+  { name: "SAP report / ALV export control", values: [true, true, true] },
+  { name: "Table extraction monitoring", values: [true, true, true] },
+  { name: "Policy-based blocking & warnings", values: [true, true, true] },
   { name: "Centralized policy management", values: [true, true, true] },
-  { name: "SAP transaction access monitoring", values: [false, false, true] },
-  { name: "SAP sensitive data download monitoring", values: [false, false, true] },
-  { name: "SAP table extraction monitoring", values: [false, false, true] },
-  { name: "SAP report / ALV data export control", values: [false, false, true] },
-  { name: "SAP user behaviour (UBA) monitoring", values: [false, false, true] },
-  { name: "Enterprise SAP data protection dashboard", values: [false, false, true] },
+  { name: "Basic dashboards & reporting", values: [true, true, true] },
+  { name: "Browser copy / paste control", values: [false, true, true] },
+  { name: "Browser upload restriction", values: [false, true, true] },
+  { name: "Browser print / screenshot controls", values: [false, true, true] },
+  { name: "Browser AI prompt protection", values: [false, true, true] },
+  { name: "Dot Layer agentless browser security", values: [false, true, true] },
+  { name: "Data masking for non-production systems", values: [false, true, true] },
+  { name: "Data scrambling for test environments", values: [false, true, true] },
+  { name: "Dynamic masking in live access scenarios", values: [false, true, true] },
+  { name: "Advanced analytics & risk trends", values: [false, true, true] },
+  { name: "User behaviour analytics (UBA)", values: [false, false, true] },
+  { name: "Insider risk monitoring", values: [false, false, true] },
+  { name: "Privacy rights request workflows", values: [false, false, true] },
+  { name: "Consent management controls", values: [false, false, true] },
+  { name: "Retention & deletion governance", values: [false, false, true] },
+  { name: "Cross-border transfer governance", values: [false, false, true] },
+  { name: "GDPR / DPDPA / CCPA reporting", values: [false, false, true] },
+  { name: "Executive command center dashboard", values: [false, false, true] },
+  { name: "SIEM / SOAR integration", values: [false, false, true] },
+  { name: "Custom workflows & APIs", values: [false, false, true] },
 ];
 
 export default function ComparisonTable() {
@@ -53,7 +62,7 @@ export default function ComparisonTable() {
           <FaGlobe size={16} style={{ marginRight: "6px" }} /> Comparison
         </div>
         <h2 className="head-text">
-          Select the pricing plan <br /> that best suits your needs.
+          Choose the Right Deployment Model
         </h2>
       </div>
 
@@ -70,12 +79,22 @@ export default function ComparisonTable() {
           ))}
         </div>
 
-        {/* Best fit for */}
-        <div className="ct-row">
-          <div className="ct-col ct-feature-col">Best fit for</div>
+        {/* Includes Row */}
+        <div className="ct-row ct-sub-header">
+          <div className="ct-col ct-feature-col">Includes</div>
           {plans.map((plan, i) => (
             <div key={i} className="ct-col ct-plan-col ct-desc-cell">
-              {plan.description}
+              {plan.includes}
+            </div>
+          ))}
+        </div>
+
+        {/* Solution Scope Row */}
+        <div className="ct-row ct-sub-header">
+          <div className="ct-col ct-feature-col">Solution Scope</div>
+          {plans.map((plan, i) => (
+            <div key={i} className="ct-col ct-plan-col ct-desc-cell">
+              {plan.scope}
             </div>
           ))}
         </div>
@@ -101,7 +120,7 @@ export default function ComparisonTable() {
           <div className="ct-col ct-feature-col ct-cta-label">·</div>
           {plans.map((_, i) => (
             <div key={i} className="ct-col ct-plan-col ct-cta-cell">
-              <a href="https://tidycal.com/threatsenseai/"  className="ct-cta-btn">
+              <a href="https://tidycal.com/threatsenseai/" className="ct-cta-btn">
                 Contact Sales
               </a>
             </div>

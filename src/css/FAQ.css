@@ -1,6 +1,6 @@
 /* src/css/FAQ.css */
 .faq-container {
-  padding: 60px 0px 0px 0px;
+  padding: 100px 130px 100px 130px;
   background-color: var(--progress-bg);
   width: 100%;
 }
@@ -13,7 +13,7 @@
 
 .faq-left {
   flex: 1;
-  padding: 60px 40px;
+  padding: 60px 40px 60px 0px;
   border-right: 1px solid #eaeaea;
   display: flex;
   flex-direction: column;
