@@ -101,7 +101,7 @@ export default function SiemSoar() {
       ),
     },
     {
-      title: "Detection Focus",
+      title: "Detection Focus ",
       subtitle: "Immediate Threat Visibility",
       description:
         "SAP security events are identified and surfaced the moment they occur. Suspicious activities are converted into actionable alerts and structured incidents, enabling security teams to respond without delay.",
