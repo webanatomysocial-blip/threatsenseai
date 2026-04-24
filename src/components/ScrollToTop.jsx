@@ -8,7 +8,12 @@ function ScrollToTop() {
   useEffect(() => {
     const handleSameHashClick = (e) => {
       const link = e.target.closest("a");
-      if (link && link.hash && link.hash === window.location.hash && link.pathname === window.location.pathname) {
+      if (
+        link &&
+        link.hash &&
+        link.hash === window.location.hash &&
+        link.pathname === window.location.pathname
+      ) {
         const elem = document.querySelector(link.hash);
         if (elem) {
           if (window.lenis) {
@@ -26,8 +31,9 @@ function ScrollToTop() {
 
     document.addEventListener("click", handleSameHashClick);
 
+    let timer;
     if (hash) {
-      setTimeout(() => {
+      timer = setTimeout(() => {
         const elem = document.querySelector(hash);
         if (elem) {
           if (window.lenis) {
@@ -58,6 +64,7 @@ function ScrollToTop() {
 
     return () => {
       document.removeEventListener("click", handleSameHashClick);
+      if (timer) clearTimeout(timer);
     };
   }, [pathname, hash]);
 

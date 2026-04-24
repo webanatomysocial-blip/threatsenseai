@@ -49,14 +49,14 @@ const Header = ({ onSearch }) => {
               Solutions <IoIosArrowDown className="dropdown-arrow" />
             </Link>
             <div className="dropdown-menu">
-              <Link to="/threatsenseai-ate" className="dropdown-item">
-                ThreatSenseAI ATE
+              <Link to="/audit-trail-enforcer" className="dropdown-item">
+                Audit Trail Enforcer
               </Link>
-              <Link to="/threatsenseai-ads" className="dropdown-item">
-                ThreatSenseAI ADS
+              <Link to="/threatsenseai-data-security" className="dropdown-item">
+                ThreatSense AI Data Security
               </Link>
-              <Link to="/threatsense-itdar-for-sap" className="dropdown-item">
-                ThreatSense ITDAR
+              <Link to="/threatops-for-sap" className="dropdown-item">
+                ThreatOps for SAP
               </Link>
             </div>
           </div>
@@ -65,6 +65,9 @@ const Header = ({ onSearch }) => {
           </Link>
           <Link to="/blogs" className="nav-link">
             Blogs
+          </Link>
+          <Link to="/become-a-partner" className="nav-link">
+            Become a Partner
           </Link>
         </nav>
 
@@ -126,25 +129,25 @@ const Header = ({ onSearch }) => {
                 className={`mobile-dropdown ${isSolutionsOpen ? "open" : ""}`}
               >
                 <Link
-                  to="/threatsenseai-ate"
+                  to="/audit-trail-enforcer"
                   className="mobile-dropdown-link"
                   onClick={toggleMenu}
                 >
-                  ThreatSenseAI ATE
+                  Audit Trail Enforcer
                 </Link>
                 <Link
-                  to="/threatsenseai-ads"
+                  to="/threatsenseai-data-security"
                   className="mobile-dropdown-link"
                   onClick={toggleMenu}
                 >
-                  ThreatSenseAI ADS
+                  ThreatSense AI Data Security
                 </Link>
                 <Link
-                  to="/threatsense-itdar-for-sap"
+                  to="/threatops-for-sap"
                   className="mobile-dropdown-link"
                   onClick={toggleMenu}
                 >
-                  ThreatSense ITDAR
+                  ThreatOps for SAP   
                 </Link>
               </div>
             </div>

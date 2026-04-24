@@ -113,6 +113,7 @@
   margin-right: 0.25em;
   font-weight: 500 !important;
   line-height: 0.5;
+  color: black !important;
 }
 
 @media (max-width: 768px) {
@@ -152,9 +153,9 @@
   .stat-value {
     font-size: 26px;
   }
-.banner-buttons{
-  margin-bottom: 30px;
-}
+  .banner-buttons {
+    margin-bottom: 30px;
+  }
   /* Center content in slide on mobile */
   .stat-item-slide {
     align-items: center;

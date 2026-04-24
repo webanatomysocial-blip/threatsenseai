@@ -13,19 +13,52 @@ import FAQ from "../components/FAQ";
 export default function Contact() {
   const connectWays = [
     {
-      icon: <AiFillQuestionCircle size={24} color="#FF5400" />,
+      icon: <AiFillQuestionCircle size={24} color="#e9580c" />,
       title: "Help & support",
       desc: "Get assistance with using Sprint and troubleshooting issues.",
     },
     {
-      icon: <AiFillMail size={24} color="#FF5400" />,
+      icon: <AiFillMail size={24} color="#e9580c" />,
       title: "Sales",
       desc: "Speak to our sales team about plans, pricing, enterprise contracts",
     },
     {
-      icon: <AiFillThunderbolt size={24} color="#FF5400" />,
+      icon: <AiFillThunderbolt size={24} color="#e9580c" />,
       title: "Join the community",
       desc: "Chat with us directly and become a part of the Sprintt community",
+    },
+  ];
+
+  const faqData = [
+    {
+      question: "How does ThreatSenseAI detect SAP threats in real-time?",
+      answer:
+        "ThreatSenseAI uses advanced AI and machine learning algorithms to monitor SAP system logs and network traffic constantly. It identifies patterns indicative of threats and alerts security teams instantly.",
+    },
+    {
+      question: "Does it integrate with ServiceNow and MS Teams?",
+      answer:
+        "Yes, ThreatSenseAI offers seamless integration with popular ITSM and collaboration tools like ServiceNow and MS Teams for automated icon reporting and communication.",
+    },
+    {
+      question: "Can it provide automated incident response?",
+      answer:
+        "Absolutely. Beyond detection, it can be configured to take automated actions to isolate threats or mitigate risks according to your predefined security policies.",
+    },
+    {
+      question: "How long is deployment for SAP systems?",
+      answer:
+        "Our deployment process is optimized for speed, typically taking only a few days to get fully integrated and operational within your SAP environment.",
+    },
+    {
+      question: "What compliance standards are supported?",
+      answer:
+        "ThreatSenseAI helps you meet various compliance requirements, including GDPR, SOX, and HIPAA, by providing comprehensive auditing and reporting capabilities.",
+    },
+    {
+      question: "Is it difficult for security teams to use?",
+      answer:
+        "No, we've designed an intuitive dashboard that simplifies complex security data, making it easy for teams to monitor and respond to threats without needing specialized SAP expertise.",
     },
   ];
 
@@ -112,7 +145,7 @@ export default function Contact() {
         </div>
       </section>
 
-      <FAQ />
+      <FAQ items={faqData} />
     </div>
   );
 }

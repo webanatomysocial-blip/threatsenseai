@@ -19,7 +19,7 @@
 
 .split-text-char {
   display: inline-block;
-  color: var(--red-color);
+  color: var(--red-color) !important;
   font-style: italic;
 }
 

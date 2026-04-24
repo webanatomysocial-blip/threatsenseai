@@ -237,7 +237,7 @@ const Footer = () => {
 
         <div className="footer-credits">
           <p className="sub-para-text-white">
-            All Rights Reserved @ThreatSenseAi LLP.
+            All Rights Reserved @ThreatSenseAI LLP.
           </p>
         </div>
       </div>

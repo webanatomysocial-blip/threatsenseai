@@ -41,7 +41,7 @@
 .header-nav {
   display: flex;
   gap: 40px;
-  width: 30%;
+  width: 42%;
   justify-content: center;
 }
 
@@ -72,8 +72,6 @@
 
 .nav-link:hover {
   color: var(--red-color);
-
-
 }
 
 .nav-link:hover::before {
@@ -91,7 +89,7 @@
   top: 100%;
   left: 0;
   background-color: #fff;
-  min-width: 180px;
+  min-width: 230px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
   padding: 10px 0;
@@ -303,10 +301,11 @@
   .only-windows {
     display: none !important;
   }
-.mobile-solutions-wrapper {
 
-  gap: 0px;
-}
+  .mobile-solutions-wrapper {
+    gap: 0px;
+  }
+
   .header-left {
     width: 60%;
   }

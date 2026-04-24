@@ -111,8 +111,9 @@
 .accordion-container {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: stretch;
   width: 100%;
+  height: 100%;
   gap: 60px;
   transition: all 0.3s ease-in-out;
 }
@@ -194,11 +195,13 @@
 
 .accordion-header-group {
   display: flex;
-  flex-direction: row;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
   margin-bottom: 40px;
   justify-content: space-between;
   transition: all 0.3s ease-in-out;
+  position: sticky;
+  top: 150px;
 }
 
 .accordion-header-group .head-text {
@@ -254,7 +257,7 @@
 }
 
 .accordion-plus-icon {
-  color: #ff5400;
+  color: #e9580c;
   font-size: 20px;
   font-weight: bold;
   display: flex;
@@ -729,7 +732,7 @@
 }
 
 .card-gradient-top {
-  height: 400px;
+  height: auto;
   width: 100%;
   border-radius: 12px;
   display: flex;

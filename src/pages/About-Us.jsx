@@ -79,9 +79,8 @@ export default function AboutUs() {
         description="Prevent data leaks across SAP, browsers, GenAI tools, and third-party access
   with real-time enforcement, masking, and continuous compliance visibility"
         backgroundImage={bg}
-        buttonText="Book a Demo"
+        buttonText="Request a Demo"
       />
-
     </div>
   );
 }

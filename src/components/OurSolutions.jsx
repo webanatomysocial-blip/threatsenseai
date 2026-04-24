@@ -49,21 +49,21 @@ const OurSolutions = ({ id }) => {
 
   const solutions = [
     {
-      title: "ThreatSenseAI ATE",
-      desc: "Compliance is not documentation. It's control. ThreatSenseAI ATE ensures audit trails in SAP cannot be disabled, altered, or bypassed.",
-      subheading: "Built for Rule 11(g) Enforcement",
+      title: "Audit Trail Enforcer",
+      desc: "Compliance is not documentation. It is control. ThreatSense AI’s Audit Trail Enforcer helps ensure SAP audit trails remain continuously active, protected from unauthorized disablement, alteration, or bypass attempts across global compliance requirements. ",
+      subheading: "Built to enforce complete traceability across SAP systems ",
       features: [
-        "Rule 11(g) compliance made enforceable",
-        "Secure audit logging at source",
-        "Audit-ready reporting on demand",
+        "Enforceable controls aligned to global regulations, including MCA Audit Trail Rule 11(g) ",
+        "Secure audit logging directly at source",
+        "Audit-ready reporting available on demand",
       ],
       media: mcaatGif1,
       reverse: false,
-      link: "/threatsenseai-ate",
-      btn: "Explore ThreatSenseAI ATE",
+      link: "/audit-trail-enforcer",
+      btn: "Explore Audit Trail Enforcer",
     },
     {
-      title: "ThreatSenseAI ADS",
+      title: "ThreatSense AI Data Security",
       desc: "Prevent Data Leaks Before They Happen. Most data leaks are caused by trusted users.",
       features: [
         "Real-time data access enforcement",
@@ -73,12 +73,12 @@ const OurSolutions = ({ id }) => {
       ],
       media: mcaatGif2,
       reverse: true,
-      link: "/threatsenseai-ads",
-      btn: "Explore ThreatSenseAI ADS",
+      link: "/threatsenseai-data-security",
+      btn: "Explore ThreatSense AI Data Security",
       videoClass: "tads-card-video",
     },
     {
-      title: "ThreatSense ITDAR",
+      title: "ThreatOps for SAP",
       desc: "AI-Driven Threat Detection & Response across SAP and non-SAP environments.",
       features: [
         "Continuous monitoring",
@@ -87,8 +87,8 @@ const OurSolutions = ({ id }) => {
       ],
       media: mcaatGif3,
       reverse: false,
-      link: "/threatsense-itdar-for-sap",
-      btn: "Explore ThreatSense ITDAR",
+      link: "/threatops-for-sap",
+      btn: "Explore ThreatOps for SAP",
     },
   ];
 

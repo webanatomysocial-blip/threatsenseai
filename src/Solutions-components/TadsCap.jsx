@@ -11,7 +11,7 @@ gsap.registerPlugin(ScrollTrigger);
 const TadsCap = ({ label, icon: Icon, title, features = [],subtitle,gridCols="3" }) => {
   const gridRef = useRef(null);
 
-  useEffect(() => {
+  React.useLayoutEffect(() => {
     const ctx = gsap.context(() => {
       const cards = gridRef.current.children;
 

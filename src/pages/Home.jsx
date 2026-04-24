@@ -26,7 +26,7 @@ export default function Home() {
         description="AI-powered cybersecurity and data security for SAP and enterprise environments.
 Detect threats, deter misuse, and defend sensitive data in real time"
         backgroundImage={bg}
-        buttonText="Book a Demo"
+        buttonText="Request a Demo"
         link="https://tidycal.com/threatsenseai/"
       />
     </>

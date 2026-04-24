@@ -1,7 +1,8 @@
 /* Accordion Section */
 .accordion-section {
   padding: 100px 130px;
-  background-color: var(--progress-bg); /* Assuming white from image or light */
+  background-color: var(--progress-bg);
+  /* Assuming white from image or light */
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -10,13 +11,14 @@
 .accordion-container {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: stretch;
   flex-direction: row-reverse;
   width: 100%;
   gap: 60px;
   height: 500px;
   transition: all 0.3s ease-in-out;
 }
+
 .d-flex {
   display: flex;
   flex-direction: column;
@@ -25,6 +27,7 @@
   width: 50%;
   transition: all 0.3s ease-in-out;
 }
+
 .accordion-content-side {
   flex: 1;
   display: flex;
@@ -52,15 +55,20 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  border-top: 1px solid #eaeaea; /* Matching FAQ top border if needed, or just items */
+  border-top: 1px solid #eaeaea;
+  /* Matching FAQ top border if needed, or just items */
 }
 
 .accordion-item {
   border-bottom: 1px solid #eaeaea;
-  background-color: transparent; /* FAQ has transparent/white? FAQ-right is white. */
-  padding: 0; /* Reset padding to match FAQ structure */
-  border-radius: 0; /* Reset radius */
-  transition: none; /* Reset transition */
+  background-color: transparent;
+  /* FAQ has transparent/white? FAQ-right is white. */
+  padding: 0;
+  /* Reset padding to match FAQ structure */
+  border-radius: 0;
+  /* Reset radius */
+  transition: none;
+  /* Reset transition */
 }
 
 .accordion-item:last-child {
@@ -78,7 +86,8 @@
   border: none;
   text-align: left;
   overflow: hidden;
-  justify-content: flex-start; /* Left align */
+  justify-content: flex-start;
+  /* Left align */
 }
 
 .accordion-header-content {
@@ -94,7 +103,7 @@
 }
 
 .accordion-plus-icon {
-  color: #ff5400;
+  color: #e9580c;
   font-size: 20px;
   font-weight: bold;
   display: flex;
@@ -118,7 +127,8 @@
   display: grid;
   grid-template-rows: 0fr;
   transition: grid-template-rows 0.3s ease-out;
-  padding: 0; /* FAQ has 0 40px */
+  padding: 0;
+  /* FAQ has 0 40px */
   /* padding-left: 35px; Indent to align with text? */
 }
 
@@ -132,14 +142,16 @@
   font-size: 16px;
   color: #666;
   line-height: 1.6;
-  padding: 0; /* Reset padding */
+  padding: 0;
+  /* Reset padding */
 }
 
 .accordion-image-side {
   flex: 1;
   display: flex;
   justify-content: flex-start;
-  align-items: flex-start; /* Align top */
+  align-items: flex-start;
+  /* Align top */
   height: 100%;
   width: 50%;
 }
@@ -166,6 +178,7 @@
     width: 100%;
     justify-content: center;
   }
+
   .d-flex {
     width: 100%;
   }

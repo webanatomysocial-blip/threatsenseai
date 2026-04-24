@@ -25,7 +25,7 @@ const CustomerFeedback = () => {
     },
     {
       id: 2,
-      text: "The built-in automation transformed our operations—what took hours now takes minutes, with full visibility across SAP and enterprise systems.",
+      text: "The built-in automation transformed our operations what took hours now takes minutes, with full visibility across SAP and enterprise systems.",
       name: "Head of IT Security",
       role: "Pharmaceutical Organization",
       icon: <FiGlobe />,
@@ -39,7 +39,7 @@ const CustomerFeedback = () => {
     },
     {
       id: 4,
-      text: "MCA Rule 11(g) compliance was a constant risk; ThreatSenseAI ATE delivered SAP audit visibility and confidence, making audits stress-free and reliable.",
+      text: "MCA Rule 11(g) compliance was a constant risk; Audit Trail Enforcer delivered SAP audit visibility and confidence, making audits stress-free and reliable.",
       name: "Head of Internal Audit",
       role: "Large Manufacturing Enterprise",
       icon: <FiUserCheck />,
@@ -49,21 +49,21 @@ const CustomerFeedback = () => {
   const testimonialsBottom = [
     {
       id: 5,
-      text: "Insider data leakage worried us, especially in SAP. ThreatSenseAI ADS enforced real-time endpoint and application controls, stopping unauthorized access before breaches.",
+      text: "Insider data leakage worried us, especially in SAP. ThreatSense AI Data Security enforced real-time endpoint and application controls, stopping unauthorized access before breaches.",
       name: "Chief Information Security Officer",
       role: "Global Services Organization",
       icon: <FiSmile />,
     },
     {
       id: 6,
-      text: "ThreatSense AI’s ThreatSense ITDAR transformed incident response, cutting alert noise, automating actions, and freeing teams to focus on threats..",
+      text: "ThreatSense AI’s ThreatOps for SAP transformed incident response, cutting alert noise, automating actions, and freeing teams to focus on threats.",
       name: "SOC Manager",
       role: "Financial Services Enterprise",
       icon: <FiLayers />,
     },
     {
       id: 7,
-      text: "What impressed us most was the unified approach—audit, data security, and threat response together, delivering end-to-end visibility across SAP and enterprise systems.",
+      text: "What impressed us most was the unified approach, audit, data security, and threat response together, delivering end-to-end visibility across SAP and enterprise systems.",
       name: "IT Risk & Security Lead",
       role: "Power Generation Enterprise",
       icon: <FiGlobe />,

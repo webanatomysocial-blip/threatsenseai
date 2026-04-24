@@ -8,7 +8,7 @@ const CybersecurityImperative = ({ dynamicRecentPosts }) => {
       <section>
         <h3>The Rising Threat Landscape</h3>
         <p>
-          In an era where digital transformation is redefining industries, cybersecurity has never been more critical. Enterprises are increasingly relying on AI and automation to streamline operations, enhance decision-making, and improve customer experiences. However, this rapid technological evolution comes at a price—AI-powered cyber threats are on the rise, targeting vulnerabilities in enterprise ecosystems, particularly within mission-critical systems like SAP.
+          In an era where digital transformation is redefining industries, cybersecurity has never been more critical. Enterprises are increasingly relying on AI and automation to streamline operations, enhance decision-making, and improve customer experiences. However, this rapid technological evolution comes at a pricecAI-powered cyber threats are on the rise, targeting vulnerabilities in enterprise ecosystems, particularly within mission-critical systems like SAP.
         </p>
       </section>
 
@@ -25,7 +25,7 @@ const CybersecurityImperative = ({ dynamicRecentPosts }) => {
         </ul>
 
         <p>
-          The reality is that AI is not just a tool for security—it is also a weapon in the hands of adversaries.
+          The reality is that AI is not just a tool for security it is also a weapon in the hands of adversaries.
         </p>
       </section>
 
@@ -76,7 +76,7 @@ const CybersecurityImperative = ({ dynamicRecentPosts }) => {
           The battle between AI-driven security and AI-powered attacks is just beginning. Enterprises must act now to fortify their SAP landscapes and safeguard their digital assets against an increasingly intelligent and persistent threat landscape.
         </p>
         <p>
-          <strong>Cybersecurity is not an option—it’s a business imperative.</strong>
+          <strong>Cybersecurity is not an option it’s a business imperative.</strong>
         </p>
       </section>
     </>

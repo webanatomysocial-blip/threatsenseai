@@ -1,10 +1,10 @@
 .security-controls-section {
   padding: 100px 130px;
   background-color: #fcfcfc;
-  background-image: 
-    linear-gradient(to right, #f3f3f3 1px, transparent 1px),
-    linear-gradient(to bottom, #f3f3f3 1px, transparent 1px);
-  background-size: 50px 50px;
+  background-image: url("../assets/solutions/bg.avif");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -50,8 +50,6 @@
   position: relative;
 }
 
-
-
 .sc-card-title {
   font-size: 24px;
   font-weight: 700;
@@ -69,20 +67,26 @@
   margin: 0;
 }
 
+.sc-icon-wrapper {
+  color: var(--red-color) !important;
+  font-size: 32px;
+  margin-bottom: -10px;
+}
+
 .sc-list-item {
   display: flex;
   align-items: flex-start;
   gap: 12px;
   font-size: 16px;
-  color: #4a4a4a;
+  color: var(--red-color) !important;
   line-height: 1.5;
 }
 
 .sc-bullet {
-  color: #8b5cf6; /* Vibrant purple */
-  font-size: 20px;
+  color: var(--red-color) !important;
+  font-size: 18px;
   line-height: 1;
-  margin-top: 3px;
+  margin-top: 4px;
 }
 
 @media (max-width: 1280px) {
@@ -93,7 +97,7 @@
 
 @media (max-width: 1024px) {
   .sc-grid {
-    grid-template-columns: repeat(2, 1fr)  !important;
+    grid-template-columns: repeat(2, 1fr) !important;
   }
 }
 

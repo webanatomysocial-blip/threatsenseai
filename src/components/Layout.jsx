@@ -10,13 +10,12 @@ const Layout = () => {
 
   return (
     <div className="app-layout">
-      <ScrollToTop />
       <Header />
-      <main>
+      <main key={`page-${location.pathname}`}>
         <Outlet />
       </main>
       <ScrollToTopButton />
-      <Footer key={location.pathname} />
+      <Footer key={`footer-${location.pathname}`} />
     </div>
   );
 };

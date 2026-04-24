@@ -42,10 +42,8 @@ const Blogs = ({ limit = "all" }) => {
               className="featured-image-container"
             >
               <img src={featuredBlog.image} alt={featuredBlog.title} />
-              <div className="image-overlay-text">{featuredBlog.category}</div>
             </Link>
             <div className="featured-content">
-              <div className="category-tag">{featuredBlog.category}</div>
               <Link
                 to={`/blogs/${featuredBlog.id}`}
                 style={{ textDecoration: "none" }}
@@ -74,15 +72,13 @@ const Blogs = ({ limit = "all" }) => {
             <div key={index} className="grid-blog-item">
               <Link to={`/blogs/${blog.id}`} className="grid-image-container">
                 <img src={blog.image} alt={blog.title} />
-                <div className="image-overlay-text">{blog.category}</div>
               </Link>
               <div className="grid-content">
-                <div className="category-tag">{blog.category}</div>
                 <Link
                   to={`/blogs/${blog.id}`}
                   style={{ textDecoration: "none" }}
                 >
-                  <p className="sub-head-text">{blog.title}</p>
+                  <p className="sub-head-text">{blog.title.slice(0, 50)}...</p>
                 </Link>
                 <div className="grid-footer">
                   <p className="sub-para-text date-text">{blog.date}</p>

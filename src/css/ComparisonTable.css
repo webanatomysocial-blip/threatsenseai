@@ -46,7 +46,17 @@
 /* Column header label row */
 .ct-header-row {
   background: #fff;
-  border-bottom: 1px solid #e8e8e8;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+/* Sub-header rows (Includes, Solution Scope) */
+.ct-sub-header {
+  background: #fafafa;
+}
+
+.ct-sub-header .ct-feature-col {
+  font-weight: 600;
+  color: #111;
 }
 
 .ct-col-label {
@@ -76,7 +86,8 @@
   line-height: 1.6;
   align-items: flex-start;
   text-align: left;
-  justify-content: flex-start;
+  justify-content: center;
+  text-align: center;
 }
 
 /* Icon cell */
@@ -124,7 +135,9 @@
   border-radius: 10px;
   text-decoration: none;
   white-space: nowrap;
-  transition: background 0.25s ease, transform 0.25s ease,
+  transition:
+    background 0.25s ease,
+    transform 0.25s ease,
     box-shadow 0.25s ease;
 }
 

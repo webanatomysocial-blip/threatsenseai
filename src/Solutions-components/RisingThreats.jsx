@@ -3,7 +3,6 @@ import { AiOutlinePlus } from "react-icons/ai";
 import { FaGlobe } from "react-icons/fa";
 import "../css/Solutions-pages.css"; // Ensure it uses the new CSS
 import bannerImg from "../assets/about-images/banner.jpg";
-import bannerVideo from "../assets/about-images/banner1.mp4";
 
 export default function RisingThreats() {
   const [activeAccordion, setActiveAccordion] = useState(0);
@@ -15,52 +14,66 @@ export default function RisingThreats() {
   const threatData = [
     {
       id: "01",
-      title: "How does Gen-AI increase insider data leakage risk?",
+      title: "How does GenAI increase insider data leakage risk?",
       description:
-        "Employees can unknowingly paste sensitive SAP or enterprise data into public Gen-AI tools for testing, analysis, or development. Once shared, this data leaves organizational control and may be stored or reused externally.",
+        "Employees may unintentionally paste sensitive SAP or enterprise data into public AI tools for analysis, testing, or development. Once shared, that data can leave organizational control and may be retained or reused externally.",
       image: bannerImg,
     },
     {
       id: "02",
       title: "Why does traditional DLP fail to stop insider threats?",
       description:
-        "Traditional DLP relies on static rules and file-based controls. It cannot detect real-time typing, contextual user intent, or data shared directly via browsers, AI tools, or screen actions.",
+        "Many legacy DLP tools focus only on endpoints or static rules. They often miss browser activity, SAP-specific transactions, screenshots, AI prompts, and context-based misuse.",
       image: bannerImg,
     },
     {
       id: "03",
       title: "Why is SAP data especially vulnerable?",
       description:
-        "SAP exposes critical business data directly on screens. Copying, screenshots, printing, or screen sharing can leak sensitive information without creating files bypassing most traditional security tools.",
+        "SAP stores highly sensitive financial, customer, HR, procurement, and operational data. Broad user access, exports, custom reports, and integrations can increase exposure if not governed properly.",
       image: bannerImg,
     },
     {
       id: "04",
       title: "How do screen sharing and screenshots cause data leaks?",
       description:
-        "Modern collaboration tools allow sensitive data to be shared visually. Most DLP tools cannot detect or block screenshots or live screen sharing of protected applications.",
+        "Sensitive data can be exposed during meetings, remote sessions, recordings, or captured screenshots. These actions often bypass traditional monitoring controls.",
       image: bannerImg,
     },
     {
       id: "05",
       title: "Why is real-time prevention critical for data protection?",
       description:
-        "Once data is copied, uploaded, or shared with AI tools, it cannot be recalled. Real-time enforcement is the only way to stop insider leaks before data leaves the organization.",
+        "Once sensitive data is copied, exported, or uploaded, remediation becomes difficult. Real-time prevention stops risky actions before data leaves the environment.",
+      image: bannerImg,
+    },
+    {
+      id: "06",
+      title: "Can ThreatSense AI work with SAP S/4HANA and ECC?",
+      description:
+        "Yes, the suite is designed to support SAP ECC, S/4HANA, HANA, and hybrid enterprise environments.",
+      image: bannerImg,
+    },
+    {
+      id: "07",
+      title: "Does it help with GDPR and DPDPA compliance?",
+      description:
+        "Yes, the platform supports privacy governance, audit evidence, retention controls, and monitoring aligned with major regulatory frameworks.",
       image: bannerImg,
     },
   ];
 
   return (
     <div className="accordion-section">
-
       <div className="accordion-container">
         <div className="accordion-content-side">
           <div className="accordion-list">
             {threatData.map((item, index) => (
               <div
                 key={index}
-                className={`accordion-item ${activeAccordion === index ? "active" : ""
-                  }`}
+                className={`accordion-item ${
+                  activeAccordion === index ? "active" : ""
+                }`}
               >
                 <button
                   className="accordion-header"
@@ -68,13 +81,12 @@ export default function RisingThreats() {
                   aria-expanded={activeAccordion === index}
                 >
                   <div className="accordion-header-content">
-                    {/* Numbering logic if needed, or just layout */}
                     <span
                       className="accordion-title"
                       style={{
                         marginRight: "10px",
                         fontWeight: "600",
-                        color: activeAccordion === index ? "#ff5400" : "#999",
+                        color: activeAccordion === index ? "#e9580c" : "#999",
                       }}
                     >
                       {item.id}
@@ -90,9 +102,7 @@ export default function RisingThreats() {
 
                 <div className="accordion-body-wrapper">
                   <div className="accordion-body">
-                    <p
-                      className="sub-para-text accordion-body-text"
-                    >
+                    <p className="sub-para-text accordion-body-text">
                       {item.description}
                     </p>
                   </div>
@@ -106,12 +116,14 @@ export default function RisingThreats() {
           <div className="accordion-header-group">
             <div className="sub-para-text security-label d-flex-col">
               <div style={{ display: "flex", alignItems: "center" }}>
-                <FaGlobe size={16} style={{ marginRight: "4px" }} /> Rising Threat Vector
+                <FaGlobe size={16} style={{ marginRight: "4px" }} /> Frequently
+                Asked Questions
               </div>
-              <h2 className="head-text">AI & Insider Data Exfiltration</h2>
+              <h2 className="head-text">
+                Common Questions About Data Leaks, AI Risk & SAP Protection
+              </h2>
             </div>
           </div>
-
         </div>
       </div>
     </div>

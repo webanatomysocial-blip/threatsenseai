@@ -5,7 +5,7 @@ const CapabilitiesSection = ({
   header = {
     icon: <FaGlobe size={16} style={{ marginRight: "4px" }} />,
     label: "Capabilities",
-    title: "What it brings?",
+    title: "What the Suite Delivers",
     subtitle: "",
   },
   items,

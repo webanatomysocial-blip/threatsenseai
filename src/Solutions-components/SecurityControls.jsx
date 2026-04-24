@@ -6,27 +6,37 @@ import "../css/SecurityControls.css";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const SecurityControls = ({ label, title, controls = [],minHeight="380" ,gridCols="4"}) => {
+const SecurityControls = ({
+  label,
+  title,
+  controls = [],
+  minHeight = "380",
+  gridCols = "4",
+}) => {
   const containerRef = useRef(null);
 
-  useEffect(() => {
-    const cards = containerRef.current.querySelectorAll(".sc-card");
-    
-    gsap.fromTo(
-      cards,
-      { y: 50, opacity: 0 },
-      {
-        y: 0,
-        opacity: 1,
-        duration: 0.8,
-        stagger: 0.2,
-        ease: "power3.out",
-        scrollTrigger: {
-          trigger: containerRef.current,
-          start: "top 80%",
+  React.useLayoutEffect(() => {
+    const ctx = gsap.context(() => {
+      const cards = containerRef.current.querySelectorAll(".sc-card");
+
+      gsap.fromTo(
+        cards,
+        { y: 50, opacity: 0 },
+        {
+          y: 0,
+          opacity: 1,
+          duration: 0.8,
+          stagger: 0.2,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: containerRef.current,
+            start: "top 80%",
+          },
         },
-      }
-    );
+      );
+    }, containerRef);
+
+    return () => ctx.revert();
   }, []);
 
   return (
@@ -39,13 +49,21 @@ const SecurityControls = ({ label, title, controls = [],minHeight="380" ,gridCol
         <h2 className="head-text">{title}</h2>
       </div>
 
-      <div className="sc-grid" style={{ gridTemplateColumns: `repeat(${gridCols}, 1fr)` }}>
+      <div
+        className="sc-grid"
+        style={{ gridTemplateColumns: `repeat(${gridCols}, 1fr)` }}
+      >
         {controls.map((control, index) => (
-          <div 
-            key={index} 
-            className="sc-card" 
-            style={{ minHeight: isNaN(minHeight) ? minHeight : `${minHeight}px` }}
+          <div
+            key={index}
+            className="sc-card"
+            style={{
+              minHeight: isNaN(minHeight) ? minHeight : `${minHeight}px`,
+            }}
           >
+            <div className="sc-icon-wrapper">
+              {control.icon || <FaShieldAlt />}
+            </div>
             <h3 className="sub-head-text">{control.title}</h3>
             <ul className="sc-list">
               {control.points.map((point, i) => (

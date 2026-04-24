@@ -6,10 +6,10 @@ import img1 from "../assets/home/tab-section/1.jpg";
 import img2 from "../assets/home/tab-section/2.jpg";
 import img3 from "../assets/home/tab-section/3.jpg";
 
-import soar from "../assets/solutions/siem/Security/1.png";
-import detect from "../assets/solutions/siem/Security/2.png";
-import govern from "../assets/solutions/siem/Security/3.png";
-import platform from "../assets/solutions/siem/Security/4.png";
+import soar from "../assets/solutions/siem/Security/4.png";
+import detect from "../assets/solutions/siem/Security/1.png";
+import govern from "../assets/solutions/siem/Security/2.png";
+import platform from "../assets/solutions/siem/Security/3.png";
 
 import real from "../assets/solutions/siem/1.png";
 import real1 from "../assets/solutions/siem/2.png";
@@ -19,11 +19,13 @@ import real4 from "../assets/solutions/siem/5.png";
 import real5 from "../assets/solutions/siem/6.png";
 
 import SolutionCarousel from "../Solutions-components/SolutionCarousel";
+import FAQ from "../components/FAQ";
 import SolutionCards from "../Solutions-components/SolutionCards";
 import CapabilitiesSection from "../components/CapabilitiesSection";
 import UseCases from "../Solutions-components/UseCases";
 import Cta from "../components/Cta";
 import bg from "../assets/home/tab-section/bg-image.png";
+import { Link } from "react-router-dom";
 
 import usecasessiem from "../assets/solutions/siem/usecase.png";
 import {
@@ -41,122 +43,70 @@ import {
 export default function SiemSoar() {
   const content = [
     {
-      title: "Real-time Alerts & Incident Creation",
+      title: "180+ Pre-Built SAP Detections & Playbooks",
       description:
-        "Continuously monitors SAP security events and system activities to detect suspicious behavior in real time. Automatically generates alerts and security incidents, enabling faster investigation and response without manual intervention",
+        "Accelerate deployment with ready-to-use threat patterns and automated response workflows built for real SAP attack and misuse scenarios.",
       img: real,
+    },
+    {
+      title: "Real-Time Threat Detection",
+      description:
+        "Detect suspicious activities instantly including privileged misuse, risky changes, abnormal access behavior, and critical security events.",
+      img: real1,
     },
     {
       title: "Intelligent Event Correlation",
       description:
-        "Correlates events across SAP application servers, databases, and connected systems to identify complex attack patterns that isolated logs cannot reveal. Reduces noise while highlighting high-risk security signals.",
-      img: real1,
-    },
-    {
-      title: "Automated Response Playbooks",
-      description:
-        "Triggers predefined response actions when threats are detected, such as session termination, alert escalation, or access control actions, ensuring consistent and rapid containment of security incidents",
+        "Correlate signals across SAP application, database, user, and infrastructure layers to identify real threats instead of isolated alerts.",
       img: real2,
     },
     {
-      title: "Compliance & Audit Readiness",
+      title: "Automated Response Orchestration",
       description:
-        "Maintains structured, centralized security records for SAP activities, supporting internal audits and regulatory requirements. Ensures traceability of events, alerts, and response actions without additional operational overhead.",
+        "Trigger predefined playbooks to contain incidents, disable access, escalate alerts, notify teams, or enforce controls automatically.",
       img: real3,
     },
     {
       title: "Seamless SAP Integration",
       description:
-        "Integrates smoothly with existing SAP landscapes without requiring major architectural changes. Designed to work alongside current SAP security configurations and enterprise monitoring tools",
+        "Deploy smoothly across SAP ECC, S/4HANA, HANA, GRC, and hybrid landscapes without complex redesign or business disruption.",
       img: real4,
     },
     {
-      title: "Minimal Performance Impact",
+      title: "Audit & Compliance Readiness",
       description:
-        "Delivers deep security visibility while keeping system and database overhead low. Designed to operate efficiently without affecting SAP performance or business operations.",
+        "Maintain traceable evidence, centralized logs, investigation history, and control reports to support audits and regulatory requirements.",
       img: real5,
     },
   ];
   const cardcontent = [
     {
-      title: "SOAR Focus",
-      subtitle: "Orchestrated Incident Response",
-      description:
-        "When a security event is detected, response should be immediate and consistent. ThreatSense ITDAR for SAP enables automated response workflows that guide incidents through investigation, containment, and remediation, without relying on manual intervention.",
-      img: soar,
-      readMoreContent: (
-        <>
-          <ul>
-            <li>Guided investigation workflows</li>
-            <li>Automated containment based on risk severity</li>
-            <li>Controlled remediation with full traceability</li>
-          </ul>
-          <p>
-            <strong>Outcome:</strong> Incidents are handled faster, safer, and
-            with predictable outcomes.
-          </p>
-        </>
-      ),
-    },
-    {
       title: "Detection Focus",
       subtitle: "Immediate Threat Visibility",
       description:
-        "SAP security events are identified and surfaced the moment they occur. Suspicious activities are converted into actionable alerts and structured incidents, enabling security teams to respond without delay.",
+        "Identify suspicious SAP activities the moment they occur. Convert raw security events into prioritized alerts and actionable incidents so teams can respond without delay.",
       img: detect,
-      readMoreContent: (
-        <>
-          <ul>
-            <li>Continuous monitoring of SAP activities</li>
-            <li>Instant alert generation for critical events</li>
-            <li>Clear incident context for SOC teams</li>
-          </ul>
-          <p>
-            <strong>Outcome:</strong> Threats are detected early—before they
-            escalate.
-          </p>
-        </>
-      ),
     },
     {
-      title: " Governance Focus",
-      subtitle: "Built-in Audit Readiness",
+      title: "Governance Focus",
+      subtitle: "Built-In Audit Readiness",
       description:
-        "Security monitoring should support audits, not complicate them. ThreatSense ITDAR for SAP maintains centralized, tamper-resistant records of security events and response actions, simplifying compliance and investigations.",
+        "Maintain centralized, tamper-resistant records of events, investigations, and response actions. Simplify audits, compliance reviews, and forensic analysis.",
       img: govern,
-      readMoreContent: (
-        <>
-          <ul>
-            <li>Centralized event and incident records</li>
-            <li>End-to-end activity traceability</li>
-            <li>Reduced manual audit preparation</li>
-          </ul>
-          <p>
-            <strong>Outcome:</strong> Audit readiness becomes continuous, not
-            reactive.
-          </p>
-        </>
-      ),
     },
     {
       title: "Platform Focus",
       subtitle: "Native SAP Landscape Fit",
       description:
-        "Security tooling should adapt to SAP, not the other way around. The solution integrates smoothly into existing SAP environments without introducing architectural complexity or operational overhead.",
+        "Built specifically for SAP environments including ECC, S/4HANA, HANA, and hybrid landscapes. Deploy without disruptive redesign or operational overhead.",
       img: platform,
-      readMoreContent: (
-        <>
-          <ul>
-            <li>Works with existing SAP configurations</li>
-            <li>Minimal deployment effort</li>
-            <li>No performance disruption</li>
-          </ul>
-          <p>
-            <strong>Outcome:</strong> Security enhancement without operational
-            compromise.
-          </p>
-        </>
-      ),
+    },
+    {
+      title: "Response Focus",
+      subtitle: "Automated Containment & Remediation",
+      description:
+        "Trigger playbooks automatically to isolate sessions, disable risky access, notify teams, escalate incidents, and enforce controls in real time.",
+      img: soar,
     },
   ];
 
@@ -165,45 +115,114 @@ export default function SiemSoar() {
       icon: <FaLayerGroup />,
       title: "End-to-End SAP Security Visibility",
       description:
-        "Gain centralized visibility across SAP applications, databases, and connected components. Security-relevant events are continuously collected and analyzed to provide a complete view of activity across the SAP landscape.",
+        "Gain centralized visibility across SAP applications, databases, interfaces, and connected systems through a unified security monitoring layer.",
     },
     {
       icon: <FaUserShield />,
-      title: "User & Privilege Activity Monitoring",
+      title: "User & Privileged Activity Monitoring",
       description:
-        "Tracks user actions and privilege usage across SAP systems to identify risky behavior patterns. Helps security teams understand who did what, when, and where, with full context.",
+        "Track user actions, privileged access, sensitive transactions, and administrative behavior with complete operational context.",
     },
     {
       icon: <FaBullseye />,
-      title: "High-Fidelity Threat Identification",
+      title: "High-Fidelity Threat Detection",
       description:
-        "Security events are enriched and correlated to surface real threats while filtering out noise. Focuses analyst attention on what truly matters instead of overwhelming them with raw logs.",
+        "Correlate events intelligently to identify real threats, reduce false positives, and focus analysts on incidents that matter.",
     },
     {
       icon: <FaSearchPlus />,
-      title: "Behavior-Based Risk Detection",
+      title: "Behavior-Based Risk Analytics",
       description:
-        "Continuously evaluates deviations from normal SAP user and system behavior. Subtle changes that indicate potential threats are identified before they escalate into incidents.",
+        "Detect abnormal user behavior, excessive access, unusual transaction patterns, and emerging insider risks before damage occurs.",
     },
     {
       icon: <FaMicroscope />,
-      title: "Proactive Threat Discovery",
+      title: "Proactive Threat Hunting",
       description:
-        "Actively searches for hidden or emerging threats across SAP environments by analyzing patterns, indicators, and historical activity, not just reacting to alerts.",
+        "Search across SAP activity data, indicators, and patterns to uncover hidden threats, misuse, and control bypass attempts.",
     },
     {
       icon: <FaMagic />,
       title: "Intelligent Alert Prioritization",
       description:
-        "Assigns contextual risk levels to alerts based on impact, asset criticality, and activity severity. Ensures security teams address the most critical risks first.",
+        "Rank incidents based on severity, business impact, user risk, and asset criticality so teams respond faster and smarter.",
     },
   ];
 
   const useCasesList = [
-    "Insider & Privileged Activity Detection in SAP",
-    "Automated Response to Critical SAP Security Events",
-    "Cross-System Event Correlation (SAP & Non-SAP)",
-    "Real-Time Alerts, Evidence & Incident Timelines for SOC Teams",
+    <>
+      <strong>Insider & Privileged Threat Detection:</strong> Identify misuse,
+      unauthorized actions, risky access, and abnormal privileged behavior
+      across SAP systems.
+    </>,
+    <>
+      <strong>Automated Response to Critical Incidents:</strong> Trigger
+      containment playbooks, disable risky access, notify teams, and escalate
+      incidents instantly.
+    </>,
+    <>
+      <strong>Cross-System Event Correlation:</strong> Connect signals across
+      SAP, databases, infrastructure, and external systems to uncover hidden
+      threats faster.
+    </>,
+    <>
+      <strong>SOC-Ready Alerts & Evidence Timelines:</strong> Provide structured
+      alerts, investigation history, audit evidence, and complete incident
+      timelines for rapid response.
+    </>,
+  ];
+
+  const sapFaqData = [
+    {
+      question: "What is ThreatOps for SAP?",
+      answer:
+        "ThreatOps for SAP is an SAP-focused threat detection and response solution that provides real-time monitoring, intelligent event correlation, and automated incident response across SAP environments.",
+    },
+    {
+      question: "How is ThreatOps different from traditional SIEM tools?",
+      answer:
+        "Traditional SIEM tools collect logs but often lack SAP business context. ThreatOps is built to understand SAP users, transactions, privileges, and security events, helping teams detect real threats faster with less noise.",
+    },
+    {
+      question: "Which SAP environments are supported?",
+      answer:
+        "ThreatOps supports SAP ECC, SAP S/4HANA, SAP HANA, hybrid landscapes, and connected SAP ecosystems based on deployment architecture.",
+    },
+    {
+      question: "Does ThreatOps support automated response actions?",
+      answer:
+        "Yes. ThreatOps includes automated playbooks that can trigger alerts, escalate incidents, disable risky access, contain sessions, and initiate remediation workflows.",
+    },
+    {
+      question: "Will it impact SAP system performance?",
+      answer:
+        "ThreatOps is designed for enterprise environments with optimized architecture and minimal operational impact when deployed correctly.",
+    },
+    {
+      question: "Can it integrate with our existing SOC tools?",
+      answer:
+        "Yes. ThreatOps can integrate with SIEM, SOAR, ITSM, ticketing, and enterprise security operations workflows based on your architecture needs.",
+    },
+    {
+      question: "How long does deployment take?",
+      answer:
+        "Deployment timelines depend on landscape complexity, scope, and integrations. Initial rollout can typically begin faster than large-scale traditional security transformation projects.",
+    },
+    {
+      question: "Does it help with audits and compliance?",
+      answer:
+        "Yes. ThreatOps provides centralized logs, evidence trails, investigation history, and reporting that support internal audits and regulatory requirements.",
+    },
+    {
+      question: "Are pre-built detections and playbooks included?",
+      answer:
+        "Yes. ThreatOps includes 180+ pre-built detection patterns with associated playbooks for common SAP security and insider risk scenarios.",
+    },
+    {
+      question: "Is ThreatOps available for cloud and on-premise environments?",
+      answer:
+        "Yes. Deployment options can be aligned to enterprise requirements including on-premise, private cloud, and hybrid models.",
+    },
   ];
 
   const headerRef = useRef(null);
@@ -231,43 +250,59 @@ export default function SiemSoar() {
   }, []);
 
   const splitLetters = (text) => {
-    return text.split("").map((char, index) => (
-      <span
-        key={index}
-        className="split-text-char"
-        style={{ font: "italic 400 1em 'Instrument Serif'" }}
-      >
-        {char === " " ? "\u00A0" : char}
-      </span>
-    ));
+    return text.split("").map((char, index) => {
+      if (char === "\n") {
+        return <br key={index} />;
+      }
+      return (
+        <span
+          key={index}
+          className="split-text-char"
+          style={{ font: "italic 400 1em 'Instrument Serif'" }}
+        >
+          {char === " " ? "\u00A0" : char}
+        </span>
+      );
+    });
   };
   return (
     <>
       <section className="siem-soar-banner">
         <div className="siem-soar-banner-content">
           <h1 ref={headerRef} className="big-text-head">
-            ThreatSense ITDAR for SAP
+            ThreatOps for SAP
             <br />{" "}
-            {splitLetters("Intelligent Threat Detection & Automated Response")}
+            {splitLetters(
+              "Real-Time Threat Detection \n  and Automated Response for SAP ",
+            )}
           </h1>
           <p className="sub-para-text">
-            AI-powered visibility and response to SAP environments. Correlate
-            security events across SAP systems, detect suspicious activity
-            early, and trigger automated response workflows to reduce risk,
-            response time, and operational overhead.
+            Secure SAP environments continuously with 180+ pre-built detections,
+            intelligent investigations, and automated response playbooks.
           </p>
+          <a
+            href="https://tidycal.com/threatsenseai/siem-soar-sap"
+            className="red-button"
+          >
+            Request a Demo
+          </a>
         </div>
       </section>
 
       <SolutionCarousel
-        label="Why ThreatSense ITDAR for SAP?"
-        title={<>We Don’t Just Log, We Detect, <br /> Correlate and Respond</>}
-        description="Basic logging only records events. ThreatSense ITDAR for SAP transforms those events into actionable intelligence with real-time detection and automated response."
+        label="Why ThreatOps for SAP? "
+        title={
+          <>
+            We Don’t Just Log, We Detect, <br /> Correlate and Respond
+          </>
+        }
+        description="Basic logging only records events. ThreatOps for SAP for SAP transforms those events into actionable intelligence with real-time detection and automated response."
         data={content}
       />
       <SolutionCards
         label="Automated Threat Detection & Response"
-        title="Security that watches, detects and acts automatically"
+        title="The SAP SOC Layer
+         You’ve Been Missing "
         description=""
         items={cardcontent}
         marginTop="0px"
@@ -277,8 +312,9 @@ export default function SiemSoar() {
         gridTemplateColumns="repeat(3, 1fr)"
         header={{
           icon: <FaGlobe size={16} />,
-          label: "We Don’t Just Log, We Detect, Correlate and Respond",
-          title: "Why ThreatSense ITDAR for SAP?",
+          label: "Why ThreatOps for SAP? ",
+          title:
+            "Advanced threat detection, intelligent correlation, and automated response for SAP environments.",
         }}
       />
 
@@ -286,20 +322,29 @@ export default function SiemSoar() {
         label="Use Cases"
         title={
           <>
-            Where ThreatSense <br /> ThreatSense ITDAR Delivers <br /> Immediate Value
+            Where ThreatOps Delivers <br></br> Immediate Value
           </>
         }
+        para="Real-time SAP threat detection, response, and visibility where enterprises need it most."
         list={useCasesList}
         image={usecasessiem}
+        srcbtn="https://tidycal.com/threatsenseai/siem-soar-sap"
       />
+
+      <FAQ
+        title="Everything you need to know about ThreatOps for SAP."
+        items={sapFaqData}
+        paddingBottom="100px"
+      />
+
       <Cta
-        title="Stay Ahead of Threats with
-AI-Powered Security"
-        description="Protect your SAP® environments with real-time monitoring, 
-        automated response, and deep threat analytics. Experience 
-        the power of ThreatSense AI today!"
+        title="Secure SAP
+         Before Threats Become Incidents "
+        description="Detect suspicious activity in real time,
+         automate response actions, and gain full visibility
+          across your SAP landscape with ThreatOps."
         backgroundImage={bg}
-        buttonText="Get Started"
+        buttonText="Request a Demo "
         link="https://tidycal.com/threatsenseai/siem-soar-sap"
       />
     </>

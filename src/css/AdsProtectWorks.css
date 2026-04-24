@@ -2,13 +2,16 @@
   width: 100%;
   height: 100vh;
   position: relative;
-  background-color: #ffffff;
   display: flex;
   flex-direction: column;
   align-items: center;
-  overflow: hidden; 
+  overflow: hidden;
   padding: 100px 0px;
   box-sizing: border-box;
+  background-image: url("../assets/solutions/bg.avif");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .ads-works-header {
@@ -17,7 +20,7 @@
   align-items: center;
   text-align: center;
   gap: 16px;
-  z-index: 10; 
+  z-index: 10;
   margin-bottom: 20px;
 }
 
@@ -36,32 +39,32 @@
   position: absolute;
   top: 0;
   left: 0;
-  margin-top: 35px;
+  margin-top: 60px;
   width: 100%;
   height: 100%;
-  pointer-events: none; 
+  pointer-events: none;
 }
 
 .ads-stacked-card {
-    border: 1px solid black;
-    width: 290px;
-    height: 350px;
-    background-color: #ffffff;
-    /* border: 1px solid #e5e5e5; */
-    /* border-radius: 16px; */
-    padding: 30px 24px;
-    /* box-shadow: 0 15px 40px rgba(0, 0, 0, 0.06); */
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    pointer-events: auto;
-    box-sizing: border-box;
-    text-align: left;
+  border: 1px solid black;
+  width: 290px;
+  height: 350px;
+  background-color: #ffffff;
+  /* border: 1px solid #e5e5e5; */
+  /* border-radius: 16px; */
+  padding: 30px 24px;
+  /* box-shadow: 0 15px 40px rgba(0, 0, 0, 0.06); */
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  pointer-events: auto;
+  box-sizing: border-box;
+  text-align: left;
 }
 
 .ads-stacked-card img {
-    width: 42px;
-    height: 42px;
+  width: 42px;
+  height: 42px;
 }
 .ads-card-title {
   font-size: 20px;
@@ -86,27 +89,27 @@
 }
 
 @media (max-width: 768px) {
-  .ads-works-pin { 
-    height: auto; 
-    position: static; 
-    padding: 80px 20px; 
+  .ads-works-pin {
+    height: auto;
+    position: static;
+    padding: 80px 20px;
     overflow: visible;
   }
-  .ads-cards-wrapper { 
-    position: relative; 
-    display: flex; 
-    flex-direction: column; 
-    align-items: center; 
-    gap: 30px; 
-    margin-top: 40px; 
-    pointer-events: auto; 
+  .ads-cards-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    margin-top: 40px;
+    pointer-events: auto;
     height: auto;
   }
-  .ads-stacked-card { 
-    position: relative; 
-    width: 100%; 
+  .ads-stacked-card {
+    position: relative;
+    width: 100%;
     max-width: 400px;
-    height: auto; 
-    padding: 30px; 
+    height: auto;
+    padding: 30px;
   }
 }

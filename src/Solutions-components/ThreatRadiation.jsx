@@ -7,35 +7,34 @@ import "swiper/css";
 import "swiper/css/autoplay";
 import "../css/ThreatRadiation.css";
 
-
-const ThreatRadiation = () => {
+const ThreatRadiation = ({ id }) => {
   const rowOne = [
-  "Excessive SAP Data Exports",
-  "Privileged User Misuse",
-  "Unauthorized Table Access",
-  "Sensitive Data Overexposure",
-];
+    "Excessive SAP Data Exports",
+    "Privileged User Misuse",
+    "Unauthorized Table Access",
+    "Sensitive Data Overexposure",
+  ];
 
-const rowTwo = [
-  "Data Pasted into GenAI Tools",
-  "Uploads to Personal Email",
-  "Unapproved Cloud Drive Sharing",
-  "Copy–Paste Data Leakage",
-];
+  const rowTwo = [
+    "Data Pasted into GenAI Tools",
+    "Uploads to Personal Email",
+    "Unapproved Cloud Drive Sharing",
+    "Copy–Paste Data Leakage",
+  ];
 
-const rowThree = [
-  "Non-Production Data Exposure",
-  "Unmasked PII & Financial Data",
-  "Mass Data Downloads",
-  "Debug Mode Changes",
-];
+  const rowThree = [
+    "Non-Production Data Exposure",
+    "Unmasked PII & Financial Data",
+    "Mass Data Downloads",
+    "Debug Mode Changes",
+  ];
 
-const rowFour = [
-  "Direct DB Access",
-  "Unmonitored Data Extracts",
-  "GenAI & Browser Risks",
-  "Prompt Data Leakage",
-];
+  const rowFour = [
+    "Direct DB Access",
+    "Unmonitored Data Extracts",
+    "GenAI & Browser Risks",
+    "Prompt Data Leakage",
+  ];
   // ✅ FIXED SWIPER SETTINGS
   const swiperOptions = {
     modules: [Autoplay],
@@ -70,7 +69,7 @@ const rowFour = [
   );
 
   return (
-    <section className="threat-radiation-section">
+    <section className="threat-radiation-section" id={id}>
       <div className="radiation-header">
         <div
           className="security-label"
@@ -80,9 +79,7 @@ const rowFour = [
           Risks &amp; Challenges
         </div>
 
-        <h2 className="head-text">
-          Where does data actually leak?
-        </h2>
+        <h2 className="head-text">Modern Data Leaks Happen Everywhere</h2>
       </div>
 
       <div className="threat-carousel-wrapper">

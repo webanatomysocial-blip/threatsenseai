@@ -16,7 +16,7 @@ const HowItWorks = () => {
       icon: <FaPlug />,
       title: "Deploy the\n ThreatSenseAi Agent",
       description:
-        "Install the lightweight ThreatSense AI agent on your SAP system—quick, seamless, and zero impact on performance.",
+        "Install the lightweight ThreatSense AI agent on your SAP system, quick, seamless, and zero impact on performance.",
     },
     {
       icon: <FaHeartbeat />, // or FaWaveSquare
@@ -28,7 +28,7 @@ const HowItWorks = () => {
       icon: <FaBrain />,
       title: "AI-Powered\n Threat Detection & Analysis",
       description:
-        "Our advanced ThreatSense ITDAR engine analyzes patterns, identifies anomalies, and flags potential threats instantly.",
+        "Our advanced ThreatOps for SAP engine analyzes patterns, identifies anomalies, and flags potential threats instantly.",
     },
     {
       icon: <FaRegBell />,

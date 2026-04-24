@@ -9,29 +9,32 @@ import { FaGlobe } from "react-icons/fa";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const UseCases = ({ label, title, list, image }) => {
+const UseCases = ({ label, title, list, image, btnName, para, srcbtn }) => {
   const containerRef = useRef(null);
   const imgRef = useRef(null);
 
   useEffect(() => {
-    const el = containerRef.current;
-    const imgEl = imgRef.current;
+    const ctx = gsap.context(() => {
+      const el = containerRef.current;
+      const imgEl = imgRef.current;
 
-    gsap.fromTo(
-      imgEl,
-      { scale: 1.2 },
-      {
-        scale: 1,
-        ease: "none",
-        scrollTrigger: {
-          trigger: el,
-          start: "top bottom",
-          end: "bottom top",
-          scrub: 1,
-          // markers: true,
+      gsap.fromTo(
+        imgEl,
+        { scale: 1.1 },
+        {
+          scale: 1,
+          ease: "none",
+          scrollTrigger: {
+            trigger: el,
+            start: "top bottom",
+            end: "bottom center",
+            scrub: 1,
+          },
         },
-      },
-    );
+      );
+    }, containerRef);
+
+    return () => ctx.revert();
   }, []);
 
   const defaultUseCasesList = [
@@ -46,7 +49,7 @@ const UseCases = ({ label, title, list, image }) => {
   const displayTitle = title || (
     <>
       Where ThreatSense <br />
-      ThreatSense ITDAR Delivers <br />
+      ThreatOps for SAP Delivers <br />
       Immediate Value
     </>
   );
@@ -60,6 +63,7 @@ const UseCases = ({ label, title, list, image }) => {
         </div>
 
         <h2 className="head-text">{displayTitle}</h2>
+        <p className="para-text">{para}</p>
 
         <ul className="uc-list">
           {displayList.map((item, index) => (
@@ -72,8 +76,11 @@ const UseCases = ({ label, title, list, image }) => {
           ))}
         </ul>
 
-        <a href="https://tidycal.com/threatsenseai/" className="black-button">
-          Book A Free Demo
+        <a
+          href={srcbtn || "https://tidycal.com/threatsenseai/"}
+          className="black-button"
+        >
+          {btnName || "Book A Free Demo"}
         </a>
       </div>
 

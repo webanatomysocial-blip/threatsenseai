@@ -1,4 +1,4 @@
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useLayoutEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -27,73 +27,71 @@ const AnimatedContent = ({
 }) => {
   const ref = useRef(null);
 
-  useEffect(() => {
-    const el = ref.current;
-    if (!el) return;
+  useLayoutEffect(() => {
+    const ctx = gsap.context(() => {
+      const el = ref.current;
+      if (!el) return;
 
-    let scrollerTarget = container || window;
+      let scrollerTarget = container || window;
 
-    // Attempt to find snap container if no container provided, but fallback to window
-    if (!container) {
-      const snapContainer = document.getElementById("snap-main-container");
-      if (snapContainer) scrollerTarget = snapContainer;
-    }
+      // Attempt to find snap container if no container provided, but fallback to window
+      if (!container) {
+        const snapContainer = document.getElementById("snap-main-container");
+        if (snapContainer) scrollerTarget = snapContainer;
+      }
 
-    if (typeof scrollerTarget === "string") {
-      scrollerTarget = document.querySelector(scrollerTarget) || window;
-    }
+      if (typeof scrollerTarget === "string") {
+        scrollerTarget = document.querySelector(scrollerTarget) || window;
+      }
 
-    const axis = direction === "horizontal" ? "x" : "y";
-    const offset = reverse ? -distance : distance;
-    const startPct = (1 - threshold) * 100;
+      const axis = direction === "horizontal" ? "x" : "y";
+      const offset = reverse ? -distance : distance;
+      const startPct = (1 - threshold) * 100;
 
-    gsap.set(el, {
-      [axis]: offset,
-      scale,
-      opacity: animateOpacity ? initialOpacity : 1,
-      visibility: "visible", // Ensure visible once GSAP takes over
-    });
+      gsap.set(el, {
+        [axis]: offset,
+        scale,
+        opacity: animateOpacity ? initialOpacity : 1,
+        visibility: "visible",
+      });
 
-    const tl = gsap.timeline({
-      paused: true,
-      delay,
-      onComplete: () => {
-        if (onComplete) onComplete();
-        if (disappearAfter > 0) {
-          gsap.to(el, {
-            [axis]: reverse ? distance : -distance,
-            scale: 0.8,
-            opacity: animateOpacity ? initialOpacity : 0,
-            delay: disappearAfter,
-            duration: disappearDuration,
-            ease: disappearEase,
-            onComplete: () => onDisappearanceComplete?.(),
-          });
-        }
-      },
-    });
+      const tl = gsap.timeline({
+        paused: true,
+        delay,
+        onComplete: () => {
+          if (onComplete) onComplete();
+          if (disappearAfter > 0) {
+            gsap.to(el, {
+              [axis]: reverse ? distance : -distance,
+              scale: 0.8,
+              opacity: animateOpacity ? initialOpacity : 0,
+              delay: disappearAfter,
+              duration: disappearDuration,
+              ease: disappearEase,
+              onComplete: () => onDisappearanceComplete?.(),
+            });
+          }
+        },
+      });
 
-    tl.to(el, {
-      [axis]: 0,
-      scale: 1,
-      opacity: 1,
-      duration,
-      ease,
-    });
+      tl.to(el, {
+        [axis]: 0,
+        scale: 1,
+        opacity: 1,
+        duration,
+        ease,
+      });
 
-    const st = ScrollTrigger.create({
-      trigger: el,
-      // If scrollerTarget is window, don't pass 'scroller' property to let ScrollTrigger use default
-      scroller: scrollerTarget === window ? null : scrollerTarget,
-      start: `top ${startPct}%`,
-      once: true,
-      onEnter: () => tl.play(),
-    });
+      ScrollTrigger.create({
+        trigger: el,
+        scroller: scrollerTarget === window ? null : scrollerTarget,
+        start: `top ${startPct}%`,
+        once: true,
+        onEnter: () => tl.play(),
+      });
+    }, ref);
 
-    return () => {
-      st.kill();
-      tl.kill();
-    };
+    return () => ctx.revert();
   }, [
     container,
     distance,

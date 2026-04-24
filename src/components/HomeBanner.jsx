@@ -145,8 +145,11 @@ const HomeBanner = () => {
             <a href="#solutions" className="red-button">
               Get Started
             </a>
-            <a href="https://tidycal.com/threatsenseai/" className="white-button">
-              Book a Demo
+            <a
+              href="https://tidycal.com/threatsenseai/"
+              className="white-button"
+            >
+              Request a Demo
             </a>
           </div>
 

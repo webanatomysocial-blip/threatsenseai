@@ -16,9 +16,25 @@ import AccessibilityStatement from "./Resources/Accessibility";
 import TadsProtect from "./solutions-pages/TadsProtect";
 import DotLayer from "./solutions-pages/DotLayer";
 import Dmss from "./solutions-pages/Dmss";
+import Dprm from "./solutions-pages/DPRM";
 import BecomeAPartner from "./solutions-pages/BecomeApartner";
 
+import { useLocation } from "react-router-dom";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
 function App() {
+  const location = useLocation();
+
+  React.useEffect(() => {
+    // Refresh ScrollTrigger after a delay to ensure all content/images 
+    // are loaded and measurements are accurate.
+    const timer = setTimeout(() => {
+      ScrollTrigger.refresh();
+    }, 1000);
+
+    return () => clearTimeout(timer);
+  }, [location.pathname]);
+
   return (
     <Routes>
       <Route path="/" element={<Layout />}>
@@ -26,18 +42,22 @@ function App() {
         <Route path="blogs" element={<BlogsPage />} />
         {/* <Route path="contact" element={<Contact />} /> */}
         <Route path="about" element={<AboutUs />} />
-        <Route path="threatsenseai-ads" element={<Tads />} />
-        <Route path="threatsenseai-ate" element={<Mcaat />} />
-        <Route path="threatsense-itdar-for-sap" element={<SiemSoar />} />
+        <Route path="threatsenseai-data-security" element={<Tads />} />
+        <Route path="audit-trail-enforcer" element={<Mcaat />} />
+        <Route path="threatops-for-sap" element={<SiemSoar />} />
 
         <Route path="privacy-policy" element={<PrivacyPolicy />} />
         <Route path="cookie-policy" element={<Cookies />} />
         <Route path="terms-and-conditions" element={<TermsAndConditions />} />
-        <Route path="accessibility-statement" element={<AccessibilityStatement />} />
+        <Route
+          path="accessibility-statement"
+          element={<AccessibilityStatement />}
+        />
 
         <Route path="tads-protect" element={<TadsProtect />} />
         <Route path="dot-layer" element={<DotLayer />} />
         <Route path="dmss" element={<Dmss />} />
+        <Route path="dprm" element={<Dprm />} />
         <Route path="blogs/:blogId" element={<DynamicBlog />} />
         <Route path="become-a-partner" element={<BecomeAPartner />} />
         {/* Redirect any other path to Home */}

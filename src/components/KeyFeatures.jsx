@@ -60,7 +60,7 @@ const KeyFeatures = () => {
     {
       id: 7,
       icon: <FiBell />,
-      title: "150+ Pre-Configured Security\n Rules",
+      title: "180+ Pre-Configured Security Rules",
       desc: "Out-of-the-box detection rules covering SAP security, insider risk, and common attack scenarios - extensible as needed.",
     },
     {
@@ -94,7 +94,7 @@ const KeyFeatures = () => {
             trigger: gridRef.current,
             start: "top 80%", // Start when top of grid hits 80% viewport
           },
-        }
+        },
       );
     }, gridRef);
 

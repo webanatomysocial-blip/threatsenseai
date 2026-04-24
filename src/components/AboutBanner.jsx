@@ -13,42 +13,62 @@ export default function AboutBanner() {
   const layoutRef = useRef(null);
 
   useEffect(() => {
-    // Animate the header letters
-    const chars = headerRef.current.querySelectorAll(".split-text-char");
-    gsap.fromTo(
-      chars,
-      { opacity: 0, y: 30, filter: "blur(10px)" },
-      { opacity: 1, y: 0, filter: "blur(0px)", duration: 0.8, stagger: 0.05, ease: "power2.out", delay: 0.2 }
-    );
-
-    // Animate the banner images and video in layout
-    const mediaItems = layoutRef.current.querySelectorAll("img, video");
-    gsap.fromTo(
-      mediaItems,
-      { opacity: 0, y: 50, scale: 0.95 },
-      {
-        opacity: 1,
-        y: 0,
-        scale: 1,
-        duration: 0.8,
-        stagger: 0.2,
-        ease: "power3.out",
-        scrollTrigger: {
-          trigger: layoutRef.current,
-          start: "top 80%",
-          toggleActions: "play none none none",
+    const ctx = gsap.context(() => {
+      // Animate the header letters
+      const chars = headerRef.current.querySelectorAll(".split-text-char");
+      gsap.fromTo(
+        chars,
+        { opacity: 0, y: 30, filter: "blur(10px)" },
+        {
+          opacity: 1,
+          y: 0,
+          filter: "blur(0px)",
+          duration: 0.8,
+          stagger: 0.05,
+          ease: "power2.out",
+          delay: 0.2,
         },
-      }
-    );
+      );
+
+      // Animate the banner images and video in layout
+      const mediaItems = layoutRef.current.querySelectorAll("img, video");
+      gsap.fromTo(
+        mediaItems,
+        { opacity: 0, y: 50, scale: 0.95 },
+        {
+          opacity: 1,
+          y: 0,
+          scale: 1,
+          duration: 0.8,
+          stagger: 0.2,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: layoutRef.current,
+            start: "top 80%",
+            toggleActions: "play none none none",
+          },
+        },
+      );
+    }, headerRef);
+
+    return () => ctx.revert();
   }, []);
 
   const splitLetters = (text) => {
-    return text.split("").map((char, index) => (
-      <span key={index} className="split-text-char"
-        style={{ font: "italic 400 1em 'Instrument Serif'" }}>
-        {char === " " ? "\u00A0" : char}
-      </span>
-    ));
+    return text.split("").map((char, index) => {
+      if (char === "\n") {
+        return <br key={index} />;
+      }
+      return (
+        <span
+          key={index}
+          className="split-text-char"
+          style={{ font: "italic 400 1em 'Instrument Serif'" }}
+        >
+          {char === " " ? "\u00A0" : char}
+        </span>
+      );
+    });
   };
 
   return (
