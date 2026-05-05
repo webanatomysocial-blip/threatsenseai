@@ -44,13 +44,16 @@ import img4 from "../assets/solutions/dotlayer/cta.png";
 
 const DotLayer = () => {
   const endpointFeatures = [
-    { icon: <FaPrint />, title: "Entering sensitive data into AI tools" },
+    { icon: <FaPrint />, title: "Entering sensitive data into\n AI tools" },
     {
       icon: <FaFileAlt />,
-      title: "Uploading confidential files to cloud apps",
+      title: "Uploading confidential files to \ncloud apps",
     },
-    { icon: <FaUsb />, title: "Copy-paste data leaks across platforms" },
-    { icon: <FaDesktop />, title: "Data exposure via emails and web forms" },
+    { icon: <FaUsb />, title: "Copy-paste data leaks across \nplatforms" },
+    {
+      icon: <FaDesktop />,
+      title: "Data exposure via emails and \nweb forms",
+    },
   ];
   const realWorldFeatures = [
     { title: "Generative AI tools (ChatGPT, Copilot, etc.)" },
@@ -98,23 +101,29 @@ const DotLayer = () => {
       title: "Personal Email Controls ",
       desc: "Blocks or restricts sharing of sensitive data through personal email platforms like Gmail or web-based Outlook. ",
     },
+    {
+      id: 6,
+      icon: <FaUserShield />,
+      title: "PII Exposure Prevention",
+      desc: "Automatically masking or blocking PII data from being exposed to GenAI tools or through any other channel from web applications.",
+    },
   ];
 
   const adsProtectWorksFeatures = [
     {
-      title: "Step 1: Detect Sensitive Data ",
+      title: "Step 1: Detect\n Sensitive Data ",
       desc: "Identifies sensitive data such as PII, SPII, financial, and business-critical information as users type, paste, or upload within the browser. ",
     },
     {
-      title: "Step 2: Analyze Context ",
+      title: "Step 2: Analyze \nContext ",
       desc: "Evaluates the application (AI tool, email, SaaS), user role, and action (typing, copy, upload) to determine risk ",
     },
     {
-      title: "Step 3: Control Data in Real Time ",
+      title: "Step 3: Control Data \nin Real Time ",
       desc: "Blocks, masks, or restricts sensitive data before it can be entered, shared, or uploaded.",
     },
     {
-      title: "Step 4: Enforce & Log ",
+      title: "Step 4: Enforce \n & Log ",
       desc: "Applies policies instantly and logs all activities for audit, compliance, and monitoring.",
     },
   ];
@@ -174,7 +183,7 @@ const DotLayer = () => {
     {
       question: "Why is sensitive data vulnerable in the browser?",
       answer:
-        "Modern workflows rely on browsers to access AI tools, email platforms, and cloud applications. Once users enter or access sensitive data in the browser, it can be easily exposed through everyday actions like typing into AI tools, pasting into web forms, uploading files to cloud storage, or sending emails—often without visibility or control. Traditional security tools don't monitor browser-level activities, leaving this critical exposure point unprotected where most modern data leaks actually occur.",
+        "Modern workflows rely on browsers to access AI tools, email platforms, and cloud applications. Once users enter or access sensitive data in the browser, it can be easily exposed through everyday actions like typing into AI tools, pasting into web forms, uploading files to cloud storage, or sending emails often without visibility or control. Traditional security tools don't monitor browser-level activities, leaving this critical exposure point unprotected where most modern data leaks actually occur.",
     },
     {
       question: "What security controls does DotLayer provide?",
@@ -224,10 +233,14 @@ const DotLayer = () => {
       <EndpointVulnerability
         label="Browser Data Exposure"
         icon={FaExclamationTriangle}
-        title={<>Why Sensitive Data Is Vulnerable in the Browser</>}
+        title={
+          <>
+            Why Sensitive Data Is <br></br> Vulnerable in the Browser
+          </>
+        }
         desc="Modern workflows rely heavily on browsers for accessing applications, AI tools, and email platforms. Once sensitive data is entered or accessed in the browser, it can be easily exposed through everyday user actions often without visibility or control."
         ctaText="Book A Free Demo"
-        ctaLink="https://tidycal.com/threatsenseai/tads"
+        ctaLink="https://tidycal.com/threatsenseai/data-security-suite"
         features={endpointFeatures}
         img={[img1, img2]}
         margin="40px"
@@ -257,7 +270,6 @@ const DotLayer = () => {
       />
       <AdsProtectWorks
         label="The Solution"
-        subPara="How It Works"
         title="How DotLayer Works  "
         desc="A real-time browser protection pipeline"
         features={adsProtectWorksFeatures}
@@ -273,12 +285,12 @@ const DotLayer = () => {
         title="Real-World Scenarios Where DotLayer Protects Your Data "
         icon={FaUserShield}
         ctaText="Book A Free Demo"
-        ctaLink="https://tidycal.com/threatsenseai/tads"
+        ctaLink="https://tidycal.com/threatsenseai/data-security-suite"
         features={realWorldFeatures2}
         enddesc="Stops data leaks at the point of entry before it can be typed, shared, or uploaded. "
         img={img4}
       />
-      <FAQ title="Dot Layer FAQs" items={faqdata} paddingBottom="100px" />
+      <FAQ title="DotLayer FAQs" items={faqdata} paddingBottom="100px" />
       <Cta
         title={
           <>

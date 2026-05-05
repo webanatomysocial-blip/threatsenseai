@@ -21,6 +21,9 @@ import {
   FaDesktop,
   FaFileAlt,
   FaShieldAlt,
+  FaInfoCircle,
+  FaCheckCircle,
+  FaRocket,
 } from "react-icons/fa";
 import {
   FiSend,
@@ -29,58 +32,66 @@ import {
   FiToggleLeft,
   FiBox,
   FiSliders,
+  FiLayers,
+  FiLock,
 } from "react-icons/fi";
 
 const TadsProtect = () => {
   const endpointFeatures = [
-    { icon: <FaPrint />, title: "Printing financial documents" },
-    { icon: <FaFileAlt />, title: "Capturing sensitive data via screenshots" },
-    { icon: <FaUsb />, title: "Copying data to USB drives" },
-    { icon: <FaDesktop />, title: "Sharing screens in meetings" },
+    { icon: <FaPrint />, title: "Printing financial\n documents" },
+    {
+      icon: <FaFileAlt />,
+      title: "Capturing sensitive data via\n screenshots",
+    },
+    { icon: <FaUsb />, title: "Copying data to \n USB drives" },
+    { icon: <FaDesktop />, title: "Sharing screens in\n meetings" },
   ];
 
   const buildToProtectFeatures = [
     { icon: <FaPrint />, title: "Real-time data activity monitoring" },
     { icon: <FaFileAlt />, title: "File download and export control" },
-    { icon: <FaDesktop />, title: "Screenshot and screen sharing protection" },
-    { icon: <FaUsb />, title: "USB and external device control" },
+    {
+      icon: <FaDesktop />,
+      title: "Screenshot and screen sharing\n protection",
+    },
+    { icon: <FaUsb />, title: "USB and external \n device control" },
   ];
 
   const tadsCapFeatures = [
     {
       id: 1,
       icon: <FiSend />,
-      title: "Screenshot & Screen Capture Protection",
+      title: "Screenshot & \n Screen Capture Protection",
       desc: "Blocks screen capture tools and prevents users from capturing SAP screens using screenshots or recording software.",
     },
     {
       id: 2,
       icon: <FiCpu />,
-      title: "Print & Export Control",
+      title: "Print &\n Export Control",
       desc: "Restricts unauthorized printing, PDF exports, and report downloads based on user roles and policies.",
     },
     {
       id: 3,
       icon: <FiGitMerge />,
-      title: "USB & External Device Control",
+      title: "USB &\n External Device Control",
       desc: "Prevents copying SAP data to USB drives or external storage devices.",
     },
     {
       id: 4,
       icon: <FiToggleLeft />,
-      title: "Screen Watermarking",
+      title: "Screen\n Watermarking",
       desc: "Applies dynamic watermarks to sensitive SAP screens to deter unauthorized capture or sharing.",
     },
     {
       id: 5,
       icon: <FiBox />,
-      title: "Meeting & Screen Share Protection",
+      title: "Meeting &\n Screen Share Protection",
       desc: "Blocks sharing of sensitive SAP screens during online meetings or collaboration tools.",
     },
     {
       id: 6,
       icon: <FiSliders />,
-      title: "Role-Aware Policy Enforcement",
+      title: "Role-Aware\n Policy Enforcement",
       desc: "Security controls adapt based on SAP roles, ensuring authorized users maintain productivity.",
     },
   ];
@@ -99,7 +110,7 @@ const TadsProtect = () => {
       desc: "Applies real-time controls like blocking screenshots, restricting exports, and preventing unauthorized device usage.",
     },
     {
-      title: "Step 4: Log & Alert",
+      title: "Step 4: Log &\n Alert",
       desc: "Records all activities for audit and sends instant alerts for policy violations or suspicious behavior.",
     },
   ];
@@ -154,12 +165,12 @@ const TadsProtect = () => {
     {
       question: "What is TADS Protect?",
       answer:
-        "TADS Protect is an endpoint data loss prevention (DLP) solution built specifically for SAP environments. It prevents unauthorized data extraction through screenshots, exports, USB transfers, and screen sharing before sensitive data leaves your enterprise. Unlike traditional network security tools, TADS Protect monitors user activity at the endpoint level and understands SAP data flows to block insider threats and accidental leaks.",
+        "TADS Protect is an endpoint DLP tool designed to safeguard against data exfiltration in SAP systems. It blocks any attempt to remove data from your organization by means of screenshots, exports, USB drives, and screen sharing before the sensitive data ever leaves your organization. This is unlike most other network-level security solutions which monitor user behavior on the network level without understanding SAP data flows.",
     },
     {
       question: "Why is SAP data vulnerable at the endpoint?",
       answer:
-        "Once users log into SAP, sensitive financial and HR data can be easily extracted through everyday actions: exporting to Excel/PDF, taking screenshots, copying to USB drives, or sharing screens in meetings. Traditional security tools focus on malware and network threats, leaving data vulnerable at the endpoint where it's most exposed. Most data breaches originate from insiders or compromised accounts, not external hackers—making endpoint protection critical.",
+        "Once users log into SAP, sensitive financial and HR data can be easily extracted through everyday actions: exporting to Excel/PDF, taking screenshots, copying to USB drives, or sharing screens in meetings. Traditional security tools focus on malware and network threats, leaving data vulnerable at the endpoint where it's most exposed. Most data breaches originate from insiders or compromised accounts, not external hackers, making endpoint protection critical.",
     },
     {
       question: "What security controls does TADS Protect provide?",
@@ -169,12 +180,12 @@ const TadsProtect = () => {
     {
       question: "Does TADS Protect prevent insider threats?",
       answer:
-        "Yes. TADS Protect directly addresses insider risks by blocking all primary data exfiltration methods (screenshots, exports, USB transfers, screen sharing), monitoring suspicious patterns (large exports, after-hours access), and enabling rapid response through real-time alerts. It creates deterrence through comprehensive logging of all activities. Most importantly, it catches threats before data leaves your enterprise—making insider attacks far less likely to succeed.",
+        "Yes. TADS Protect directly addresses insider risks by blocking all primary data exfiltration methods (screenshots, exports, USB transfers, screen sharing), monitoring suspicious patterns (large exports, after-hours access), and enabling rapid response through real-time alerts. It creates deterrence through comprehensive logging of all activities. Most importantly, it catches threats before data leaves your enterprise, making insider attacks far less likely to succeed.",
     },
     {
       question: "Can authorized users still be productive with TADS Protect?",
       answer:
-        "Absolutely. TADS Protect uses role-aware policies that adapt based on user responsibilities. Finance managers can export GL reports, HR can share employee data with vendors, and auditors maintain broad access—while unauthorized and risky activities are blocked. Organizations report less than 1% disruption to legitimate work when policies are properly configured. The solution balances security with productivity through intelligent policy design.",
+        "Absolutely. TADS Protect uses role-aware policies that adapt based on user responsibilities. Finance managers can export GL reports, HR can share employee data with vendors, and auditors maintain broad access, while unauthorized and risky activities are blocked. Organizations report less than 1% disruption to legitimate work when policies are properly configured. The solution balances security with productivity through intelligent policy design.",
     },
   ];
 
@@ -223,13 +234,14 @@ const TadsProtect = () => {
         ]}
         bottomDesc="No tracking of what happens after data leaves SAP"
         ctaText="Book A Free Demo"
-        ctaLink="https://tidycal.com/threatsenseai/tads"
+        ctaLink="https://tidycal.com/threatsenseai/data-security-suite"
         features={endpointFeatures}
         img={[img1, img2]}
       />
 
       <BuildToProtect
         label="Endpoint Protection Layer"
+        icon={FiLayers}
         title={
           <>
             Built to Protect SAP Data <br /> Where It’s Most Exposed
@@ -242,6 +254,7 @@ const TadsProtect = () => {
 
       <TadsCap
         label="TADS capabilities"
+        icon={FaCheckCircle}
         title={
           <>
             Comprehensive endpoint protection purpose <br />
@@ -253,7 +266,6 @@ const TadsProtect = () => {
 
       <AdsProtectWorks
         label="The Solution"
-        subPara="How It Works"
         title="How TADS Protect Works"
         desc="Four-step real-time protection pipeline"
         features={adsProtectWorksFeatures}
@@ -262,12 +274,14 @@ const TadsProtect = () => {
 
       <SecurityControls
         label="Core Capabilities"
+        icon={FiLock}
         title="Security Controls"
         controls={securityControlsData}
       />
 
       <RealWorld
         title="Real-world scenarios where TADS Protect delivers critical value"
+        icon={FaRocket}
         ctaText="Protect Your Data Today"
         ctaLink="https://tidycal.com/threatsenseai/tads"
         features={realWorldFeatures}

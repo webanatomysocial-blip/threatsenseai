@@ -19,20 +19,20 @@ const CoreTechs = ({ technologies, subheading, description }) => {
         "Prevents unauthorized SAP data exports, excessive access, insider misuse, and risky data movement through real-time, policy-driven controls built for SAP environments.",
       image: cardImage,
       video: null,
-      url: "/tads-protect",
+      url: "/solutions/threatsenseai-data-security/tads-protect",
       btnText: "Explore TADS Protect",
     },
     {
       id: "02",
-      title: "Dot Layer",
+      title: "DotLayer",
       subtitle:
         "Stops browser-based data leaks by controlling copy, paste, upload, print, screenshot, and AI prompt actions - without agents or complex endpoint deployments.",
       description:
-        "Dot Layer provides a secure browser environment for SAP, preventing data leakage through common web-based actions without impacting user experience.",
+        "DotLayerprovides a secure browser environment for SAP, preventing data leakage through common web-based actions without impacting user experience.",
       image: cardImage,
       video: null,
-      url: "/dot-layer",
-      btnText: "Explore Dot Layer",
+      url: "/solutions/threatsenseai-data-security/dot-layer",
+      btnText: "Explore DotLayer",
     },
     {
       id: "03",
@@ -43,7 +43,7 @@ const CoreTechs = ({ technologies, subheading, description }) => {
         "DMSS ensures that sensitive data is only visible to authorized personnel, protecting privacy and maintaining regulatory compliance across SAP landscapes.",
       image: cardImage,
       video: null,
-      url: "/dmss",
+      url: "/solutions/threatsenseai-data-security/dmss",
       btnText: "Explore DMSS",
     },
     {
@@ -55,7 +55,7 @@ const CoreTechs = ({ technologies, subheading, description }) => {
         "DPRM streamlines privacy management by automating regulatory workflows and providing comprehensive reporting for global privacy standards.",
       image: cardImage,
       video: null,
-      url: "/dprm",
+      url: "/solutions/threatsenseai-data-security/dprm",
       btnText: "Explore DPRM",
     },
   ];
@@ -134,7 +134,7 @@ const CoreTechs = ({ technologies, subheading, description }) => {
         )}
       </div>
 
-      <div className="techs-timeline" id="sap-data">
+      <div className="techs-timeline" id="sap-data-protection">
         <div className="timeline-line"></div>
         {techs.map((tech, index) => (
           <div

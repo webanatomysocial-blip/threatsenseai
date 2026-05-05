@@ -53,9 +53,6 @@ const BlogLayout = ({
         <div className="pod-hero-section">
           <div className="pod-split-header">
             <div className="pod-title-section">
-              {category && (
-                <span className="blog-category-badge">{category}</span>
-              )}
               <h1 className="head-text">{title}</h1>
               {(date || author) && (
                 <div className="blog-hero-meta">
@@ -75,16 +72,12 @@ const BlogLayout = ({
         <div className="pod-sticky-header-container" ref={headerRef}>
           <div className="pod-sticky-header">
             <div className="pod-header-content">
-              <div className="pod-header-title">
-                {category}{" "}
-                <span style={{ margin: "0 10px", color: "#ccc" }}>|</span>{" "}
-                {title}
-              </div>
+              <div className="pod-header-title">{title}</div>
               <div className="pod-header-actions">
                 <div className="social-icons-header">
                   <a
                     href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(
-                      currentUrl
+                      currentUrl,
                     )}`}
                     target="_blank"
                     rel="noopener noreferrer"
@@ -95,7 +88,7 @@ const BlogLayout = ({
                   </a>
                   <a
                     href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(
-                      currentUrl
+                      currentUrl,
                     )}`}
                     target="_blank"
                     rel="noopener noreferrer"
@@ -131,27 +124,12 @@ const BlogLayout = ({
           <div className="pod-main-content">
             <div className="pod-body">{content}</div>
           </div>
-
-          <aside className="pod-sidebar-right">
-            {/* Sponsored Section Commented Out due to missing assets */}
-            {/* <div className="sponsored-card">
-              <span className="sponsored-label">Sponsored</span>
-              <a
-                href="https://togglenow.com/services/mca-audit-trail/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img src={sponsoredImage || sponsoredDefault} alt="Sponsored" />
-              </a>
-            </div> */}
-          </aside>
         </div>
 
         <div className="pod-container">
           {/* <CommentSection postId={title} /> */}
         </div>
       </div>
-
     </>
   );
 };

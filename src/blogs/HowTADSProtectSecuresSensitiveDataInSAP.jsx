@@ -6,7 +6,7 @@ const HowTADSProtectSecuresSensitiveDataInSAP = ({ dynamicRecentPosts }) => {
   const content = (
     <>
       <section>
-        <h3>A Cybersecurity Perspective for Enterprise Security Leaders</h3>
+        <h2>A Cybersecurity Perspective for Enterprise Security Leaders</h2>
         <p>Let’s consider a common scenario in many SAP environments:</p>
         <ul>
           <li>A business user responsible for vendor operations logs into SAP to review vendor master records (transaction code XK03, or FK03).</li>
@@ -49,7 +49,7 @@ const HowTADSProtectSecuresSensitiveDataInSAP = ({ dynamicRecentPosts }) => {
       </section>
 
       <section>
-        <h3>The Growing Regulatory Pressure on Enterprise Data Protection</h3>
+        <h2>The Growing Regulatory Pressure on Enterprise Data Protection</h2>
         <p>Organizations are also facing increasing regulatory pressure to protect sensitive personal and financial information.</p>
         <p>Regulations such as:</p>
         <ul>
@@ -83,7 +83,7 @@ const HowTADSProtectSecuresSensitiveDataInSAP = ({ dynamicRecentPosts }) => {
       </section>
 
       <section>
-        <h3>Why Traditional Security Controls Miss SAP Data Exposure Risks</h3>
+        <h2>Why Traditional Security Controls Miss SAP Data Exposure Risks</h2>
         <p>Traditional DLP architectures focus primarily on detecting data leaving the enterprise network.</p>
         <p>They monitor activities such as:</p>
         <ul>
@@ -108,7 +108,7 @@ const HowTADSProtectSecuresSensitiveDataInSAP = ({ dynamicRecentPosts }) => {
       </section>
 
       <section>
-        <h3>Extending Beyond Traditional Data Loss Prevention</h3>
+        <h2>Extending Beyond Traditional Data Loss Prevention</h2>
         <p>TADS Protect extends traditional DLP capabilities while introducing SAP-aware protection mechanisms.</p>
         <p>At the endpoint level, organizations can enforce policies to:</p>
         <ul>
@@ -126,7 +126,7 @@ const HowTADSProtectSecuresSensitiveDataInSAP = ({ dynamicRecentPosts }) => {
       </section>
 
       <section>
-        <h3>SAP-Aware Security Controls</h3>
+        <h2>SAP-Aware Security Controls</h2>
         <p>Unlike conventional DLP platforms, TADS Protect introduces context-aware security designed for SAP environments.</p>
         <p>
           When users access sensitive SAP transactions or reports, the system can dynamically apply on-screen watermarking.
@@ -161,7 +161,7 @@ const HowTADSProtectSecuresSensitiveDataInSAP = ({ dynamicRecentPosts }) => {
       </section>
 
       <section>
-        <h3>Preventing Data Leakage to AI Platforms</h3>
+        <h2>Preventing Data Leakage to AI Platforms</h2>
         <p>A growing enterprise risk involves employees sharing sensitive business information with generative AI platforms.</p>
         <p>Users often paste internal data into AI tools to:</p>
         <ul>
@@ -180,7 +180,7 @@ const HowTADSProtectSecuresSensitiveDataInSAP = ({ dynamicRecentPosts }) => {
       </section>
 
       <section>
-        <h3>Traditional DLP vs TADS Protect</h3>
+        <h2>Traditional DLP vs TADS Protect</h2>
         <div style={{ overflowX: "auto" }}>
           <table className="custom-table" style={{ width: "100%", borderCollapse: "collapse", marginTop: "20px", marginBottom: "20px" }}>
             <thead>
@@ -244,7 +244,7 @@ const HowTADSProtectSecuresSensitiveDataInSAP = ({ dynamicRecentPosts }) => {
       </section>
 
       <section>
-        <h3>Integrating Security with Enterprise Workflows</h3>
+        <h2>Integrating Security with Enterprise Workflows</h2>
         <p>Detection alone is not enough.</p>
         <p>Organizations also need structured processes to investigate and respond to incidents.</p>
         <p>TADS Protect integrates with IT Service Management (ITSM) platforms.</p>
@@ -258,7 +258,7 @@ const HowTADSProtectSecuresSensitiveDataInSAP = ({ dynamicRecentPosts }) => {
       </section>
 
       <section>
-        <h3>Securing SAP Data in the AI Era</h3>
+        <h2>Securing SAP Data in the AI Era</h2>
         <p>Traditional perimeter-based security models are becoming insufficient.</p>
         <p>Sensitive data now moves through:</p>
         <ul>

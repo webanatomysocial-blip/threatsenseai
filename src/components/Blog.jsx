@@ -38,14 +38,14 @@ const Blogs = ({ limit = "all" }) => {
         {featuredBlog && (
           <div className="featured-blog-row">
             <Link
-              to={`/blogs/${featuredBlog.id}`}
+              to={`/blogs/${featuredBlog.slug}`}
               className="featured-image-container"
             >
               <img src={featuredBlog.image} alt={featuredBlog.title} />
             </Link>
             <div className="featured-content">
               <Link
-                to={`/blogs/${featuredBlog.id}`}
+                to={`/blogs/${featuredBlog.slug}`}
                 style={{ textDecoration: "none" }}
               >
                 <h2 className="sub-head-text">{featuredBlog.title}</h2>
@@ -70,12 +70,12 @@ const Blogs = ({ limit = "all" }) => {
         <div className="blogs-grid-wrapper">
           {remainingBlogs.map((blog, index) => (
             <div key={index} className="grid-blog-item">
-              <Link to={`/blogs/${blog.id}`} className="grid-image-container">
+              <Link to={`/blogs/${blog.slug}`} className="grid-image-container">
                 <img src={blog.image} alt={blog.title} />
               </Link>
               <div className="grid-content">
                 <Link
-                  to={`/blogs/${blog.id}`}
+                  to={`/blogs/${blog.slug}`}
                   style={{ textDecoration: "none" }}
                 >
                   <p className="sub-head-text">{blog.title.slice(0, 50)}...</p>

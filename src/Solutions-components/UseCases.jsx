@@ -9,7 +9,7 @@ import { FaGlobe } from "react-icons/fa";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const UseCases = ({ label, title, list, image, btnName, para, srcbtn }) => {
+const UseCases = ({ label, icon: Icon, title, list, image, btnName, para, srcbtn }) => {
   const containerRef = useRef(null);
   const imgRef = useRef(null);
 
@@ -59,7 +59,7 @@ const UseCases = ({ label, title, list, image, btnName, para, srcbtn }) => {
     <div className="use-cases-container" ref={containerRef}>
       <div className="uc-text-side">
         <div className="sub-para-text security-label">
-          <FaGlobe size={16} style={{ marginRight: "4px" }} /> {displayLabel}
+          {Icon ? <Icon size={16} style={{ marginRight: "4px" }} /> : <FaGlobe size={16} style={{ marginRight: "4px" }} />} {displayLabel}
         </div>
 
         <h2 className="head-text">{displayTitle}</h2>

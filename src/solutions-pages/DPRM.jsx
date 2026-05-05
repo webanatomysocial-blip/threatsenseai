@@ -215,7 +215,7 @@ const Dprm = () => {
               margin: "-28px",
             }}
           >
-            Data Protection Rights Manager
+            Data Privacy Regulation Manager
           </h1>
           <p
             className="sub-para-text-white"
@@ -240,13 +240,14 @@ const Dprm = () => {
         ]}
         bottomDesc="No visibility into how personal data flows or where compliance breaks down."
         ctaText="Book A Free Demo"
-        ctaLink="https://tidycal.com/threatsenseai/tads"
+        ctaLink="https://tidycal.com/threatsenseai/data-security-suite"
         features={endpointFeatures}
         img={[img1, img2]}
       />
 
       <BuildToProtect
         label="DPDPA Enforcement Layer"
+        icon={FiLayers}
         title="Managing DPDPA Obligations Across Your Organization"
         desc="Traditional compliance tools track policies but rarely connect them to actual data flows. DPRM bridges that gap - linking consent records, processing activities, data principal rights, and breach events into one governed, auditable platform."
         features={buildToProtectFeatures}
@@ -255,6 +256,7 @@ const Dprm = () => {
 
       <TadsCap
         label="DPRM Capabilities"
+        icon={FaCheckCircle}
         title="What DPRM Manages for You"
         features={tadsCapFeatures}
         gridCols="2"
@@ -262,7 +264,6 @@ const Dprm = () => {
 
       <AdsProtectWorks
         label="The Process"
-        subPara="How DPRM Works"
         title="How DPRM Works"
         desc="Four steps to structured DPDPA compliance"
         features={adsProtectWorksFeatures}
@@ -271,6 +272,7 @@ const Dprm = () => {
 
       <SecurityControls
         label="Core Capabilities"
+        icon={FiLock}
         title="Compliance Controls"
         controls={securityControlsData}
         minHeight="0"
@@ -282,7 +284,7 @@ const Dprm = () => {
         desc=""
         icon={FaRocket}
         ctaText="Book a Demo"
-        ctaLink="https://tidycal.com/threatsenseai/tads"
+        ctaLink="https://tidycal.com/threatsenseai/data-security-suite"
         features={realWorldFeatures}
         img={cta}
         direction="row"
@@ -297,7 +299,7 @@ const Dprm = () => {
          and stay audit-ready - across any tech stack, for any industry."
         backgroundImage={bg}
         buttonText="Book a Demo"
-        link="https://tidycal.com/threatsenseai/mca-audit-trail-rule-11g-demo"
+        link="https://tidycal.com/threatsenseai/data-security-suite"
       />
     </>
   );

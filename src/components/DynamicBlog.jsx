@@ -1,5 +1,5 @@
-import React, { Suspense, useMemo } from "react";
-import { useParams, Link } from "react-router-dom";
+import React, { Suspense, useMemo, useEffect } from "react";
+import { useParams, Link, useNavigate } from "react-router-dom";
 import { blogMetadata } from "../blogs/metadata.js";
 import { Helmet } from "react-helmet-async";
 
@@ -8,6 +8,7 @@ const blogModules = import.meta.glob("../blogs/*.jsx");
 
 export default function DynamicBlog() {
   const { blogId } = useParams(); // Expecting slug or id
+  const navigate = useNavigate();
 
   // 1. Find metadata based on the URL param (slug or id)
   const metadata = useMemo(() => {
@@ -16,6 +17,13 @@ export default function DynamicBlog() {
       blogMetadata.find((b) => b.slug === blogId || b.id === blogId) || null
     );
   }, [blogId]);
+
+  // Redirect if visiting via ID instead of slug to maintain lowercase URLs
+  useEffect(() => {
+    if (metadata && blogId === metadata.id) {
+      navigate(`/blogs/${metadata.slug}`, { replace: true });
+    }
+  }, [metadata, blogId, navigate]);
 
   // 2. Determine the file path key for import.meta.glob
   const moduleKey = useMemo(() => {

@@ -8,6 +8,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 const SecurityControls = ({
   label,
+  icon: Icon,
   title,
   controls = [],
   minHeight = "380",
@@ -43,7 +44,7 @@ const SecurityControls = ({
     <section className="security-controls-section" ref={containerRef}>
       <div className="sc-header">
         <div className="sc-label">
-          <FaShieldAlt />
+          {Icon ? <Icon /> : <FaShieldAlt />}
           <span>{label}</span>
         </div>
         <h2 className="head-text">{title}</h2>

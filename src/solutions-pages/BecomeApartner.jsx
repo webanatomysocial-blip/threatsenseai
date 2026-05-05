@@ -1,7 +1,7 @@
 import React from "react";
 import MentorCarousel from "../Solutions-components/MentorCarousel";
 import RealWorld from "../Solutions-components/RealWorld";
-import { FaInfoCircle } from "react-icons/fa";
+import { FaInfoCircle, FaHandshake, FaRocket, FaBriefcase, FaCheckCircle } from "react-icons/fa";
 import PartnerBenefits from "../Solutions-components/PartnerBenefits";
 import SecurityControls from "../Solutions-components/SecurityControls";
 import TadsCap from "../Solutions-components/TadsCap";
@@ -165,6 +165,7 @@ export default function BecomeAPartner() {
 
       <TadsCap
         features={tadsCapFeatures}
+        icon={FaBriefcase}
         subtitle="Partnership Opportunities"
         title={
           <>
@@ -176,6 +177,7 @@ export default function BecomeAPartner() {
       />
       <PartnerSuccess
         features={partnerSuccessStages}
+        icon={FaRocket}
         subtitle="Partner Success Journey"
         title={
           <>
@@ -187,6 +189,7 @@ export default function BecomeAPartner() {
       />
       <PartnerSuccess
         features={globalpartner}
+        icon={FaHandshake}
         subtitle="Partnership Opportunities"
         title={<>Join Our Global Partner Ecosystem</>}
         gridCols="2"

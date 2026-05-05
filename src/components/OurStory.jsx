@@ -29,7 +29,10 @@ const OurStory = () => {
       <div className="our-story-container">
         {/* Left content */}
         <div className="our-story-left">
-          <span className="story-label" style={{ display: "flex", alignItems: "center", gap: "6px" }}>
+          <span
+            className="story-label"
+            style={{ display: "flex", alignItems: "center", gap: "6px" }}
+          >
             <FaBookOpen size={18} color="black" />
             Our Story
           </span>
@@ -37,16 +40,18 @@ const OurStory = () => {
           <h2 className="head-text">Why We Built ThreatSense AI</h2>
 
           <p className="para-text">
-            Enterprise risk today is no longer driven only by external attackers.
-            It is driven by how data is accessed, moved, copied, and misused
-            inside the organization, often through trusted users, business-critical
-            systems, and modern tools like browsers and generative AI.
+            Enterprise risk today is no longer driven only by external
+            attackers. It is driven by how data is accessed, moved, copied, and
+            misused inside the organization, often through trusted users,
+            business-critical systems, and modern tools like browsers and
+            generative AI.
           </p>
 
           <p className="para-text">
             We design security solutions that work where enterprises actually
-            operate, across SAP applications, databases, browsers, third parties,
-            and modern AI tools, without disrupting business operations.
+            operate, across SAP applications, databases, browsers, third
+            parties, and modern AI tools, without disrupting business
+            operations.
           </p>
         </div>
 
@@ -92,8 +97,8 @@ const OurStory = () => {
         className="story-highlight"
       >
         <p className="sub-head-text">
-          ThreatSense AI exists to help organizations stay secure, compliant, and
-          in control of their most critical data  &nbsp;
+          ThreatSense AI exists to help organizations stay secure, compliant,
+          and in control of their most critical data &nbsp;
           <span className="story-highlight-accent">
             every day, not just during audits
           </span>

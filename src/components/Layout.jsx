@@ -4,6 +4,7 @@ import Header from "./Header";
 import Footer from "./Footer";
 import ScrollToTop from "./ScrollToTop"; // Assuming this exists given the context
 import ScrollToTopButton from "./ScrollToTopButton";
+import Chatbot from "./Chatbot";
 
 const Layout = () => {
   const location = useLocation();
@@ -15,6 +16,7 @@ const Layout = () => {
         <Outlet />
       </main>
       <ScrollToTopButton />
+      <Chatbot />
       <Footer key={`footer-${location.pathname}`} />
     </div>
   );

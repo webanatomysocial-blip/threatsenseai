@@ -23,15 +23,6 @@
   flex: 1;
 }
 
-.pod-title-section .head-text {
-  font-size: 52px !important;
-  line-height: 1.2;
-  font-weight: 700;
-  white-space: normal;
-  color: var(--black-color);
-  margin: 18px 0 20px;
-}
-
 .blog-category-badge {
   display: inline-block;
   background-color: #f0f0f0;
@@ -135,12 +126,16 @@
 }
 
 .social-icon.facebook {
-  background: #0077b5 url("https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png") center/cover;
+  background: #0077b5
+    url("https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png")
+    center/cover;
 }
 
 /* Placeholder LinkedIn */
 .social-icon.linkedin {
-  background: #ff4500 url("https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg") center/cover;
+  background: #ff4500
+    url("https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg")
+    center/cover;
 }
 
 /* Placeholder FB */
@@ -237,8 +232,8 @@
   margin: 0 auto;
   padding: 60px 40px;
   display: grid;
-  grid-template-columns: 280px 1fr 340px;
-  /* Left: 280px, Mid: Flex, Right: 340px */
+  grid-template-columns: 280px 1fr;
+  /* Left: 280px, Mid: Flex (full width) */
   gap: 60px;
   position: relative;
   align-items: start;
@@ -262,7 +257,6 @@
   font-size: 24px;
   font-weight: 700;
   margin-bottom: 30px;
-  padding-left: 10px;
   line-height: 1;
 }
 
@@ -299,25 +293,33 @@
   color: #333;
 }
 
-.pod-body h2 {
-  font-size: 32px;
-  font-weight: 700;
-  margin-top: 50px;
-  margin-bottom: 25px;
+.pod-body section {
+  margin-bottom: 50px;
+}
+
+.pod-body h2,
+.pod-body h3,
+.pod-body h4,
+.pod-body h5,
+.pod-body h6 {
+  font-size: 28px;
+  font-weight: 600;
+  margin-top: 40px;
+  margin-bottom: 20px;
   color: #000;
 }
 
 .pod-body p {
-  margin-bottom: 24px;
+  margin-bottom: 14px;
+}
+.pod-body a,
+link {
+  text-decoration: none;
 }
 
 .pod-body ul {
-  margin-bottom: 24px;
+  margin-bottom: 14px;
   padding-left: 20px;
-}
-
-.pod-body li {
-  margin-bottom: 15px;
 }
 
 @media (max-width: 900px) {
@@ -332,11 +334,15 @@
     padding: 60px 20px;
   }
 
-  .pod-body h2 {
+  .pod-body h2,
+  .pod-body h3,
+  .pod-body h4,
+  .pod-body h5,
+  .pod-body h6 {
     font-size: 24px;
     font-weight: 700;
     margin-top: 30px;
-    margin-bottom: 25px;
+    margin-bottom: 15px;
     color: #000;
   }
 
@@ -355,7 +361,6 @@
   .pod-main-content {
     order: 1;
   }
-
 
   .pod-header-content {
     padding: 10px 20px;

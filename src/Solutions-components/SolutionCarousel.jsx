@@ -10,7 +10,7 @@ import img2 from "../assets/home/tab-section/2.jpg";
 import img3 from "../assets/home/tab-section/3.jpg";
 import { FaGlobe } from "react-icons/fa";
 
-export default function SolutionCarousel({ label, title, data, paddingTop }) {
+export default function SolutionCarousel({ label, icon: Icon, title, data, paddingTop }) {
   const defaultLabel = "Why Audit Trail Enforcer?";
   const defaultTitle = (
     <>
@@ -55,7 +55,8 @@ export default function SolutionCarousel({ label, title, data, paddingTop }) {
       >
         <div className="capabilities-header">
           <div className="sub-para-text security-label">
-            <FaGlobe size={16} style={{ marginRight: "4px" }} />{" "}
+            {Icon ? <Icon size={16} style={{ marginRight: "4px" }} /> : <FaGlobe size={16} style={{ marginRight: "4px" }} />}
+            {" "}
             {label || defaultLabel}
           </div>
           <h2 className="head-text">{title || defaultTitle}</h2>

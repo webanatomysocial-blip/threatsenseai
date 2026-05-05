@@ -118,14 +118,32 @@ const Dmss = () => {
     {
       id: 4,
       icon: <FiUserCheck />,
-      title: "Secure Data Access for Third Parties ",
+      title: (
+        <>
+          Secure Data Access for<br></br>Third Parties
+        </>
+      ),
       desc: "Provides controlled and masked data access to vendors and external users without exposing real sensitive information. ",
     },
     {
       id: 5,
       icon: <FiLayers />,
-      title: "Seamless Landscape Deployment ",
+      title: (
+        <>
+          Seamless Landscape<br></br> Deployment
+        </>
+      ),
       desc: "Applies data masking and protection policies consistently across environments, ensuring secure and controlled rollout throughout the SAP landscape. ",
+    },
+    {
+      id: 6,
+      icon: <FaUserShield />,
+      title: (
+        <>
+          PII Data<br></br> Protection
+        </>
+      ),
+      desc: "Automasking is applied wherever PII is detected on the screen.",
     },
   ];
   const realWorldFeatures2 = [
@@ -156,7 +174,7 @@ const Dmss = () => {
     {
       question: "Why is sensitive data vulnerable in SAP systems?",
       answer:
-        "Sensitive data in SAP systems is frequently exposed due to operational needs, lack of access controls, or unrestricted user permissions. Production data is often copied into development and testing environments where developers access real customer and financial information during testing. Users frequently have access to more data than required for their roles, and third-party vendors may access critical SAP environments without data protection. Reports often expose sensitive financial and personal information without restriction—making data masking essential for security.",
+        "Sensitive data in SAP systems is frequently exposed due to operational needs, lack of access controls, or unrestricted user permissions. Production data is often copied into development and testing environments where developers access real customer and financial information during testing. Users frequently have access to more data than required for their roles, and third-party vendors may access critical SAP environments without data protection. Reports often expose sensitive financial and personal information without restriction making data masking essential for security.",
     },
     {
       question: "What security controls does DMSS provide?",
@@ -172,7 +190,7 @@ const Dmss = () => {
     {
       question: "Can DMSS provide controlled access to third-party vendors?",
       answer:
-        "Absolutely. DMSS enables secure access for external vendors and third-party users by providing masked or controlled views of SAP data without exposing real sensitive information. Organizations can grant vendors access to necessary business data—such as vendor records, transaction details, or reporting information—while automatically masking personal details, payment information, and other confidential data. This allows vendors to perform their functions while maintaining data security and compliance requirements.",
+        "Absolutely. DMSS enables secure access for external vendors and third-party users by providing masked or controlled views of SAP data without exposing real sensitive information. Organizations can grant vendors access to necessary business datasuch as vendor records, transaction details, or reporting information, while automatically masking personal details, payment information, and other confidential data. This allows vendors to perform their functions while maintaining data security and compliance requirements.",
     },
   ];
 
@@ -223,7 +241,7 @@ const Dmss = () => {
           </>
         }
         ctaText="Book A Free Demo"
-        ctaLink="https://tidycal.com/threatsenseai/tads"
+        ctaLink="https://tidycal.com/threatsenseai/data-security-suite"
         features={[]}
         img={img1}
         direction="row-reverse"
@@ -247,7 +265,6 @@ const Dmss = () => {
       <AdsProtectWorks
         label=" "
         icon={FaShieldAlt}
-        subPara="How DMSS Works"
         title="Intelligent Data Protection Built for SAP  "
         desc="DMSS protects sensitive SAP data through real-time masking and data scrambling, ensuring secure access across all environments. "
         features={adsProtectWorksFeatures}
@@ -255,6 +272,7 @@ const Dmss = () => {
 
       <SecurityControls
         label="Data Protection Scope "
+        icon={FiLock}
         title="Sensitive Data That Can Be Protected "
         controls={securityControlsData}
         minHeight="0"
@@ -265,7 +283,7 @@ const Dmss = () => {
         desc=""
         icon={FaRocket}
         ctaText="Book A Free Demo"
-        ctaLink="https://tidycal.com/threatsenseai/tads"
+        ctaLink="https://tidycal.com/threatsenseai/data-security-suite"
         features={realWorldFeatures}
         img={img3}
         direction="row"

@@ -6,7 +6,7 @@ import img3 from "../assets/solutions/mcaat/results/6.png";
 import img4 from "../assets/solutions/mcaat/results/7.png";
 import { FaGlobe } from "react-icons/fa";
 
-const ResultsComp = () => {
+const ResultsComp = ({ icon: Icon }) => {
   const results = [
     {
       id: 1,
@@ -42,7 +42,7 @@ const ResultsComp = () => {
     <div className="mcaat-res-container">
       <div className="capabilities-header">
         <div className="sub-para-text security-label">
-          <FaGlobe size={16} style={{ marginRight: "4px" }} /> Results
+          {Icon ? <Icon size={16} style={{ marginRight: "4px" }} /> : <FaGlobe size={16} style={{ marginRight: "4px" }} />} Results
         </div>
         <h2 className="head-text">Results We Deliver</h2>
       </div>

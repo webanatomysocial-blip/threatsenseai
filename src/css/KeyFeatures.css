@@ -65,12 +65,12 @@
 .feature-title {
   margin: 0;
   color: #000;
+  white-space: pre-line;
 }
 
 .feature-desc {
   margin: 0;
   color: #555;
-  max-width: 300px;
 }
 
 /* Mobile Responsive */

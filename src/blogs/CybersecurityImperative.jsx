@@ -6,14 +6,14 @@ const CybersecurityImperative = ({ dynamicRecentPosts }) => {
   const content = (
     <>
       <section>
-        <h3>The Rising Threat Landscape</h3>
+        <h2>The Rising Threat Landscape</h2>
         <p>
           In an era where digital transformation is redefining industries, cybersecurity has never been more critical. Enterprises are increasingly relying on AI and automation to streamline operations, enhance decision-making, and improve customer experiences. However, this rapid technological evolution comes at a pricecAI-powered cyber threats are on the rise, targeting vulnerabilities in enterprise ecosystems, particularly within mission-critical systems like SAP.
         </p>
       </section>
 
       <section>
-        <h3>AI: A Double-Edged Sword</h3>
+        <h2>AI: A Double-Edged Sword</h2>
         <p>
           Artificial Intelligence is revolutionizing cybersecurity with capabilities like threat detection, behavioral analytics, and automated response mechanisms. However, cybercriminals are also leveraging AI to conduct sophisticated attacks, including:
         </p>
@@ -30,7 +30,7 @@ const CybersecurityImperative = ({ dynamicRecentPosts }) => {
       </section>
 
       <section>
-        <h3>SAP Systems: A Prime Target for Cybercriminals</h3>
+        <h2>SAP Systems: A Prime Target for Cybercriminals</h2>
         <p>
           SAP environments are the backbone of many global enterprises, handling sensitive business processes, financial transactions, and critical data. Unfortunately, these systems have become high-value targets for cybercriminals due to:
         </p>
@@ -43,32 +43,32 @@ const CybersecurityImperative = ({ dynamicRecentPosts }) => {
       </section>
 
       <section>
-        <h3>Strengthening SAP Security Against AI-Driven Threats</h3>
+        <h2>Strengthening SAP Security Against AI-Driven Threats</h2>
         <p>
           Enterprises must proactively adopt a robust cybersecurity strategy to safeguard their SAP environments. Here’s how:
         </p>
         
-        <h4>AI-Powered Threat Detection</h4>
+        <h3>AI-Powered Threat Detection</h3>
         <p>Deploy AI-driven security solutions like ThreatSenseAI to monitor anomalies in real time, identify insider threats, and detect malicious activities before they escalate.</p>
         
-        <h4>Zero Trust Architecture</h4>
+        <h3>Zero Trust Architecture</h3>
         <p>Implement a Zero Trust model, enforcing strict identity and access controls to ensure that only authorized users and systems interact with SAP environments.</p>
         
-        <h4>Continuous Patch Management</h4>
+        <h3>Continuous Patch Management</h3>
         <p>Keep SAP applications up to date with the latest security patches and conduct regular vulnerability assessments to mitigate risks associated with outdated software.</p>
         
-        <h4>Intelligent User Behavior Analytics (UBA)</h4>
+        <h3>Intelligent User Behavior Analytics (UBA)</h3>
         <p>Utilize AI-driven UBA to detect unusual activities, such as unauthorized access attempts or abnormal transaction patterns.</p>
         
-        <h4>Automated Incident Response</h4>
+        <h3>Automated Incident Response</h3>
         <p>Integrate SIEM+SOAR solutions to enable rapid response and automated remediation of security incidents, minimizing damage and reducing downtime.</p>
         
-        <h4>Enhanced SAP Role Design with S.M.A.R.T Framework</h4>
+        <h3>Enhanced SAP Role Design with S.M.A.R.T Framework</h3>
         <p>Adopt the Secure, Minimal, Aligned, Risk-Free, Task-Based Role Framework to reduce excessive privileges and enforce least-privilege access policies within SAP.</p>
       </section>
 
       <section>
-        <h3>The Future of Cybersecurity: AI vs. AI</h3>
+        <h2>The Future of Cybersecurity: AI vs. AI</h2>
         <p>
           As enterprises embrace AI, cybersecurity strategies must evolve to counteract AI-driven threats. Investing in AI-powered defense mechanisms, continuous risk assessment, and cybersecurity training will be crucial in staying ahead of cyber adversaries.
         </p>

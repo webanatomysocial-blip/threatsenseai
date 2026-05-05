@@ -59,7 +59,7 @@ const OurSolutions = ({ id }) => {
       ],
       media: mcaatGif1,
       reverse: false,
-      link: "/audit-trail-enforcer",
+      link: "/solutions/audit-trail-enforcer",
       btn: "Explore Audit Trail Enforcer",
     },
     {
@@ -73,7 +73,7 @@ const OurSolutions = ({ id }) => {
       ],
       media: mcaatGif2,
       reverse: true,
-      link: "/threatsenseai-data-security",
+      link: "/solutions/threatsenseai-data-security",
       btn: "Explore ThreatSense AI Data Security",
       videoClass: "tads-card-video",
     },
@@ -87,7 +87,7 @@ const OurSolutions = ({ id }) => {
       ],
       media: mcaatGif3,
       reverse: false,
-      link: "/threatops-for-sap",
+      link: "/solutions/threatops-for-sap",
       btn: "Explore ThreatOps for SAP",
     },
   ];

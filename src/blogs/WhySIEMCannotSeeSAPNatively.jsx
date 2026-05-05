@@ -6,7 +6,7 @@ const WhySIEMCannotSeeSAPNatively = ({ dynamicRecentPosts }) => {
     const content = (
         <>
             <section>
-                <h3>A Cybersecurity Perspective for Enterprise Security Leaders</h3>
+                <h2>A Cybersecurity Perspective for Enterprise Security Leaders</h2>
                 <p>
                     In most enterprise security architectures, the Security Information and Event Management (SIEM) platform functions as the central nervous system of threat detection. Logs stream in from firewalls, endpoints, Active Directory, cloud workloads, and network infrastructure. Correlation rules analyze patterns, alerts are generated, and dashboards provide security teams and leadership with operational visibility.
                 </p>
@@ -44,7 +44,7 @@ const WhySIEMCannotSeeSAPNatively = ({ dynamicRecentPosts }) => {
             </section>
 
             <section>
-                <h3>Why Traditional SIEM Architectures Struggle to Interpret SAP Activity</h3>
+                <h2>Why Traditional SIEM Architectures Struggle to Interpret SAP Activity</h2>
                 <p>
                     Most SIEM platforms were engineered to analyze security events generated at infrastructure and identity layers. These include network devices, operating systems, databases, cloud APIs, and identity providers. The telemetry produced by these systems is largely technical in nature and can be correlated using standardized event models.
                 </p>
@@ -60,7 +60,7 @@ const WhySIEMCannotSeeSAPNatively = ({ dynamicRecentPosts }) => {
             </section>
 
             <section>
-                <h3>Log Visibility Is Not the Same as Risk Visibility</h3>
+                <h2>Log Visibility Is Not the Same as Risk Visibility</h2>
                 <p>
                     Many organizations assume that forwarding SAP logs to a SIEM platform closes the monitoring gap. In practice, this only provides log visibility, not business risk visibility.
                 </p>
@@ -76,7 +76,7 @@ const WhySIEMCannotSeeSAPNatively = ({ dynamicRecentPosts }) => {
             </section>
 
             <section>
-                <h3>The Complexity of the SAP Authorization Model</h3>
+                <h2>The Complexity of the SAP Authorization Model</h2>
                 <p>
                     A major reason for this limitation lies in the design of SAP’s authorization architecture. Unlike many enterprise applications that rely on simple role-based access models, SAP security is constructed through multiple layers of authorization objects, role hierarchies, organizational restrictions, and context-sensitive checks within ABAP programs.
                 </p>
@@ -92,7 +92,7 @@ const WhySIEMCannotSeeSAPNatively = ({ dynamicRecentPosts }) => {
             </section>
 
             <section>
-                <h3>SAP Security Risks Are Often Behavioural and Transactional</h3>
+                <h2>SAP Security Risks Are Often Behavioural and Transactional</h2>
                 <p>
                     Another fundamental difference is that many SAP risks are behavioural and contextual rather than purely event-driven.
                 </p>
@@ -112,7 +112,7 @@ const WhySIEMCannotSeeSAPNatively = ({ dynamicRecentPosts }) => {
             </section>
 
             <section>
-                <h3>The Limits of Traditional SIEM Correlation</h3>
+                <h2>The Limits of Traditional SIEM Correlation</h2>
                 <p>
                     Leading SIEM platforms such as Splunk, IBM QRadar, and Microsoft Sentinel excel at detecting infrastructure-level anomalies and correlating large volumes of technical security events. They are highly effective in identifying malware activity, lateral movement, network intrusions, and endpoint compromise.
                 </p>
@@ -131,7 +131,7 @@ const WhySIEMCannotSeeSAPNatively = ({ dynamicRecentPosts }) => {
             </section>
 
             <section>
-                <h3>The Visibility Gap in Enterprise Security</h3>
+                <h2>The Visibility Gap in Enterprise Security</h2>
                 <p>
                     From a governance perspective, this gap creates a false sense of coverage. The presence of a SIEM platform often signals comprehensive monitoring to executive leadership and boards. Yet unless SAP activity is enriched with business context and authorization intelligence, the organization is primarily observing infrastructure telemetry rather than operational financial risk.
                 </p>
@@ -144,7 +144,7 @@ const WhySIEMCannotSeeSAPNatively = ({ dynamicRecentPosts }) => {
             </section>
 
             <section>
-                <h3>Closing the SAP Monitoring Gap</h3>
+                <h2>Closing the SAP Monitoring Gap</h2>
                 <p>
                     Achieving meaningful monitoring for SAP environments requires extending security visibility into the application layer. This typically involves extracting SAP activity data, enriching it with authorization context and transaction semantics, and correlating it with enterprise monitoring platforms in a way that preserves business meaning.
                 </p>
@@ -154,7 +154,7 @@ const WhySIEMCannotSeeSAPNatively = ({ dynamicRecentPosts }) => {
             </section>
 
             <section>
-                <h3>Executive Perspective</h3>
+                <h2>Executive Perspective</h2>
                 <p>
                     SIEM platforms remain essential to modern cybersecurity operations. They provide the correlation engine that connects signals across infrastructure, identities, and endpoints. However, they were not originally designed to interpret the business logic embedded inside enterprise ERP systems.
                 </p>

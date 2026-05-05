@@ -45,52 +45,44 @@ $url = $defaultUrl;
 // Data from src/blogs/metadata.js
 $blogMetadata = [
     [
-        "id" => "FutureTrendsSaaS",
-        "title" => "Future Trends in SaaS: What's Next?",
-        "slug" => "future-trends-saas",
-        "metaDescription" => "Explore tomorrow's innovations, today.",
-        "image" => "/src/blogs/blogs-images/1.png",
-        "url" => $baseUrl . "/blogs/future-trends-saas"
+        "id" => "UnmaskingCyberThreats",
+        "title" => "Unmasking Cyber Threats in SAP: The Rising Need for Intelligent Security",
+        "slug" => "unmasking-cyber-threats-sap",
+        "metaDescription" => "SAP systems are the lifeblood of many enterprises. However, they have increasingly become targets.",
+        "image" => "/src/blogs/blogs-images/1.jpg",
+        "url" => $baseUrl . "/blogs/unmasking-cyber-threats-sap"
     ],
     [
-        "id" => "SecurityEssentialsSaaS",
-        "title" => "Security Essentials for Modern SaaS Products",
-        "slug" => "security-essentials-saas",
-        "metaDescription" => "Essential security practices for modern cloud products.",
-        "image" => "/src/blogs/blogs-images/1.png",
-        "url" => $baseUrl . "/blogs/security-essentials-saas"
+        "id" => "CybersecurityImperative",
+        "title" => "The Cybersecurity Imperative: Safeguarding Enterprises in the Age of AI",
+        "slug" => "cybersecurity-imperative-ai",
+        "metaDescription" => "In an era where digital transformation is redefining industries, cybersecurity has never been more critical.",
+        "image" => "/src/blogs/blogs-images/2.jpg",
+        "url" => $baseUrl . "/blogs/cybersecurity-imperative-ai"
     ],
     [
-        "id" => "SaaSOnboarding",
-        "title" => "SaaS Onboarding That Delights Users",
-        "slug" => "saas-onboarding-delights",
-        "metaDescription" => "Creating a seamless first experience for your customers.",
-        "image" => "/src/blogs/blogs-images/1.png",
-        "url" => $baseUrl . "/blogs/saas-onboarding-delights"
+        "id" => "WhySIEMCannotSeeSAPNatively",
+        "title" => "Why SIEM Cannot See SAP Natively",
+        "slug" => "why-siem-cannot-see-sap-natively",
+        "metaDescription" => "SAP systems are the lifeblood of many enterprises, but traditional SIEM tools cannot natively detect threats.",
+        "image" => "/src/blogs/blogs-images/5.webp",
+        "url" => $baseUrl . "/blogs/why-siem-cannot-see-sap-natively"
     ],
     [
-        "id" => "MustHaveIntegrations",
-        "title" => "Must-Have Integrations for Your SaaS stack",
-        "slug" => "must-have-integrations",
-        "metaDescription" => "The tools you need to connect for maximum efficiency.",
-        "image" => "/src/blogs/blogs-images/1.png",
-        "url" => $baseUrl . "/blogs/must-have-integrations"
+        "id" => "HowTADSProtectSecuresSensitiveDataInSAP",
+        "title" => "How TADS Protect Secures Sensitive Data in SAP",
+        "slug" => "how-tads-protect-secures-sensitive-data-in-sap",
+        "metaDescription" => "SAP systems are the lifeblood of many enterprises. Learn why SAP-native security is critical.",
+        "image" => "/src/blogs/blogs-images/6.jpg",
+        "url" => $baseUrl . "/blogs/how-tads-protect-secures-sensitive-data-in-sap"
     ],
     [
-        "id" => "ComparingPricingModels",
-        "title" => "Comparing SaaS Pricing Models: What Fits You?",
-        "slug" => "comparing-pricing-models",
-        "metaDescription" => "Finding the right value proposition for your product.",
-        "image" => "/src/blogs/blogs-images/1.png",
-        "url" => $baseUrl . "/blogs/comparing-pricing-models"
-    ],
-    [
-        "id" => "FiveReasonsProductivity",
-        "title" => "5 Reasons SaaS Improves Productivity",
-        "slug" => "five-reasons-productivity",
-        "metaDescription" => "How cloud tools are changing the way we work.",
-        "image" => "/src/blogs/blogs-images/1.png",
-        "url" => $baseUrl . "/blogs/five-reasons-productivity"
+        "id" => "McaAuditTrailCompliance",
+        "title" => "MCA Audit Trail Compliance: Why Every Company Must Comply Now",
+        "slug" => "mca-audit-trail-compliance",
+        "metaDescription" => "Audit trail failures are rarely caused by regulation gaps. This article explains how organizations can strengthen compliance under MCA Rule 11(g).",
+        "image" => "/src/blogs/blogs-images/7.jpg",
+        "url" => $baseUrl . "/blogs/mca-audit-trail-compliance"
     ],
 ];
 

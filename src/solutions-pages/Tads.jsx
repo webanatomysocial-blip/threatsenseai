@@ -191,20 +191,20 @@ export default function Tads() {
         "TADS Protect ensures that sensitive SAP data remains within the enterprise by enforcing context-aware security policies at the point of access and egress.",
       image: tadsimg,
       video: null,
-      url: "/tads-protect",
+      url: "/solutions/threatsenseai-data-security/tads-protect",
       btnText: "Explore TADS Protect",
     },
     {
       id: "02",
-      title: "Dot Layer",
+      title: "DotLayer",
       subtitle:
         "Stops browser-based data leaks by controlling copy, paste, upload, print, screenshot, and AI prompt actions, without agents or complex endpoint deployments.",
       description:
-        "Dot Layer provides a secure browser environment for SAP, preventing data leakage through common web-based actions without impacting user experience.",
+        "DotLayerprovides a secure browser environment for SAP, preventing data leakage through common web-based actions without impacting user experience.",
       image: dotimg,
       video: null,
-      url: "/dot-layer",
-      btnText: "Explore Dot Layer",
+      url: "/solutions/threatsenseai-data-security/dot-layer",
+      btnText: "Explore DotLayer",
     },
     {
       id: "03",
@@ -215,7 +215,7 @@ export default function Tads() {
         "DMSS ensures that sensitive data is only visible to authorized personnel, protecting privacy and maintaining regulatory compliance across SAP landscapes.",
       image: dmssimg,
       video: null,
-      url: "/dmss",
+      url: "/solutions/threatsenseai-data-security/dmss",
       btnText: "Explore DMSS",
     },
     {
@@ -227,7 +227,7 @@ export default function Tads() {
         "DPRM streamlines privacy management by automating regulatory workflows and providing comprehensive reporting for global privacy standards.",
       image: dprm, // Using tadsimg as a fallback for the new product
       video: null,
-      url: "/dprm",
+      url: "/solutions/threatsenseai-data-security/dprm",
       btnText: "Explore DPRM",
     },
   ];
@@ -338,7 +338,7 @@ export default function Tads() {
             suite built for modern data risks. Built for modern data risks.
             Crafted for SAP landscapes.
           </p>
-          <a href="#sap-data" className="red-button">
+          <a href="#sap-data-protection" className="red-button">
             Explore the Suite
           </a>
         </div>
@@ -353,12 +353,18 @@ export default function Tads() {
       <CapabilitiesSection
         items={capabilities}
         gridTemplateColumns="repeat(2, 1fr)"
+        header={{
+          icon: <FaShieldAlt size={16} style={{ marginRight: "4px" }} />,
+          label: "Capabilities",
+          title: "What the Suite Delivers",
+        }}
       />
 
       <ComparisonTable />
 
       <UseCases
         label="Use Cases"
+        icon={FaBullseye}
         title={
           <>
             Where ThreatSense AI <br></br> Data Security Suite Delivers{" "}
@@ -369,11 +375,11 @@ export default function Tads() {
         list={useCasesList}
         image={usecaseimg}
         btnName="Explore the Suite"
-        srcbtn="#sap-data"
+        srcbtn="#sap-data-protection"
       />
       <CapabilitiesSection
         header={{
-          icon: <FaGlobe size={16} />,
+          icon: <FaUserShield size={16} />,
           label: "Benefits",
           title: "Built for Teams That Protect Enterprise Data",
         }}
@@ -386,7 +392,7 @@ export default function Tads() {
       <section className="protection-layer-section">
         <div className="capabilities-header">
           <div className="sub-para-text security-label">
-            <FaGlobe size={16} style={{ marginRight: "4px" }} /> Unified
+            <FaLock size={16} style={{ marginRight: "4px" }} /> Unified
             Protection
           </div>
           <h2 className="head-text">

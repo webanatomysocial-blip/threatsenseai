@@ -49,13 +49,13 @@ const Header = ({ onSearch }) => {
               Solutions <IoIosArrowDown className="dropdown-arrow" />
             </Link>
             <div className="dropdown-menu">
-              <Link to="/audit-trail-enforcer" className="dropdown-item">
+              <Link to="/solutions/audit-trail-enforcer" className="dropdown-item">
                 Audit Trail Enforcer
               </Link>
-              <Link to="/threatsenseai-data-security" className="dropdown-item">
+              <Link to="/solutions/threatsenseai-data-security" className="dropdown-item">
                 ThreatSense AI Data Security
               </Link>
-              <Link to="/threatops-for-sap" className="dropdown-item">
+              <Link to="/solutions/threatops-for-sap" className="dropdown-item">
                 ThreatOps for SAP
               </Link>
             </div>
@@ -129,21 +129,21 @@ const Header = ({ onSearch }) => {
                 className={`mobile-dropdown ${isSolutionsOpen ? "open" : ""}`}
               >
                 <Link
-                  to="/audit-trail-enforcer"
+                  to="/solutions/audit-trail-enforcer"
                   className="mobile-dropdown-link"
                   onClick={toggleMenu}
                 >
                   Audit Trail Enforcer
                 </Link>
                 <Link
-                  to="/threatsenseai-data-security"
+                  to="/solutions/threatsenseai-data-security"
                   className="mobile-dropdown-link"
                   onClick={toggleMenu}
                 >
                   ThreatSense AI Data Security
                 </Link>
                 <Link
-                  to="/threatops-for-sap"
+                  to="/solutions/threatops-for-sap"
                   className="mobile-dropdown-link"
                   onClick={toggleMenu}
                 >

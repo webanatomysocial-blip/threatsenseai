@@ -2,6 +2,7 @@ import one from '../blogs/blogs-images/1.jpg';
 import two from '../blogs/blogs-images/2.jpg';
 import three from '../blogs/blogs-images/5.webp';
 import four from '../blogs/blogs-images/6.jpg';
+import five from '../blogs/blogs-images/7.png';
 
 
 export const blogMetadata = [
@@ -44,6 +45,16 @@ export const blogMetadata = [
     image: four,
     date: "Apr 7, 2026",
     author: "ThreatSenseAI Team",
+  },
+  {
+    id: "McaAuditTrailCompliance",
+    title: "MCA Audit Trail Compliance: Why Every Company Must Comply Now",
+    category: "SAP Security",
+    slug: "mca-audit-trail-compliance",
+    excerpt: "Based on our experience in SAP Security, GRC, audit readiness, and enterprise compliance programs, we have seen that audit trail failures are rarely caused by regulation gaps. They are caused by control execution gaps. This article explains how organizations can strengthen compliance under MCA Rule 11(g).",
+    image: five,
+    date: "Apr 28, 2026",
+    author: "Raghu Boddu",
   }
 ];
 

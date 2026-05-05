@@ -291,6 +291,7 @@ export default function SiemSoar() {
 
       <SolutionCarousel
         label="Why ThreatOps for SAP? "
+        icon={FaSearchPlus}
         title={
           <>
             We Don’t Just Log, We Detect, <br /> Correlate and Respond
@@ -301,6 +302,7 @@ export default function SiemSoar() {
       />
       <SolutionCards
         label="Automated Threat Detection & Response"
+        icon={FaMagic}
         title="The SAP SOC Layer
          You’ve Been Missing "
         description=""
@@ -311,7 +313,7 @@ export default function SiemSoar() {
         items={core}
         gridTemplateColumns="repeat(3, 1fr)"
         header={{
-          icon: <FaGlobe size={16} />,
+          icon: <FaLayerGroup size={16} />,
           label: "Why ThreatOps for SAP? ",
           title:
             "Advanced threat detection, intelligent correlation, and automated response for SAP environments.",
@@ -320,6 +322,7 @@ export default function SiemSoar() {
 
       <UseCases
         label="Use Cases"
+        icon={FaBullseye}
         title={
           <>
             Where ThreatOps Delivers <br></br> Immediate Value

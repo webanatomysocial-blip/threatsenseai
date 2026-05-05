@@ -193,31 +193,161 @@ export default function Mcaat() {
       question:
         "What is Audit Trail Enforcer and how does it protect audit logs?",
       answer:
-        "Audit Trail Enforcer is a comprehensive SAP audit security solution designed to continuously monitor, protect, and enforce audit trail integrity across SAP systems and databases. Unlike basic logging tools, it goes beyond simple log recording to actively prevent tampering and ensure compliance.\n\nKey protection mechanisms include:\n• Real-time monitoring of audit logs to detect deletion or manipulation attempts\n• Tamper-resistant storage at both OS and database levels\n• Automatic protection of CDHDR and CDPOS change document tables\n• Continuous enforcement of audit policies and logging configurations\n• Preservation of audit evidence for forensic and statutory audits\n\nThis ensures that critical activities remain traceable and audit logs cannot be disabled, bypassed, or altered without detection.",
+        "Audit Trail Enforcer is a robust audit security software package that will constantly keep a watch over and safeguard the integrity of your audit trails in SAP system and database. While logging is an important feature by itself, it fails to provide protection against data tampering.",
     },
     {
       question:
         "How does Audit Trail Enforcer ensure compliance with MCA Rule 11(g) in India?",
-      answer:
-        "MCA Rule 11(g) requires organizations to maintain continuous and secure audit trails that cannot be disabled or bypassed. Audit Trail Enforcer meets these requirements through automated controls:\n\n• Continuous Monitoring: Audit policies and logging configurations are continuously monitored across SAP application and database layers\n• Automatic Reactivation: If audit logging is disabled (intentionally or accidentally), SM19 logs are automatically restored\n• Tamper Detection: Any attempt to delete, alter, or manipulate audit logs is detected in real time\n• Evidence Preservation: Audit logs and compliance evidence are protected from unauthorized modification\n• Audit-Ready Reporting: Structured dashboards and reports provide evidence-backed data ready for regulatory review\n\nIn India, this solution is marketed as MCAAT (MCA Audit Trail) to specifically address MCA Rule 11(g) compliance requirements.",
+      answer: (
+        <>
+          <p>
+            MCA Rule 11(g) requires organizations to maintain continuous and
+            secure{" "}
+            <Link
+              style={{ textDecoration: "none" }}
+              to="/blogs/mca-audit-trail-compliance"
+            >
+              {" "}
+              audit trails
+            </Link>{" "}
+            that cannot be disabled or bypassed. Audit Trail Enforcer meets
+            these requirements through automated controls:
+          </p>
+          <ul style={{ paddingLeft: "20px", margin: "10px 0" }}>
+            <li style={{ marginBottom: "10px" }}>
+              <>Continuous Monitoring:</> Audit policies and logging
+              configurations are continuously monitored across SAP application
+              and database layers
+            </li>
+            <li style={{ marginBottom: "10px" }}>
+              <>Automatic Reactivation:</> If audit logging is disabled
+              (intentionally or accidentally), SM19 logs are automatically
+              restored
+            </li>
+            <li style={{ marginBottom: "10px" }}>
+              <>Tampering detection:</> Any attempt to tamper with or manipulate
+              the audit logs is noticed immediately.
+            </li>
+            <li style={{ marginBottom: "10px" }}>
+              <>Protection of Evidence:</> Any attempts to tamper with audit
+              logs and compliance papers are effectively prohibited.
+            </li>
+            <li style={{ marginBottom: "10px" }}>
+              <>Audit-Ready Reports:</> Ready-to-use reports give evidence-based
+              data that is audit-ready.
+            </li>
+          </ul>
+          <p>
+            In India, this solution is marketed as MCAAT (MCA Audit Trail) to
+            specifically address MCA Rule 11(g) compliance requirements.
+          </p>
+        </>
+      ),
     },
     {
       question:
         "What is the difference between Audit Trail Enforcer and SAP audit logging?",
-      answer:
-        "While standard SAP audit logging (SM19) records activities, Audit Trail Enforcer provides comprehensive protection that standard logging cannot:\n\n• Standard Logging: Can be manually disabled; logs can be deleted without detection; lacks tamper resistance; database-level changes bypass application logs\n• Audit Trail Enforcer: Cannot be disabled without automatic reactivation; tampering is instantly detected; stores logs with tamper-resistant protection; monitors database logins and changes; provides auditor-ready dashboards\n\nAdditionally, Audit Trail Enforcer captures critical database activities automatically without requiring expensive DDL/DML logging that increases database footprint. Standard logs are often raw data not immediately audit-ready, while Audit Trail Enforcer delivers structured, compliance-focused reports that reduce audit preparation effort by 40-60%.",
+      answer: (
+        <>
+          <p>
+            While normal SAP audit logging (SM19) records actions, Audit Trail
+            Enforcer offers extensive protection that regular logging cannot.
+          </p>
+          <ul style={{ paddingLeft: "20px", margin: "10px 0" }}>
+            <li style={{ marginBottom: "10px" }}>
+              <>Standard Logging:</> Can be manually disabled; logs can be
+              erased without discovery; tamper resistance is lacking;
+              database-level changes bypass application logs.
+            </li>
+            <li style={{ marginBottom: "10px" }}>
+              <>Audit Trail Enforcer:</> cannot be disabled without automatic
+              reactivation; tampering is immediately recognised; keeps logs with
+              tamper-resistant security; monitors database logins and changes;
+              provides auditor-ready dashboards.
+            </li>
+          </ul>
+          <p>
+            Additionally, Audit Trail Enforcer automatically captures key
+            database activities without the need for expensive DDL/DML
+            recording, which increases database footprint. Standard logs are
+            frequently raw data that is not immediately audit-ready, whereas
+            Audit Trail Enforcer generates organised, compliance-focused reports
+            that cut audit preparation time by 40-60%.
+          </p>
+        </>
+      ),
     },
     {
       question:
         "Can Audit Trail Enforcer detect and prevent log tampering attempts?",
-      answer:
-        "Yes. Audit Trail Enforcer includes real-time tamper detection and automated enforcement capabilities:\n\n• Immediately detects any attempt to delete, alter, or manipulate audit logs\n• Records the tampering event with full context (who, what, when, where)\n• Preserves tamper-proof evidence for investigation\n• Triggers instant alerts and automated enforcement actions (ITSM incident creation, system alerts)\n• Prevents silent compliance breaches by detecting high-risk activities (DEBUG mode, policy deletion, configuration changes)\n\nBy shifting from trust-based to control-based audit integrity, Audit Trail Enforcer ensures audit data remains legally defensible and reliable for regulators, auditors, and internal investigations.",
+      answer: (
+        <>
+          <p>
+            Yes. Audit Trail Enforcer includes real-time tamper detection and
+            automated enforcement capabilities:
+          </p>
+          <ul style={{ paddingLeft: "20px", margin: "10px 0" }}>
+            <li style={{ marginBottom: "10px" }}>
+              Immediately detects any attempt to delete, alter, or manipulate
+              audit logs
+            </li>
+            <li style={{ marginBottom: "10px" }}>
+              Records the tampering event with full context (who, what, when,
+              where)
+            </li>
+            <li style={{ marginBottom: "10px" }}>
+              Preserves tamper-proof evidence for investigation
+            </li>
+            <li style={{ marginBottom: "10px" }}>
+              Triggers instant alerts and automated enforcement actions (ITSM
+              incident creation, system alerts)
+            </li>
+            <li style={{ marginBottom: "10px" }}>
+              Stops silent breach of compliance by spotting risk activities such
+              as debug mode, policy deletion, and configuration changes.
+            </li>
+          </ul>
+          <p>
+            Audit Trail Enforcer ensures that audit data is legally defensible
+            and reliable for the regulatory bodies and auditors by shifting to
+            audit trail integrity based on controls rather than trust.
+          </p>
+        </>
+      ),
     },
     {
       question:
         "Does Audit Trail Enforcer work with SAP on Cloud (RISE) and SAP architectures?",
-      answer:
-        "Yes. Audit Trail Enforcer delivers consistent audit controls across all SAP landscapes:\n\n• On-Premise SAP: Full support for traditional SAP systems with database protection\n• SAP HANA: Optimized for SAP HANA databases with native integration\n• SAP on Cloud (RISE): Works seamlessly in hybrid and cloud SAP environments without system redesign\n• MS SQL: Compatible with Microsoft SQL Server backends\n\nThis multi-platform support means you maintain consistent audit enforcement regardless of infrastructure—whether you're on-premise, in the cloud, or in the middle of a SAP transformation. Audit Trail Enforcer adapts to modern SAP architectures and migrations without requiring extensive customization, ensuring compliance continuity throughout your digital transformation journey.",
+      answer: (
+        <>
+          <p>
+            Yes. Audit Trail Enforcer ensures consistent audit controls within
+            all SAP landscapes:
+          </p>
+          <ul style={{ paddingLeft: "20px", margin: "10px 0" }}>
+            <li style={{ marginBottom: "10px" }}>
+              <>On-Premise SAP:</> Complete compatibility with classic SAP
+              solutions, including database security
+            </li>
+            <li style={{ marginBottom: "10px" }}>
+              <>SAP HANA:</> Designed specifically for SAP HANA databases
+            </li>
+            <li style={{ marginBottom: "10px" }}>
+              <>SAP on Cloud (RISE):</> Functional within mixed and cloud-based
+              SAP systems without changes to the system design
+            </li>
+            <li style={{ marginBottom: "10px" }}>
+              <>MS SQL:</> Support for Microsoft SQL Server databases
+            </li>
+          </ul>
+          <p>
+            The versatile nature of this solution allows for consistency in
+            audit trail enforcement irrespective of the underlying
+            infrastructure, whether you are running on-premise, in the cloud, or
+            in the process of transitioning to SAP.
+          </p>
+        </>
+      ),
     },
   ];
 
@@ -295,9 +425,10 @@ export default function Mcaat() {
           </div>
         </div>
       </section>
-      <SolutionCarousel data={content} />
+      <SolutionCarousel icon={FaHistory} data={content} />
       <SolutionCards
         label="Automated Controls Delivered"
+        icon={FaSync}
         title="Compliance that enforces itself"
         description={
           isMobile
@@ -312,15 +443,16 @@ export default function Mcaat() {
         items={core}
         gridTemplateColumns="repeat(3 , 1fr)"
         header={{
-          icon: <FaGlobe size={16} />,
+          icon: <FaChartBar size={16} />,
           label: "Key Capabilities",
           title: "What it brings?",
         }}
       />
 
-      <ResultsComp />
+      <ResultsComp icon={FaDatabase} />
       <UseCases
         label="Use Cases"
+        icon={FaBullseye}
         title={<>Always-On Audit Trail Compliance with Audit Trail Enforcer </>}
         list={useCasesList}
         image={img4}

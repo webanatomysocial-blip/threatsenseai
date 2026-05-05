@@ -33,10 +33,19 @@ const features = [
   { name: "Browser upload restriction", values: [false, true, true] },
   { name: "Browser print / screenshot controls", values: [false, true, true] },
   { name: "Browser AI prompt protection", values: [false, true, true] },
-  { name: "Dot Layer agentless browser security", values: [false, true, true] },
-  { name: "Data masking for non-production systems", values: [false, true, true] },
-  { name: "Data scrambling for test environments", values: [false, true, true] },
-  { name: "Dynamic masking in live access scenarios", values: [false, true, true] },
+  { name: "DotLayeragentless browser security", values: [false, true, true] },
+  {
+    name: "Data masking for non-production systems",
+    values: [false, true, true],
+  },
+  {
+    name: "Data scrambling for test environments",
+    values: [false, true, true],
+  },
+  {
+    name: "Dynamic masking in live access scenarios",
+    values: [false, true, true],
+  },
   { name: "Advanced analytics & risk trends", values: [false, true, true] },
   { name: "User behaviour analytics (UBA)", values: [false, false, true] },
   { name: "Insider risk monitoring", values: [false, false, true] },
@@ -61,14 +70,11 @@ export default function ComparisonTable() {
         >
           <FaGlobe size={16} style={{ marginRight: "6px" }} /> Comparison
         </div>
-        <h2 className="head-text">
-          Choose the Right Deployment Model
-        </h2>
+        <h2 className="head-text">Choose the Right Deployment Model</h2>
       </div>
 
       {/* Table Card */}
       <div className="ct-card">
-
         {/* Column Header Row */}
         <div className="ct-row ct-header-row">
           <div className="ct-col ct-feature-col ct-col-label">Feature</div>
@@ -120,13 +126,15 @@ export default function ComparisonTable() {
           <div className="ct-col ct-feature-col ct-cta-label">·</div>
           {plans.map((_, i) => (
             <div key={i} className="ct-col ct-plan-col ct-cta-cell">
-              <a href="https://tidycal.com/threatsenseai/" className="ct-cta-btn">
+              <a
+                href="https://tidycal.com/threatsenseai/"
+                className="ct-cta-btn"
+              >
                 Contact Sales
               </a>
             </div>
           ))}
         </div>
-
       </div>
     </section>
   );

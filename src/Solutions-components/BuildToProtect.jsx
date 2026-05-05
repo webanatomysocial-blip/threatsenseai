@@ -5,7 +5,7 @@ import { FaInfoCircle } from "react-icons/fa";
 
 
 
-const BuildToProtect = ({ label, title, desc, features = [], img }) => {
+const BuildToProtect = ({ label, icon: Icon, title, desc, features = [], img }) => {
     return (
         <>
             <div className="build-to-pro-con">
@@ -14,7 +14,7 @@ const BuildToProtect = ({ label, title, desc, features = [], img }) => {
                 </div>
                 <div className="build-to-pro-right">
                     <div className="ev-label">
-                        <FaInfoCircle />
+                        {Icon ? <Icon /> : <FaInfoCircle />}
                         <span>{label}</span>
                     </div>
                     <h2 className="head-text">

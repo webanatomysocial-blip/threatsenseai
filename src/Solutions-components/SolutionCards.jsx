@@ -78,6 +78,7 @@ function ZigZagCardRow({ card }) {
 export default function SolutionCards({
   items,
   label,
+  icon: Icon,
   title,
   description,
   marginTop,
@@ -165,7 +166,8 @@ export default function SolutionCards({
     >
       <div className="capabilities-header">
         <div className="sub-para-text security-label">
-          <FaGlobe size={16} style={{ marginRight: "4px" }} />{" "}
+          {Icon ? <Icon size={16} style={{ marginRight: "4px" }} /> : <FaGlobe size={16} style={{ marginRight: "4px" }} />}
+          {" "}
           {label || defaultLabel}
         </div>
         <h2 className="head-text">{title || defaultTitle}</h2>

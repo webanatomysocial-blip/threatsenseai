@@ -1,9 +1,6 @@
 import React from "react";
 import "../css/footer.css";
 import { FaLinkedin, FaInstagram } from "react-icons/fa";
-import { FaFacebook } from "react-icons/fa";
-import { FaYoutube } from "react-icons/fa";
-
 import { FaXTwitter } from "react-icons/fa6";
 import logoWhite from "../assets/logo-white.png";
 import AnimatedContent from "./AnimatedContent";
@@ -24,191 +21,159 @@ const Footer = () => {
         delay={0.3}
       >
         <div className="footer-top">
-          <div className="footer-left">
-            <h2 className="head-text-white" style={{ marginBottom: "20px" }}>
-              Your data <br /> under control
+          <div className="footer-top-left">
+            <h2 className="footer-heading">
+              Your data <br /> under control.
             </h2>
-
-            <p
-              className="para-text-white"
-              style={{ maxWidth: "400px", color: "#ccc" }}
-            >
-              ThreatSense AI helps enterprises protect sensitive data from
-              insider threats, misuse, and breaches by combining cybersecurity,
-              data security, and automated response into a single platform
+            <p className="footer-description">
+              ThreatSenseAI is revolutionizing cybersecurity by seamlessly
+              integrating advanced SIEM and SOAR capabilities into one powerful
+              solution.
             </p>
           </div>
 
-          <div className="footer-right">
-            <div className="newsletter-section">
-              <label className="sub-para-text-white">
-                Subscribe to our Newsletter
-              </label>
-
-              <form
-                className="newsletter-form"
-                onSubmit={(e) => e.preventDefault()}
+          <div className="footer-top-right">
+            <span className="social-label">Social</span>
+            <div className="social-icons">
+              <a
+                href="https://twitter.com/ThreatSenseAI"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="X (Twitter)"
               >
-                <input
-                  type="email"
-                  placeholder="name@gmail.com"
-                  className="newsletter-input"
-                />
-                <button
-                  type="submit"
-                  className="white-button"
-                  style={{ borderRadius: "50px", padding: "10px 24px" }}
+                <FaXTwitter size={24} color="white" />
+              </a>
+              <a
+                href="https://www.linkedin.com/company/threatsenseai/"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="LinkedIn"
+              >
+                <FaLinkedin size={24} color="white" />
+              </a>
+              <a
+                href="https://www.instagram.com/threatsenseai"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Instagram"
+              >
+                <FaInstagram size={24} color="white" />
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div className="footer-middle">
+          <div className="footer-column">
+            <h4>Quick Links</h4>
+            <ul className="footer-links">
+              <li>
+                <Link to="/">Home</Link>
+              </li>
+              <li>
+                <Link to="/about">About us</Link>
+              </li>
+              <li>
+                <a href="https://tidycal.com/threatsenseai/">Contact us</a>
+              </li>
+            </ul>
+          </div>
+
+          <div className="footer-column">
+            <h4>Solutions</h4>
+            <ul className="footer-links">
+              <li>
+                <Link to="/solutions/audit-trail-enforcer" className="red-link">
+                  Audit Trail Enforcer
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/solutions/threatsenseai-data-security"
+                  className="red-link"
                 >
-                  Submit
-                </button>
-              </form>
+                  ThreatSense AI Data Security
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/solutions/threatsenseai-data-security/tads-protect"
+                  className="white-link"
+                >
+                  TADS Protect
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/solutions/threatsenseai-data-security/dot-layer"
+                  className="white-link"
+                >
+                  DotLayer
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/solutions/threatsenseai-data-security/dmss"
+                  className="white-link"
+                >
+                  DMSS
+                </Link>
+              </li>
+
+              <li>
+                <Link
+                  to="/solutions/threatsenseai-data-security/dprm"
+                  className="white-link"
+                >
+                  DPRM
+                </Link>
+              </li>
+              <li>
+                <Link to="/solutions/threatops-for-sap" className="red-link">
+                  ThreatOps for SAP
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          <div className="footer-column">
+            <div className="footer-sub-group">
+              <h4>Resources</h4>
+              <ul className="footer-links">
+                <li>
+                  <Link to="/blogs">Blogs</Link>
+                </li>
+              </ul>
             </div>
 
-            <div className="footer-links-container">
-              <div className="footer-column">
-                <h4 className="sub-para-text-white" style={{ fontWeight: 600 }}>
-                  Main Pages
-                </h4>
-
-                <ul className="footer-links">
-                  <li>
-                    <Link
-                      to="/"
-                      className="para-text-white"
-                      style={{ fontSize: "14px", color: "#999" }}
-                    >
-                      Home
-                    </Link>
-                  </li>
-
-                  <li>
-                    <Link
-                      to="/#solutions"
-                      className="para-text-white"
-                      style={{ fontSize: "14px", color: "#999" }}
-                    >
-                      Solutions
-                    </Link>
-                  </li>
-
-                  <li>
-                    <Link
-                      to="/about"
-                      className="para-text-white"
-                      style={{ fontSize: "14px", color: "#999" }}
-                    >
-                      About
-                    </Link>
-                  </li>
-
-                  <li>
-                    <Link
-                      to="/blogs"
-                      className="para-text-white"
-                      style={{ fontSize: "14px", color: "#999" }}
-                    >
-                      Blogs
-                    </Link>
-                  </li>
-
-                  <li>
-                    <a
-                      href="https://tidycal.com/threatsenseai/"
-                      className="para-text-white"
-                      style={{ fontSize: "14px", color: "#999" }}
-                    >
-                      Contact
-                    </a>
-                  </li>
-                </ul>
-
-                <div className="footer-socials">
-                  <span
-                    className="sub-para-text-white"
-                    style={{ display: "block", marginBottom: "10px" }}
-                  >
-                    Social
-                  </span>
-
-                  <div className="social-icons">
-                    <a
-                      href="https://www.facebook.com/profile.php?id=61587549253422"
-                      target="_blank"
-                      rel="noreferrer"
-                      aria-label="face book"
-                    >
-                      <FaFacebook size={24} color="white" />
-                    </a>
-
-                    <a
-                      href="https://www.linkedin.com/company/threatsenseai/"
-                      target="_blank"
-                      rel="noreferrer"
-                      aria-label="LinkedIn"
-                    >
-                      <FaLinkedin size={24} color="white" />
-                    </a>
-
-                    <a
-                      href="https://www.youtube.com/channel/UCgCFk__RE-IMMdfKRc0UATA"
-                      target="_blank"
-                      rel="noreferrer"
-                      aria-label="youtube"
-                    >
-                      <FaYoutube size={24} color="white" />
-                    </a>
-                  </div>
-                </div>
-              </div>
-
-              <div className="footer-column">
-                <h4 className="sub-para-text-white" style={{ fontWeight: 600 }}>
-                  Resources
-                </h4>
-
-                <ul className="footer-links">
-                  <li>
-                    <Link
-                      to="/privacy-policy"
-                      className="para-text-white"
-                      style={{ fontSize: "14px", color: "#999" }}
-                    >
-                      Privacy Policy
-                    </Link>
-                  </li>
-
-                  <li>
-                    <Link
-                      to="/terms-and-conditions"
-                      className="para-text-white"
-                      style={{ fontSize: "14px", color: "#999" }}
-                    >
-                      Terms & Conditions
-                    </Link>
-                  </li>
-
-                  <li>
-                    <Link
-                      to="/cookie-policy"
-                      className="para-text-white"
-                      style={{ fontSize: "14px", color: "#999" }}
-                    >
-                      Cookie Policy
-                    </Link>
-                  </li>
-
-                  <li>
-                    <Link
-                      to="/accessibility-statement"
-                      className="para-text-white"
-                      style={{ fontSize: "14px", color: "#999" }}
-                    >
-                      Accessibility Statement
-                    </Link>
-                  </li>
-                </ul>
-              </div>
+            <div className="footer-sub-group" style={{ marginTop: "40px" }}>
+              <h4>Partner</h4>
+              <ul className="footer-links">
+                <li>
+                  <Link to="/become-a-partner">Become a patner</Link>
+                </li>
+              </ul>
             </div>
+          </div>
+
+          <div className="footer-column">
+            <h4>Legal & Compliance</h4>
+            <ul className="footer-links">
+              <li>
+                <Link to="/privacy-policy">Privacy Policy</Link>
+              </li>
+              <li>
+                <Link to="/terms-and-conditions">Terms & Condition</Link>
+              </li>
+              <li>
+                <Link to="/cookie-policy">Cookie Policy</Link>
+              </li>
+              <li>
+                <Link to="/accessibility-statement">
+                  Accesibility Statement
+                </Link>
+              </li>
+            </ul>
           </div>
         </div>
       </AnimatedContent>
@@ -236,8 +201,9 @@ const Footer = () => {
         </AnimatedContent>
 
         <div className="footer-credits">
-          <p className="sub-para-text-white">
-            All Rights Reserved @ThreatSenseAI LLP.
+          <p className="copyright-text">
+            Copyright © {new Date().getFullYear()} ThreatSense AI. All Rights
+            Reserved.
           </p>
         </div>
       </div>
