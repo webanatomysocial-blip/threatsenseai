@@ -462,9 +462,10 @@ export default function Mcaat() {
       <p
         className="para-text"
         style={{
-          marginTop: "-70px",
-          marginBottom: "40px",
-          marginLeft: "120px",
+          marginTop: isMobile ? "20px" : "-70px",
+          marginBottom: isMobile ? "60px" : "40px",
+          marginLeft: isMobile ? "20px" : "120px",
+          marginRight: isMobile ? "20px" : "0px",
         }}
       >
         *This solution is marketed as MCAAT in India to address MCA Rule 11(g)

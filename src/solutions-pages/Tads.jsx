@@ -275,6 +275,7 @@ export default function Tads() {
   const headerRef = useRef(null);
 
   useEffect(() => {
+    if (!headerRef.current) return;
     const chars = headerRef.current.querySelectorAll(".split-text-char");
 
     gsap.fromTo(
@@ -319,7 +320,7 @@ export default function Tads() {
           <h1 ref={headerRef} className="big-text-head">
             ThreatSense AI
             {isMobile
-              ? splitLetters("\nData Security Suite (TADS)")``
+              ? splitLetters("\nData Security Suite (TADS)")
               : splitLetters("\nData Security Suite (TADS)")}
           </h1>
           <p

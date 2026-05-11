@@ -365,8 +365,7 @@
 
   .accordion-header-group {
     display: block !important;
-    margin-bottom: 20px !important;
-    position: relative !important;
+    margin-bottom: 0px !important;
   }
 
   .accordion-header-group .head-text {
@@ -491,7 +490,7 @@
   }
 
   .uc-img-wrapper {
-    height: 350px;
+    height: 300px;
   }
 }
 
@@ -942,7 +941,7 @@
 @media (max-width: 1024px) {
   .protection-layer-section {
     padding: 60px 20px;
-    gap: 10px;
+    gap: 30px;
   }
 
   .leak-column,

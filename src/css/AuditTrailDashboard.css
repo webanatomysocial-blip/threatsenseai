@@ -1,0 +1,223 @@
+.at-dashboard-container {
+  width: 100%;
+  max-width: 650px;
+  background: linear-gradient(135deg, #fce4dc 0%, #f9d5c8 100%);
+  border-radius: 24px;
+  padding: 24px;
+  box-shadow: 0 20px 40px rgba(233, 88, 12, 0.1);
+  font-family: 'Inter', sans-serif;
+  margin: 0 auto;
+}
+
+.at-dashboard-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 24px;
+  padding: 4px 8px;
+}
+
+.at-header-icon {
+  width: 20px;
+  height: 20px;
+  background-color: #ff5722;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 10px;
+}
+
+.at-header-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #4a4a4a;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.at-dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.at-card {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 16px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.at-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+}
+
+.at-card-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 16px;
+}
+
+.at-card-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.at-card-footer {
+  margin-top: 16px;
+  font-size: 12px;
+  color: #666;
+  text-align: center;
+  font-weight: 500;
+}
+
+/* Donut Chart */
+.at-donut-wrapper {
+  position: relative;
+  width: 100px;
+  height: 100px;
+}
+
+.at-donut-svg {
+  transform: rotate(-90deg);
+}
+
+.at-donut-bg {
+  fill: none;
+  stroke: #eee;
+  stroke-width: 8;
+}
+
+.at-donut-fill {
+  fill: none;
+  stroke: #ff5722;
+  stroke-width: 8;
+  stroke-linecap: round;
+  transition: stroke-dashoffset 1s ease-out;
+}
+
+.at-donut-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 20px;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+/* Pills Grid */
+.at-pills-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  width: 100%;
+}
+
+.at-pill {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.at-pill-number {
+  background: white;
+  border: 1px solid #eee;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 600;
+  color: #333;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+}
+
+.at-pill-number.active {
+  background: #ff5722;
+  color: white;
+  border-color: #ff5722;
+}
+
+.at-pill-number.warning {
+  background: #ff9800;
+  color: white;
+  border-color: #ff9800;
+}
+
+.at-pill-label {
+  font-size: 9px;
+  font-weight: 700;
+  color: #888;
+  text-transform: uppercase;
+}
+
+/* Action Icons */
+.at-actions-wrapper {
+  display: flex;
+  gap: 12px;
+  width: 100%;
+}
+
+.at-action-box {
+  flex: 1;
+  background: #fff;
+  border: 1px solid #f0f0f0;
+  border-radius: 12px;
+  padding: 12px 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.at-action-icon {
+  font-size: 16px;
+  color: #ff5722;
+}
+
+.at-action-label {
+  font-size: 9px;
+  font-weight: 600;
+  color: #666;
+  text-align: center;
+}
+
+/* Line Chart */
+.at-chart-wrapper {
+  width: 100%;
+  height: 60px;
+  padding: 0 10px;
+}
+
+.at-chart-line {
+  fill: none;
+  stroke: #ff9800;
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.at-chart-area {
+  fill: rgba(255, 152, 0, 0.05);
+}
+
+@media (max-width: 480px) {
+  .at-dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .at-dashboard-container {
+    padding: 16px;
+  }
+}
