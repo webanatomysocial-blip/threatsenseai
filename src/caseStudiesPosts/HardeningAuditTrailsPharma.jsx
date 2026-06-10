@@ -1,7 +1,7 @@
 import React from "react";
 import BlogLayout from "../components/BlogLayout";
 import FAQ from "../components/FAQ";
-import heroImage from "./caseStudiesImages/1.avif";
+import heroImage from "./caseStudiesImages/2.png";
 
 const faqItems = [
   {

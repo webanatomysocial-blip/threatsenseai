@@ -1,4 +1,5 @@
 import one from './caseStudiesImages/1.avif';
+import two from './caseStudiesImages/2.png';
 
 
 export const caseStudyMetadata = [
@@ -17,7 +18,7 @@ export const caseStudyMetadata = [
     title: "Hardening Audit Trails for Pharma Data Integrity – MCA Rule 11(g) and 21 CFR Part 11",
     slug: "hardening-audit-trails-pharma-data-integrity-mca-rule-11g-21cfr-part-11",
     excerpt: "How a leading Indian pharmaceutical manufacturer turned its SAP ECC 6.0 EHP 8 audit trail from a compliance liability into an automated, ALCOA+-aligned control.",
-    image: one,
+    image: two,
     readTime: "9 Min Read",
     date: "June 10, 2026",
     author: "ThreatSense AI Team"
