@@ -33,7 +33,7 @@ const WhatMakesUs = () => {
         >
           <div className="different-card">
             <div className="different-icon"><BsArchive size={20} color="#F97015" /></div>
-            <p className="sub-head-text">"SAP First" – by Design</p>
+            <p className="sub-head-text">"SAP First" – <br className="only-windows"/> by Design</p>
             <p className="sub-para-text">
               We build natively for SAP application, database, and data layer, rather than retrofitting generic security tools onto complex SAP environments.
             </p>
@@ -41,7 +41,7 @@ const WhatMakesUs = () => {
 
           <div className="different-card">
             <div className="different-icon"><FaBolt size={20} color="#F97015" /></div>
-            <p className="sub-head-text">Real-Time Control, Not Postmortem</p>
+            <p className="sub-head-text">Real-Time Control,<br/> Not Postmortem</p>
             <p className="sub-para-text">
               We don't just log violations. We automatically respond, reinstating controls, blocking actions, and preserving evidence as incidents occur.
             </p>
@@ -49,7 +49,7 @@ const WhatMakesUs = () => {
 
           <div className="different-card">
             <div className="different-icon"><BsShield size={20} color="#F97015" /></div>
-            <p className="sub-head-text">Data-Centric Protection</p>
+            <p className="sub-head-text">Data-Centric<br/> Protection</p>
             <p className="sub-para-text">
               Our focus is on how data is accessed, exposed, copied, exported, or shared across SAP, browsers, AI tools, and third-party channels.
             </p>
@@ -57,7 +57,7 @@ const WhatMakesUs = () => {
 
           <div className="different-card">
             <div className="different-icon"><BsFileText size={20} color="#F97015" /></div>
-            <p className="sub-head-text">Compliance That Stays On</p>
+            <p className="sub-head-text">Compliance<br/> That Stays On</p>
             <p className="sub-para-text">
               Continuous enforcement of regulatory requirements such as MCA Rule 11(g), GDPR, DPDP, SOX, and industry mandates without relying on manual checks.
             </p>
@@ -65,7 +65,7 @@ const WhatMakesUs = () => {
 
           <div className="different-card">
             <div className="different-icon"><FaBuilding size={20} color="#F97015" /></div>
-            <p className="sub-head-text">Enterprise-Safe Architecture</p>
+            <p className="sub-head-text">Enterprise-Safe<br/> Architecture</p>
             <p className="sub-para-text">
               Lightweight, non-intrusive deployment that integrates seamlessly with existing SAP landscapes, SIEM/SOAR platforms, and ITSM tools.
             </p>
@@ -73,7 +73,7 @@ const WhatMakesUs = () => {
 
           <div className="different-card">
             <div className="different-icon"><FaExclamationTriangle size={20} color="#F97015" /></div>
-            <p className="sub-head-text">Built to Stop Insider & AI-Driven Leaks</p>
+            <p className="sub-head-text">Built to Stop Insider &<br/> AI-Driven Leaks</p>
             <p className="sub-para-text">
               Addresses modern leak vectors including privileged misuse, excessive access, browser-based exfiltration, and data exposure through GenAI tools.
             </p>

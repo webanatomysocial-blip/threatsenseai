@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { Link, useLocation } from "react-router-dom";
 import "../css/blog-post.css";
 
 // Import specific icons from react-icons
@@ -30,7 +31,12 @@ const BlogLayout = ({
 }) => {
   const progressBarRef = useRef(null);
   const headerRef = useRef(null);
+  const location = useLocation();
   const currentUrl = window.location.href;
+
+  const isCaseStudy = location.pathname.includes('/case-studies');
+  const parentText = isCaseStudy ? 'Case Studies' : 'Blogs';
+  const parentLink = isCaseStudy ? '/case-studies' : '/blogs';
 
   useEffect(() => {
     // Animate Progress Bar width based on scroll
@@ -54,6 +60,15 @@ const BlogLayout = ({
           <div className="pod-split-header">
             <div className="pod-title-section">
               <h1 className="head-text">{title}</h1>
+              
+              <div className="blog-breadcrumbs">
+                <Link to="/">Home</Link>
+                <span>/</span>
+                <Link to={parentLink}>{parentText}</Link>
+                <span>/</span>
+                <span className="breadcrumb-current">{title}</span>
+              </div>
+
               {(date || author) && (
                 <div className="blog-hero-meta">
                   {author && <span className="blog-hero-author">{author}</span>}
@@ -106,20 +121,23 @@ const BlogLayout = ({
           </div>
         </div>
 
-        {/* Three-Column Layout */}
-        <div className="pod-container three-column-layout">
-          <aside className="pod-sidebar-left">
-            <div className="recent-posts">
-              <h3>Recent posts</h3>
-              {recentPosts &&
-                recentPosts.map((post, index) => (
-                  <a key={index} href={post.link} className="recent-post-item">
-                    {post.title}
-                    <hr />
-                  </a>
-                ))}
-            </div>
-          </aside>
+        {/* Layout */}
+        <div className={`pod-container ${isCaseStudy ? 'case-study-layout' : 'three-column-layout'}`}>
+          {!isCaseStudy && (
+            <aside className="pod-sidebar-left">
+              <div className="recent-posts">
+                <h3>Recent posts</h3>
+                {recentPosts &&
+                  recentPosts.map((post, index) => (
+                    <a key={index} href={post.link} className="recent-post-item">
+                      {post.title}
+                      <hr />
+                    </a>
+
+                  ))}
+              </div>
+            </aside>
+          )}
 
           <div className="pod-main-content">
             <div className="pod-body">{content}</div>

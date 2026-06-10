@@ -6,6 +6,8 @@ import DynamicBlog from "./components/DynamicBlog";
 import BlogsPage from "./pages/Blogs";
 import Contact from "./pages/Contact";
 import AboutUs from "./pages/About-Us";
+import CaseStudies from "./pages/Case-Studies";
+import DynamicCaseStudy from "./components/DynamicCaseStudy";
 import Tads from "./solutions-pages/Tads";
 import Mcaat from "./solutions-pages/Mcaat";
 import SiemSoar from "./solutions-pages/siem-soar";
@@ -42,6 +44,7 @@ function App() {
         <Route path="blogs" element={<BlogsPage />} />
         {/* <Route path="contact" element={<Contact />} /> */}
         <Route path="about" element={<AboutUs />} />
+        <Route path="case-studies" element={<CaseStudies />} />
         <Route path="solutions/threatsenseai-data-security" element={<Tads />} />
         <Route path="solutions/audit-trail-enforcer" element={<Mcaat />} />
         <Route path="solutions/threatops-for-sap" element={<SiemSoar />} />
@@ -71,6 +74,7 @@ function App() {
           element={<Dprm />}
         />
         <Route path="blogs/:blogId" element={<DynamicBlog />} />
+        <Route path="case-studies/:caseStudyId" element={<DynamicCaseStudy />} />
         <Route path="become-a-partner" element={<BecomeAPartner />} />
         {/* Redirect any other path to Home */}
         <Route path="*" element={<Navigate to="/" replace />} />

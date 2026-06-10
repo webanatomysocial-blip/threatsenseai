@@ -23,6 +23,37 @@
   flex: 1;
 }
 
+/* Breadcrumbs */
+.blog-breadcrumbs {
+  font-size: 14px;
+  color: #666;
+  margin-top: 15px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.blog-breadcrumbs a {
+  color: #000;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.blog-breadcrumbs a:hover {
+  color: #555;
+}
+
+.breadcrumb-current {
+  color: #888;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 300px;
+}
+
 .blog-category-badge {
   display: inline-block;
   background-color: #f0f0f0;
@@ -237,7 +268,17 @@
   gap: 60px;
   position: relative;
   align-items: start;
-  /* Ensure sticky columns work */
+/* Ensure sticky columns work */
+}
+
+/* Case Study Layout */
+.pod-container.case-study-layout {
+  width: 100dvw;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 100px 130px;
+  display: block;
+  box-sizing: border-box;
 }
 
 /* Left Sidebar (Recent Posts) */
@@ -322,6 +363,26 @@ link {
   padding-left: 20px;
 }
 
+.pod-body table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.pod-body table th,
+.pod-body table td {
+  padding: 12px 15px;
+  border: 1px solid #ccc;
+  vertical-align: top;
+}
+
+.pod-body table th {
+  background-color: #f4f4f4;
+  text-align: left;
+  font-weight: 700;
+  color: #000;
+}
+
 @media (max-width: 900px) {
   .pod-container.three-column-layout {
     grid-template-columns: 1fr;
@@ -344,6 +405,9 @@ link {
     margin-top: 30px;
     margin-bottom: 15px;
     color: #000;
+  }
+  .pod-container.case-study-layout{
+    padding: 60px 20px;
   }
 
   .pod-body {
