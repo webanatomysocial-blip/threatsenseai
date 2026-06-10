@@ -16,7 +16,7 @@ export const caseStudyMetadata = [
   {
     id: "HardeningAuditTrailsPharma",
     title: "Hardening Audit Trails for Pharma Data Integrity – MCA Rule 11(g) and 21 CFR Part 11",
-    slug: "hardening-audit-trails-pharma-data-integrity-mca-rule-11g-21cfr-part-11",
+    slug: "hardening-audit-trails-pharma-data-integrity",
     excerpt: "How a leading Indian pharmaceutical manufacturer turned its SAP ECC 6.0 EHP 8 audit trail from a compliance liability into an automated, ALCOA+-aligned control.",
     image: two,
     readTime: "9 Min Read",
